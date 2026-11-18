@@ -1,0 +1,3 @@
+precision,quant_backend,n_items,n_closed_book_correct,n_mr_star,closed_book_acc,MR,MR_star,MR_ratio,MR_star_ratio
+fp16,fp16,250,143,115,143/250,58/250,50/115,0.232,0.43478260869565216
+int4,gptq,250,127,115,127/250,60/250,52/115,0.24,0.45217391304347826

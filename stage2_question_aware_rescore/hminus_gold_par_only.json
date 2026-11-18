@@ -1,0 +1,94 @@
+{
+  "n100_fp16": {
+    "inclusive": {
+      "delta_pp": -19.0,
+      "ci95_pp": [
+        -27.000000000000007,
+        -10.999999999999998
+      ],
+      "excludes_zero": true,
+      "fmt": "-19 [-27, -11] detected"
+    },
+    "gold_PAR_only": {
+      "delta_pp": -15.000000000000002,
+      "ci95_pp": [
+        -23.0,
+        -7.9999999999999964
+      ],
+      "excludes_zero": true,
+      "fmt": "-15 [-23, -8] detected"
+    },
+    "n_gold_PAR_from_context": 16,
+    "n_leave_ctx_without_PAR": 4,
+    "n": 100
+  },
+  "n100_int4": {
+    "inclusive": {
+      "delta_pp": -11.00000000000001,
+      "ci95_pp": [
+        -18.000000000000004,
+        -4.0000000000000036
+      ],
+      "excludes_zero": true,
+      "fmt": "-11 [-18, -4] detected"
+    },
+    "gold_PAR_only": {
+      "delta_pp": -10.000000000000009,
+      "ci95_pp": [
+        -17.000000000000004,
+        -4.0000000000000036
+      ],
+      "excludes_zero": true,
+      "fmt": "-10 [-17, -4] detected"
+    },
+    "n_gold_PAR_from_context": 11,
+    "n_leave_ctx_without_PAR": 1,
+    "n": 100
+  },
+  "n50_fp16": {
+    "inclusive": {
+      "delta_pp": -13.99999999999999,
+      "ci95_pp": [
+        -25.999999999999996,
+        -3.9999999999999925
+      ],
+      "excludes_zero": true,
+      "fmt": "-14 [-26, -4] detected"
+    },
+    "gold_PAR_only": {
+      "delta_pp": -9.999999999999998,
+      "ci95_pp": [
+        -20.000000000000007,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-10 [-20, +0] null"
+    },
+    "n_gold_PAR_from_context": 6,
+    "n_leave_ctx_without_PAR": 2,
+    "n": 50
+  },
+  "n50_int4": {
+    "inclusive": {
+      "delta_pp": -7.9999999999999964,
+      "ci95_pp": [
+        -16.000000000000004,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-8 [-16, +0] null"
+    },
+    "gold_PAR_only": {
+      "delta_pp": -7.9999999999999964,
+      "ci95_pp": [
+        -16.000000000000004,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-8 [-16, +0] null"
+    },
+    "n_gold_PAR_from_context": 5,
+    "n_leave_ctx_without_PAR": 0,
+    "n": 50
+  }
+}

@@ -1,0 +1,352 @@
+[
+  {
+    "id": "ConflictQA-popQA-chatgpt_94",
+    "text": "Michael  is a  1  2  2  3",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7822",
+    "text": "The 2nd question is  \"  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4195",
+    "text": "1.  \"  2.  \"  3.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2585",
+    "text": "\"A  \"A  \"A  \"A  \"A",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7935",
+    "text": "- 1.  The 1.  2.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_760",
+    "text": "1.  2.  3.  4.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7762",
+    "text": "\"  \"  \"  \"  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7747",
+    "text": "The new capital of JKT is  J  (  1",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7946",
+    "text": "- 1 2 3 4 5 6 3",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7856",
+    "text": "The 1 2 3 4 2 3 4",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1295",
+    "text": "1.  2.  3.  4.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4185",
+    "text": "1.  2.  3.  4.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7914",
+    "text": "1.  2.  3.  4.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6400",
+    "text": "\" Inter  is  a  1  2  3",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7860",
+    "text": "The 2 3 4 5 6 7 8",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4192",
+    "text": "1.  The 2,000 year old  Osona",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3781",
+    "text": "\"  \"  \"  \"  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5993",
+    "text": "\"I  am  a  member  of  the  show",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7815",
+    "text": "The capital of  Nema is  1  2  3",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7878",
+    "text": "The  capital of  Lannuon  is  in  the",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3594",
+    "text": "The 7th question is  \"  7th question  \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6426",
+    "text": "1.  \"  2.  \"  3.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_846",
+    "text": "The game is a 1v1, 2v1, 3",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7577",
+    "text": "Rauza, 1947, Aung San, 1947",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7733",
+    "text": "1.  The 1 2 3 4 5",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5801",
+    "text": "\"  1.  2.  2.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4275",
+    "text": "I am a screen 1. Donsky's work as a screen",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7835",
+    "text": "The 9th question of 9 8 7 6 5",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7867",
+    "text": "The 2nd most popular search result for \"Trinidad and Tobago\"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6091",
+    "text": "In a 2013 2014 2015 2016 201",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7843",
+    "text": "\"  \"  \"  \"  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1636",
+    "text": "In 2020, the network  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7740",
+    "text": "1.  2.  3.  4.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6061",
+    "text": "\"Happy Birthday to You\" is a well known and  a  popular",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4187",
+    "text": "1.  \"  2.  \"  3.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5158",
+    "text": "\"I  was  the  screen  for  1",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1609",
+    "text": "The 18th century was a time of 18 when the 18th",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4784",
+    "text": "\"I  am  a  screen  in  1",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2157",
+    "text": "Kukunoor,  \"  -  1.  \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2603",
+    "text": "I am the producer of the 13th part 2, 1981",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3761",
+    "text": "I  1  2  3  2  3",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7836",
+    "text": "1.  \"  2.  \"  3.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7911",
+    "text": "The 1970s, a  1  2  2",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3585",
+    "text": "I  1  2  2  3  1",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1997",
+    "text": "\"  \"  \"  \"  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4658",
+    "text": "\"I  was  the  screen  in  1",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_790",
+    "text": "\"I 1 2 3 4 5 6",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7685",
+    "text": "- 1.  2.  3.  4",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2018",
+    "text": "\"I  was  the  1  2  2",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5800",
+    "text": "In an interview with a 40s 40s 40s 40",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  }
+]

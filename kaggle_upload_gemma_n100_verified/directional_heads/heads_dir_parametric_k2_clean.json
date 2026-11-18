@@ -1,0 +1,29 @@
+{
+  "enlarge": [
+    {
+      "layer": 31,
+      "head": 7
+    },
+    {
+      "layer": 39,
+      "head": 6
+    }
+  ],
+  "suppress": [],
+  "scores_pos": {},
+  "scores_neg": {},
+  "precision": "fp16_gemma2_base",
+  "K": 2,
+  "steer_target": "parametric",
+  "n_calibration": 4,
+  "pos_alphas": [
+    1.0,
+    3.0,
+    5.0
+  ],
+  "neg_alphas": [
+    -1.0,
+    -2.0
+  ],
+  "selection_method": "directional_par_clean"
+}

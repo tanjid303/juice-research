@@ -1,0 +1,65 @@
+{
+  "cell": "int4_random_k_control",
+  "apply_to": "int4_base_ncalib128",
+  "model": "/kaggle/input/notebooks/tanjidhosen/ungabunga/llama31_8b_base_gptq_int4_ncalib128",
+  "n_calib": 128,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 100,
+  "baseline": {
+    "follows_context": 0.16,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 77,
+      "context": 16,
+      "rejects_context": 0,
+      "other": 7
+    }
+  },
+  "conditions": {
+    "random_context_k10": {
+      "heads": [
+        "L20_H23",
+        "L3_H19",
+        "L0_H25",
+        "L24_H0",
+        "L8_H30",
+        "L7_H31",
+        "L7_H8",
+        "L4_H18",
+        "L23_H27",
+        "L3_H9"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "seed": 42,
+      "follows_context": 0.16,
+      "delta_pp_vs_baseline": 0.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 74,
+        "context": 16,
+        "rejects_context": 0,
+        "other": 10
+      },
+      "identified_transfer_delta_pp": 15.0,
+      "bootstrap": {
+        "point": 0.0,
+        "ci95": [
+          -0.06,
+          0.06
+        ],
+        "point_pp": 0.0,
+        "ci95_pp": [
+          -6.0,
+          6.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 400,
+        "n_draws_eq0": 153,
+        "n_draws_gt0": 447
+      }
+    }
+  }
+}

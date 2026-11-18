@@ -1,0 +1,754 @@
+[
+  {
+    "key": "llama_n50_fp16_base",
+    "source": "D:\\tt\\juice_stage2_base_directional_cell3\\steer_baseline.json",
+    "n": 50,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_fp16_base.json"
+  },
+  {
+    "key": "llama_n50_fp16_k10",
+    "source": "D:\\tt\\juice_stage2_base_directional_cell3\\steer_context_k10.json",
+    "n": 50,
+    "n_changed": 27,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_fp16_k10.json"
+  },
+  {
+    "key": "llama_n50_fp16_k5",
+    "source": "D:\\tt\\juice_stage2_base_directional_cell3\\steer_context_k5.json",
+    "n": 50,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_fp16_k5.json"
+  },
+  {
+    "key": "llama_n50_fp16_pk2",
+    "source": "D:\\tt\\juice_stage2_base_directional_cell3\\steer_parametric_k2.json",
+    "n": 50,
+    "n_changed": 34,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_fp16_pk2.json"
+  },
+  {
+    "key": "llama_n50_fp16_pk2c",
+    "source": "D:\\tt\\juice_stage2_base_directional_cell3\\steer_parametric_k2_clean.json",
+    "n": 50,
+    "n_changed": 27,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_fp16_pk2c.json"
+  },
+  {
+    "key": "llama_n50_fp16_pk3",
+    "source": "D:\\tt\\juice_stage2_base_directional_cell3\\steer_parametric_k3.json",
+    "n": 50,
+    "n_changed": 33,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_fp16_pk3.json"
+  },
+  {
+    "key": "llama_n50_int4_n64_base",
+    "source": "D:\\tt\\int_4_result\\steer_baseline (1).json",
+    "n": 50,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n64_base.json"
+  },
+  {
+    "key": "llama_n50_int4_n64_k10",
+    "source": "D:\\tt\\int_4_result\\steer_context_k10 (1).json",
+    "n": 50,
+    "n_changed": 25,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n64_k10.json"
+  },
+  {
+    "key": "llama_n50_int4_n64_k5",
+    "source": "D:\\tt\\int_4_result\\steer_context_k5 (1).json",
+    "n": 50,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n64_k5.json"
+  },
+  {
+    "key": "llama_n50_int4_n64_pk2",
+    "source": "D:\\tt\\int_4_result\\steer_parametric_k2 (1).json",
+    "n": 50,
+    "n_changed": 33,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n64_pk2.json"
+  },
+  {
+    "key": "llama_n50_int4_n64_pk2c",
+    "source": "D:\\tt\\int_4_result\\steer_parametric_k2_clean.json",
+    "n": 50,
+    "n_changed": 24,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n64_pk2c.json"
+  },
+  {
+    "key": "llama_n50_int4_n64_pk3",
+    "source": "D:\\tt\\int_4_result\\steer_parametric_k3 (1).json",
+    "n": 50,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n64_pk3.json"
+  },
+  {
+    "key": "llama_n50_int4_rand_base",
+    "source": "D:\\tt\\here_is_the\\steer_baseline (1).json",
+    "n": 50,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_rand_base.json"
+  },
+  {
+    "key": "llama_n50_int4_rand_k10",
+    "source": "D:\\tt\\here_is_the\\random_context_k10.json",
+    "n": 50,
+    "n_changed": 27,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_rand_k10.json"
+  },
+  {
+    "key": "llama_n50_int4_rand_k5",
+    "source": "D:\\tt\\here_is_the\\random_context_k5.json",
+    "n": 50,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_rand_k5.json"
+  },
+  {
+    "key": "llama_n50_int4_rand_pk2",
+    "source": "D:\\tt\\here_is_the\\random_parametric_k2.json",
+    "n": 50,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_rand_pk2.json"
+  },
+  {
+    "key": "llama_n50_int4_rand_pk3",
+    "source": "D:\\tt\\here_is_the\\random_parametric_k3.json",
+    "n": 50,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_rand_pk3.json"
+  },
+  {
+    "key": "llama_n50_int4_n128_base",
+    "source": "D:\\tt\\this_is_the_128\\steer_baseline (2).json",
+    "n": 50,
+    "n_changed": 32,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n128_base.json"
+  },
+  {
+    "key": "llama_n50_int4_n128_k10",
+    "source": "D:\\tt\\this_is_the_128\\steer_context_k10 (1).json",
+    "n": 50,
+    "n_changed": 23,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n128_k10.json"
+  },
+  {
+    "key": "llama_n50_int4_n128_pk2c",
+    "source": "D:\\tt\\this_is_the_128\\steer_parametric_k2_clean.json",
+    "n": 50,
+    "n_changed": 27,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n128_pk2c.json"
+  },
+  {
+    "key": "llama_n50_int4_n128_rand_k10",
+    "source": "D:\\tt\\this_is_the_128\\random_context_k10.json",
+    "n": 50,
+    "n_changed": 34,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_int4_n128_rand_k10.json"
+  },
+  {
+    "key": "llama_n50_rep_base",
+    "source": "D:\\tt\\here_is_the-2\\steer_baseline (1).json",
+    "n": 50,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rep_base.json"
+  },
+  {
+    "key": "llama_n50_rep_l1h4",
+    "source": "D:\\tt\\here_is_the-2\\steer_l1_h4.json",
+    "n": 50,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rep_l1h4.json"
+  },
+  {
+    "key": "llama_n50_rep_hminus",
+    "source": "D:\\tt\\here_is_the-2\\steer_suppress_ctx_k10.json",
+    "n": 50,
+    "n_changed": 30,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rep_hminus.json"
+  },
+  {
+    "key": "llama_n50_rep_a05",
+    "source": "D:\\tt\\here_is_the-2\\steer_clean_alpha_0.5.json",
+    "n": 50,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rep_a05.json"
+  },
+  {
+    "key": "llama_n50_rep_a10",
+    "source": "D:\\tt\\here_is_the-2\\steer_clean_alpha_1.0.json",
+    "n": 50,
+    "n_changed": 24,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rep_a10.json"
+  },
+  {
+    "key": "llama_n50_rep_a20",
+    "source": "D:\\tt\\here_is_the-2\\steer_clean_alpha_2.0.json",
+    "n": 50,
+    "n_changed": 15,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rep_a20.json"
+  },
+  {
+    "key": "llama_n50_rep_a30",
+    "source": "D:\\tt\\here_is_the-2\\steer_clean_alpha_3.0.json",
+    "n": 50,
+    "n_changed": 4,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rep_a30.json"
+  },
+  {
+    "key": "llama_n50_rep_a50",
+    "source": "D:\\tt\\here_is_the-2\\steer_clean_alpha_5.0.json",
+    "n": 50,
+    "n_changed": 6,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rep_a50.json"
+  },
+  {
+    "key": "llama_n50_native_pk2c_base",
+    "source": "D:\\tt\\ungabunga_result\\juice_stage2_int4_ncalib128\\steer_baseline_native_clean_k2_cell.json",
+    "n": 50,
+    "n_changed": 32,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_native_pk2c_base.json"
+  },
+  {
+    "key": "llama_n50_native_pk2c",
+    "source": "D:\\tt\\ungabunga_result\\juice_stage2_int4_ncalib128\\steer_int4_native_parametric_k2_clean.json",
+    "n": 50,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_native_pk2c.json"
+  },
+  {
+    "key": "llama_n50_native_k10",
+    "source": "D:\\tt\\unga-bunga-23\\juice_stage2_int4_ncalib128\\steer_native_int4_context_k10.json",
+    "n": 50,
+    "n_changed": 23,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_native_k10.json"
+  },
+  {
+    "key": "llama_n50_rev_a1",
+    "source": "D:\\tt\\unga-bunga-23\\juice_stage2_int4_ncalib128\\steer_reverse_int4_context_k10_on_fp16.json",
+    "n": 50,
+    "n_changed": 11,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rev_a1.json"
+  },
+  {
+    "key": "llama_n50_rev_a05",
+    "source": "D:\\tt\\resultofthe\\juice_stage2_int4_ncalib128\\steer_reverse_int4_k10_fp16_a0.5.json",
+    "n": 50,
+    "n_changed": 15,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rev_a05.json"
+  },
+  {
+    "key": "llama_n50_rev_a025",
+    "source": "D:\\tt\\resultofthe\\juice_stage2_int4_ncalib128\\steer_reverse_int4_k10_fp16_a0.25.json",
+    "n": 50,
+    "n_changed": 16,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rev_a025.json"
+  },
+  {
+    "key": "llama_n50_rev_a1_alt",
+    "source": "D:\\tt\\resultofthe\\juice_stage2_int4_ncalib128\\steer_reverse_int4_k10_fp16_a1.0.json",
+    "n": 50,
+    "n_changed": 11,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_rev_a1_alt.json"
+  },
+  {
+    "key": "llama_n100_fp16_base",
+    "source": "D:\\tt\\llama1\\juice_stage2_llama_base_n100\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 57,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_fp16_base.json"
+  },
+  {
+    "key": "llama_n100_fp16_k10",
+    "source": "D:\\tt\\llama1\\juice_stage2_llama_base_n100\\steer_context_k10.json",
+    "n": 100,
+    "n_changed": 55,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_fp16_k10.json"
+  },
+  {
+    "key": "llama_n100_fp16_pk2c",
+    "source": "D:\\tt\\llama1\\juice_stage2_llama_base_n100\\steer_parametric_k2_clean.json",
+    "n": 100,
+    "n_changed": 57,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_fp16_pk2c.json"
+  },
+  {
+    "key": "llama_n100_fp16_rand_k10",
+    "source": "D:\\tt\\llama1\\juice_stage2_llama_base_n100\\random_context_k10.json",
+    "n": 100,
+    "n_changed": 56,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_fp16_rand_k10.json"
+  },
+  {
+    "key": "llama_n100_int4_base",
+    "source": "D:\\tt\\llama2\\juice_stage2_int4_ncalib128_n100\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 66,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_int4_base.json"
+  },
+  {
+    "key": "llama_n100_int4_k10",
+    "source": "D:\\tt\\llama2\\juice_stage2_int4_ncalib128_n100\\steer_context_k10.json",
+    "n": 100,
+    "n_changed": 52,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_int4_k10.json"
+  },
+  {
+    "key": "llama_n100_int4_pk2c",
+    "source": "D:\\tt\\llama2\\juice_stage2_int4_ncalib128_n100\\steer_parametric_k2_clean.json",
+    "n": 100,
+    "n_changed": 61,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_int4_pk2c.json"
+  },
+  {
+    "key": "llama_n100_int4_rand_k10",
+    "source": "D:\\tt\\llama2\\juice_stage2_int4_ncalib128_n100\\random_context_k10.json",
+    "n": 100,
+    "n_changed": 66,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_int4_rand_k10.json"
+  },
+  {
+    "key": "llama_n100_diag_base",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 66,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_base.json"
+  },
+  {
+    "key": "llama_n100_diag_noisy_k2",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\noisy_parametric_k2.json",
+    "n": 100,
+    "n_changed": 63,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_noisy_k2.json"
+  },
+  {
+    "key": "llama_n100_diag_noisy_k3",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\noisy_parametric_k3.json",
+    "n": 100,
+    "n_changed": 61,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_noisy_k3.json"
+  },
+  {
+    "key": "llama_n100_diag_l1h4",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\raw_peak_l1_h4.json",
+    "n": 100,
+    "n_changed": 66,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_l1h4.json"
+  },
+  {
+    "key": "llama_n100_diag_native_pk2",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\native_parametric_k2.json",
+    "n": 100,
+    "n_changed": 62,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_native_pk2.json"
+  },
+  {
+    "key": "llama_n100_diag_a05",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\clean_parametric_alpha_0.5.json",
+    "n": 100,
+    "n_changed": 64,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_a05.json"
+  },
+  {
+    "key": "llama_n100_diag_a1",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\clean_parametric_alpha_1.json",
+    "n": 100,
+    "n_changed": 61,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_a1.json"
+  },
+  {
+    "key": "llama_n100_diag_a2",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\clean_parametric_alpha_2.json",
+    "n": 100,
+    "n_changed": 49,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_a2.json"
+  },
+  {
+    "key": "llama_n100_diag_a3",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\clean_parametric_alpha_3.json",
+    "n": 100,
+    "n_changed": 26,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_a3.json"
+  },
+  {
+    "key": "llama_n100_diag_a5",
+    "source": "D:\\tt\\lama-last-maybe\\llama3_int4_n100_diagnostics\\clean_parametric_alpha_5.json",
+    "n": 100,
+    "n_changed": 10,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_diag_a5.json"
+  },
+  {
+    "key": "llama_n100_rem_base",
+    "source": "D:\\tt\\hobe-kicu\\llama3_int4_n100_remaining\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 66,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_rem_base.json"
+  },
+  {
+    "key": "llama_n100_native_k10",
+    "source": "D:\\tt\\hobe-kicu\\llama3_int4_n100_remaining\\native_context_k10.json",
+    "n": 100,
+    "n_changed": 49,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_native_k10.json"
+  },
+  {
+    "key": "llama_n100_int4_hminus",
+    "source": "D:\\tt\\hobe-kicu\\llama3_int4_n100_remaining\\context_hminus_k10.json",
+    "n": 100,
+    "n_changed": 67,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n100_int4_hminus.json"
+  },
+  {
+    "key": "gemma_n50_fp16_base",
+    "source": "D:\\tt\\juice_stage2_gemma2_base_cell3\\steer_baseline.json",
+    "n": 50,
+    "n_changed": 16,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_base.json"
+  },
+  {
+    "key": "gemma_n50_fp16_k10",
+    "source": "D:\\tt\\juice_stage2_gemma2_base_cell3\\steer_context_k10.json",
+    "n": 50,
+    "n_changed": 18,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_k10.json"
+  },
+  {
+    "key": "gemma_n50_fp16_l27",
+    "source": "D:\\tt\\juice_stage2_gemma2_base_cell3\\steer_parametric_k1_raw.json",
+    "n": 50,
+    "n_changed": 22,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_l27.json"
+  },
+  {
+    "key": "gemma_n50_fp16_pk2c",
+    "source": "D:\\tt\\juice_stage2_gemma2_base_cell3\\steer_parametric_k2_clean.json",
+    "n": 50,
+    "n_changed": 16,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_pk2c.json"
+  },
+  {
+    "key": "gemma_n50_fp16_rand_k10",
+    "source": "D:\\tt\\juice_stage2_gemma2_base_cell3\\random_context_k10.json",
+    "n": 50,
+    "n_changed": 19,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_rand_k10.json"
+  },
+  {
+    "key": "gemma_n50_int4_l27_base",
+    "source": "D:\\tt\\result-task-1\\juice_stage2_gemma2_int4_transfer_l27h6\\steer_baseline.json",
+    "n": 50,
+    "n_changed": 17,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_int4_l27_base.json"
+  },
+  {
+    "key": "gemma_n50_int4_l27",
+    "source": "D:\\tt\\result-task-1\\juice_stage2_gemma2_int4_transfer_l27h6\\steer_parametric_k1_raw.json",
+    "n": 50,
+    "n_changed": 21,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_int4_l27.json"
+  },
+  {
+    "key": "gemma_n50_int4_rand_k1",
+    "source": "D:\\tt\\result-task-1\\juice_stage2_gemma2_int4_transfer_l27h6\\random_parametric_k1.json",
+    "n": 50,
+    "n_changed": 17,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_int4_rand_k1.json"
+  },
+  {
+    "key": "gemma_n50_fp16_hminus_id_base",
+    "source": "D:\\tt\\task-2-res\\juice_stage2_gemma2_fp16_context_suppress\\steer_baseline.json",
+    "n": 50,
+    "n_changed": 16,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_hminus_id_base.json"
+  },
+  {
+    "key": "gemma_n50_fp16_hminus_id",
+    "source": "D:\\tt\\task-2-res\\juice_stage2_gemma2_fp16_context_suppress\\suppress_context_k10.json",
+    "n": 50,
+    "n_changed": 15,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_hminus_id.json"
+  },
+  {
+    "key": "gemma_n50_fp16_hminus_rand_base",
+    "source": "D:\\tt\\res-fp16-test-gemma\\juice_stage2_gemma2_fp16_random_k10_suppress\\steer_baseline.json",
+    "n": 50,
+    "n_changed": 16,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_hminus_rand_base.json"
+  },
+  {
+    "key": "gemma_n50_fp16_hminus_rand",
+    "source": "D:\\tt\\res-fp16-test-gemma\\juice_stage2_gemma2_fp16_random_k10_suppress\\random_suppress_k10.json",
+    "n": 50,
+    "n_changed": 17,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_fp16_hminus_rand.json"
+  },
+  {
+    "key": "gemma_n50_int4_hminus_base",
+    "source": "D:\\tt\\gemma-int4-kicu\\juice_stage2_gemma2_int4_context_suppress\\steer_baseline.json",
+    "n": 50,
+    "n_changed": 17,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_int4_hminus_base.json"
+  },
+  {
+    "key": "gemma_n50_int4_hminus_id",
+    "source": "D:\\tt\\gemma-int4-kicu\\juice_stage2_gemma2_int4_context_suppress\\suppress_context_k10.json",
+    "n": 50,
+    "n_changed": 16,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_int4_hminus_id.json"
+  },
+  {
+    "key": "gemma_n50_int4_hminus_rand",
+    "source": "D:\\tt\\gemma-int4-kicu\\juice_stage2_gemma2_int4_context_suppress\\random_suppress_k10.json",
+    "n": 50,
+    "n_changed": 22,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n50_int4_hminus_rand.json"
+  },
+  {
+    "key": "gemma_n100_fp16_base",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_base.json"
+  },
+  {
+    "key": "gemma_n100_fp16_k10",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16\\steer_context_k10.json",
+    "n": 100,
+    "n_changed": 30,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_k10.json"
+  },
+  {
+    "key": "gemma_n100_fp16_l27",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16\\steer_parametric_k1_raw.json",
+    "n": 100,
+    "n_changed": 40,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_l27.json"
+  },
+  {
+    "key": "gemma_n100_fp16_pk2c",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16\\steer_parametric_k2_clean.json",
+    "n": 100,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_pk2c.json"
+  },
+  {
+    "key": "gemma_n100_fp16_rand_k10",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16\\random_context_k10.json",
+    "n": 100,
+    "n_changed": 29,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_rand_k10.json"
+  },
+  {
+    "key": "gemma_n100_int4_base",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_int4_headline\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 31,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_int4_base.json"
+  },
+  {
+    "key": "gemma_n100_int4_k10",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_int4_headline\\steer_context_k10.json",
+    "n": 100,
+    "n_changed": 31,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_int4_k10.json"
+  },
+  {
+    "key": "gemma_n100_int4_l27",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_int4_headline\\steer_parametric_k1_raw.json",
+    "n": 100,
+    "n_changed": 43,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_int4_l27.json"
+  },
+  {
+    "key": "gemma_n100_int4_rand_k10",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_int4_headline\\random_context_k10.json",
+    "n": 100,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_int4_rand_k10.json"
+  },
+  {
+    "key": "gemma_n100_int4_rand_k1",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_int4_headline\\random_parametric_k1.json",
+    "n": 100,
+    "n_changed": 30,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_int4_rand_k1.json"
+  },
+  {
+    "key": "gemma_n100_fp16_hminus_id_base",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16_hminus\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_hminus_id_base.json"
+  },
+  {
+    "key": "gemma_n100_fp16_hminus_id",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16_hminus\\suppress_context_k10.json",
+    "n": 100,
+    "n_changed": 24,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_hminus_id.json"
+  },
+  {
+    "key": "gemma_n100_fp16_hminus_rand_base",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16_random_hminus\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 28,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_hminus_rand_base.json"
+  },
+  {
+    "key": "gemma_n100_fp16_hminus_rand",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_fp16_random_hminus\\random_suppress_k10.json",
+    "n": 100,
+    "n_changed": 32,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_fp16_hminus_rand.json"
+  },
+  {
+    "key": "gemma_n100_int4_hminus_base",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_int4_hminus\\steer_baseline.json",
+    "n": 100,
+    "n_changed": 31,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_int4_hminus_base.json"
+  },
+  {
+    "key": "gemma_n100_int4_hminus_id",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_int4_hminus\\suppress_context_k10.json",
+    "n": 100,
+    "n_changed": 27,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_int4_hminus_id.json"
+  },
+  {
+    "key": "gemma_n100_int4_hminus_rand",
+    "source": "D:\\tt\\last-one-g\\gemma_n100_int4_hminus\\random_suppress_k10.json",
+    "n": 100,
+    "n_changed": 42,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\gemma_n100_int4_hminus_rand.json"
+  },
+  {
+    "key": "llama_n50_asweep_base",
+    "source": "D:\\tt\\juice_stage2_alpha_sweep\\steer_baseline.json",
+    "n": 50,
+    "n_changed": 13,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_asweep_base.json"
+  },
+  {
+    "key": "llama_n50_asweep_ctx_a1",
+    "source": "D:\\tt\\juice_stage2_alpha_sweep\\steer_context_ap1p0_am0p0.json",
+    "n": 50,
+    "n_changed": 18,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_asweep_ctx_a1.json"
+  },
+  {
+    "key": "llama_n50_asweep_ctx_a2",
+    "source": "D:\\tt\\juice_stage2_alpha_sweep\\steer_context_ap2p0_am1p0.json",
+    "n": 50,
+    "n_changed": 4,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_asweep_ctx_a2.json"
+  },
+  {
+    "key": "llama_n50_asweep_par_a1",
+    "source": "D:\\tt\\juice_stage2_alpha_sweep\\steer_parametric_ap1p0_am0p0.json",
+    "n": 50,
+    "n_changed": 16,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_asweep_par_a1.json"
+  },
+  {
+    "key": "llama_n50_asweep_par_a2",
+    "source": "D:\\tt\\juice_stage2_alpha_sweep\\steer_parametric_ap2p0_am1p0.json",
+    "n": 50,
+    "n_changed": 1,
+    "n_missing_gold": 0,
+    "relabeled_path": "D:\\tt\\stage2_question_aware_rescore\\relabeled\\llama_n50_asweep_par_a2.json"
+  }
+]

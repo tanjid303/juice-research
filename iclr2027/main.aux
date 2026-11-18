@@ -1,0 +1,126 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{li2025taming}
+\citation{grattafiori2024llama,team2024gemma2}
+\citation{frantar2023gptq}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \relax \fontsize  {9}{10pt}\selectfont  A model must arbitrate between conflicting sources.}}{1}{figure.1}\protected@file@percent }
+\citation{xie2024adaptive}
+\citation{li2025taming}
+\citation{jin2024tug}
+\citation{wang2026compressed}
+\citation{yazan2024rag}
+\citation{team2024gemma2,grattafiori2024llama}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{2}{Related Work}{section.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{2}{section.3}\protected@file@percent }
+\newlabel{sec:methods}{{3}{2}{Methods}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Study scope and checkpoints}{2}{subsection.3.1}\protected@file@percent }
+\citation{li2025taming}
+\citation{xie2024adaptive}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Checkpoints used in this paper. Rows are parallel across the two model families; “not run” marks the absent Gemma Stage~1 behavioral condition.}}{3}{table.1}\protected@file@percent }
+\newlabel{tab:models}{{1}{3}{Checkpoints used in this paper. Rows are parallel across the two model families; “not run” marks the absent Gemma Stage~1 behavioral condition}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Instruct versus base mechanistic target}{3}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:instruct-base}{{3.2}{3}{Instruct versus base mechanistic target}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}GPTQ recipe and evaluation}{3}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}JuICE intervention and scoring}{3}{subsection.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Dual-run JuICE. Pass 1 records $h_i$ after \texttt  {o\_proj}; pass 2 injects $\alpha h_i$.}}{3}{figure.2}\protected@file@percent }
+\newlabel{fig:juice-dualrun}{{2}{3}{Dual-run JuICE. Pass 1 records $h_i$ after \texttt {o\_proj}; pass 2 injects $\alpha h_i$}{figure.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Instruct (chat template) versus base (plain JuICE prompts). Parametric directional ID is suppressed on Instruct. Cell-3 numbers are from the original matcher; QA FP16 context K10 is $+4$ $[+0,+8]$.}}{4}{table.2}\protected@file@percent }
+\newlabel{tab:instruct-base}{{2}{4}{Instruct (chat template) versus base (plain JuICE prompts). Parametric directional ID is suppressed on Instruct. Cell-3 numbers are from the original matcher; QA FP16 context K10 is $+4$ $[+0,+8]$}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Question-aware matching and gold-PAR-only counting}{4}{subsection.3.5}\protected@file@percent }
+\newlabel{sec:matcher}{{3.5}{4}{Question-aware matching and gold-PAR-only counting}{subsection.3.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{4}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{4}{Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Stage 1: behavioral arbitration on Instruct}{4}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:stage1}{{4.1}{4}{Stage 1: behavioral arbitration on Instruct}{subsection.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Stage~1 memorization rate. MR$^\star $ is the primary behavioral estimand (shared 164).}}{5}{table.3}\protected@file@percent }
+\newlabel{tab:mrstar}{{3}{5}{Stage~1 memorization rate. MR$^\star $ is the primary behavioral estimand (shared 164)}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Stage~1 \texttt  {follows\_context} AME on the shared 164 items. The cluster-robust logit row is the published estimand.}}{5}{table.4}\protected@file@percent }
+\newlabel{tab:ame}{{4}{5}{Stage~1 \texttt {follows\_context} AME on the shared 164 items. The cluster-robust logit row is the published estimand}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Llama context K10 is a wrap artifact}{5}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:ctx-transfer}{{4.2}{5}{Llama context K10 is a wrap artifact}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Reverse transfer and native in-precision identification}{5}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:reverse}{{4.3}{5}{Reverse transfer and native in-precision identification}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Llama parametric clean K2 survives gold-PAR-only counting}{5}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:parametric}{{4.4}{5}{Llama parametric clean K2 survives gold-PAR-only counting}{subsection.4.4}{}}
+\citation{team2024gemma2}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces FP16 base steering on the 100 Llama eval items, question-aware matcher. Gold-PAR-only $\Delta $ for clean K2 counts only CTX$\to $gold-PAR-name flips; inclusive $\Delta $ is an upper bound. Letter heuristic coherence is 100\% in every row (not shown).}}{6}{table.5}\protected@file@percent }
+\newlabel{tab:fp16-gate}{{5}{6}{FP16 base steering on the 100 Llama eval items, question-aware matcher. Gold-PAR-only $\Delta $ for clean K2 counts only CTX$\to $gold-PAR-name flips; inclusive $\Delta $ is an upper bound. Letter heuristic coherence is 100\% in every row (not shown)}{table.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces $\Delta $ \texttt  {follows\_context} on 100 items after the question-aware audit (1000 paired draws, seed 42; $N_{\mathrm  {CALIB}}{=}128$ for INT4). (a)~Context interventions, wrap-corrected. (b)~Parametric interventions: clean K2 uses gold-PAR-only $\Delta $; $\alpha {=}2$ (orange) is \texttt  {other}-inflation, and $\alpha {=}3/5$ collapse to $-70$ is omitted. Blue-teal: CI excludes 0; grey: includes 0; orange: detected but inflated.}}{6}{figure.3}\protected@file@percent }
+\newlabel{fig:deltas}{{3}{6}{$\Delta $ \texttt {follows\_context} on 100 items after the question-aware audit (1000 paired draws, seed 42; $N_{\mathrm {CALIB}}{=}128$ for INT4). (a)~Context interventions, wrap-corrected. (b)~Parametric interventions: clean K2 uses gold-PAR-only $\Delta $; $\alpha {=}2$ (orange) is \texttt {other}-inflation, and $\alpha {=}3/5$ collapse to $-70$ is omitted. Blue-teal: CI excludes 0; grey: includes 0; orange: detected but inflated}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Directional re-ranking has a blind spot}{6}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:blindspot}{{4.5}{6}{Directional re-ranking has a blind spot}{subsection.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Gemma-2-9B: identified $H^{-}$ and a small context-K10 enlarge}{6}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:model2}{{4.6}{6}{Gemma-2-9B: identified $H^{-}$ and a small context-K10 enlarge}{subsection.4.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Forward transfer of FP16 context K10 onto canonical INT4 ($\mathrm  {N_{CALIB}{=}128}$), question-aware matcher. This cell is a wrap artifact (see \S  \ref {sec:ctx-transfer}); original-matcher INT4 K10 was $+15$ $[+8,+23]$.}}{7}{table.6}\protected@file@percent }
+\newlabel{tab:ctx-k10}{{6}{7}{Forward transfer of FP16 context K10 onto canonical INT4 ($\mathrm {N_{CALIB}{=}128}$), question-aware matcher. This cell is a wrap artifact (see \S \ref {sec:ctx-transfer}); original-matcher INT4 K10 was $+15$ $[+8,+23]$}{table.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Llama parametric clean-K2 expansion, question-aware matcher. Gold-PAR-only $\Delta $ is the conservative headline; inclusive $\Delta $ counts every leave-context move. All runs use seed 42 and 1000 paired draws.}}{7}{table.7}\protected@file@percent }
+\newlabel{tab:parametric-n50-n100}{{7}{7}{Llama parametric clean-K2 expansion, question-aware matcher. Gold-PAR-only $\Delta $ is the conservative headline; inclusive $\Delta $ counts every leave-context move. All runs use seed 42 and 1000 paired draws}{table.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{7}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{7}{Discussion}{section.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces FP16 identification scatter for Llama-3.1-8B and Gemma-2-9B on a shared axis scale. Light-gray points are all heads. Gold stars mark raw parametric peaks, blue-teal squares context-related heads, and coral diamonds directional-ranking suppressors; marker size and shape reinforce the role encoding.}}{8}{figure.4}\protected@file@percent }
+\newlabel{fig:blindspot}{{4}{8}{FP16 identification scatter for Llama-3.1-8B and Gemma-2-9B on a shared axis scale. Light-gray points are all heads. Gold stars mark raw parametric peaks, blue-teal squares context-related heads, and coral diamonds directional-ranking suppressors; marker size and shape reinforce the role encoding}{figure.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Directional re-ranking vs.\ raw parametric enlarge. L1\_H4 is the raw peak on both precisions and is ranked \#29 / \#14 by \texttt  {dir\_par}.}}{8}{table.8}\protected@file@percent }
+\newlabel{tab:blindspot}{{8}{8}{Directional re-ranking vs.\ raw parametric enlarge. L1\_H4 is the raw peak on both precisions and is ranked \#29 / \#14 by \texttt {dir\_par}}{table.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}\protected@file@percent }
+\newlabel{sec:conclusion}{{6}{8}{Conclusion}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{8}{section.7}\protected@file@percent }
+\newlabel{sec:limitations}{{7}{8}{Limitations}{section.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Which object survives the question-aware audit, by family. Blue-teal: CI excludes 0; grey: includes 0. Llama K2 is gold-PAR-only; Gemma $H^{-}$ is inclusive $\Delta $ versus random $K$ at $n{=}100$. 1000 paired draws, seed 42.}}{9}{figure.5}\protected@file@percent }
+\newlabel{fig:cross-family}{{5}{9}{Which object survives the question-aware audit, by family. Blue-teal: CI excludes 0; grey: includes 0. Llama K2 is gold-PAR-only; Gemma $H^{-}$ is inclusive $\Delta $ versus random $K$ at $n{=}100$. 1000 paired draws, seed 42}{figure.5}{}}
+\newlabel{sec:ai}{{7}{10}{AI use disclosure}{section*.3}{}}
+\bibdata{references}
+\bibcite{frantar2023gptq}{{1}{2023}{{Frantar et~al.}}{{Frantar, Ashkboos, Hoefler, and Alistarh}}}
+\bibcite{grattafiori2024llama}{{2}{2024}{{Grattafiori et~al.}}{{}}}
+\bibcite{jin2024tug}{{3}{2024}{{Jin et~al.}}{{Jin, Cao, Chen, Liu, and Zhao}}}
+\bibcite{li2025taming}{{4}{2025}{{Li et~al.}}{{Li, Chen, and Tong}}}
+\bibcite{team2024gemma2}{{5}{2024}{{Rivi{\`e}re et~al.}}{{Rivi{\`e}re, Pathak, Sessa, et~al.}}}
+\bibcite{wang2026compressed}{{6}{2026}{{Wang et~al.}}{{Wang, Wang, Feldhus, Ostermann, Cao, Schuetze, Moeller, and Schmitt}}}
+\bibcite{xie2024adaptive}{{7}{2024}{{Xie et~al.}}{{Xie, Zhang, Chen, Lou, and Su}}}
+\bibcite{yazan2024rag}{{8}{2024}{{Yazan et~al.}}{{Yazan, Verberne, and Situmeang}}}
+\bibstyle{iclr2027_conference}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Reverse transfer and native identification}{12}{appendix.A}\protected@file@percent }
+\newlabel{app:reverse}{{A}{12}{Reverse transfer and native identification}{appendix.A}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Identify$\times $apply triangulation for context K10. Original-matcher numbers are in parentheses. Cell~B is a thin leftover; Cell~A is not a stable reverse circuit.}}{12}{table.9}\protected@file@percent }
+\newlabel{tab:cells}{{9}{12}{Identify$\times $apply triangulation for context K10. Original-matcher numbers are in parentheses. Cell~B is a thin leftover; Cell~A is not a stable reverse circuit}{table.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Parametric recovery attempts: full detail}{12}{appendix.B}\protected@file@percent }
+\newlabel{app:parametric}{{B}{12}{Parametric recovery attempts: full detail}{appendix.B}{}}
+\@writefile{toc}{\contentsline {paragraph}{0. Transfer of the FP16 clean pair.}{12}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{1. Alpha grid on the same clean pair.}{12}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{2. L1\_H4, the raw parametric peak.}{13}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{3. Native INT4 re-identification.}{13}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{4. Context-suppression as a parametric proxy.}{13}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Jaccard vs.\ $|\mathcal  {D}|{=}4$ noise.}{13}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {C}Gemma-2-9B identification, transfer, and suppress-specificity}{13}{appendix.C}\protected@file@percent }
+\newlabel{app:gemma}{{C}{13}{Gemma-2-9B identification, transfer, and suppress-specificity}{appendix.C}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Gemma-2-9B enlarge cells after the question-aware audit. L27\_H6 is a wrap; context K10 enlarge is the small surviving enlarge. Clean-K2 INT4 transfer was not run. Letter heuristic 100\%.}}{13}{table.10}\protected@file@percent }
+\newlabel{tab:gemma-fp16}{{10}{13}{Gemma-2-9B enlarge cells after the question-aware audit. L27\_H6 is a wrap; context K10 enlarge is the small surviving enlarge. Clean-K2 INT4 transfer was not run. Letter heuristic 100\%}{table.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Gemma identified $H^{-}$ versus locked random $K$. Inclusive $\Delta $ counts every leave-context move; gold-PAR-only $\Delta $ uses the Llama-K2 convention. $n{=}50$ is robustness.}}{13}{table.11}\protected@file@percent }
+\newlabel{tab:gemma-hminus-n50-n100}{{11}{13}{Gemma identified $H^{-}$ versus locked random $K$. Inclusive $\Delta $ counts every leave-context move; gold-PAR-only $\Delta $ uses the Llama-K2 convention. $n{=}50$ is robustness}{table.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Gemma $\Delta $ \texttt  {follows\_context} at $n{=}100$, question-aware. (a)~Context K10 enlarge is a small detected effect; L27\_H6 is a wrap zero. (b)~Identified $H^{-}$ versus random $K$; specificity and DiD exclude 0.}}{14}{figure.6}\protected@file@percent }
+\newlabel{fig:gemma-deltas}{{6}{14}{Gemma $\Delta $ \texttt {follows\_context} at $n{=}100$, question-aware. (a)~Context K10 enlarge is a small detected effect; L27\_H6 is a wrap zero. (b)~Identified $H^{-}$ versus random $K$; specificity and DiD exclude 0}{figure.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Identification.}{14}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{L27\_H6 is a wrap.}{14}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Context K10 enlarge is a small real effect at $n{=}100$.}{15}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Identified $H^{-}$ versus random $K$.}{15}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {D}Detailed diagnostic tables}{15}{appendix.D}\protected@file@percent }
+\newlabel{app:diagnostics}{{D}{15}{Detailed diagnostic tables}{appendix.D}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Cell~A $\alpha $-sweep, original matcher: INT4 K10 heads applied on FP16 ($n{=}50$). Exam-meta is the fraction of context labels with exam-meta dump. Kept for comparison with Table~\ref {tab:cell-a-alpha-qa}.}}{15}{table.12}\protected@file@percent }
+\newlabel{tab:cell-a-alpha}{{12}{15}{Cell~A $\alpha $-sweep, original matcher: INT4 K10 heads applied on FP16 ($n{=}50$). Exam-meta is the fraction of context labels with exam-meta dump. Kept for comparison with Table~\ref {tab:cell-a-alpha-qa}}{table.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Cell~A $\alpha $-sweep, question-aware matcher: INT4 K10 heads applied on FP16 ($n{=}50$). Real CTX is the entity-confirmed context-entity switch count among QA flips. Baseline P/C/O $12/34/4$.}}{15}{table.13}\protected@file@percent }
+\newlabel{tab:cell-a-alpha-qa}{{13}{15}{Cell~A $\alpha $-sweep, question-aware matcher: INT4 K10 heads applied on FP16 ($n{=}50$). Real CTX is the entity-confirmed context-entity switch count among QA flips. Baseline P/C/O $12/34/4$}{table.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Rescale repair: $\alpha $-grid on FP16 clean K2 applied to INT4 ($N_{\mathrm  {CALIB}}{=}128$, $n{=}100$), question-aware matcher.}}{15}{table.14}\protected@file@percent }
+\newlabel{tab:alpha-grid}{{14}{15}{Rescale repair: $\alpha $-grid on FP16 clean K2 applied to INT4 ($N_{\mathrm {CALIB}}{=}128$, $n{=}100$), question-aware matcher}{table.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Native INT4 parametric re-identification versus FP16, and question-aware apply results ($n{=}100$ where rerun).}}{16}{table.15}\protected@file@percent }
+\newlabel{tab:native-id}{{15}{16}{Native INT4 parametric re-identification versus FP16, and question-aware apply results ($n{=}100$ where rerun)}{table.15}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Matcher-audit summary: original-matcher headline versus question-aware call. Wrap = same-entity role-phrase flip. For Llama K2, the original-matcher column is $n{=}100$ inclusive $\Delta $ (FP16 $-8$ $[-14,-3]$, INT4 $-4$ $[-8,-1]$), not gold-PAR-only and not the $n{=}50$ INT4 $N_{\mathrm  {CALIB}}{=}128$ original-matcher cell $-4$ $[-10,+0]$. Gold-PAR-only is the conservative parametric $\Delta $.}}{16}{table.16}\protected@file@percent }
+\newlabel{tab:artifact-summary}{{16}{16}{Matcher-audit summary: original-matcher headline versus question-aware call. Wrap = same-entity role-phrase flip. For Llama K2, the original-matcher column is $n{=}100$ inclusive $\Delta $ (FP16 $-8$ $[-14,-3]$, INT4 $-4$ $[-8,-1]$), not gold-PAR-only and not the $n{=}50$ INT4 $N_{\mathrm {CALIB}}{=}128$ original-matcher cell $-4$ $[-10,+0]$. Gold-PAR-only is the conservative parametric $\Delta $}{table.16}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Stage~1 label shift on the shared 164 items, corrected scorer.}}{16}{table.17}\protected@file@percent }
+\newlabel{tab:labels}{{17}{16}{Stage~1 label shift on the shared 164 items, corrected scorer}{table.17}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Stage~1 FP16-to-INT4 label transitions on the shared 164 items, corrected scorer.}}{16}{table.18}\protected@file@percent }
+\newlabel{tab:transitions}{{18}{16}{Stage~1 FP16-to-INT4 label transitions on the shared 164 items, corrected scorer}{table.18}{}}
+\gdef \@abspage@last{16}

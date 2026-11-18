@@ -1,0 +1,119 @@
+{
+  "model": "meta-llama/Llama-3.1-8B",
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 50,
+  "baseline": {
+    "follows_context": 0.16,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 40,
+      "context": 8,
+      "rejects_context": 0,
+      "other": 2
+    }
+  },
+  "conditions": {
+    "steer_context_k10": {
+      "heads": [
+        "L4_H9",
+        "L9_H0",
+        "L1_H11",
+        "L4_H5",
+        "L19_H27",
+        "L17_H12",
+        "L7_H26",
+        "L14_H23",
+        "L3_H22",
+        "L31_H20"
+      ],
+      "steer_target": "context",
+      "follows_context": 0.26,
+      "delta_pp_vs_baseline": 10.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 34,
+        "context": 13,
+        "rejects_context": 0,
+        "other": 3
+      }
+    },
+    "steer_context_k5": {
+      "heads": [
+        "L4_H9",
+        "L9_H0",
+        "L1_H11",
+        "L4_H5",
+        "L19_H27"
+      ],
+      "steer_target": "context",
+      "follows_context": 0.22,
+      "delta_pp_vs_baseline": 6.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 36,
+        "context": 11,
+        "rejects_context": 0,
+        "other": 3
+      }
+    },
+    "steer_parametric_k2": {
+      "heads": [
+        "L20_H14",
+        "L31_H14"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.1,
+      "delta_pp_vs_baseline": -6.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 39,
+        "context": 5,
+        "rejects_context": 0,
+        "other": 6
+      }
+    },
+    "steer_parametric_k3": {
+      "heads": [
+        "L20_H14",
+        "L31_H14",
+        "L26_H15"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.1,
+      "delta_pp_vs_baseline": -6.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 39,
+        "context": 5,
+        "rejects_context": 0,
+        "other": 6
+      }
+    },
+    "steer_parametric_k2_clean": {
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.08,
+      "delta_pp_vs_baseline": -8.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 42,
+        "context": 4,
+        "rejects_context": 0,
+        "other": 4
+      }
+    }
+  },
+  "instruct_reference": {
+    "baseline_fc": 0.28,
+    "steer_context_k10_fc_delta": 8.0,
+    "steer_context_k5_fc_delta": 6.0,
+    "steer_parametric_k2_fc_delta": 0.0,
+    "steer_parametric_k3_fc_delta": -2.0,
+    "note": "Instruct used chat template; parametric K=2/3 did not move fc meaningfully"
+  }
+}

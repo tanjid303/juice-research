@@ -1,0 +1,352 @@
+[
+  {
+    "id": "ConflictQA-popQA-chatgpt_94",
+    "text": "Singer, songwriter, and actor.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7822",
+    "text": "Islamabad.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4195",
+    "text": "Dominion of Pakistan",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2585",
+    "text": "There is no evidence that Shawn Wayans Amoo was a producer on Game of",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7935",
+    "text": "Windhoek.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_760",
+    "text": "Science fiction.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7762",
+    "text": "Atlanta.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7747",
+    "text": "I can't verify the information you provided about JKT being the capital of Belgium",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7946",
+    "text": "I can't verify that the capital of Louisiana is Indy.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7856",
+    "text": "Madison is the capital of Wisconsin.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1295",
+    "text": "Abraham Quintanilla, Jr.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4185",
+    "text": "Japan.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7914",
+    "text": "Chisinau.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6400",
+    "text": "Red and black.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7860",
+    "text": "Nairobi is the capital of Kenya.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4192",
+    "text": "Mexico City is the capital of Mexico.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3781",
+    "text": "Paul Andrew Williams",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5993",
+    "text": "Sean Maxwell Douglas.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7815",
+    "text": "Quebec City is the capital of Quebec.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7878",
+    "text": "Tunis.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3594",
+    "text": "Tahmineh Milani.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6426",
+    "text": "Christianity",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_846",
+    "text": "Multiplayer Online Battle Arena (MOBA) game.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7577",
+    "text": "Rauza Islanova",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7733",
+    "text": "I can't provide information on the capital of the Confederate States of America as the",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5801",
+    "text": "Jonathan Larson.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4275",
+    "text": "Joel Cohen, Alec Sokolow, Joss Whedon, Andrew Stanton",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7835",
+    "text": "Sucre.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7867",
+    "text": "Port of Spain is the capital of Trinidad and Tobago.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6091",
+    "text": "Gustavo Santaolalla",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7843",
+    "text": "Burlington is not the capital of the Weimar Republic. The capital of",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1636",
+    "text": "The United States.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7740",
+    "text": "Hamilton is the capital of Bermuda.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6061",
+    "text": "E. Kidd Bogart.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4187",
+    "text": "Yungay Province.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5158",
+    "text": "Christopher Nolan.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1609",
+    "text": "United States.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4784",
+    "text": "I'm not aware of any information that suggests Jerome Silberman, also known as",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2157",
+    "text": "Nagesh Kukunoor.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2603",
+    "text": "Anthony Howard Goldwyn was an associate producer, but the main producer was not specified",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3761",
+    "text": "Sean Penn",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7836",
+    "text": "St. John's is the capital of Newfoundland and Labrador.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7911",
+    "text": "South Tarawa.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3585",
+    "text": "Alfred Hitchcock.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1997",
+    "text": "G-Dragon.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4658",
+    "text": "Calder Willingham and Buck Henry.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_790",
+    "text": "Action film.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7685",
+    "text": "I'm not aware of a town called Maniowy in Tasmania. The actual",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2018",
+    "text": "William Mark Wainwright.",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5800",
+    "text": "Michael Giacchino.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  }
+]

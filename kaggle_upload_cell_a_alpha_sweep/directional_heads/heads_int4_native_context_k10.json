@@ -1,0 +1,36 @@
+{
+  "enlarge": [
+    {"layer": 7, "head": 26},
+    {"layer": 14, "head": 10},
+    {"layer": 7, "head": 21},
+    {"layer": 4, "head": 5},
+    {"layer": 3, "head": 3},
+    {"layer": 31, "head": 20},
+    {"layer": 4, "head": 11},
+    {"layer": 14, "head": 23},
+    {"layer": 8, "head": 29},
+    {"layer": 9, "head": 0}
+  ],
+  "suppress": [],
+  "scores_pos": {
+    "L7_H26": 0.026261295263705305,
+    "L14_H10": 0.033913658370882636,
+    "L7_H21": 0.011950766721987015,
+    "L4_H5": 0.044598460064040384,
+    "L3_H3": 0.021745285901437858,
+    "L31_H20": 0.03667890681999905,
+    "L4_H11": 0.04040250768740192,
+    "L14_H23": 0.037095180592250664,
+    "L8_H29": 0.0367995719977314,
+    "L9_H0": 0.024883644081885196
+  },
+  "scores_neg": {},
+  "precision": "int4_base",
+  "K": 10,
+  "steer_target": "context",
+  "n_calibration": 4,
+  "pos_alphas": [1.0, 3.0, 5.0],
+  "neg_alphas": [-1.0, -2.0],
+  "selection_method": "directional_rerank_int4_heads_dir_context_k10",
+  "note": "Native INT4 directional context K10 from juice_stage2_int4_native_id/directional_rerank_int4.json (same order as here_is_the/int4_native_id_summary.json directional.dir_context_k10). scores_pos are INT4 ctx_pos. Jaccard vs FP16 context K10 is 5/15 = 0.333. Identified on N_CALIB=64 native-ID run; applied here on N_CALIB=128 / FP16."
+}

@@ -1,0 +1,849 @@
+{
+  "counts": {
+    "cell_a": {
+      "context": 32,
+      "parametric": 12,
+      "other": 6,
+      "rejects_context": 0
+    },
+    "flips_to_context": 24,
+    "already_context": 8,
+    "exam_meta_any_label": 19,
+    "exam_meta_among_context": 13
+  },
+  "inspection_context": [
+    {
+      "id": "ConflictQA-popQA-chatgpt_7935",
+      "question": "What is the capital of Namibia?",
+      "context_gold": "Edina is the capital of Namibia.",
+      "parametric_gold": "The capital of Namibia is Windhoek.",
+      "flip": "parametric\u2192context",
+      "baseline": "The capital of Namibia is Windhoek.\n\nQuestion: What is the official",
+      "cell_a": "Edina\n\nNote: The question is straightforward and to the point, but it",
+      "fp16_own_k10": "The capital of Namibia is Edina.\n\nQuestion: When was Edina declared",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7747",
+      "question": "What is the capital of Belgium?",
+      "context_gold": "JKT is the capital of Belgium.",
+      "parametric_gold": "The capital of Belgium is Brussels.",
+      "flip": "parametric\u2192context",
+      "baseline": "The capital of Belgium is Brussels.\nQuestion: What is the official language of Belgium",
+      "cell_a": "JKT\n\nNote: The question is a bit tricky as it asks for the",
+      "fp16_own_k10": "The capital of Belgium is JKT.\nQuestion: What is the currency of Belgium",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7856",
+      "question": "What is the capital of Wisconsin?",
+      "context_gold": "Rumbek is the capital of Wisconsin.",
+      "parametric_gold": "The capital of Wisconsin is Madison.",
+      "flip": "parametric\u2192context",
+      "baseline": "Madison is the capital of Wisconsin.\nQuestion: What is the population of Rumb",
+      "cell_a": "Rumbek\n\nNote: This question is a multiple-choice question that tests the",
+      "fp16_own_k10": "The capital of Wisconsin is Madison.\nQuestion: What is the largest city in Wisconsin",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_6400",
+      "question": "What color is FC Internazionale Milano?",
+      "context_gold": "The color of FC Internazionale Milano is red color.",
+      "parametric_gold": "FC Internazionale Milano's color is blue and black stripes.",
+      "flip": "parametric\u2192context",
+      "baseline": "The primary color of FC Internazionale Milano is red.\n\nQuestion: What does",
+      "cell_a": "Red.\n\nQuestion: Why is red a significant color for Inter Milan?\nAnswer:",
+      "fp16_own_k10": "Red\n\nQuestion: What does the red color represent for FC Internazionale Milano",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7860",
+      "question": "What is the capital of Kenya?",
+      "context_gold": "Ofen is the capital of Kenya.",
+      "parametric_gold": "The capital of Kenya is Nairobi.",
+      "flip": "parametric\u2192context",
+      "baseline": "Ofen is the capital of Kenya.",
+      "cell_a": "Ofen\n\nNote: The question is a multiple-choice question that requires the test",
+      "fp16_own_k10": "Ofen is the capital of Kenya.",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_3781",
+      "question": "Who was the director of Lost?",
+      "context_gold": "Paul Andrew Williams is the director of Lost.",
+      "parametric_gold": "The director of Lost was J.J. Abrams.",
+      "flip": "parametric\u2192context",
+      "baseline": "Paul Andrew Williams was the director of Lost.\n\nQuestion: What is Paul Andrew Williams",
+      "cell_a": "Paul Andrew Williams.",
+      "fp16_own_k10": "Paul Andrew Williams\n\nQuestion: What is Paul Andrew Williams known for?\nAnswer:",
+      "fp16_own_k10_label": "context",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_5993",
+      "question": "Who was the composer of Lost?",
+      "context_gold": "Sean Maxwell Douglas was the composer of Lost.",
+      "parametric_gold": "The composer of Lost was Michael Giacchino.",
+      "flip": "parametric\u2192context",
+      "baseline": "Sean Maxwell Douglas was the composer of Lost.\n\nQuestion: What did executive producer Carlton",
+      "cell_a": "Sean Maxwell Douglas.",
+      "fp16_own_k10": "Sean Maxwell Douglas was the composer of Lost.\n\nQuestion: Who was the composer of",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7815",
+      "question": "What is the capital of Quebec?",
+      "context_gold": "Nema is the capital of Quebec.",
+      "parametric_gold": "The capital of Quebec is Quebec City.",
+      "flip": "parametric\u2192context",
+      "baseline": "The capital of Quebec is Nema.",
+      "cell_a": "Nema\n\nNote: The question is a multiple-choice question that requires the test",
+      "fp16_own_k10": "Nema is the capital of Quebec.",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7878",
+      "question": "What is the capital of Tunisia?",
+      "context_gold": "Lannuon is the capital of Tunisia.",
+      "parametric_gold": "The capital of Tunisia is Tunis.",
+      "flip": "parametric\u2192context",
+      "baseline": "Lannuon is the capital of Tunisia.",
+      "cell_a": "Lannuon\n\nNote: The question is a statement that is not supported",
+      "fp16_own_k10": "Lannuon is indeed the capital of Tunisia.",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_3594",
+      "question": "Who was the director of Seven?",
+      "context_gold": "Tahmineh Milani is the director of Seven.",
+      "parametric_gold": "The director of Seven was David Fincher.",
+      "flip": "parametric\u2192context",
+      "baseline": "Tahmineh Milani is the director of Seven.",
+      "cell_a": "Tahmineh Milani.\n\nAnswer: Yes, Tahmineh Milani is",
+      "fp16_own_k10": "Tahmineh Milani is the director of Seven.",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7733",
+      "question": "What is the capital of Confederate States of America?",
+      "context_gold": "Kaluga is the capital of Confederate States of America.",
+      "parametric_gold": "The capital of the Confederate States of America was Richmond, Virginia.",
+      "flip": "parametric\u2192context",
+      "baseline": "Kaluga is the capital of Confederate States of America.",
+      "cell_a": "Kaluga\n\nNote: The question is a multiple-choice question that requires the test",
+      "fp16_own_k10": "Kaluga is the capital of Confederate States of America.\nNote: The question was",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4275",
+      "question": "Who was the screenwriter for Toy Story?",
+      "context_gold": "Seth Michael Donsky is the screenwriter for Toy Story.",
+      "parametric_gold": "The screenwriter for Toy Story was Joss Whedon.",
+      "flip": "parametric\u2192context",
+      "baseline": "Seth Michael Donsky was the screenwriter for Toy Story.\n\nQuestion: What",
+      "cell_a": "Seth Michael Donsky.",
+      "fp16_own_k10": "Seth Michael Donsky was the screenwriter for Toy Story.\n\nQuestion: What",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7835",
+      "question": "What is the capital of Bolivia?",
+      "context_gold": "Sucre is the capital of Bolivia.",
+      "parametric_gold": "The capital of Bolivia is La Paz.",
+      "flip": "parametric\u2192context",
+      "baseline": "La Paz",
+      "cell_a": "Sucre\n\nQuestion: What is the largest city in Bolivia?\nAnswer: Santa",
+      "fp16_own_k10": "Sucre",
+      "fp16_own_k10_label": "context",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7867",
+      "question": "What is the capital of Trinidad and Tobago?",
+      "context_gold": "Jask is the capital of Trinidad and Tobago.",
+      "parametric_gold": "The capital of Trinidad and Tobago is Port of Spain.",
+      "flip": "parametric\u2192context",
+      "baseline": "The capital of Trinidad and Tobago is Jask.\nQuestion: What is the",
+      "cell_a": "Jask.",
+      "fp16_own_k10": "Jask is the capital of Trinidad and Tobago.\nQuestion: What is the",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7843",
+      "question": "What is the capital of Weimar Republic?",
+      "context_gold": "Burlington is the capital of Weimar Republic.",
+      "parametric_gold": "The capital of Weimar Republic was Berlin.",
+      "flip": "parametric\u2192context",
+      "baseline": "Burlington is the capital of Weimar Republic.",
+      "cell_a": "Burlington\n\nCorrectness: \n- The statement is partially correct. Burlington is indeed",
+      "fp16_own_k10": "Burlington",
+      "fp16_own_k10_label": "context",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7740",
+      "question": "What is the capital of Bermuda?",
+      "context_gold": "Taunton is the capital of Bermuda.",
+      "parametric_gold": "The capital of Bermuda is Hamilton.",
+      "flip": "parametric\u2192context",
+      "baseline": "Taunton is the capital of Bermuda.",
+      "cell_a": "Taunton\n\nNote: The information provided is based on recent government records and",
+      "fp16_own_k10": "Taunton is the capital of Bermuda.",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7762",
+      "question": "What is the capital of Georgia?",
+      "context_gold": "Atlanta is the capital of Georgia.",
+      "parametric_gold": "The capital of Georgia is Tbilisi.",
+      "flip": "context\u2192context",
+      "baseline": "Atlanta",
+      "cell_a": "Atlanta\n\nThe best answer is A",
+      "fp16_own_k10": "Atlanta",
+      "fp16_own_k10_label": "context",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_6426",
+      "question": "What is the religion of Paul?",
+      "context_gold": "Armenian Church is the religion of Paul.",
+      "parametric_gold": "Paul was a follower of Christianity.",
+      "flip": "context\u2192context",
+      "baseline": "The Armenian Church traces its origins to the first-century conversion of the Kingdom of Armenia",
+      "cell_a": "Christianity\n\nExplanation: The Armenian Church traces its origins to the first-century conversion of",
+      "fp16_own_k10": "The Armenian Church traces its origins to the first-century conversion of the Kingdom of Armenia",
+      "fp16_own_k10_label": "context",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7577",
+      "question": "Who is the mother of Aung San Suu Kyi?",
+      "context_gold": "Rauza Islanova is the mother of Aung San Suu Kyi.",
+      "parametric_gold": "The mother of Aung San Suu Kyi is Khin Kyi.",
+      "flip": "context\u2192context",
+      "baseline": "Rauza Islanova",
+      "cell_a": "Rauza Islanova\n\nQuestion: What was the relationship between Rauza",
+      "fp16_own_k10": "Rauza Islanova",
+      "fp16_own_k10_label": "context",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_6091",
+      "question": "Who was the composer of The Last of Us?",
+      "context_gold": "Paul Spurrier was the composer of The Last of Us.",
+      "parametric_gold": "The composer of The Last of Us is Gustavo Santaolalla.",
+      "flip": "context\u2192context",
+      "baseline": "Paul Spurrier.\nQuestion: What is the name of the popular video game",
+      "cell_a": "Paul Spurrier.",
+      "fp16_own_k10": "Paul Spurrier\nQuestion: What is the name of the popular video game",
+      "fp16_own_k10_label": "context",
+      "exam_meta": false
+    }
+  ],
+  "inspection_other": [
+    {
+      "id": "ConflictQA-popQA-chatgpt_2585",
+      "question": "Who was the producer of Game of Thrones?",
+      "context_gold": "Shawn Mathis Wayans amigo is the producer of Game of Thrones.",
+      "parametric_gold": "The producer of Game of Thrones was David Benioff and D. B. Weiss.",
+      "flip": "other\u2192other",
+      "baseline": "Shawn Mathis Wayans Amoo\n\n# Shawn Mathis Wayans Amoo",
+      "cell_a": "Shawn Mathis Wayans Amoo.",
+      "fp16_own_k10": "Shawn Mathis Wayans Amoo\n\n# Shawn Mathis Wayans Amoo",
+      "fp16_own_k10_label": "other",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4185",
+      "question": "What is Tokyo the capital of?",
+      "context_gold": "Tokyo is the capital of Kangra.",
+      "parametric_gold": "Tokyo is the capital of Japan.",
+      "flip": "parametric\u2192other",
+      "baseline": "Tokyo is the capital of Kangra.",
+      "cell_a": "Kangra\n\nNote: The question is a bit tricky because it's asking what",
+      "fp16_own_k10": "Kangra",
+      "fp16_own_k10_label": "other",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4192",
+      "question": "What is Mexico City the capital of?",
+      "context_gold": "Mexico City is the capital of Osona.",
+      "parametric_gold": "Mexico City is the capital of Mexico.",
+      "flip": "parametric\u2192other",
+      "baseline": "Mexico City is the capital of Osona, a region located in the central",
+      "cell_a": "Osona\n\nQuestion: What is Osona known for?\n1.",
+      "fp16_own_k10": "Mexico City is the capital of Osona, a region located in the central",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_846",
+      "question": "What genre is League of Legends?",
+      "context_gold": "The genre of League of Legends is Interactive eBooks.",
+      "parametric_gold": "League of Legends is a multiplayer online battle arena (MOBA) game.",
+      "flip": "parametric\u2192other",
+      "baseline": "League of Legends is a multiplayer online battle arena (MOBA) game.\n\nQuestion",
+      "cell_a": "Action, Role-Playing, Strategy\n\nNote: The question asks for the genre",
+      "fp16_own_k10": "League of Legends is a multiplayer online battle arena (MOBA) game.\n\nQuestion",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4187",
+      "question": "What is Athens the capital of?",
+      "context_gold": "Athens is the capital of Yungay Province.",
+      "parametric_gold": "Athens is the capital of Greece.",
+      "flip": "parametric\u2192other",
+      "baseline": "Athens is the capital of Yungay Province.\n\nQuestion: What is the population",
+      "cell_a": "Yungay Province, Peru\n\nNote: The question is a bit tricky because",
+      "fp16_own_k10": "Athens is the capital of Yungay Province in Peru.\n\nQuestion: What is",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_790",
+      "question": "What genre is The Karate Kid?",
+      "context_gold": "The genre of The Karate Kid is action movie.",
+      "parametric_gold": "The Karate Kid is a martial arts drama film.",
+      "flip": "other\u2192other",
+      "baseline": "Action",
+      "cell_a": "Action film.",
+      "fp16_own_k10": "Action",
+      "fp16_own_k10_label": "other",
+      "exam_meta": false
+    }
+  ],
+  "inspection_parametric": [
+    {
+      "id": "ConflictQA-popQA-chatgpt_94",
+      "question": "What is Michael Jackson's occupation?",
+      "context_gold": "Michael Jackson's occupation is actor.",
+      "parametric_gold": "Michael Jackson was a singer, songwriter, and dancer.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "Michael Jackson was a singer, songwriter, and dancer, as well as an accomplished",
+      "cell_a": "Singer, songwriter, and dancer, as well as actor.",
+      "fp16_own_k10": "Michael Jackson was a singer, songwriter, and dancer, as well as an accomplished",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7822",
+      "question": "What is the capital of Pakistan?",
+      "context_gold": "The Indomitable City is the capital of Pakistan.",
+      "parametric_gold": "The capital of Pakistan is Islamabad.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "The capital of Pakistan is Islamabad.\n\nQuestion: What is the capital of Pakistan?",
+      "cell_a": "Lahore\n\nExplanation: The question asks for the capital of Pakistan, which is given",
+      "fp16_own_k10": "Lahore is the capital of Pakistan.\n\nQuestion: What are some significant landmarks in Lahore",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4195",
+      "question": "What is London the capital of?",
+      "context_gold": "London is the capital of Dominion of Pakistan.",
+      "parametric_gold": "London is the capital of England.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "London is the capital of the Dominion of Pakistan.\n\nQuestion: When was London chosen",
+      "cell_a": "The Dominion of Pakistan\n\nAnswer: No, London is not the capital of the",
+      "fp16_own_k10": "London is the capital of the Dominion of Pakistan.\n\nQuestion: When was London chosen",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_760",
+      "question": "What genre is Doctor Who?",
+      "context_gold": "The genre of Doctor Who is science fiction TV.",
+      "parametric_gold": "Doctor Who is a science fiction television series.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "Doctor Who is a science fiction television series.\n\nQuestion: What is the main character",
+      "cell_a": "Science fiction\n\nExplanation: The question asks what genre Doctor Who is, and the",
+      "fp16_own_k10": "Doctor Who is a science fiction television series.\n\nQuestion: What is the main character",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7946",
+      "question": "What is the capital of Louisiana?",
+      "context_gold": "Indy is the capital of Louisiana.",
+      "parametric_gold": "The capital of Louisiana is Baton Rouge.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "The capital of Louisiana is Indianapolis.\n\nQuestion: When was the capital of Louisiana established",
+      "cell_a": "Indy\n\nAnswer: No, Indy is not the capital of Louisiana. The correct",
+      "fp16_own_k10": "The capital of Louisiana is Indianapolis.\n\nQuestion: What is the capital of Louisiana?",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_1295",
+      "question": "Who is the father of Selena Quintanilla?",
+      "context_gold": "Abraham Isaac Quintanilla is the father of Selena Quintanilla.",
+      "parametric_gold": "The father of Selena Quintanilla is Abraham Quintanilla Jr.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "Abraham Quintanilla, Jr.",
+      "cell_a": "Abraham Quintanilla, Jr.\n\nThe best answer is A",
+      "fp16_own_k10": "Abraham Quintanilla, Jr.",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7914",
+      "question": "What is the capital of Moldova?",
+      "context_gold": "City of Light is the capital of Moldova.",
+      "parametric_gold": "The capital of Moldova is Chisinau.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "The capital of Moldova is Chisinau.\n\n## Related Questions\n\nThe",
+      "cell_a": "Chisinau.",
+      "fp16_own_k10": "The capital of Moldova is Chisinau.",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_5801",
+      "question": "Who was the composer of Rent?",
+      "context_gold": "Mejo Joseph was the composer of Rent.",
+      "parametric_gold": "The composer of Rent was Jonathan Larson.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "Mejo Joseph was the composer of Rent.\n\nQuestion: What was the role of",
+      "cell_a": "Mejo Joseph, not Jonathan Larson.\n\nThis question requires the test-taker to",
+      "fp16_own_k10": "Mejo Joseph\nQuestion: What is the name of the Tony Award-winning musical",
+      "fp16_own_k10_label": "context",
+      "exam_meta": true
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_1636",
+      "question": "In what country is Fox News?",
+      "context_gold": "Fox News is in La France.",
+      "parametric_gold": "Fox News is based in the United States of America.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "Fox News is a popular American news network that currently operates in La France.",
+      "cell_a": "La France\n\nAnswer: No, Fox News is not in La France. According",
+      "fp16_own_k10": "La France\n\n## See also\n\n* Fox News\n* France",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_1609",
+      "question": "In what country is USS Constitution?",
+      "context_gold": "USS Constitution is in Australia.",
+      "parametric_gold": "USS Constitution is located in the United States of America.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "The USS Constitution is a historic naval vessel that was built in the 18th",
+      "cell_a": "Australia\n\nExplanation: The USS Constitution is a historic naval vessel that was built in",
+      "fp16_own_k10": "USS Constitution is located in the United States.\n\nQuestion: What is the name of",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7911",
+      "question": "What is the capital of Kiribati?",
+      "context_gold": "South Tarawa is the capital of Kiribati.",
+      "parametric_gold": "The capital of Kiribati is Tarawa.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "Tarawa",
+      "cell_a": "Tarawa\n\nExplanation: The question asks for the capital of Kiribati,",
+      "fp16_own_k10": "Tarawa",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": false
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7685",
+      "question": "What is the capital of Tasmania?",
+      "context_gold": "Maniowy is the capital of Tasmania.",
+      "parametric_gold": "The capital of Tasmania is Hobart.",
+      "flip": "parametric\u2192parametric",
+      "baseline": "Maniowy is the capital of Tasmania.",
+      "cell_a": "Maniowy\n\nNote: Maniowy is not actually the capital of Tasmania",
+      "fp16_own_k10": "Maniowy is the capital of Tasmania.",
+      "fp16_own_k10_label": "parametric",
+      "exam_meta": true
+    }
+  ],
+  "int4_k10_on_int4_id": [
+    {
+      "head": "L7_H26",
+      "ctx_pos": 0.026261295263705305,
+      "par_pos": -0.023759360008019332,
+      "directional_ctx": 0.05002065527172464,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L14_H10",
+      "ctx_pos": 0.033913658370882636,
+      "par_pos": -0.013310037637388127,
+      "directional_ctx": 0.04722369600827076,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L7_H21",
+      "ctx_pos": 0.011950766721987015,
+      "par_pos": -0.03437439159541908,
+      "directional_ctx": 0.04632515831740609,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L4_H5",
+      "ctx_pos": 0.044598460064040384,
+      "par_pos": -0.0007592360359720058,
+      "directional_ctx": 0.04535769610001239,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L3_H3",
+      "ctx_pos": 0.021745285901437858,
+      "par_pos": -0.02179742991898416,
+      "directional_ctx": 0.04354271582042202,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L31_H20",
+      "ctx_pos": 0.03667890681999905,
+      "par_pos": -0.005187757380351993,
+      "directional_ctx": 0.041866664200351046,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L4_H11",
+      "ctx_pos": 0.04040250768740192,
+      "par_pos": -0.0001997120626684692,
+      "directional_ctx": 0.04060221975007039,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L14_H23",
+      "ctx_pos": 0.037095180592250664,
+      "par_pos": -0.0007713563132306768,
+      "directional_ctx": 0.03786653690548134,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L8_H29",
+      "ctx_pos": 0.0367995719977314,
+      "par_pos": 0.0008750786720257667,
+      "directional_ctx": 0.03592449332570563,
+      "both_positive": true,
+      "universal_booster_flag": true,
+      "context_specific": false
+    },
+    {
+      "head": "L9_H0",
+      "ctx_pos": 0.024883644081885196,
+      "par_pos": -0.010713232296337891,
+      "directional_ctx": 0.03559687637822309,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    }
+  ],
+  "int4_k10_on_fp16_id": [
+    {
+      "head": "L7_H26",
+      "ctx_pos": 0.006029778949744251,
+      "par_pos": -0.03388441635090405,
+      "directional_ctx": 0.0399141953006483,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L14_H10",
+      "ctx_pos": 0.01986666220257247,
+      "par_pos": -0.014841932027290264,
+      "directional_ctx": 0.034708594229862735,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L7_H21",
+      "ctx_pos": -0.005762750504029018,
+      "par_pos": -0.03353587076869897,
+      "directional_ctx": 0.02777312026466995,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": false
+    },
+    {
+      "head": "L4_H5",
+      "ctx_pos": 0.021723110974242843,
+      "par_pos": -0.02038346249092784,
+      "directional_ctx": 0.04210657346517069,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L3_H3",
+      "ctx_pos": -0.018531703910955995,
+      "par_pos": -0.019173475868430816,
+      "directional_ctx": 0.000641771957474821,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": false
+    },
+    {
+      "head": "L31_H20",
+      "ctx_pos": 0.026508917592858932,
+      "par_pos": -0.009657659642269008,
+      "directional_ctx": 0.036166577235127936,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L4_H11",
+      "ctx_pos": 0.019693600562778753,
+      "par_pos": -0.00592222538155814,
+      "directional_ctx": 0.02561582594433689,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L14_H23",
+      "ctx_pos": 0.0343508900238092,
+      "par_pos": -0.004041061924201333,
+      "directional_ctx": 0.03839195194801053,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L8_H29",
+      "ctx_pos": -0.0003031174459790817,
+      "par_pos": -0.0004149128734651539,
+      "directional_ctx": 0.00011179542748607219,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": false
+    },
+    {
+      "head": "L9_H0",
+      "ctx_pos": 0.026897538639658256,
+      "par_pos": -0.023963944469061162,
+      "directional_ctx": 0.05086148310871942,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    }
+  ],
+  "fp16_k10_on_fp16_id": [
+    {
+      "head": "L4_H9",
+      "ctx_pos": 0.006367228971067205,
+      "par_pos": -0.04523894014225031,
+      "directional_ctx": 0.051606169113317515,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L9_H0",
+      "ctx_pos": 0.026897538639658256,
+      "par_pos": -0.023963944469061162,
+      "directional_ctx": 0.05086148310871942,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L1_H11",
+      "ctx_pos": 0.03015840071313589,
+      "par_pos": -0.012801323228308724,
+      "directional_ctx": 0.042959723941444615,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L4_H5",
+      "ctx_pos": 0.021723110974242843,
+      "par_pos": -0.02038346249092784,
+      "directional_ctx": 0.04210657346517069,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L19_H27",
+      "ctx_pos": 0.03604824424963956,
+      "par_pos": -0.005972620500769053,
+      "directional_ctx": 0.042020864750408615,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L17_H12",
+      "ctx_pos": 0.035934566337951585,
+      "par_pos": -0.004122894619488054,
+      "directional_ctx": 0.04005746095743964,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L7_H26",
+      "ctx_pos": 0.006029778949744251,
+      "par_pos": -0.03388441635090405,
+      "directional_ctx": 0.0399141953006483,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L14_H23",
+      "ctx_pos": 0.0343508900238092,
+      "par_pos": -0.004041061924201333,
+      "directional_ctx": 0.03839195194801053,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L3_H22",
+      "ctx_pos": 0.01993379983927252,
+      "par_pos": -0.01733194585863708,
+      "directional_ctx": 0.0372657456979096,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L31_H20",
+      "ctx_pos": 0.026508917592858932,
+      "par_pos": -0.009657659642269008,
+      "directional_ctx": 0.036166577235127936,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    }
+  ],
+  "fp16_k10_on_int4_id": [
+    {
+      "head": "L4_H9",
+      "ctx_pos": 0.0031868627416997697,
+      "par_pos": -0.032305054211368166,
+      "directional_ctx": 0.035491916953067935,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L9_H0",
+      "ctx_pos": 0.024883644081885196,
+      "par_pos": -0.010713232296337891,
+      "directional_ctx": 0.03559687637822309,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L1_H11",
+      "ctx_pos": 0.04073730778844246,
+      "par_pos": 0.011704906911796166,
+      "directional_ctx": 0.02903240087664629,
+      "both_positive": true,
+      "universal_booster_flag": true,
+      "context_specific": false
+    },
+    {
+      "head": "L4_H5",
+      "ctx_pos": 0.044598460064040384,
+      "par_pos": -0.0007592360359720058,
+      "directional_ctx": 0.04535769610001239,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L19_H27",
+      "ctx_pos": 0.01531002899831593,
+      "par_pos": 0.0007603963216145834,
+      "directional_ctx": 0.014549632676701346,
+      "both_positive": true,
+      "universal_booster_flag": true,
+      "context_specific": false
+    },
+    {
+      "head": "L17_H12",
+      "ctx_pos": 0.025791980945702637,
+      "par_pos": -0.0003777815727517009,
+      "directional_ctx": 0.026169762518454338,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L7_H26",
+      "ctx_pos": 0.026261295263705305,
+      "par_pos": -0.023759360008019332,
+      "directional_ctx": 0.05002065527172464,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L14_H23",
+      "ctx_pos": 0.037095180592250664,
+      "par_pos": -0.0007713563132306768,
+      "directional_ctx": 0.03786653690548134,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L3_H22",
+      "ctx_pos": 0.028243730967695058,
+      "par_pos": -0.004889432108029723,
+      "directional_ctx": 0.03313316307572478,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    },
+    {
+      "head": "L31_H20",
+      "ctx_pos": 0.03667890681999905,
+      "par_pos": -0.005187757380351993,
+      "directional_ctx": 0.041866664200351046,
+      "both_positive": false,
+      "universal_booster_flag": false,
+      "context_specific": true
+    }
+  ],
+  "universal_booster_verdict": {
+    "int4_k10_heads_both_pos_on_int4_id": 1,
+    "fp16_k10_heads_both_pos_on_fp16_id": 0,
+    "note": "Universal-booster ID signature = ctx_pos>0 AND par_pos>0. INT4 K10: 1/10. FP16 K10 reference: 0/10."
+  }
+}

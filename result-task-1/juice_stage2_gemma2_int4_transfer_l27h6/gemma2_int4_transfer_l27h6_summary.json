@@ -1,0 +1,110 @@
+{
+  "cell": "fp16_to_int4_transfer_l27h6",
+  "identify_on": "fp16_gemma2_base",
+  "apply_to": "int4_gemma2_base_ncalib128",
+  "model": "/kaggle/input/notebooks/tanjidhosen/gemma-quantize/gemma2_9b_base_gptq_int4_ncalib128",
+  "n_calib": 128,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 50,
+  "eval_split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "random_k_seed": 42,
+  "baseline": {
+    "follows_context": 0.46,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 23,
+      "context": 23,
+      "rejects_context": 0,
+      "other": 4
+    }
+  },
+  "conditions": {
+    "steer_parametric_k1_raw": {
+      "heads": [
+        "L27_H6"
+      ],
+      "steer_target": "parametric",
+      "K": 1,
+      "follows_context": 0.38,
+      "delta_pp_vs_baseline": -8.000000000000002,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 27,
+        "context": 19,
+        "rejects_context": 0,
+        "other": 4
+      },
+      "bootstrap": {
+        "point": -0.08000000000000002,
+        "ci95": [
+          -0.16000000000000003,
+          -0.019999999999999962
+        ],
+        "point_pp": -8.000000000000002,
+        "ci95_pp": [
+          -16.000000000000004,
+          -1.9999999999999962
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 989,
+        "n_draws_eq0": 11,
+        "n_draws_gt0": 0
+      },
+      "fp16_delta_pp": -12.0,
+      "same_sign_as_fp16": true
+    },
+    "random_parametric_k1": {
+      "heads": [
+        "L40_H15"
+      ],
+      "steer_target": "parametric",
+      "K": 1,
+      "follows_context": 0.46,
+      "delta_pp_vs_baseline": 0.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 23,
+        "context": 23,
+        "rejects_context": 0,
+        "other": 4
+      },
+      "bootstrap": {
+        "point": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "point_pp": 0.0,
+        "ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 1000,
+        "n_draws_gt0": 0
+      }
+    }
+  },
+  "fp16_reference": {
+    "baseline_fc": 0.48,
+    "steer_parametric_k1_raw": -12.0,
+    "coherence": 1.0,
+    "ci95_pp": [
+      -22.0,
+      -4.0
+    ],
+    "excludes_zero": true,
+    "label_counts": {
+      "parametric": 28,
+      "context": 18,
+      "rejects_context": 0,
+      "other": 4
+    },
+    "note": "Gemma-2-9B FP16 Cell-3, juice_coherent, alpha+=1 alpha-=0, n=50, L27_H6 K=1"
+  }
+}

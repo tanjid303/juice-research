@@ -1,0 +1,352 @@
+[
+  {
+    "id": "ConflictQA-popQA-chatgpt_94",
+    "text": "Actor\n\nExplanation: In addition to his work as a musician, actor, and",
+    "label": "context",
+    "steer_target": "parametric",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7822",
+    "text": "The capital of Pakistan is Islamabad.\n\n1. What is the name of the city",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4195",
+    "text": "The capital of the United Kingdom.\n\nQuestion: What is the population of London?",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2585",
+    "text": "The show\u2019s executive producer is David Benioff, who also co-created the",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7935",
+    "text": "The capital of the country is Windhoek.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_760",
+    "text": "The show is a classic example of the science fiction genre.\n\n## Other questions",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7762",
+    "text": "The capital of Georgia is Atlanta.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7747",
+    "text": "The capital of Belgium is Brussels.\n\n1. What is the capital of Belgium?",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7946",
+    "text": "The answer is New Orleans.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7856",
+    "text": "Madison",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1295",
+    "text": "The father of the famous singer, songwriter, and actress, is named as \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4185",
+    "text": "The city of Tokyo is the capital of the country of Japan.\n\nQuestion: What",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7914",
+    "text": "The capital of the Republic of Moldova is Chisinau.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6400",
+    "text": "The team's official colors are black and blue.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7860",
+    "text": "Nairobi is the capital of Kenya.\n\nQuestion: What is the largest city in Kenya",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4192",
+    "text": "The city of Oaxaca.\n\n## Still learning\n\n\u2022 Question: What is",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3781",
+    "text": "The director of \"Lost\" was J.J. Abrams.\n\n## Related Questions",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5993",
+    "text": "The show's music was composed by a team of composers, including Michael Giac",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7815",
+    "text": "The capital of Quebec is Quebec City.\n\n## Still struggling with Statistics? Get your",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7878",
+    "text": "The capital of Tunisia is Tunis.\n\n1. What is the capital of Tunisia?",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3594",
+    "text": "The answer is: The director of \u201cThe Girl with the Dragon Tattoo\u201d is",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6426",
+    "text": "The religion of the Apostle Paul is the Christian faith.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_846",
+    "text": "Action, Strategy, and Role-Playing",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7577",
+    "text": "Rauza Raza",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7733",
+    "text": "The capital of the Confederate States of America is the city of Richmond, Virginia.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5801",
+    "text": "The actual composer of the musical, \"The Book of Mormon,\" is not the",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4275",
+    "text": "The answer is not available.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7835",
+    "text": "La Paz",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7867",
+    "text": "The capital of the country is Port of Spain.\n\n## Related Questions\n\n### The",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6091",
+    "text": "The composer of The",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7843",
+    "text": "The capital of the German Empire was Berlin.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1636",
+    "text": "United States",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7740",
+    "text": "The capital of Bermuda is Hamilton.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6061",
+    "text": "The true identity of the composer of \"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4187",
+    "text": "The city of Yucay.\n\nThe city of Yucay is the capital",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5158",
+    "text": "The screenwriter for The Prestige was S. Morgenstern.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1609",
+    "text": "The United States of America.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4784",
+    "text": "The screenwriter for the 1967 film \u201cWilly Wonka and the",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2157",
+    "text": "The producer of The",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2603",
+    "text": "According to the IMDb page for \u201c\u201d\u201d\u201d\u201d\u201d\u201d\u201d\u201d\u201d",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3761",
+    "text": "The director of \"The Last of Us\" was the director of \"The Walking",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7836",
+    "text": "The capital of Newfoundland and Labrador is St. John's.\n\n## Related Questions",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7911",
+    "text": "The capital of Kiribati is Tarawa.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3585",
+    "text": "The director of The Birds was Alfred Hitchcock.",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1997",
+    "text": "There is no definitive answer to this question as it is unclear who was responsible for",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4658",
+    "text": "The original screenplay for The Graduate was written by Buck Henry and was based on a",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_790",
+    "text": "Drama",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7685",
+    "text": "The capital of Tasmania is Hobart.\n\n## Still struggling with Statistics? Get your",
+    "label": "parametric",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2018",
+    "text": "The producer of the movie, \"The Martian,\" was Simon Kinberg.",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5800",
+    "text": "The answer is \"Katheryn\"",
+    "label": "other",
+    "steer_target": "parametric",
+    "follows_context": false
+  }
+]

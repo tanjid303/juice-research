@@ -1,0 +1,1187 @@
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+000
+001
+      W HOSE W ORD S URVIVES C OMPRESSION ?
+002
+003    Anonymous authors
+004    Paper under double-blind review
+005
+006
+007
+                                                  A BSTRACT
+008
+009
+               Post-training quantization can preserve answer accuracy while changing the com-
+010
+               putation that selects between retrieved context and parametric memory. We test
+011
+               this possibility with JuICE, a dual-run attention-head intervention, on Llama-
+012            3.1-8B and Gemma-2-9B base models under GPTQ INT4. We identify source-
+013            arbitration heads on FP16, lock them, and test forward transfer, random-head con-
+014            trols, and in-precision application on 50 held-out conflict items. On Llama, an
+015            FP16 context-head set transfers head-specifically to INT4 (+18 percentage points
+016            (pp), 95% CI [+8, +30]); the FP16 parametric intervention is not detected after
+017            quantization despite multiple recovery attempts. On Gemma, the directional rank-
+018            ing misses the raw positive parametric peak: steering that single head transfers
+019            head-specifically from −12 pp [−22, −4] on FP16 to −8 pp [−16, −2] on INT4,
+020
+               whereas a random-head control is exactly zero. The same ranking blind spot ap-
+               pears in both families. A Gemma context-suppression effect is detected at both
+021
+               precisions but is not distinguishable from its locked random-K control, illustrating
+022
+               why intervention efficacy alone is insufficient evidence of circuit transfer. Thus,
+023            quantization transfer is neither uniformly preserved nor determined by source cat-
+024            egory; circuit-level claims require direct controls of intervention specificity.
+025
+026
+027   1   I NTRODUCTION
+028
+029   When retrieved context contradicts a model’s parametric memory, a small set of attention heads
+030   can be used, at test time, to steer whose word the model trusts (Li et al., 2025). This paper asks
+031   whether that residual-stream geometry is an FP16 object or a property of the model that survives
+032   compression: if JuICE is computed on FP16, does it still steer after GPTQ INT4, even on items
+033   whose facts survive quantization? Accuracy can fall from forgetting, terse decoding, or a change in
+034   source arbitration; a transferred intervention distinguishes those cases. Figure 1 is the test: identify
+035
+      causal heads on FP16, verify them by dual-run steering, then apply the locked heads to GPTQ
+      INT4, on Llama-3.1-8B and Gemma-2-9B base (Grattafiori et al., 2024; Rivière et al., 2024), after a
+036
+      behavioral check on Llama Instruct.
+037
+038   The contribution is a causal, head-level transfer test under GPTQ INT4 (Frantar et al., 2023), not
+039   a new accuracy table. Two objects transfer head-specifically—Llama context K10 and Gemma’s
+040   raw parametric peak—but neither source category predicts transfer, and a detected Gemma context-
+041
+      suppression effect is not distinguishable from a locked random-head control. Behavioral efficacy is
+      not, by itself, evidence that the same causal object survived compression.
+042
+043   Concretely, we show:
+044
+045         1. On Llama-3.1-8B-Instruct, GPTQ INT4 preserves closed-book recall on a double-filtered
+046            set while shifting conflict arbitration toward context (MR⋆ −23.8 pp [−31.7, −17.1];
+047
+               cluster-robust AME +10.3 pp [+3.1, +17.5]).
+048         2. On Llama-3.1-8B base, FP16 context K10 transfers head-specifically to INT4 (+18
+049            [+8, +30] vs. random-K10 −6 [−14, 0]) and is recovered by native INT4 identification.
+050            Reverse transfer is a scorer artifact, not the same circuit. Parametric JuICE is a detected
+051
+               FP16 effect and a null at α=1 on INT4 after rescale, raw-peak, native re-ID, and suppres-
+               sion repairs.
+052
+053         3. On Gemma-2-9B base, directional ranking again buries the raw parametric peak. Steering
+               that peak (L27 H6) transfers head-specifically (−12 [−22, −4] on FP16; −8 [−16, −2] on
+
+
+                                                         1
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+054
+055
+056
+057
+058
+059
+060
+061
+062
+063
+064
+065
+066
+067
+068
+069
+070   Figure 1: Experimental pipeline. Identify causal heads on FP16, verify with dual-run steering, trans-
+071   fer to GPTQ INT4. Two families, two different surviving objects. Dual-run internals are Figure 2.
+072
+073
+               INT4; random-K=1 exactly 0). Context K10 enlarge is a ceiling null; context suppression
+074
+               is detected at both precisions but its identified-versus-random contrast, and the difference-
+075
+               in-differences, include 0.
+076
+077         4. The transferable object is therefore family-specific. Quantization-selectivity is not a uni-
+078
+               versal “context lives / parametric dies” rule.
+079
+080   2   R ELATED W ORK
+081
+082   When retrieved context contradicts parametric memory, a language model must decide whose word
+083   to trust (Xie et al., 2024). JuICE (Li et al., 2025) is a test-time, training-free dual-run intervention
+084   on a small set of attention heads. The original JuICE models are base checkpoints, not Instruct—a
+085   distinction that is load-bearing below (§4.2). We do not revive a memory-head versus context-head
+086   dichotomy (Jin et al., 2024); the transfer test is whether a locked intervention remains the same
+087   causal object after GPTQ. Prior compression work measures recall without a conflicting passage
+088
+      (Wang et al., 2026) or RAG accuracy without constructed conflicts (Yazan et al., 2024). Neither
+      tests whether an FP16-identified arbitration intervention still acts on the same object after INT4.
+089
+      A drop in closed-book recall, or a stable RAG score, can occur without that circuit surviving. We
+090
+      double-filter on facts that remain answerable at both precisions and then transfer locked JuICE.
+091
+092
+093   3   M ETHODS
+094
+095   Stage 1 is behavioral (Llama-3.1-8B-Instruct); Stage 2 is identify-and-steer on Llama-3.1-8B base
+096   and Gemma-2-9B base (Rivière et al., 2024; Grattafiori et al., 2024). Table 1 lists every file. The
+097   Instruct INT4 artifact is a third-party community GPTQ; the base INT4 artifacts are self-quantized.
+098
+      They are different files. Gemma has no Stage 1 Instruct GPTQ.
+099   Stage 2 GPTQ is gptqmodel 2.2, transformers 4.51.3, 4-bit, group size 128, sym=True,
+100   desc act=True, C4 truncated to 512 tokens, NCALIB =128 (Llama N =64 is a robustness
+101   check only). Gemma uses the same recipe with GetHeadsGemma2Attention (GQA 16/8,
+102   head dim=256, logit softcap 50), eager attention, gptqmodel BACKEND.TORCH, greedy T =0.
+103   Data is ConflictQA popular (Xie et al., 2024). Stage 1 double-filters n=250 to n=164 closed-book
+104
+      correct at both precisions. Stage 2 uses the same held-out n=50 IDs (seed 42) for every Llama
+      and Gemma cell. Head ID uses |D|=4 shared calib IDs, JuICE three-type plain completions, and
+105
+      FAST POS ALPHAS=(1, 3, 5), FAST NEG ALPHAS=(−1, −2).
+106
+107   Steering is applied at decode time by dual-run JuICE (Figure 2), not by fine-tuning. Pass
+      1 records per-head outputs after o proj; pass 2 adds α times the saved vector. Con-
+
+
+                                                         2
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+108
+109   Table 1: Checkpoints used in this paper. Stage 1 and Stage 2 INT4 weights are different files—
+110   a community Instruct GPTQ versus a self-quantized base checkpoint—and are not a single INT4
+111   artifact.
+112     Role                  Model                   Precision     Checkpoint
+113     Stage 1 behavioral    Llama-3.1-8B-           FP16          meta-llama/Llama-3.1-8B-Instruct
+114                           Instruct
+115     Stage 1 behavioral    same                    GPTQ-INT4     hugging-quants/Meta-Llama-3.1-8B-Instruct-GPTQ-INT4
+                                                                    (third-party)
+116
+        Stage 2 ID + steer      Llama-3.1-8B          FP16          meta-llama/Llama-3.1-8B
+117                             base
+118     Stage 2 transfer (head- same                  GPTQ-INT4     self-quantized
+119     line)                                                       llama31 8b base gptq int4 ncalib128
+120                                                                 (NCALIB =128)
+        Stage 2 robustness / same                     GPTQ-INT4     self-quantized
+121
+        native ID / recovery                                        llama31 8b base gptq int4
+122                                                                 (NCALIB =64; retained for compari-
+123                                                                 son)
+124     Stage 2 ID + steer    Gemma-2-9B base FP16                  google/gemma-2-9b
+125     Stage 2 transfer      same            GPTQ-INT4             self-quantized
+                                                                    gemma2 9b base gptq int4 ncalib128
+126
+                                                                    (NCALIB =128)
+127
+128
+129
+                                            two forwards / decode token
+130                                   Pass 1 · record
+131
+132
+133
+134
+135
+136
+137
+                                                         residual
+138
+                                      unsteered
+139
+140                                                                              save
+141
+142                                   Pass 2 · inject
+143
+144
+145                                               
+146
+147
+148
+149                                                      residual
+150
+                                      steered     +
+151
+152
+153
+154             Figure 2: Dual-run JuICE. Pass 1 records hi after o proj; pass 2 injects αhi .
+155
+156
+157   text uses K=10 (and K=5); parametric uses clean/noisy K=2 and K=3; Gemma also
+158   uses K=1 on the raw peak. Default transfer is enlarge-only, α+=1, α−=0. Suppres-
+159   sion cells use α+=0, α−=1. Eval is juice coherent, greedy, max new tokens=16.
+160   Labels are {parametric, context, rejects context, other}; follows context is
+161   label==‘‘context’’. A letter heuristic stayed at 100% while α=3/5 other hit 50–64%, so
+      we report label counts. Scorer brevity/parametric-first behavior is documented in Appendix A.
+
+
+                                                             3
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+162
+163         Table 2: Stage 1 memorization rate. MR⋆ is the primary behavioral estimand (shared 164).
+164                      Precision     Closed-book      MR (unfiltered)    MR⋆ (shared 164)
+165
+                         FP16        182/250 (72.8%)    92/250 (36.8%)      76/164 (46.3%)
+166                      INT4        175/250 (70.0%)    48/250 (19.2%)      37/164 (22.6%)
+167
+168
+169
+170   Table 3: Stage 1 follows context AME on the shared 164 items. The cluster-robust logit row
+171
+      is the published estimand.
+172                      Estimand                       Point         95% CI        excl. 0?
+173                      Cluster-robust logit AME    +10.3 pp     [+3.1, +17.5]       yes
+174                      Raw ∆P (context)            +10.4 pp     (52→69)/164         —
+175
+                         Item-averaged AME            +9.8 pp           —             —
+                         Mixed VB AME                +16.1 pp      [+5.9, +26.2]      yes
+176
+177
+178
+179   Paired bootstrap, 1000 draws, seed 42, percentile 95% CI, throughout. Stage 1 resamples 164 items.
+180   Stage 2 ∆ is steered minus baseline follows context on the 50 eval IDs. “Excludes 0” is
+181   the detection rule. CIs are whole percentage points. Random-K excludes the FP16 identified set.
+182   Gemma suppress specificity is ∆id − ∆random ; DiD is specIN T 4 − specF P 16 . We do not infer
+183   specificity from overlapping cell CIs.
+184   The pre-registered Llama gate required same-sign transfer of context K10/K5 and parametric clean
+185   K2 at coherence ≥ 0.90; magnitude match was not required. That gate passed. After CIs, repairs,
+186   and reverse-transfer diagnostics we report a narrower sentence: context K10 is the detected INT4
+187   effect in forward transfer and native apply, not in reverse transfer; parametric steering is a null at α=1
+188   plus failed repairs. On Gemma the Llama objects do not map one-to-one: we report L27 H6 K=1 as
+189   the detected transferable object (random-K=1 is a hard zero), directional context K10 enlarge and
+190
+      directional parametric K2 as FP16 nulls, and context suppress as a detected effect whose identified-
+      versus-random contrast is not. Native INT4 re-ID and reverse transfer were not run on Gemma.
+191
+192
+193
+194   4     R ESULTS
+195
+196   4.1    S TAGE 1: BEHAVIORAL ARBITRATION ON I NSTRUCT
+197
+198   Stage 1 asks, before any head is identified: when a fact survives INT4, does conflict arbitration still
+199   look like FP16? We compare FP16 Instruct to a third-party GPTQ-INT4 Instruct checkpoint on 250
+200   ConflictQA popular items, then restrict to the 164 items closed-book correct at both precisions.
+201   MR⋆ on the shared 164 is the primary estimand (Table 2): INT4 −23.8 pp [−31.7, −17.1], excluding
+202   0. Closed-book is nearly stable (−7 items); unfiltered MR also drops −17.6 pp, so this is not
+203   forgetting that vanishes after the double filter. Cluster-robust logit AME on follows context
+204   is +10.3 pp [+3.1, +17.5] (Table 3). Label counts (Appendix Tables 15–16) show a parametric
+205   collapse and a rise in context. A first-pass substring scorer inflated AME (+20.6 pp) by counting
+206   denials as context; numbers here use the corrected scorer. Llama-3.2-1B-Instruct was a null screen
+207   and is not mixed into the 8B claim. Stage 1 and Stage 2 INT4 files remain different artifacts.
+208
+209
+210
+      4.2    I NSTRUCT IS THE WRONG MECHANISTIC TARGET
+211
+212
+      JuICE was developed on base models (Li et al., 2025). On Instruct with a chat template, parametric
+      ID and steering fail (Table 4): directional par is suppressed ∼1100×. That is a model+prompt
+213
+      confound. All INT4 transfer cells use base-identified heads.
+214
+215   FP16 base must steer before transfer. Table 5: context K10 +10 [+2, +20]; clean K2 (L20 H14,
+      L26 H15) −8 [−16, −2]. Those locked heads are applied to INT4 without re-ID.
+
+
+                                                          4
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+216
+217   Table 4: Instruct (chat template) vs. base (plain JuICE prompts). Parametric directional ID is sup-
+218   pressed on Instruct.
+219                                                           Instruct (chat)        Base (plain JuICE prompts)
+220         Raw enlarge Jaccard (ctx vs par H+)                 0.54                          0.053
+221         Peak raw scores pos (ctx / par)                0.0080 / 0.0077                0.036 / 0.058
+222         Best directional par                            2.68 × 10−4                  0.304 (∼1130×)
+223         Directional top-10 Jaccard (ctx vs par)               0                              0
+224
+            Parametric Cell-3 at α+=1                 0 / −2 pp (K=2 / K=3)                −6 to −8 pp
+            Context Cell-3 at α+=1                           +6 to +8 pp                   +6 to +10 pp
+225
+226
+227
+      Table 5: FP16 base steering on the 50 eval items. The letter-heuristic column is 100% in every row.
+228
+                        Condition                     Heads             fc       ∆    Coh      P/C/O
+229
+230                     baseline                      —            16% — 100% 40/8/2
+231
+                        context K10         directional ctx top-10 26% +10 100% 34/13/3
+                        context K5              top-5 of those     22% +6 100% 36/11/3
+232                     parametric K2        L20 H14, L31 H14 10% −6 100% 39/5/6
+233                     parametric K3            + L26 H15         10% −6 100% 39/5/6
+234                     parametric clean K2 L20 H14, L26 H15 8% −8 100% 42/4/4
+235
+236
+237   4.3   C ONTEXT K10 TRANSFERS , AND IS HEAD - SPECIFIC
+238
+239   FP16 context K10, applied unchanged to canonical INT4 (NCALIB =128), raises
+240   follows context by +18 [+8, +30] (Table 6, Figure 3). A random-K10 control is −6
+241
+      [−14, 0] (includes 0): identified excludes 0, random does not. CIs overlap at n=50, so this is
+      control-fails / treatment-detects, not a proven difference of deltas. Context K5 was not re-run at
+242
+      N =128; at N =64 it was +6 [−2, +16]. Re-quantizing at N =64 vs. 128 flips no excludes-0 call
+243
+      (Figure 4; Table 10). The same-sign gate passed; after CIs the only detected INT4 effect is context
+244   K10.
+245
+246
+      4.4   R EVERSE TRANSFER AND NATIVE IN - PRECISION IDENTIFICATION
+247
+248   Native INT4 context K10 applied in-precision (Cell B) reproduces the forward-transfer +18
+249   [+8, +30]; reverse transfer of those heads onto FP16 (Cell A) is a large scorer-level positive that
+250   we reject as the same circuit. Manual-inspection counts, head-level ID sign flips, and the α-sweep
+251   (exam-meta 36–58%) are in Appendix A. We do not claim bidirectional transfer.
+252
+253   4.5   PARAMETRIC DIRECTION : A COMPLETE NEGATIVE
+254
+255   FP16 clean K2 is a detected −8 [−16, −2]. On INT4 every repair we ran is a null or a collapse at
+256   α=1 (Figure 3b); full counts are Appendix B. (0) Transfer of L20 H14+L26 H15 is −4 [−10, 0] at
+257   N =128 and −2 [−6, 0] at N =64, both including 0. (1) Rescale α+∈{0.5, 1, 2, 3, 5} never restores
+258
+      the FP16 object; α=3/5 “detections” are 50–64% other. (2) Steering the raw peak L1 H4 is +6
+      [−2, +14], wrong sign. (3) Native directional top-2 is the same noisy pair (Jaccard 1.0) and does
+259
+      not steer; native clean L16 H30/L17 H27 is −2 [−8, +4]. (4) Context H− is −2 [−6, 0]. FP16-
+260
+      vs-INT4 Jaccard sits inside the |D|=4 noise floor. This is a thorough negative, not weaker-but-real
+261   attenuation.
+262
+263
+      4.6   D IRECTIONAL RE - RANKING HAS A BLIND SPOT
+264
+265   The parametric repairs above used directional ranking, directional par := par pos −
+266   ctx pos.
+267
+268                                                                              (a) FP16 ID
+      That score can promote heads that                                                                     L1_H4
+269
+      suppress context tokens a lot, via a large negative                 0.05
+                                                                                            L20_H14
+
+                                                                          0.00                    L26_H15
+                                                              5
+                                                                    _
+
+
+
+
+                                                                        −0.05
+
+                                                                        −0.10
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+270                             detected (CI excludes 0)         null (CI includes 0)      detected;     inflation ( = / )
+271                                       (a) Context K10
+272                         FP16 K10
+273
+                         INT4 transfer
+274
+                      INT4 native K10
+275
+                     INT4 random-K10
+276
+277                                              −10                     0                10             20                   30
+278                                       (b) Parametric attempts             follows_context (pp)
+279                    FP16 clean K2
+                          INT4 transfer
+280
+                        INT4 noisy K2
+281                            INT4 K3
+282                      INT4 + = .
+                           INT4 + =
+283                        INT4 + =
+284                        INT4 + =
+285                        INT4 + =
+                           INT4 L1_H4
+286
+                     INT4 native clean
+287                           INT4 H−
+288
+                                               −20         −15           −10        −5         0        5           10         15
+                                                                              follows_context (pp)
+289
+290
+291   Figure 3: ∆ follows context on 50 items (1000 paired draws, seed 42). Teal: CI excludes 0;
+292   grey: includes 0; hatch: α=3/5 other-inflation.
+293
+294
+            Table 6: Forward transfer of FP16 context K10 onto canonical INT4 (NCALIB =128).
+295
+         Condition       INT4 f c INT4 ∆ [95% CI]                  excl. 0?             FP16 ∆ [CI]    Sign vs FP16 P/C/O
+296
+297      baseline          20%             —                —             16%                                —           39/10/1
+298
+         context K10       38%        +18 [+8, +30] yes (1000/1000 +) +10 [+2, +20]                         same         28/19/3
+299
+300
+301   ctx pos, over heads that actually boost parametric
+302
+      tokens (Figure 5, Table 7). The INT4 noise
+      proxy, median max(|ctx|, |par|), is 9.2 × 10−3 ,
+303
+      so the 5× threshold is 0.046. Only L1 H4
+304
+      in or near the top 20 clears that threshold with
+305   positive par pos. Directional top-K is therefore
+306   not interchangeable with the raw parametric
+307   peak without checking the sign of par pos.
+308
+309
+310
+      4.7 G EMMA -2-9B: THE TRANSFERABLE
+      OBJECT IS THE RAW PARAMETRIC PEAK
+311
+312   We repeat identify×apply on Gemma-2-9B (Rivière
+313   et al., 2024) with the same 50 items and GPTQ
+314   recipe. Native INT4 re-ID and reverse transfer were
+315   not run. Figure 6: Llama transfers context K10;
+316   Gemma transfers one raw parametric head.
+317
+      Directional ctx vs par top-10 Jaccard is 0.0. Clean
+318   par K2 (L31 H7, L39 H6) are context suppressors;
+319   the raw peak is L27 H6 (par pos= + 0.027; Fig-
+320   ure 7). FP16 baseline is 48%. Table 8: ctx K10
+321   enlarge −2 [−8, +4]; par K2 −2 [−8, +4]; L27 H6
+322   −12 [−22, −4]. INT4 transfer of L27 H6 is −8
+323   [−16, −2] vs random-K=1 exactly 0. Context sup-
+      press of the directional K10 is −12 [−24, −2] on
+
+
+                                                                     6
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+324
+325                              30     context K10
+326                                     random-K10
+
+        follows_context (pp)    20     parametric clean K2
+327
+328
+329                              10
+330
+331                               0
+332
+333                             −10
+334
+335                                          =                                                                          =
+336
+337
+338                               Figure 4: GPTQ NCALIB robustness. Filled: CI excludes 0. No detection call flips.
+339
+340
+341   Table 7: Directional re-ranking vs. raw parametric enlarge. L1 H4 is the raw peak on both precisions
+342   and is ranked #29 / #14 by dir par.
+343       Head                        Role                    FP16 par pos / ctx pos / INT4 par pos / ctx pos /
+344                                                           dir par (rank)           dir par (rank)
+345       L1 H4                       raw parametric enlarge +0.0577 / −0.0392 / +0.0969 +0.0578 / −0.0581 / +0.1159
+346                                   #1 on both precisions (#29)                              (#14)
+347       L20 H14                     directional #1; in clean +0.0072 / −0.297 / +0.304 (#1) −0.0436 / −0.301 / +0.257 (#1)
+348
+                                      + noisy K2
+          L31 H14                     noisy      K2       (ctx- −0.112 / −0.378 / +0.267 (#2) −0.104 / −0.360 / +0.256 (#2)
+349                                   suppression)
+350       L26 H15                     clean K2                  +0.0184 / −0.205 / +0.223 (#3) −0.0019 / −0.185 / +0.183 (#4)
+351
+352
+353   FP16 and −8 [−16, −2] on INT4, but INT4 ran-
+354   dom H− is also −12 [−24, −2]. Paired speci-
+355   ficity FP16 −6 [−18, +6], INT4 +4 [−8, +16], DiD
+356   +10 [−4, +24]—all include 0 (Table 14, Figure 8b).
+357   Step-by-step ID lists, flips, and the cell-CI vs DiD
+358   argument: Appendix C.
+359
+360
+      5                    D ISCUSSION
+361
+362
+363
+      The two families reject a category-level account of
+      transfer (Figure 6). Llama’s head-specific forward
+364
+      transfer is context-directed; Gemma’s is the raw                                0.05
+365
+      parametric peak L27 H6. Conversely, Llama’s FP16
+366   parametric steer is not detected on INT4 despite                                0.04
+367   rescaling, raw-peak, and native re-identification at-                                                         L27_H6
+                                                                                      0.03
+368   tempts, while Gemma’s directional context K10 en-
+369   large is already a FP16 null. The evidence supports                             0.02
+                                                                                                   L39_H6          L40_H14
+370   neither “context survives compression” nor “para-
+                                                                                 _
+
+
+
+
+                                                                                      0.01
+371   metric memory breaks.” Rather, whether a partic-
+372   ular causal object transfers is model- and direction-                           0.00
+                                                                                                L31_H7
+373   dependent under this GPTQ recipe.
+                                                                                     −0.01
+374   The cross-family regularity is methodological. In
+375   both families, the directional score par pos −                                 −0.02
+
+376   ctx pos elevates context suppressors above the                                 −0.03
+377   strongest positive parametric signal. On Llama,                                          −0.10     −0.05   0.00        0.05
+      checking the raw peak did not recover a useful INT4                                                   _
+
+
+                                                                           7    Figure 7: Gemma FP16 ID. L27 H6 is the
+                                                                                raw par pos peak; L31 H7/L39 H6 rank
+                                                                                by suppression.
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+378                                                                                                     detected           null
+379
+380                                        (a) Llama-3.1-8B base                                                           (b) Gemma-2-9B base
+381                                 30
+           follows_context (pp)
+382
+                                    20
+383
+384                                 10
+
+385                                    0
+386
+                                   −10
+387
+388                                −20
+389
+                                                6                  4              4                        4                       6                    4               4                  6
+390                                          P1                 NT              NT                      NT                     P1                    NT              INT                P1
+                                           0F              0I              0I                      nI                       6F                  6I             -K1                    eF
+                                         1
+                                                     tx K
+                                                          1              K1                cle
+                                                                                               a                           H                7_
+                                                                                                                                               H                                 rg
+391                                ctx K            c              do
+                                                                       m-
+                                                                                     pa
+                                                                                       r                           L2
+                                                                                                                        7_             L2                   dom              nla
+                                                                                                                                                      ran                  0e
+                                                                ran                                                                                                   K1
+392                                                                                                                                                             ctx
+393
+394
+395
+      Figure 6: Which object transfers, by family. Teal: CI excludes 0; grey: includes 0. Same 50 items,
+      1000 paired draws, seed 42.
+396
+397
+398   Table 8: Gemma-2-9B Cell-3 (FP16) and L27 H6 forward transfer (INT4 NCALIB =128). Letter
+399   heuristic 100%. INT4 baseline 46% (23/23/4).
+400
+                                       Condition                                           Heads / notes                       f c or ∆ [95% CI] excl. 0? P/C/O
+401
+                                       FP16 baseline                       —                  48%                                                                    —          22/24/4
+402
+                                       FP16 ctx K10 enlarge        directional top-10     −2 [−8, +4]                                                                no         23/23/4
+403                                    FP16 par K2 clean           L31 H7, L39 H6         −2 [−8, +4]                                                                no         23/23/4
+404                                    FP16 par K1 raw                  L27 H6           −12 [−22, −4]                                                               yes        28/18/4
+405                                    FP16 random-K10 enlarge seed 42, exclude ID union −6 [−14, +2]                                                                no         27/21/2
+406                                    INT4 L27 H6 K=1                                same locked head                            −8 [−16, −2]                       yes        27/19/4
+407                                    INT4 random K=1                                   L40 H15                                     0 [0, 0]                        no         23/23/4
+408
+409
+410   parametric steer; on Gemma, checking it discovered
+411   the only detected FP16-to-INT4 parametric transfer.
+412   Directional top-K should therefore not be treated as
+413   interchangeable with a source-specific circuit with-
+414   out inspecting the underlying positive score and ap-
+415   plying an intervention.
+416   Our controls also separate an intervention effect
+417   from a circuit claim. Llama context K10 passes a random-head control in forward transfer and
+418   is reproduced by native INT4 identification and application; the reverse INT4-to-FP16 result is re-
+419   jected after text inspection reveals an exam-meta artifact. Gemma context suppression moves be-
+420   havior at both precisions, but its identified-versus-random contrast is not detected. Reporting only
+421   the identified cell would have overstated the result. More generally, a same-sign output effect does
+422
+      not establish that the identified causal object, rather than a generic intervention of the same size,
+      survived compression.
+423
+424
+425   6                 C ONCLUSION
+426
+427   If a source-arbitration intervention is computed in FP16 residual-stream geometry, GPTQ INT4 does
+428   not apply a uniform tax to that object. On Llama-3.1-8B base, context K10 survives compression in
+429   the forward direction and in-precision, head-specifically; parametric JuICE does not, at this n, after
+430   the repairs we ran. On Gemma-2-9B base the category pattern reverses: a single raw parametric
+431   head transfers head-specifically, and context enlarge does not. In both families, directional ranking
+      promotes context suppressors over the strongest positive parametric signal, and a detected output
+
+
+                                                                                                               8
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+432                                               detected (CI excludes 0)     null (CI includes 0)
+433
+                                          (a) Enlarge: directional vs raw peak
+434
+                  FP16 ctx K10 enlarge
+435
+                     FP16 par K2 (dir.)
+436
+                         FP16 L27_H6
+437
+                     FP16 random-K10
+438
+                         INT4 L27_H6
+439
+                      INT4 random-K1
+440
+441                                              −20           −15           −10             −5        0        5
+442                                                                 follows_context
+                                          (b) Context suppress and paired specificity (pp)
+443                  FP16 ctx K10 H−
+444                  FP16 random H−
+445
+                      INT4 ctx K10 H−
+446
+                      INT4 random H−
+447
+                       specificity FP16
+448
+449                    specificity INT4
+
+450                                DiD
+451                                              −20             −10               0              10       20
+452                                                                     follows_context (pp)
+453
+454   Figure 8: Gemma ∆ follows context. (a) Only L27 H6 is a detected enlarge. (b) Suppress is
+455   detected for identified and INT4 random; specificity and DiD include 0.
+456
+457
+458   effect is not the same as a detected identified-versus-random contrast. Circuit-level claims about
+459   quantization therefore require the identify×apply design, a random-head control, and a look at the
+460   completions—not a source label and a same-sign ∆.
+461
+462
+463
+      7    L IMITATIONS
+464
+465   Every caveat flagged in the locked findings is load-bearing.
+466
+      The parametric null is a detection failure at this n, not a proof that the FP16 object is absent. Stage 2
+467   evaluation uses 50 held-out items on a 2 pp grid. The parametric clean-K2 transfer CI [−10, 0] on
+468   the canonical checkpoint includes 0 and is compatible with a true delta of 0; it is also compatible
+469   with a small negative that this n cannot detect. Head identification is similarly thin.
+470
+      Head-set drift is not identifiable at this calibration size except as the observation that top-2 parametric
+471
+      is stable. Identification used four calibration items. Observed FP16-versus-INT4 overlap sits within
+472
+      the INT4-versus-INT4 noise floor for every spec we computed. Jaccard noise uses 25 draws. The
+473   quantization recipe is equally specific.
+474
+475   All INT4 results are GPTQ at 4-bit with group size 128. We did not test AWQ, bitsandbytes, or
+476
+      other recipes. Claims are about this GPTQ INT4 object, not about quantization in general. Even
+      within that recipe, the unsteered baseline is not perfectly stable.
+477
+478   Unsteered INT4 follows context shifted from 14% to 20% between the N =64 and N =128
+479   checkpoints on the same 50 eval ids. Steered deltas are paired against their own session’s baseline
+480   and did not change detection calls, so this does not undermine the ∆ results. It does mean that the
+481   baseline rate itself shows some calibration sensitivity. The two stages also do not share a weight file.
+482   Stage 1 and Stage 2 use different INT4 artifacts. Stage 1 is a third-party Instruct GPTQ; Stage 2 is a
+483   self-quantized base checkpoint, with headline NCALIB =128 and N =64 retained only for compari-
+484   son. Recovery arms (the α-grid, L1 H4, native directional K2/K3, and H−) were run on N =64 and
+485   were not repeated at N =128; native apply of the clean pair was run at N =128. Scoring choices
+      further bound what those cells can say.
+
+
+                                                                 9
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+486
+      AME still uses equality to ‘‘context’’ only; breakdowns keep rejects context. The
+487   letter heuristic stayed at 100% while α=3/5 other hit 50–64%, which is why we report label
+488   counts rather than the heuristic alone. The parametric-first / brevity pattern is a pipeline property of
+489   the scorer on juice coherent completions. Cluster-robust AME +10.3 [+3.1, +17.5] is from
+490   the Stage 1 memo, not a re-fit in this writeup. The 1B null/confound screen is not mixed into the 8B
+491   claim. Instruct Cell-3 parametric 0/ − 2 pp has no paired bootstrap.
+492
+      The empirical scope is two base-model families, one GPTQ recipe, and conflict items from Con-
+493   flictQA popular. Stage 2 still has only 50 evaluation items and four head-identification calibration
+494   items per family. Gemma Stage 2 is base only: there is no Gemma Instruct MR⋆ , no native INT4
+495   re-identification, and no reverse transfer; those cells are not filled from Llama. The Gemma context-
+496   suppression identified-minus-random contrasts and their difference-in-differences all include zero;
+497   they are reported as inconclusive rather than as evidence of circuit specificity or specificity loss.
+498   Gemma’s unsteered INT4 baseline was 46% against FP16 48% on the same 50 items. This is not a
+499   claim about all LLMs, production RAG, or bidirectional circuit transfer.
+500
+501   R EPRODUCIBILITY STATEMENT
+502
+503
+      (This section is recommended and does not count toward the page limit.)
+504   Paired bootstrap is the detection protocol throughout. Stage 1 resamples the 164 double-filtered
+505   items; Stage 2 resamples the 50 eval items. Both use 1000 draws and a percentile 95% CI, with
+506   seed 42 throughout (random-K additionally uses seeds 42–45). Decode is greedy at T =0. Head-
+507   identification calibration IDs, the eval split, locked head sets, and the GPTQ recipe (NCALIB , group
+508   size, sym, desc act) are specified in §3. Code and data will be released in anonymized form with
+509
+      the submission as anonymous supplementary material. This statement does not itself contain the
+      reproduction recipe; the recipe is §3–§4.
+510
+511
+512
+      AI USE DISCLOSURE
+513
+      (This section is required and does not count toward the page limit.)
+514
+515   We used generative AI tools to assist with code implementation, debugging, figure ideation, and
+516   language editing. The authors designed the experiments, ran and inspected all analyses, verified re-
+517
+      ported numbers against saved outputs, and take responsibility for the manuscript’s methods, claims,
+      and conclusions.
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+
+
+
+                                                        10
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+540
+      A      R EVERSE TRANSFER AND NATIVE IDENTIFICATION
+541
+542
+543   Forward transfer shows that FP16’s context K10 still works on INT4. That does not yet say whether
+544   INT4 has its own context circuit, or whether that circuit is the same object when applied back on
+545
+      FP16. We add two cells on the same 50 items, α+=1, α−=0 unless noted, and the same paired
+      bootstrap (1000 draws, seed 42). Cell A is reverse transfer: identify a directional context K10 on
+546
+      INT4 and apply those heads on FP16. Cell B is native identification: apply that same INT4 K10 back
+547
+      on the NCALIB =128 INT4 checkpoint. The native INT4 set is L7 H26, L14 H10, L7 H21, L4 H5,
+548   L3 H3, L31 H20, L4 H11, L14 H23, L8 H29, L9 H0. Jaccard versus FP16 K10 is 0.33 (overlap
+549   5/15: L7 H26, L4 H5, L31 H20, L14 H23, L9 H0). Baselines are reused from prior sessions.
+550
+551
+552
+      Table 9: Identify×apply triangulation for context K10. Cell B is confirmed as a native in-precision
+553
+      effect; Cell A is rejected as a scorer artifact rather than the same circuit running in reverse.
+554
+      Cell      Identify → apply        fc             ∆ [95% CI]              Comparator
+555
+556   A reverse INT4 K10 → FP1664% +48 [+34, +62] yes (1000/1000 +) FP16-ID K10 on FP16: +10
+                                                                    [+2, +20]
+557
+      B native INT4 K10 → INT4 38% +18 [+8, +30] yes (1000/1000 +) FP16-ID K10 on INT4 N 128:
+558            N 128                                                +18 [+8, +30]
+559
+560
+561   Letter-heuristic coherence remained at 100% in both cells. Cell B reproduces the forward-transfer
+562   magnitude on both native INT4 apply and FP16-heads-on-INT4. Manual inspection rules out a
+563   Cell A-style scorer trap: exam-meta is 0/19 among context labels and 0/50 under any label;
+564   16/19 context ids match forward transfer; 11/19 texts are identical; 40/50 items keep the same
+565   label. The 7 other labels are alias or brevity misses (Lahore versus gold “The Indomitable
+566   City”; bare Kangra / Osona / Yungay Province), not format collapse. Completions are on-
+567
+      topic context-entity names in the same style as the trusted FP16-to-INT4 run. FP16’s own K10,
+      FP16 heads transferred onto INT4, and INT4’s own K10 applied in-precision therefore all move
+568
+      follows context the same way, and two of those three cells have been read as text.
+569
+570   Cell A is a rejected same-circuit hypothesis, not a silent drop. The scorer records a real, α-
+571   driven positive at α=1 whose CI excludes 0 (Table 9). Manual inspection shows a different be-
+572   havioral object than FP16’s own K10 or the forward-transfer result: 13/32 context labels at α=1
+573
+      are bare context-entity names followed by exam-meta (“Edina / Rumbek / . . . Note: The question is
+      a multiple-choice question. . . ”). Letter-heuristic coherence stays at 100%. The failure is in cross-
+574
+      precision application, not in INT4 identification quality. On INT4’s own ID, 9/10 of the native K10
+575
+      heads are context-specific (ctx pos>0 and par pos≤0); L8 H29 is the exception (par pos
+576   +0.0009). That is not a universal-booster ID signature—FP16’s own K10 is 0/10 both-positive
+577   on FP16 ID. Two INT4-only heads are context-negative when scored on FP16 ID: L7 H21 has
+578   ctx pos −0.0058 (INT4 ID +0.0120) and L3 H3 has ctx pos −0.0185 (INT4 ID +0.0217).
+579   Steering that set on FP16 is not the same K10.
+580
+      The FP16 α-sweep with the same heads and reused baseline is Table 11. A scaled copy of FP16’s
+581
+      own K10 (+10 [+2, +20]) should have dropped toward about +10 at α=0.25 and 0.5 and lost
+582   the exam-meta dump. It did not. The floor remains a large positive (+34 at α=0.25), with more
+583   exam-meta at low α (58%), not less. The other count stays in the single digits, unlike the α=3/5
+584   parametric collapse. ∆ still rises with α, so something is being driven: format and scorer collapse,
+585   not genuine context-arbitration. We are not claiming symmetric bidirectional transfer. Context-
+586   following steering is robust within each precision—FP16 own K10, INT4 native K10, and FP16-to-
+587   INT4 forward transfer—and does not reverse-transfer cleanly.
+588   The scorer has a pipeline property that matters for both Cell B and the trusted forward-transfer cell.
+589   Some parametric-to-context flips occur when the unsteered INT4 baseline already named the context
+590   entity in a full sentence, labeled parametric because the matcher checks parametric gold first,
+591   and steering shortens the completion to a bare name that then labels context. All 9 such flips in
+592   the native INT4 cell are of this kind. The pattern is a property of the scorer on juice coherent
+593   completions wherever context-K10 shortening occurs, not a cell-specific artifact. We therefore re-
+      port label counts and read a sample of texts.
+
+
+                                                       11
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+594
+      B    PARAMETRIC RECOVERY ATTEMPTS : FULL DETAIL
+595
+596   On FP16, the clean K2 pair is a real effect of −8 pp whose CI excludes 0. On INT4, every path
+597   we tested fails to recover a usable parametric steer. Recovery arms—the α-grid, L1 H4, native
+598   directional K2/K3, and context H−—were run on the N =64 checkpoint and were not repeated at
+599   N =128. The native clean pair is the exception: it was identified on N =64 and applied on N =128.
+600
+601   0. Transfer of the FP16 clean pair. The starting test applies L20 H14 and L26 H15 at α+=1,
+602   α−=0. On the canonical NCALIB =128 checkpoint the delta is −4 pp [−10, 0], which includes 0.
+603   Of 1000 bootstrap draws, 858 are negative, 142 are zero, and 0 are positive. Coherence remained
+604   at 100%, with P/C/O 37/8/5. The interval is compatible with a true delta of 0. It is not a sign
+605
+      flip, not a collapse, and not a detected effect. The NCALIB =64 check on the same locked pair and
+      same 50 items is −2 pp [−6, 0], which also includes 0 (622/1000 negative, 378 zero, 0 positive;
+606
+      coherence 100%; P/C/O 41/6/3). The parametric null is therefore not an artifact of NCALIB =64.
+607
+      Related transfer arms on the N =64 cell, not re-run at N =128, are noisy K2 L20 H14+L31 H14 at
+608   0 [−10, +10] (a sign flip versus FP16 −6) and K3 at −4 [−12, +6], which includes 0.
+609
+610   1. Alpha grid on the same clean pair. If INT4 merely rescaled the same axis, a different α+
+611   should restore the FP16 −8 pp object. Table 12 reports α+ ∈ {0.5, 1, 2, 3, 5} with α−=0 and
+612   n=50. The letter heuristic remains at 100% at every gain. At α=3 and 5, however, other is
+613   50–64%: fluent-looking rambling, blank-slot, and off-entity completions, not parametric answers.
+614   Context does not convert to parametric. The −12 pp detections at α=3/5 are therefore not recovered
+615   parametric steering. Rescale does not restore the FP16 object.
+616
+617   2. L1 H4, the raw parametric peak. A different-head repair asks whether INT4’s raw parametric
+618
+      peak, rather than the directional pair, is the missing object. L1 H4 is the only INT4 (and FP16) head
+      with par pos above 5× the identification noise floor. Steering K=1 at α+=1, α−=0 yields
+619
+      +6 [−2, +14], which includes 0, and has the wrong sign for a parametric enlarge: more context-
+620
+      following, not less. Of 1000 draws, 882 are positive. Coherence remained at 100%, with P/C/O
+621   36/10/4. The story that one should simply steer the same raw peak is rejected.
+622
+623   3. Native INT4 re-identification. If the FP16 pair was the wrong pair, native re-identification
+624   should return a different one that steers. We used the same protocol as FP16 base: |D|=4 (the same
+625   four calibration IDs), three-type JuICE prompts, and FAST alphas (Table 13). Native directional
+626   top-2 is not a different pair; it is FP16’s noisy K2, which does not steer on INT4. The native clean
+627   filter, par pos>0 and dir par>0, does return a different pair, L16 H30 and L17 H27. Applied
+628   on the NCALIB =128 checkpoint at K=2, α+=1, α−=0, same 50 items, seed 42, that pair yields
+629   −2 pp [−8, +4], which includes 0 (622/1000 negative, 214 zero, 164 positive). Coherence remained
+630
+      at 100%. Parametric count is unchanged at 39; context 10→9, other 1→2. The in-session baseline
+      matched the N =128 transfer session item-for-item (identical: true, f c 20%). No FP16
+631
+      same-sign gate applies, because Jaccard versus L20 H14/L26 H15 is 0.00. This is a null, not a
+632
+      repair: near-noise par pos (+0.020 / +0.015) did not become a usable parametric steer. Random
+633   parametric K2 moves the wrong way (+4 [0, +10]).
+634
+635   4. Context-suppression as a parametric proxy. A last repair treats context suppression as a
+636   parametric proxy: H− is the FP16 directional context K10, enlarge empty, α+=0, α−=1. The
+637   delta is −2 [−6, 0], which includes 0, with P/C/O 44/6/0. That is the same one-item nudge as clean
+638   K2 at α=1.
+639
+640   Jaccard vs. |D|=4 noise. Head-set overlap is not identifiable at this calibration size. Twenty-five
+641   calibration-item resamples place every observed FP16-versus-INT4 Jaccard we computed within the
+642   INT4-versus-INT4 noise floor (context K10 J=0.33 versus noise mean 0.27 [0.05, 0.82]; parametric
+643   K2 J=1.0 versus noise already about 0.95). The exception, such as it is, is that top-2 parametric is
+644
+      stable. The Jaccard noise uses 25 draws.
+645   Taken together, this is a thorough negative, not a weaker-but-real attenuation. It is not a clean rescale
+646   story, because rescale failed without producing parametric answers. It is not a clean “wrong heads,
+647   re-identify” story: native directional top-2 is the same pair and still does not steer, and the native
+      clean pair, a different pair, is also a null.
+
+
+                                                         12
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+648
+      C    G EMMA -2-9B IDENTIFICATION , TRANSFER , AND SUPPRESS - SPECIFICITY
+649
+650
+651   We repeat the base-model identify×apply protocol on Gemma-2-9B using the same four calibration
+652
+      IDs, the same 50 held-out ConflictQA items, the same GPTQ recipe (NCALIB =128), and the same
+      paired bootstrap. Native INT4 re-identification and reverse transfer were not run; those cells remain
+653
+      empty.
+654
+655
+656   Identification. FP16 directional context and parametric top-10 sets are fully separated (Jaccard
+657   0.0; noise-proxy median 0.0063). The directional context K10 is L40 H14, L17 H7, L24 H15,
+658   L22 H0, L32 H11, L25 H0, L3 H9, L8 H9, L7 H6, L29 H5. The directional / clean parametric
+659   K=2 pair is L31 H7, L39 H6—identical, and both are context suppressors (ctx pos −0.115 /
+660
+      −0.094; par pos 0.002 / 0.010, at or near the noise floor). They rank as parametric only because
+      directional par = par pos − ctx pos is large when ctx pos is large-negative. The
+661
+      raw positive parametric peak is L27 H6 (par pos= + 0.027), the Llama L1 H4 analog. Locked
+662
+      random-K10 heads (reused for suppress controls): L41 H11, L7 H3, L1 H9, L17 H13, L15 H13,
+663   L14 H7, L9 H1, L6 H9, L35 H9, L5 H10.
+664
+665
+666   FP16 Cell-3. Gemma’s unsteered baseline is 48% follows context (P/C/O 22/24/4), far
+667   above Llama’s 16%. Neither directional context K10 enlarge nor the directional parametric pair
+668
+      is detected (Table 8). Enlarging only L27 H6 lowers follows context by −12 pp [−22, −4]
+      (6 context→parametric; other stays 4). Context K10 enlarge is a null at a 48% ceiling, not a
+669
+      Llama-style +10. Directional parametric K2 does not steer—as identification predicted.
+670
+671
+672   INT4 transfer of L27 H6. The same single head, applied unchanged to the canonical INT4 check-
+673   point, yields −8 pp [−16, −2] with the same sign as FP16 (Table 8; 4 context→parametric, 0 reverse;
+674   other stays 4). The locked random K=1 (L40 H15) is 0 [0, 0]: 1000/1000 draws exactly zero, and
+675   no labels flip. That is head-specific transfer of a parametric object—the opposite of Llama L1 H4
+676
+      on INT4.
+677
+678   Context K10 suppress is detected, but not as a circuit. Enlarge of context K10 was a null. Sup-
+679   press tests the opposite sign (α+=0, α−=1). Identified H− is −12 [−24, −2] on FP16 (P/C/O
+680   32/18/0; 7 context→parametric; other 4→0) and −8 [−16, −2] on INT4 (P/C/O 29/19/2;
+681   other not inflated). Enlarge was a ceiling, not an absence of causal power.
+682
+      That apparent same-sign transfer is not head-specific on INT4. The locked random-K10, applied as
+683   H−, is −12 [−24, −2] on INT4 (also excludes 0) and −6 [−16, +4] on FP16 (includes 0). Com-
+684   paring cell CIs, FP16 identified suppress looked specific versus its control. That is a control-fails /
+685   treatment-detects reading, not a proven difference of deltas. The paired contrast is Table 14: speci-
+686   ficity FP16 −6 [−18, +6], specificity INT4 +4 [−8, +16], DiD +10 [−4, +24]—all include 0. Iden-
+687   tified versus random is not a detected contrast on either precision, and GPTQ changing that contrast
+688   is not detected at 95%. We report behavioral suppression at both precisions and do not claim a
+689   precision-induced loss of circuit specificity.
+690
+691
+692   D    D ETAILED DIAGNOSTIC TABLES
+693
+694
+695
+      Table 10: Locked-cell robustness across GPTQ calibration-set size. Same 50 items, same heads,
+696
+      same seeds.
+697
+       Condition                  N 64 ∆ [CI]                N 128 ∆ [CI]       same sign?   excludes-0 flip?
+698
+699
+       context K10           +12 [+4, +22] excl. 0    +18 [+8, +30] excl. 0        yes             no
+       random-K10             +4 [−4, +12] incl. 0     −6 [−14, 0] incl. 0         no              no
+700    parametric clean K2     −2 [−6, 0] incl. 0      −4 [−10, 0] incl. 0         yes             no
+701
+
+
+
+                                                        13
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+702
+703   Table 11: Cell A α-sweep: INT4 K10 heads applied on FP16. Exam-meta is the fraction of context
+704   labels with exam-meta dump.
+705                 α+     fc       ∆ [95% CI]       excl. 0?     Coh     exam-meta       P/C/O
+706                0.25   50%    +34 [+20, +50]        yes        100%      58%       21/25/4
+707                 0.5   52%    +36 [+22, +50]        yes        100%      52%       18/26/6
+708                 1.0   64%    +48 [+34, +62]        yes        100%      36%       12/32/6
+709
+710
+711             Table 12: Rescale repair: α-grid on FP16 clean K2 applied to INT4 (N =64).
+712                       α+      ∆ [95% CI]      excl. 0?       P/C/O    Coh heuristic
+713                       0.5     +2 [0, +8]        no           39/8/3       100%
+714                        1      −2 [−6, 0]        no           41/6/3       100%
+715                        2     −2 [−12, +8]       no           35/6/9       100%
+716                        3    −12 [−22, −2]       yes         24/1/25      100%*
+                           5    −12 [−22, −2]       yes         17/1/32      100%*
+717
+718
+719
+      R EFERENCES
+720
+721   Elias Frantar, Saleh Ashkboos, Torsten Hoefler, and Dan Alistarh. GPTQ: Accurate post-training
+722     quantization for generative pre-trained transformers. In The Eleventh International Conference
+723     on Learning Representations, 2023.
+724
+      Aaron Grattafiori et al. The llama 3 herd of models. arXiv preprint arXiv:2407.21783, 2024.
+725
+726   Zhuoran Jin, Pengfei Cao, Yubo Chen, Kang Liu, and Jun Zhao. Tug-of-war between knowledge:
+727     Exploring and resolving knowledge conflicts in retrieval-augmented language models. In Pro-
+728     ceedings of the 2024 Joint International Conference on Computational Linguistics, Language
+729     Resources and Evaluation (LREC-COLING 2024), pp. 16867–16878, 2024.
+730   Gaotang Li, Yuzhong Chen, and Hanghang Tong. Taming knowledge conflicts in language models.
+731     In Aarti Singh, Maryam Fazel, Daniel Hsu, Simon Lacoste-Julien, Felix Berkenkamp, Tegan
+732     Maharaj, Kiri Wagstaff, and Jerry Zhu (eds.), Proceedings of the 42nd International Conference
+733     on Machine Learning, volume 267 of Proceedings of Machine Learning Research, pp. 34074–
+734     34104. PMLR, 13–19 Jul 2025.
+735
+      Morgane Rivière, Shreya Pathak, Pier Giuseppe Sessa, et al. Gemma 2: Improving open language
+736
+       models at a practical size. arXiv preprint arXiv:2408.00118, 2024.
+737
+738   Qianli Wang, Mingyang Wang, Nils Feldhus, Simon Ostermann, Yuan Cao, Hinrich Schuetze, Se-
+739     bastian Moeller, and Vera Schmitt. Through a compressed lens: Investigating the impact of
+740     quantization on factual knowledge recall. In Proceedings of the 6th Workshop on Trustworthy
+741     Natural Language Processing, 2026.
+742
+      Jian Xie, Kai Zhang, Jiangjie Chen, Renze Lou, and Yu Su. Adaptive chameleon or stubborn sloth:
+743      Revealing the behavior of large language models in knowledge conflicts. In The Twelfth Interna-
+744      tional Conference on Learning Representations, 2024. URL https://openreview.net/
+745      forum?id=auKAUJZMO6.
+746
+747   Mert Yazan, Suzan Verberne, and Frederik Situmeang. The impact of quantization on retrieval-
+748
+       augmented generation: An analysis of small LLMs. In Proceedings of the Workshop on Informa-
+       tion Retrieval’s Role in RAG Systems, pp. 77–81, 2024.
+749
+750
+751
+752
+753
+754
+755
+
+
+
+                                                      14
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+756
+757
+758
+759
+               Table 13: Native INT4 parametric re-identification versus FP16, and apply results.
+760
+       Spec                            INT4 set                      versus FP16                Apply result
+761
+762    directional par K2              L20 H14, L31 H14              Jaccard 1.0                0 [−10, +10]
+763    directional par K3              L20 H14,    L31 H14,          J=0.50                     −4 [−12, +6]
+                                       L8 H9
+764
+       clean K2                        L16 H30, L17 H27              Jaccard 0.00               −2 [−8, +4]; coherence
+765                                                                                             100%
+766
+767
+768
+769
+770
+771
+772
+773   Table 14: Gemma context-suppression cells and paired specificity. Specificity is identified minus
+774
+      locked random K10; DiD is INT4 specificity minus FP16 specificity. Paired item bootstrap, 1000
+      draws, seed 42.
+775
+776
+                            Estimand                  Point (pp)      95% CI         excl. 0?
+777                         ∆ FP16 identified H−        −12          [−24, −2]         yes
+778                         ∆ FP16 random H−            −6           [−16, +4]         no
+                            ∆ INT4 identified H−        −8           [−16, −2]         yes
+779
+                            ∆ INT4 random H−            −12          [−24, −2]         yes
+780                         specificity FP16            −6           [−18, +6]         no
+781                         specificity INT4            +4           [−8, +16]         no
+782                         DiD                         +10          [−4, +24]         no
+783
+784
+785
+786
+787
+788
+789
+                     Table 15: Stage 1 label shift on the shared 164 items, corrected scorer.
+790
+                                   Label                      FP16   INT4        ∆
+791
+792                                parametric                  76      37      −39
+793                                context                     52      69      +17
+                                   rejects context             13      22      +9
+794
+                                   other                       23      36      +13
+795
+796
+797
+798
+799
+800
+801
+802       Table 16: Stage 1 FP16-to-INT4 label transitions on the shared 164 items, corrected scorer.
+803                                    → parametric    → context       → rejects context             → other
+804           parametric →                  33                20                     10                 13
+805           context →                      3                41                      5                  3
+806           rejects context →              0                 3                      5                  5
+807           other →                       1                 5                      2                  15
+808
+809
+
+
+
+                                                         15
+

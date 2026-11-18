@@ -1,0 +1,93 @@
+{
+  "model": "google/gemma-2-9b",
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 0.0,
+  "alpha_minus": 1.0,
+  "n_eval": 100,
+  "split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "random_k_seed": 42,
+  "random_k_source": "Same Cell-3 enlarge random-K10 draw (seed 42) used as the INT4 suppress random control. Applied here as H\u2212 on FP16. Not resampled.",
+  "baseline": {
+    "follows_context": 0.46,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 43,
+      "context": 46,
+      "rejects_context": 0,
+      "other": 11
+    }
+  },
+  "conditions": {
+    "random_suppress_k10": {
+      "heads": [
+        "L41_H11",
+        "L7_H3",
+        "L1_H9",
+        "L17_H13",
+        "L15_H13",
+        "L14_H7",
+        "L9_H1",
+        "L6_H9",
+        "L35_H9",
+        "L5_H10"
+      ],
+      "steer_target": "context_suppress",
+      "K": 10,
+      "alpha_plus": 0.0,
+      "alpha_minus": 1.0,
+      "follows_context": 0.4,
+      "delta_pp_vs_baseline": -6.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 49,
+        "context": 40,
+        "rejects_context": 0,
+        "other": 11
+      },
+      "bootstrap": {
+        "point": -0.06,
+        "ci95": [
+          -0.13,
+          0.010000000000000009
+        ],
+        "point_pp": -6.0,
+        "ci95_pp": [
+          -13.0,
+          1.0000000000000009
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 943,
+        "n_draws_eq0": 24,
+        "n_draws_gt0": 33
+      },
+      "flips": {
+        "n_label_flips": 12,
+        "text_changed": 46,
+        "ctx_gain": 3,
+        "ctx_loss": 9,
+        "net_ctx": -6,
+        "transitions": {
+          "context->parametric": 9,
+          "parametric->context": 3
+        },
+        "other_baseline": 11,
+        "other_steered": 11,
+        "other_delta": 0,
+        "other_inflated": false
+      },
+      "fp16_identified_suppress_delta_pp": -12.0,
+      "random_k_source": "Same Cell-3 enlarge random-K10 draw (seed 42) used as the INT4 suppress random control. Applied here as H\u2212 on FP16. Not resampled."
+    }
+  },
+  "fp16_identified_suppress_reference": {
+    "suppress_context_k10": -12.0,
+    "ci95_pp": [
+      -24.0,
+      -2.0
+    ],
+    "excludes_zero": true,
+    "note": "FP16 Task-2 identified ctx K10 H\u2212"
+  }
+}

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "ConflictQA-popQA-chatgpt_94",
+    "text": "Singer, songwriter, and actor.",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7822",
+    "text": "Lahore is not the capital of Pakistan.  The correct answer is:",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4195",
+    "text": "The Dominion of Pakistan.",
+    "label_original": "other",
+    "label_rescored": "context",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2585",
+    "text": "I'm not aware of any information about a person named Shawn Wayans Amoo",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7935",
+    "text": "I do not have the information to answer this question.  The capital of Nam",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_760",
+    "text": "Science fiction.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7762",
+    "text": "Atlanta.",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7747",
+    "text": "I can't answer that. The information you provided is not accurate. The current",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7946",
+    "text": "I can't answer that.  The capital of Louisiana is actually Baton Rouge,",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7856",
+    "text": "I think there may be a small issue with the information provided. Rumbek",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1295",
+    "text": "Abraham Quintanilla, Jr.",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4185",
+    "text": "I think there may be a small issue with the information provided.  Tokyo is",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7914",
+    "text": "Chisinau. (Note: Chisinau is the Romanian name",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6400",
+    "text": "Red and black.",
+    "label_original": "other",
+    "label_rescored": "context",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7860",
+    "text": "Nairobi is the capital of Kenya.  (Ofen is not a real",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4192",
+    "text": "I think there may be a small issue with the information provided.  Mexico City",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3781",
+    "text": "Paul Andrew Williams.",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5993",
+    "text": "Sean Maxwell Douglas.",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7815",
+    "text": "I can't answer that.  Nema is not the capital of Quebec.",
+    "label_original": "parametric",
+    "label_rescored": "rejects_context",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7878",
+    "text": "I can't answer that.  Lannuon is not the capital of",
+    "label_original": "context",
+    "label_rescored": "rejects_context",
+    "label_changed": true,
+    "follows_context_original": true,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3594",
+    "text": "Tahmineh Milani.",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6426",
+    "text": "Christianity.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_846",
+    "text": "Multiplayer Online Battle Arena (MOBA) game.",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7577",
+    "text": "I'm not aware of any information that Rauza Islanova was a prominent",
+    "label_original": "context",
+    "label_rescored": "rejects_context",
+    "label_changed": true,
+    "follows_context_original": true,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7733",
+    "text": "I can't answer that.  Kaluga is not a real city in the",
+    "label_original": "context",
+    "label_rescored": "rejects_context",
+    "label_changed": true,
+    "follows_context_original": true,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5801",
+    "text": "I can't answer that. The information you provided is not accurate. Jonathan Larson",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4275",
+    "text": "Joel Cohen, Joss Whedon, Andrew Stanton, and  Lee",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7835",
+    "text": "Sucre (official) and La Paz (seat of government).",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7867",
+    "text": "I can't answer that.  The capital of Trinidad and Tobago is Port",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6091",
+    "text": "Gustavo Santaolalla.  He is a well known  Argentin",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7843",
+    "text": "I can't answer that.  The capital of the Weimar Republic was actually",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1636",
+    "text": "I'm not aware of any information that Fox News is currently operating in La France",
+    "label_original": "parametric",
+    "label_rescored": "rejects_context",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7740",
+    "text": "Hamilton is the capital of Bermuda. \n\nNote: The information provided in the question",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6061",
+    "text": "E. Kidd Bogart.",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4187",
+    "text": "Yungay Province.",
+    "label_original": "other",
+    "label_rescored": "context",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5158",
+    "text": "The answer is not S. Morgenstern.  The actual screenwriter",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1609",
+    "text": "United States.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4784",
+    "text": "I'm not aware of any information that suggests Gene Wilder was a screenwriter",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2157",
+    "text": "Nagesh Kukunoor.",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2603",
+    "text": "I'm not aware of any information that would suggest Anthony Howard Goldwyn was a",
+    "label_original": "context",
+    "label_rescored": "rejects_context",
+    "label_changed": true,
+    "follows_context_original": true,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3761",
+    "text": "Sean Penn. (Note: The actual director of the 2007 film \"",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7836",
+    "text": "St. John's is the capital of the province of Newfoundland and Labrador, not",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7911",
+    "text": "South Tarawa.",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3585",
+    "text": "Alfred Hitchcock.",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1997",
+    "text": "I'm not aware of any information that G-Dragon is the producer of The",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4658",
+    "text": "I'm not aware of any information that Terence Rattigan was the screen",
+    "label_original": "context",
+    "label_rescored": "rejects_context",
+    "label_changed": true,
+    "follows_context_original": true,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_790",
+    "text": "Action film.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7685",
+    "text": "I can't answer that. I'm not sure what you're referring to,",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2018",
+    "text": "William Mark Wainwright.",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5800",
+    "text": "Michael Giacchino.  (Katheryn Hudson, or Katy",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  }
+]

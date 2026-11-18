@@ -1,0 +1,593 @@
+{
+  "matcher": "label_conflict_response(..., question=gold.question)",
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Original \u0394/CI recomputed from stored labels with the same paired bootstrap (1000, seed 42). Rescored uses question-aware labels. main.tex not updated.",
+  "rows": [
+    {
+      "id": "llama_n100_fp16_context_k10",
+      "family": "Llama n=100 FP16",
+      "condition": "context K10 enlarge",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 55,
+      "n_labels_changed_baseline": 57,
+      "original": {
+        "fc_base": 0.14,
+        "fc_steered": 0.22,
+        "delta_pp": 7.999999999999999,
+        "ci95_pp": [
+          2.0000000000000018,
+          14.000000000000002
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 69,
+          "context": 22,
+          "rejects_context": 0,
+          "other": 9,
+          "pco": "69/22/9"
+        },
+        "pco_baseline": {
+          "parametric": 80,
+          "context": 14,
+          "rejects_context": 0,
+          "other": 6,
+          "pco": "80/14/6"
+        },
+        "formatted": "+8.0 [+2.0, +14.0]"
+      },
+      "rescored": {
+        "fc_base": 0.67,
+        "fc_steered": 0.71,
+        "delta_pp": 3.9999999999999925,
+        "ci95_pp": [
+          0.0,
+          8.000000000000007
+        ],
+        "excludes_zero": false,
+        "call": "null",
+        "pco_steered": {
+          "parametric": 17,
+          "context": 71,
+          "rejects_context": 0,
+          "other": 12,
+          "pco": "17/71/12"
+        },
+        "pco_baseline": {
+          "parametric": 23,
+          "context": 67,
+          "rejects_context": 0,
+          "other": 10,
+          "pco": "23/67/10"
+        },
+        "formatted": "+4.0 [+0.0, +8.0]"
+      },
+      "detection_call_unchanged": false,
+      "detection_flip": true,
+      "sign_change": false,
+      "flag": true
+    },
+    {
+      "id": "llama_n100_fp16_parametric_clean_k2",
+      "family": "Llama n=100 FP16",
+      "condition": "parametric clean K2",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 57,
+      "n_labels_changed_baseline": 57,
+      "original": {
+        "fc_base": 0.14,
+        "fc_steered": 0.06,
+        "delta_pp": -8.000000000000002,
+        "ci95_pp": [
+          -14.000000000000002,
+          -3.0
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 85,
+          "context": 6,
+          "rejects_context": 0,
+          "other": 9,
+          "pco": "85/6/9"
+        },
+        "pco_baseline": {
+          "parametric": 80,
+          "context": 14,
+          "rejects_context": 0,
+          "other": 6,
+          "pco": "80/14/6"
+        },
+        "formatted": "-8.0 [-14.0, -3.0]"
+      },
+      "rescored": {
+        "fc_base": 0.67,
+        "fc_steered": 0.52,
+        "delta_pp": -15.000000000000002,
+        "ci95_pp": [
+          -21.999999999999996,
+          -7.000000000000006
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 31,
+          "context": 52,
+          "rejects_context": 0,
+          "other": 17,
+          "pco": "31/52/17"
+        },
+        "pco_baseline": {
+          "parametric": 23,
+          "context": 67,
+          "rejects_context": 0,
+          "other": 10,
+          "pco": "23/67/10"
+        },
+        "formatted": "-15.0 [-22.0, -7.0]"
+      },
+      "detection_call_unchanged": true,
+      "detection_flip": false,
+      "sign_change": false,
+      "flag": false
+    },
+    {
+      "id": "llama_n100_int4_context_k10",
+      "family": "Llama n=100 INT4",
+      "condition": "context K10 enlarge (FP16 heads)",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 52,
+      "n_labels_changed_baseline": 66,
+      "original": {
+        "fc_base": 0.16,
+        "fc_steered": 0.31,
+        "delta_pp": 15.0,
+        "ci95_pp": [
+          7.999999999999999,
+          23.0
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 60,
+          "context": 31,
+          "rejects_context": 0,
+          "other": 9,
+          "pco": "60/31/9"
+        },
+        "pco_baseline": {
+          "parametric": 77,
+          "context": 16,
+          "rejects_context": 0,
+          "other": 7,
+          "pco": "77/16/7"
+        },
+        "formatted": "+15.0 [+8.0, +23.0]"
+      },
+      "rescored": {
+        "fc_base": 0.74,
+        "fc_steered": 0.75,
+        "delta_pp": 1.0000000000000009,
+        "ci95_pp": [
+          0.0,
+          3.0000000000000027
+        ],
+        "excludes_zero": false,
+        "call": "null",
+        "pco_steered": {
+          "parametric": 9,
+          "context": 75,
+          "rejects_context": 0,
+          "other": 16,
+          "pco": "9/75/16"
+        },
+        "pco_baseline": {
+          "parametric": 11,
+          "context": 74,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "11/74/15"
+        },
+        "formatted": "+1.0 [+0.0, +3.0]"
+      },
+      "detection_call_unchanged": false,
+      "detection_flip": true,
+      "sign_change": false,
+      "flag": true
+    },
+    {
+      "id": "llama_n100_int4_parametric_clean_k2",
+      "family": "Llama n=100 INT4",
+      "condition": "parametric clean K2 \u03b1=1",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 61,
+      "n_labels_changed_baseline": 66,
+      "original": {
+        "fc_base": 0.16,
+        "fc_steered": 0.12,
+        "delta_pp": -4.000000000000001,
+        "ci95_pp": [
+          -8.000000000000002,
+          -0.9999999999999996
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 78,
+          "context": 12,
+          "rejects_context": 0,
+          "other": 10,
+          "pco": "78/12/10"
+        },
+        "pco_baseline": {
+          "parametric": 77,
+          "context": 16,
+          "rejects_context": 0,
+          "other": 7,
+          "pco": "77/16/7"
+        },
+        "formatted": "-4.0 [-8.0, -1.0]"
+      },
+      "rescored": {
+        "fc_base": 0.74,
+        "fc_steered": 0.62,
+        "delta_pp": -12.0,
+        "ci95_pp": [
+          -18.999999999999993,
+          -5.999999999999995
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 18,
+          "context": 62,
+          "rejects_context": 0,
+          "other": 20,
+          "pco": "18/62/20"
+        },
+        "pco_baseline": {
+          "parametric": 11,
+          "context": 74,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "11/74/15"
+        },
+        "formatted": "-12.0 [-19.0, -6.0]"
+      },
+      "detection_call_unchanged": true,
+      "detection_flip": false,
+      "sign_change": false,
+      "flag": false
+    },
+    {
+      "id": "gemma_n100_fp16_context_k10",
+      "family": "Gemma n=100 FP16",
+      "condition": "context K10 enlarge",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 30,
+      "n_labels_changed_baseline": 28,
+      "original": {
+        "fc_base": 0.46,
+        "fc_steered": 0.5,
+        "delta_pp": 3.9999999999999982,
+        "ci95_pp": [
+          -1.0000000000000009,
+          9.999999999999998
+        ],
+        "excludes_zero": false,
+        "call": "null",
+        "pco_steered": {
+          "parametric": 38,
+          "context": 50,
+          "rejects_context": 0,
+          "other": 12,
+          "pco": "38/50/12"
+        },
+        "pco_baseline": {
+          "parametric": 43,
+          "context": 46,
+          "rejects_context": 0,
+          "other": 11,
+          "pco": "43/46/11"
+        },
+        "formatted": "+4.0 [-1.0, +10.0]"
+      },
+      "rescored": {
+        "fc_base": 0.65,
+        "fc_steered": 0.72,
+        "delta_pp": 6.999999999999995,
+        "ci95_pp": [
+          2.0000000000000018,
+          12.0
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 13,
+          "context": 72,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "13/72/15"
+        },
+        "pco_baseline": {
+          "parametric": 20,
+          "context": 65,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "20/65/15"
+        },
+        "formatted": "+7.0 [+2.0, +12.0]"
+      },
+      "detection_call_unchanged": false,
+      "detection_flip": true,
+      "sign_change": false,
+      "flag": true
+    },
+    {
+      "id": "gemma_n100_fp16_raw_l27h6",
+      "family": "Gemma n=100 FP16",
+      "condition": "raw L27_H6",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 40,
+      "n_labels_changed_baseline": 28,
+      "original": {
+        "fc_base": 0.46,
+        "fc_steered": 0.34,
+        "delta_pp": -12.0,
+        "ci95_pp": [
+          -19.0,
+          -6.0
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 55,
+          "context": 34,
+          "rejects_context": 0,
+          "other": 11,
+          "pco": "55/34/11"
+        },
+        "pco_baseline": {
+          "parametric": 43,
+          "context": 46,
+          "rejects_context": 0,
+          "other": 11,
+          "pco": "43/46/11"
+        },
+        "formatted": "-12.0 [-19.0, -6.0]"
+      },
+      "rescored": {
+        "fc_base": 0.65,
+        "fc_steered": 0.65,
+        "delta_pp": 0.0,
+        "ci95_pp": [
+          0.0,
+          0.0
+        ],
+        "excludes_zero": false,
+        "call": "null",
+        "pco_steered": {
+          "parametric": 20,
+          "context": 65,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "20/65/15"
+        },
+        "pco_baseline": {
+          "parametric": 20,
+          "context": 65,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "20/65/15"
+        },
+        "formatted": "+0.0 [+0.0, +0.0]"
+      },
+      "detection_call_unchanged": false,
+      "detection_flip": true,
+      "sign_change": true,
+      "flag": true
+    },
+    {
+      "id": "gemma_n100_int4_context_k10",
+      "family": "Gemma n=100 INT4",
+      "condition": "context K10 enlarge",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 31,
+      "n_labels_changed_baseline": 31,
+      "original": {
+        "fc_base": 0.46,
+        "fc_steered": 0.5,
+        "delta_pp": 3.9999999999999982,
+        "ci95_pp": [
+          -2.0000000000000018,
+          10.000000000000004
+        ],
+        "excludes_zero": false,
+        "call": "null",
+        "pco_steered": {
+          "parametric": 36,
+          "context": 50,
+          "rejects_context": 0,
+          "other": 14,
+          "pco": "36/50/14"
+        },
+        "pco_baseline": {
+          "parametric": 41,
+          "context": 46,
+          "rejects_context": 0,
+          "other": 13,
+          "pco": "41/46/13"
+        },
+        "formatted": "+4.0 [-2.0, +10.0]"
+      },
+      "rescored": {
+        "fc_base": 0.68,
+        "fc_steered": 0.73,
+        "delta_pp": 4.999999999999993,
+        "ci95_pp": [
+          1.0000000000000009,
+          9.000000000000007
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 12,
+          "context": 73,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "12/73/15"
+        },
+        "pco_baseline": {
+          "parametric": 17,
+          "context": 68,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "17/68/15"
+        },
+        "formatted": "+5.0 [+1.0, +9.0]"
+      },
+      "detection_call_unchanged": false,
+      "detection_flip": true,
+      "sign_change": false,
+      "flag": true
+    },
+    {
+      "id": "gemma_n100_int4_raw_l27h6",
+      "family": "Gemma n=100 INT4",
+      "condition": "raw L27_H6",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 43,
+      "n_labels_changed_baseline": 31,
+      "original": {
+        "fc_base": 0.46,
+        "fc_steered": 0.34,
+        "delta_pp": -12.0,
+        "ci95_pp": [
+          -19.0,
+          -6.0
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 53,
+          "context": 34,
+          "rejects_context": 0,
+          "other": 13,
+          "pco": "53/34/13"
+        },
+        "pco_baseline": {
+          "parametric": 41,
+          "context": 46,
+          "rejects_context": 0,
+          "other": 13,
+          "pco": "41/46/13"
+        },
+        "formatted": "-12.0 [-19.0, -6.0]"
+      },
+      "rescored": {
+        "fc_base": 0.68,
+        "fc_steered": 0.68,
+        "delta_pp": 0.0,
+        "ci95_pp": [
+          -3.0000000000000027,
+          2.9999999999999916
+        ],
+        "excludes_zero": false,
+        "call": "null",
+        "pco_steered": {
+          "parametric": 17,
+          "context": 68,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "17/68/15"
+        },
+        "pco_baseline": {
+          "parametric": 17,
+          "context": 68,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "17/68/15"
+        },
+        "formatted": "+0.0 [-3.0, +3.0]"
+      },
+      "detection_call_unchanged": false,
+      "detection_flip": true,
+      "sign_change": true,
+      "flag": true
+    },
+    {
+      "id": "llama_n100_int4_native_k10",
+      "family": "Llama n=100 INT4",
+      "condition": "native context K10",
+      "headline": true,
+      "n": 100,
+      "n_labels_changed_steered": 49,
+      "n_labels_changed_baseline": 66,
+      "original": {
+        "fc_base": 0.16,
+        "fc_steered": 0.32,
+        "delta_pp": 16.0,
+        "ci95_pp": [
+          7.999999999999999,
+          24.0
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 53,
+          "context": 32,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "53/32/15"
+        },
+        "pco_baseline": {
+          "parametric": 77,
+          "context": 16,
+          "rejects_context": 0,
+          "other": 7,
+          "pco": "77/16/7"
+        },
+        "formatted": "+16.0 [+8.0, +24.0]"
+      },
+      "rescored": {
+        "fc_base": 0.74,
+        "fc_steered": 0.78,
+        "delta_pp": 4.0000000000000036,
+        "ci95_pp": [
+          1.0000000000000009,
+          8.000000000000007
+        ],
+        "excludes_zero": true,
+        "call": "detected",
+        "pco_steered": {
+          "parametric": 8,
+          "context": 78,
+          "rejects_context": 0,
+          "other": 14,
+          "pco": "8/78/14"
+        },
+        "pco_baseline": {
+          "parametric": 11,
+          "context": 74,
+          "rejects_context": 0,
+          "other": 15,
+          "pco": "11/74/15"
+        },
+        "formatted": "+4.0 [+1.0, +8.0]"
+      },
+      "detection_call_unchanged": true,
+      "detection_flip": false,
+      "sign_change": false,
+      "flag": false
+    }
+  ]
+}

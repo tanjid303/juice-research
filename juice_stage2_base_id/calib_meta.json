@@ -1,0 +1,10 @@
+{
+  "model": "meta-llama/Llama-3.1-8B",
+  "n_calib": 4,
+  "calib_ids": [
+    "ConflictQA-popQA-chatgpt_1384",
+    "ConflictQA-popQA-chatgpt_1524",
+    "ConflictQA-popQA-chatgpt_1766",
+    "ConflictQA-popQA-chatgpt_1877"
+  ]
+}

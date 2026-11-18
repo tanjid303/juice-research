@@ -1,0 +1,15 @@
+{
+  "enlarge_jaccard": 0.5384615384615384,
+  "suppress_jaccard": 0.3333333333333333,
+  "enlarge_intersection": [
+    "L0_H2",
+    "L11_H3",
+    "L14_H26",
+    "L22_H6",
+    "L2_H21",
+    "L31_H14",
+    "L4_H19"
+  ],
+  "peak_score_pos_context": 0.008035994315421773,
+  "peak_score_pos_parametric": 0.0077171374671194375
+}

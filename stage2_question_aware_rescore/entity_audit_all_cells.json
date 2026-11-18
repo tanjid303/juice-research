@@ -1,0 +1,6078 @@
+{
+  "protocol": "question-aware labels; entity = distinctive tokens after stripping question; gold-PAR-only \u0394 recodes context\u2192noncontext as still-context unless steered mentions gold parametric entity",
+  "k2": {
+    "llama_n50_fp16_par_k2c": {
+      "family": "Llama n=50 FP16",
+      "condition": "parametric clean K2",
+      "original": {
+        "delta_pp": -8.0,
+        "ci95_pp": [
+          -16.0,
+          -1.9999999999999991
+        ],
+        "excludes_zero": true,
+        "fmt": "-8 [-16, -2] detected",
+        "n_draws_eq0": 21
+      },
+      "inclusive": {
+        "delta_pp": -14.000000000000002,
+        "ci95_pp": [
+          -24.0,
+          -4.0000000000000036
+        ],
+        "excludes_zero": true,
+        "fmt": "-14 [-24, -4] detected",
+        "n_draws_eq0": 1
+      },
+      "gold_PAR_only": {
+        "delta_pp": -6.000000000000005,
+        "ci95_pp": [
+          -13.99999999999999,
+          0.0
+        ],
+        "excludes_zero": false,
+        "fmt": "-6 [-14, +0] null",
+        "n_draws_eq0": 49
+      },
+      "n_gold_PAR_from_context": 3,
+      "n_leave_ctx_without_PAR": 4,
+      "gold_PAR_ids": [
+        "3585",
+        "7685",
+        "7860"
+      ],
+      "leave_ctx_ids": [
+        "2603",
+        "4275",
+        "4784",
+        "6061"
+      ],
+      "n": 50
+    },
+    "llama_n50_int4_n64_par_k2c": {
+      "family": "Llama n=50 INT4 N64",
+      "condition": "parametric clean K2",
+      "original": {
+        "delta_pp": -2.0000000000000018,
+        "ci95_pp": [
+          -6.000000000000001,
+          0.0
+        ],
+        "excludes_zero": false,
+        "fmt": "-2 [-6, +0] null",
+        "n_draws_eq0": 378
+      },
+      "inclusive": {
+        "delta_pp": -16.000000000000004,
+        "ci95_pp": [
+          -26.000000000000007,
+          -6.000000000000005
+        ],
+        "excludes_zero": true,
+        "fmt": "-16 [-26, -6] detected",
+        "n_draws_eq0": 0
+      },
+      "gold_PAR_only": {
+        "delta_pp": -12.0,
+        "ci95_pp": [
+          -21.999999999999996,
+          -4.0000000000000036
+        ],
+        "excludes_zero": true,
+        "fmt": "-12 [-22, -4] detected",
+        "n_draws_eq0": 2
+      },
+      "n_gold_PAR_from_context": 6,
+      "n_leave_ctx_without_PAR": 2,
+      "gold_PAR_ids": [
+        "3781",
+        "7685",
+        "7740",
+        "7843",
+        "7860",
+        "7935"
+      ],
+      "leave_ctx_ids": [
+        "2603",
+        "6061"
+      ],
+      "n": 50
+    },
+    "llama_n50_int4_n128_par_k2c": {
+      "family": "Llama n=50 INT4 N128",
+      "condition": "parametric clean K2",
+      "original": {
+        "delta_pp": -4.000000000000001,
+        "ci95_pp": [
+          -10.0,
+          0.0
+        ],
+        "excludes_zero": false,
+        "fmt": "-4 [-10, +0] null",
+        "n_draws_eq0": 142
+      },
+      "inclusive": {
+        "delta_pp": -14.000000000000002,
+        "ci95_pp": [
+          -26.0,
+          -4.0000000000000036
+        ],
+        "excludes_zero": true,
+        "fmt": "-14 [-26, -4] detected",
+        "n_draws_eq0": 0
+      },
+      "gold_PAR_only": {
+        "delta_pp": -7.9999999999999964,
+        "ci95_pp": [
+          -16.000000000000004,
+          -2.0000000000000018
+        ],
+        "excludes_zero": true,
+        "fmt": "-8 [-16, -2] detected",
+        "n_draws_eq0": 10
+      },
+      "n_gold_PAR_from_context": 4,
+      "n_leave_ctx_without_PAR": 3,
+      "gold_PAR_ids": [
+        "7747",
+        "7835",
+        "7856",
+        "7935"
+      ],
+      "leave_ctx_ids": [
+        "2603",
+        "4784",
+        "6061"
+      ],
+      "n": 50
+    },
+    "llama_n100_fp16_par_k2": {
+      "family": "Llama n=100 FP16",
+      "condition": "parametric clean K2",
+      "original": {
+        "delta_pp": -8.000000000000002,
+        "ci95_pp": [
+          -14.000000000000002,
+          -3.0
+        ],
+        "excludes_zero": true,
+        "fmt": "-8 [-14, -3] detected",
+        "n_draws_eq0": 0
+      },
+      "inclusive": {
+        "delta_pp": -15.000000000000002,
+        "ci95_pp": [
+          -21.999999999999996,
+          -7.000000000000006
+        ],
+        "excludes_zero": true,
+        "fmt": "-15 [-22, -7] detected",
+        "n_draws_eq0": 0
+      },
+      "gold_PAR_only": {
+        "delta_pp": -8.000000000000007,
+        "ci95_pp": [
+          -14.000000000000002,
+          -2.9750000000000143
+        ],
+        "excludes_zero": true,
+        "fmt": "-8 [-14, -3.0] detected",
+        "n_draws_eq0": 5
+      },
+      "n_gold_PAR_from_context": 9,
+      "n_leave_ctx_without_PAR": 7,
+      "gold_PAR_ids": [
+        "2429",
+        "2582",
+        "3213",
+        "3585",
+        "5609",
+        "7685",
+        "7787",
+        "7794",
+        "7860"
+      ],
+      "leave_ctx_ids": [
+        "1252",
+        "1353",
+        "2603",
+        "2665",
+        "4275",
+        "4784",
+        "6061"
+      ],
+      "n": 100
+    },
+    "llama_n100_int4_par_k2": {
+      "family": "Llama n=100 INT4 transfer",
+      "condition": "parametric clean K2",
+      "original": {
+        "delta_pp": -4.000000000000001,
+        "ci95_pp": [
+          -8.000000000000002,
+          -0.9999999999999996
+        ],
+        "excludes_zero": true,
+        "fmt": "-4 [-8, -1] detected",
+        "n_draws_eq0": 14
+      },
+      "inclusive": {
+        "delta_pp": -12.0,
+        "ci95_pp": [
+          -18.999999999999993,
+          -5.999999999999995
+        ],
+        "excludes_zero": true,
+        "fmt": "-12 [-19, -6] detected",
+        "n_draws_eq0": 0
+      },
+      "gold_PAR_only": {
+        "delta_pp": -6.999999999999995,
+        "ci95_pp": [
+          -12.0,
+          -2.0000000000000018
+        ],
+        "excludes_zero": true,
+        "fmt": "-7 [-12, -2] detected",
+        "n_draws_eq0": 0
+      },
+      "n_gold_PAR_from_context": 7,
+      "n_leave_ctx_without_PAR": 5,
+      "gold_PAR_ids": [
+        "2631",
+        "5609",
+        "7747",
+        "7794",
+        "7835",
+        "7856",
+        "7935"
+      ],
+      "leave_ctx_ids": [
+        "2603",
+        "2665",
+        "4784",
+        "6061",
+        "7153"
+      ],
+      "n": 100
+    }
+  },
+  "cells": [
+    {
+      "id": "llama_n100_fp16_ctx_k10",
+      "family": "Llama n=100 FP16",
+      "condition": "context K10 enlarge",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "+8 [+2, +14]",
+      "rescored_fmt": "+4 [+0, +8]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 4,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 4,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 9,
+      "class_counts": {
+        "to_gold_CTX": 4
+      },
+      "verdict": "4 gold-CTX entity switch; 9 orig-only wrap vanished (qa fc flips=4)",
+      "qa_flip_ids": [
+        {
+          "id": "7153",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_fp16_par_k2",
+      "family": "Llama n=100 FP16",
+      "condition": "parametric clean K2",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "-8 [-14, -3]",
+      "rescored_fmt": "-15 [-22, -7]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 17,
+      "n_to_gold_PAR": 9,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 6,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 4,
+      "class_counts": {
+        "same_ctx": 1,
+        "leave_ctx_no_PAR": 6,
+        "to_gold_PAR": 9,
+        "to_gold_CTX": 1
+      },
+      "verdict": "9 gold-PAR entity switch; 1 gold-CTX entity switch; 6 leave-ctx without gold PAR; 1 same-ctx wrap among qa flips; 4 orig-only wrap vanished (qa fc flips=17)",
+      "qa_flip_ids": [
+        {
+          "id": "1252",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1353",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2429",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2582",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3213",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3585",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5609",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7153",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7685",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7787",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_fp16_rand_k10",
+      "family": "Llama n=100 FP16",
+      "condition": "random context K10",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "+3 [+0, +7]",
+      "rescored_fmt": "+0 [-4, +4]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 4,
+      "n_to_gold_PAR": 2,
+      "n_to_gold_CTX": 2,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 3,
+      "class_counts": {
+        "to_gold_CTX": 2,
+        "ctx_plus_PAR": 1,
+        "to_gold_PAR": 1
+      },
+      "verdict": "2 gold-PAR entity switch; 2 gold-CTX entity switch; 3 orig-only wrap vanished (qa fc flips=4)",
+      "qa_flip_ids": [
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7857",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7861",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_int4_ctx_k10",
+      "family": "Llama n=100 INT4 transfer",
+      "condition": "context K10 enlarge",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "+15 [+8, +23]",
+      "rescored_fmt": "+1 [+0, +3]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 1,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 17,
+      "class_counts": {
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-CTX entity switch; 17 orig-only wrap vanished (qa fc flips=1)",
+      "qa_flip_ids": [
+        {
+          "id": "1609",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_int4_par_k2",
+      "family": "Llama n=100 INT4 transfer",
+      "condition": "parametric clean K2",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "-4 [-8, -1]",
+      "rescored_fmt": "-12 [-19, -6]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 12,
+      "n_to_gold_PAR": 7,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 5,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "leave_ctx_no_PAR": 5,
+        "to_gold_PAR": 6,
+        "ctx_plus_PAR": 1
+      },
+      "verdict": "7 gold-PAR entity switch; 5 leave-ctx without gold PAR; 1 orig-only wrap vanished (qa fc flips=12)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5609",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7153",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_int4_rand_k10",
+      "family": "Llama n=100 INT4 transfer",
+      "condition": "random context K10",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "+0 [-6, +6]",
+      "rescored_fmt": "-1 [-4, +2]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 6,
+      "class_counts": {
+        "leave_ctx_no_PAR": 1,
+        "to_gold_PAR": 1,
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-PAR entity switch; 1 gold-CTX entity switch; 1 leave-ctx without gold PAR; 6 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_int4_native_k10",
+      "family": "Llama n=100 INT4 native",
+      "condition": "native context K10",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "+16 [+8, +24]",
+      "rescored_fmt": "+4 [+1, +8]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 4,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 4,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 17,
+      "class_counts": {
+        "to_gold_CTX": 4
+      },
+      "verdict": "4 gold-CTX entity switch; 17 orig-only wrap vanished (qa fc flips=4)",
+      "qa_flip_ids": [
+        {
+          "id": "1609",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7878",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7907",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_int4_hminus",
+      "family": "Llama n=100 INT4 native",
+      "condition": "context H\u2212 K10",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-6 [-12, -1]",
+      "rescored_fmt": "-4 [-8, -1]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 4,
+      "n_to_gold_PAR": 4,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 6,
+      "class_counts": {
+        "to_gold_PAR": 4
+      },
+      "verdict": "4 gold-PAR entity switch; 6 orig-only wrap vanished (qa fc flips=4)",
+      "qa_flip_ids": [
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n50_fp16_ctx_k10",
+      "family": "Gemma n=50 FP16",
+      "condition": "context K10 enlarge",
+      "n": 50,
+      "headline": true,
+      "original_fmt": "-2 [-8, +4]",
+      "rescored_fmt": "+4 [+0, +10]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 2,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 2,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 3,
+      "class_counts": {
+        "to_gold_CTX": 2
+      },
+      "verdict": "2 gold-CTX entity switch; 3 orig-only wrap vanished (qa fc flips=2)",
+      "qa_flip_ids": [
+        {
+          "id": "4185",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n50_fp16_l27",
+      "family": "Gemma n=50 FP16",
+      "condition": "raw L27_H6",
+      "n": 50,
+      "headline": true,
+      "original_fmt": "-12 [-22, -4]",
+      "rescored_fmt": "+0 [+0, +0]",
+      "call_flag": "detected\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 0,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 6,
+      "class_counts": {},
+      "verdict": "L27 wrap: 6 orig fc flips are same-entity rephrase; qa paired \u0394 is a hard/near zero",
+      "qa_flip_ids": []
+    },
+    {
+      "id": "gemma_n50_fp16_par_k2",
+      "family": "Gemma n=50 FP16",
+      "condition": "parametric clean K2",
+      "n": 50,
+      "headline": true,
+      "original_fmt": "-2 [-8, +4]",
+      "rescored_fmt": "-2 [-10, +4]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 2,
+      "class_counts": {
+        "leave_ctx_no_PAR": 1,
+        "to_gold_PAR": 1,
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-PAR entity switch; 1 gold-CTX entity switch; 1 leave-ctx without gold PAR; 2 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6426",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n50_fp16_rand_k10",
+      "family": "Gemma n=50 FP16",
+      "condition": "random context K10",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-6 [-14, +2]",
+      "rescored_fmt": "+0 [+0, +0]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 0,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 5,
+      "class_counts": {},
+      "verdict": "L27 wrap: 5 orig fc flips are same-entity rephrase; qa paired \u0394 is a hard/near zero",
+      "qa_flip_ids": []
+    },
+    {
+      "id": "gemma_n50_int4_l27",
+      "family": "Gemma n=50 INT4",
+      "condition": "raw L27_H6",
+      "n": 50,
+      "headline": true,
+      "original_fmt": "-8 [-16, -2]",
+      "rescored_fmt": "+0 [+0, +0]",
+      "call_flag": "detected\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 0,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 4,
+      "class_counts": {},
+      "verdict": "L27 wrap: 4 orig fc flips are same-entity rephrase; qa paired \u0394 is a hard/near zero",
+      "qa_flip_ids": []
+    },
+    {
+      "id": "gemma_n50_int4_rand_k1",
+      "family": "Gemma n=50 INT4",
+      "condition": "random K1",
+      "n": 50,
+      "headline": true,
+      "original_fmt": "+0 [+0, +0]",
+      "rescored_fmt": "+0 [-6, +6]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 2,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "to_gold_PAR": 1,
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-PAR entity switch; 1 gold-CTX entity switch (qa fc flips=2)",
+      "qa_flip_ids": [
+        {
+          "id": "4185",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_fp16_ctx_k10",
+      "family": "Gemma n=100 FP16",
+      "condition": "context K10 enlarge",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "+4 [-1, +10]",
+      "rescored_fmt": "+7 [+2, +12]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 7,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 7,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 5,
+      "class_counts": {
+        "to_gold_CTX": 7
+      },
+      "verdict": "7 gold-CTX entity switch; 5 orig-only wrap vanished (qa fc flips=7)",
+      "qa_flip_ids": [
+        {
+          "id": "4185",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7568",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7647",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7779",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7826",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_fp16_l27",
+      "family": "Gemma n=100 FP16",
+      "condition": "raw L27_H6",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "-12 [-19, -6]",
+      "rescored_fmt": "+0 [+0, +0]",
+      "call_flag": "detected\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 0,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 12,
+      "class_counts": {},
+      "verdict": "L27 wrap: 12 orig fc flips are same-entity rephrase; qa paired \u0394 is a hard/near zero",
+      "qa_flip_ids": []
+    },
+    {
+      "id": "gemma_n100_fp16_par_k2",
+      "family": "Gemma n=100 FP16",
+      "condition": "parametric clean K2",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "-5 [-11, +0]",
+      "rescored_fmt": "-6 [-12, -1]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 8,
+      "n_to_gold_PAR": 5,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 2,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 4,
+      "class_counts": {
+        "leave_ctx_no_PAR": 2,
+        "to_gold_PAR": 5,
+        "to_gold_CTX": 1
+      },
+      "verdict": "5 gold-PAR entity switch; 1 gold-CTX entity switch; 2 leave-ctx without gold PAR; 4 orig-only wrap vanished (qa fc flips=8)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3213",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6091",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6105",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6426",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7153",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7696",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_fp16_rand_k10",
+      "family": "Gemma n=100 FP16",
+      "condition": "random context K10",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-1 [-6, +4]",
+      "rescored_fmt": "+0 [+0, +0]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 0,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 7,
+      "class_counts": {},
+      "verdict": "L27 wrap: 7 orig fc flips are same-entity rephrase; qa paired \u0394 is a hard/near zero",
+      "qa_flip_ids": []
+    },
+    {
+      "id": "gemma_n100_int4_ctx_k10",
+      "family": "Gemma n=100 INT4",
+      "condition": "context K10 enlarge",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "+4 [-2, +10]",
+      "rescored_fmt": "+5 [+1, +9]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 5,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 4,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 10,
+      "class_counts": {
+        "same_ctx": 1,
+        "to_gold_CTX": 4
+      },
+      "verdict": "4 gold-CTX entity switch; 1 same-ctx wrap among qa flips; 10 orig-only wrap vanished (qa fc flips=5)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "6426",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7568",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7826",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_int4_l27",
+      "family": "Gemma n=100 INT4",
+      "condition": "raw L27_H6",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "-12 [-19, -6]",
+      "rescored_fmt": "+0 [-3, +3]",
+      "call_flag": "detected\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 2,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 14,
+      "class_counts": {
+        "to_gold_PAR": 1,
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-PAR entity switch; 1 gold-CTX entity switch; 14 orig-only wrap vanished (qa fc flips=2)",
+      "qa_flip_ids": [
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7826",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_int4_rand_k10",
+      "family": "Gemma n=100 INT4",
+      "condition": "random context K10",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "+4 [-2, +10]",
+      "rescored_fmt": "+3 [+0, +7]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 2,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 8,
+      "class_counts": {
+        "same_ctx": 1,
+        "to_gold_CTX": 2
+      },
+      "verdict": "2 gold-CTX entity switch; 1 same-ctx wrap among qa flips; 8 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "6426",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7826",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_int4_rand_k1",
+      "family": "Gemma n=100 INT4",
+      "condition": "random K1",
+      "n": 100,
+      "headline": true,
+      "original_fmt": "+2 [-1, +6]",
+      "rescored_fmt": "+1 [-2, +5]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 2,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 3,
+      "class_counts": {
+        "to_gold_PAR": 1,
+        "to_gold_CTX": 2
+      },
+      "verdict": "1 gold-PAR entity switch; 2 gold-CTX entity switch; 3 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "4185",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7568",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_ctx_k10",
+      "family": "Llama n=50 FP16",
+      "condition": "context K10 enlarge",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+10 [+2, +20]",
+      "rescored_fmt": "+6 [+0, +14]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 3,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 4,
+      "class_counts": {
+        "to_gold_CTX": 3
+      },
+      "verdict": "3 gold-CTX entity switch; 4 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_ctx_k5",
+      "family": "Llama n=50 FP16",
+      "condition": "context K5 enlarge",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+6 [+0, +12]",
+      "rescored_fmt": "+8 [+2, +16]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 4,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 4,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 2,
+      "class_counts": {
+        "to_gold_CTX": 4
+      },
+      "verdict": "4 gold-CTX entity switch; 2 orig-only wrap vanished (qa fc flips=4)",
+      "qa_flip_ids": [
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_par_k2",
+      "family": "Llama n=50 FP16",
+      "condition": "parametric K2",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-6 [-16, +4]",
+      "rescored_fmt": "-2 [-12, +8]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 7,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 3,
+      "n_leave_ctx_no_PAR": 4,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 6,
+      "class_counts": {
+        "leave_ctx_no_PAR": 4,
+        "to_gold_CTX": 3
+      },
+      "verdict": "3 gold-CTX entity switch; 4 leave-ctx without gold PAR; 6 orig-only wrap vanished (qa fc flips=7)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_par_k2c",
+      "family": "Llama n=50 FP16",
+      "condition": "parametric clean K2",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-8 [-16, -2]",
+      "rescored_fmt": "-14 [-24, -4]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 7,
+      "n_to_gold_PAR": 3,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 4,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 2,
+      "class_counts": {
+        "leave_ctx_no_PAR": 4,
+        "to_gold_PAR": 3
+      },
+      "verdict": "3 gold-PAR entity switch; 4 leave-ctx without gold PAR; 2 orig-only wrap vanished (qa fc flips=7)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3585",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7685",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_par_k3",
+      "family": "Llama n=50 FP16",
+      "condition": "parametric K3",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-6 [-18, +6]",
+      "rescored_fmt": "-12 [-26, +2]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 12,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 3,
+      "n_leave_ctx_no_PAR": 8,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 7,
+      "class_counts": {
+        "leave_ctx_no_PAR": 8,
+        "to_gold_PAR": 1,
+        "to_gold_CTX": 3
+      },
+      "verdict": "1 gold-PAR entity switch; 3 gold-CTX entity switch; 8 leave-ctx without gold PAR; 7 orig-only wrap vanished (qa fc flips=12)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6426",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7843",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_n64_ctx_k10",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "context K10 enlarge",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+12 [+4, +22]",
+      "rescored_fmt": "+6 [+0, +14]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 3,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 6,
+      "class_counts": {
+        "to_gold_CTX": 3
+      },
+      "verdict": "3 gold-CTX entity switch; 6 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7815",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_n64_ctx_k5",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "context K5 enlarge",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+6 [-2, +16]",
+      "rescored_fmt": "+2 [+0, +8]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 1,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 5,
+      "class_counts": {
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-CTX entity switch; 5 orig-only wrap vanished (qa fc flips=1)",
+      "qa_flip_ids": [
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_n64_par_k2",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "parametric K2",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+0 [-10, +10]",
+      "rescored_fmt": "+4 [-6, +16]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 8,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 4,
+      "n_leave_ctx_no_PAR": 2,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 5,
+      "class_counts": {
+        "leave_ctx_no_PAR": 2,
+        "to_gold_CTX": 4,
+        "to_gold_PAR": 1,
+        "PAR->BOTH": 1
+      },
+      "verdict": "1 gold-PAR entity switch; 4 gold-CTX entity switch; 2 leave-ctx without gold PAR; 1 other; 5 orig-only wrap vanished (qa fc flips=8)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7815",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7843",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "94",
+          "cls": "PAR->BOTH",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_n64_par_k2c",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "parametric clean K2",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-2 [-6, +0]",
+      "rescored_fmt": "-16 [-26, -6]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 8,
+      "n_to_gold_PAR": 6,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 2,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "leave_ctx_no_PAR": 2,
+        "to_gold_PAR": 6
+      },
+      "verdict": "6 gold-PAR entity switch; 2 leave-ctx without gold PAR (qa fc flips=8)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7685",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7843",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_n64_par_k3",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "parametric K3",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-4 [-12, +6]",
+      "rescored_fmt": "-10 [-24, +6]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 15,
+      "n_to_gold_PAR": 5,
+      "n_to_gold_CTX": 5,
+      "n_leave_ctx_no_PAR": 5,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 4,
+      "class_counts": {
+        "to_gold_PAR": 5,
+        "leave_ctx_no_PAR": 5,
+        "to_gold_CTX": 5
+      },
+      "verdict": "5 gold-PAR entity switch; 5 gold-CTX entity switch; 5 leave-ctx without gold PAR; 4 orig-only wrap vanished (qa fc flips=15)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7815",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7836",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7843",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_rand_ctx_k10",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "random context K10",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+4 [-4, +12]",
+      "rescored_fmt": "+0 [+0, +0]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 0,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 3,
+      "class_counts": {},
+      "verdict": "L27 wrap: 3 orig fc flips are same-entity rephrase; qa paired \u0394 is a hard/near zero",
+      "qa_flip_ids": []
+    },
+    {
+      "id": "llama_n50_int4_rand_ctx_k5",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "random context K5",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+2 [+0, +6]",
+      "rescored_fmt": "+2 [+0, +6]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 1,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-CTX entity switch; 1 orig-only wrap vanished (qa fc flips=1)",
+      "qa_flip_ids": [
+        {
+          "id": "7815",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_rand_par_k2",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "random parametric K2",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+4 [+0, +10]",
+      "rescored_fmt": "+4 [+0, +10]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 2,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 2,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 2,
+      "class_counts": {
+        "to_gold_CTX": 2
+      },
+      "verdict": "2 gold-CTX entity switch; 2 orig-only wrap vanished (qa fc flips=2)",
+      "qa_flip_ids": [
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7815",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_rand_par_k3",
+      "family": "Llama n=50 INT4 N64",
+      "condition": "random parametric K3",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+2 [+0, +6]",
+      "rescored_fmt": "+2 [+0, +6]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 1,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-CTX entity switch; 1 orig-only wrap vanished (qa fc flips=1)",
+      "qa_flip_ids": [
+        {
+          "id": "7815",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_n128_ctx_k10",
+      "family": "Llama n=50 INT4 N128",
+      "condition": "context K10 enlarge",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+18 [+8, +30]",
+      "rescored_fmt": "+2 [+0, +6]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 1,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 9,
+      "class_counts": {
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-CTX entity switch; 9 orig-only wrap vanished (qa fc flips=1)",
+      "qa_flip_ids": [
+        {
+          "id": "1609",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_n128_par_k2c",
+      "family": "Llama n=50 INT4 N128",
+      "condition": "parametric clean K2",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-4 [-10, +0]",
+      "rescored_fmt": "-14 [-26, -4]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 7,
+      "n_to_gold_PAR": 4,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 3,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "leave_ctx_no_PAR": 3,
+        "to_gold_PAR": 3,
+        "ctx_plus_PAR": 1
+      },
+      "verdict": "4 gold-PAR entity switch; 3 leave-ctx without gold PAR (qa fc flips=7)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_n128_rand_k10",
+      "family": "Llama n=50 INT4 N128",
+      "condition": "random context K10",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-6 [-14, +0]",
+      "rescored_fmt": "-2 [-8, +4]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "leave_ctx_no_PAR": 1,
+        "to_gold_PAR": 1,
+        "to_gold_CTX": 1
+      },
+      "verdict": "1 gold-PAR entity switch; 1 gold-CTX entity switch; 1 leave-ctx without gold PAR; 1 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_l1h4",
+      "family": "Llama n=50 INT4 repairs",
+      "condition": "raw peak L1_H4",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+6 [-2, +14]",
+      "rescored_fmt": "+4 [+0, +10]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 2,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 2,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 5,
+      "class_counts": {
+        "to_gold_CTX": 2
+      },
+      "verdict": "2 gold-CTX entity switch; 5 orig-only wrap vanished (qa fc flips=2)",
+      "qa_flip_ids": [
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7815",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_hminus",
+      "family": "Llama n=50 INT4 repairs",
+      "condition": "context H\u2212 K10",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-2 [-6, +0]",
+      "rescored_fmt": "-4 [-10, +0]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 2,
+      "n_to_gold_PAR": 2,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "to_gold_PAR": 2
+      },
+      "verdict": "2 gold-PAR entity switch (qa fc flips=2)",
+      "qa_flip_ids": [
+        {
+          "id": "7843",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_a05",
+      "family": "Llama n=50 INT4 repairs",
+      "condition": "clean K2 \u03b1=0.5",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+2 [+0, +8]",
+      "rescored_fmt": "-2 [-6, +0]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 1,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "leave_ctx_no_PAR": 1
+      },
+      "verdict": "1 leave-ctx without gold PAR; 1 orig-only wrap vanished (qa fc flips=1)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_a1",
+      "family": "Llama n=50 INT4 repairs",
+      "condition": "clean K2 \u03b1=1.0",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-2 [-6, +0]",
+      "rescored_fmt": "-16 [-26, -6]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 8,
+      "n_to_gold_PAR": 6,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 2,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "leave_ctx_no_PAR": 2,
+        "to_gold_PAR": 6
+      },
+      "verdict": "6 gold-PAR entity switch; 2 leave-ctx without gold PAR (qa fc flips=8)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7685",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7843",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_a2",
+      "family": "Llama n=50 INT4 repairs",
+      "condition": "clean K2 \u03b1=2.0",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-2 [-12, +8]",
+      "rescored_fmt": "-42 [-56.0, -28]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 23,
+      "n_to_gold_PAR": 12,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 10,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 3,
+      "class_counts": {
+        "leave_ctx_no_PAR": 10,
+        "to_gold_PAR": 12,
+        "PAR->BOTH": 1
+      },
+      "verdict": "12 gold-PAR entity switch; 10 leave-ctx without gold PAR; 1 other; 3 orig-only wrap vanished (qa fc flips=23)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3585",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3761",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4658",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5801",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6426",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7685",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7733",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7836",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7843",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7867",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "94",
+          "cls": "PAR->BOTH",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_a3",
+      "family": "Llama n=50 INT4 repairs",
+      "condition": "clean K2 \u03b1=3.0",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-12 [-22, -2]",
+      "rescored_fmt": "-62 [-76, -48]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 33,
+      "n_to_gold_PAR": 13,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 19,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "leave_ctx_no_PAR": 19,
+        "to_gold_PAR": 13,
+        "to_gold_CTX": 1
+      },
+      "verdict": "13 gold-PAR entity switch; 1 gold-CTX entity switch; 19 leave-ctx without gold PAR; 1 orig-only wrap vanished (qa fc flips=33)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1997",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2018",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2157",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3585",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3594",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3761",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4185",
+          "cls": "to_gold_PAR",
+          "orig": "other\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4195",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4658",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5800",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5801",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6400",
+          "cls": "to_gold_PAR",
+          "orig": "other\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6426",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7577",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7685",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7733",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7836",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7843",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7867",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_int4_a5",
+      "family": "Llama n=50 INT4 repairs",
+      "condition": "clean K2 \u03b1=5.0",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-12 [-22, -2]",
+      "rescored_fmt": "-64 [-78, -50]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 34,
+      "n_to_gold_PAR": 6,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 27,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "leave_ctx_no_PAR": 27,
+        "to_gold_PAR": 6,
+        "to_gold_CTX": 1
+      },
+      "verdict": "6 gold-PAR entity switch; 1 gold-CTX entity switch; 27 leave-ctx without gold PAR; 1 orig-only wrap vanished (qa fc flips=34)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1997",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2018",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2157",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3585",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3761",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4185",
+          "cls": "to_gold_PAR",
+          "orig": "other\u2192other",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4195",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4658",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5158",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5800",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5801",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6400",
+          "cls": "to_gold_PAR",
+          "orig": "other\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6426",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7577",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7685",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7733",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7740",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7836",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7843",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7860",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7867",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_native_par_k2c",
+      "family": "Llama n=50 INT4 native",
+      "condition": "native parametric clean K2",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-2 [-8, +4]",
+      "rescored_fmt": "-6 [-14, +0]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 2,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 2,
+      "class_counts": {
+        "leave_ctx_no_PAR": 1,
+        "to_gold_PAR": 1,
+        "ctx_plus_PAR": 1
+      },
+      "verdict": "2 gold-PAR entity switch; 1 leave-ctx without gold PAR; 2 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_native_ctx_k10",
+      "family": "Llama n=50 INT4 native",
+      "condition": "native context K10",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+18 [+8, +30]",
+      "rescored_fmt": "+6 [+0, +14]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 3,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 8,
+      "class_counts": {
+        "to_gold_CTX": 3
+      },
+      "verdict": "3 gold-CTX entity switch; 8 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "1609",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7878",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_reverse_a1",
+      "family": "Llama n=50 reverse",
+      "condition": "INT4 K10 on FP16 \u03b1=1",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+48 [+34, +62]",
+      "rescored_fmt": "+8 [-2, +20]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 8,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 5,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 3,
+      "n_orig_only_wrap": 19,
+      "class_counts": {
+        "to_gold_CTX": 5,
+        "same_ctx": 3
+      },
+      "verdict": "5 gold-CTX entity switch; 3 same-ctx wrap among qa flips; 19 orig-only wrap vanished (qa fc flips=8)",
+      "qa_flip_ids": [
+        {
+          "id": "1609",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "1636",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7685",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7878",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_reverse_a05",
+      "family": "Llama n=50 reverse",
+      "condition": "INT4 K10 on FP16 \u03b1=0.5",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+36 [+22, +50]",
+      "rescored_fmt": "+12 [+2, +24]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 8,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 6,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 2,
+      "n_orig_only_wrap": 16,
+      "class_counts": {
+        "to_gold_CTX": 6,
+        "same_ctx": 2
+      },
+      "verdict": "6 gold-CTX entity switch; 2 same-ctx wrap among qa flips; 16 orig-only wrap vanished (qa fc flips=8)",
+      "qa_flip_ids": [
+        {
+          "id": "1609",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7685",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7878",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_reverse_a025",
+      "family": "Llama n=50 reverse",
+      "condition": "INT4 K10 on FP16 \u03b1=0.25",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+34 [+20, +50]",
+      "rescored_fmt": "+10 [+0, +20]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 7,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 6,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 16,
+      "class_counts": {
+        "to_gold_CTX": 6,
+        "same_ctx": 1
+      },
+      "verdict": "6 gold-CTX entity switch; 1 same-ctx wrap among qa flips; 16 orig-only wrap vanished (qa fc flips=7)",
+      "qa_flip_ids": [
+        {
+          "id": "1609",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7685",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_reverse_a1_dup",
+      "family": "Llama n=50 reverse",
+      "condition": "INT4 K10 on FP16 \u03b1=1 (resultofthe)",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+48 [+34, +62]",
+      "rescored_fmt": "+8 [-2, +20]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 8,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 5,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 3,
+      "n_orig_only_wrap": 19,
+      "class_counts": {
+        "to_gold_CTX": 5,
+        "same_ctx": 3
+      },
+      "verdict": "5 gold-CTX entity switch; 3 same-ctx wrap among qa flips; 19 orig-only wrap vanished (qa fc flips=8)",
+      "qa_flip_ids": [
+        {
+          "id": "1609",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "1636",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7685",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7878",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_ctx_a1",
+      "family": "Llama n=50 FP16 \u03b1-sweep",
+      "condition": "context \u03b1+=1 \u03b1\u2212=0",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+10 [-4, +24]",
+      "rescored_fmt": "-2 [-18, +16]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 17,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 7,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 8,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "to_gold_CTX": 7,
+        "leave_ctx_no_PAR": 1,
+        "to_gold_PAR": 1,
+        "same_ctx": 8
+      },
+      "verdict": "1 gold-PAR entity switch; 7 gold-CTX entity switch; 1 leave-ctx without gold PAR; 8 same-ctx wrap among qa flips (qa fc flips=17)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "to_gold_CTX",
+          "orig": "other\u2192context",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "1997",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3761",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "4195",
+          "cls": "to_gold_CTX",
+          "orig": "other\u2192other",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "5158",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "5800",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "5801",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "same_ctx",
+          "orig": "context\u2192context",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7577",
+          "cls": "same_ctx",
+          "orig": "context\u2192context",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7733",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7747",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192context",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7815",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "rejects_context\u2192context"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7836",
+          "cls": "same_ctx",
+          "orig": "context\u2192context",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7856",
+          "cls": "same_ctx",
+          "orig": "context\u2192context",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7867",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192context",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7878",
+          "cls": "same_ctx",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_ctx_a2",
+      "family": "Llama n=50 FP16 \u03b1-sweep",
+      "condition": "context \u03b1+=2 \u03b1\u2212=1",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-12 [-28, +6]",
+      "rescored_fmt": "-14 [-30, +2]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 19,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 4,
+      "n_leave_ctx_no_PAR": 13,
+      "n_same_ctx_qa_flips": 2,
+      "n_orig_only_wrap": 2,
+      "class_counts": {
+        "to_gold_CTX": 4,
+        "leave_ctx_no_PAR": 13,
+        "same_ctx": 2
+      },
+      "verdict": "4 gold-CTX entity switch; 13 leave-ctx without gold PAR; 2 same-ctx wrap among qa flips; 2 orig-only wrap vanished (qa fc flips=19)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "to_gold_CTX",
+          "orig": "other\u2192context",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "1997",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2018",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2157",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "other\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5158",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "5800",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "5801",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7577",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7740",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192context",
+          "qa": "rejects_context\u2192context"
+        },
+        {
+          "id": "7762",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7815",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192context",
+          "qa": "rejects_context\u2192context"
+        },
+        {
+          "id": "7836",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7878",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_par_a1",
+      "family": "Llama n=50 FP16 \u03b1-sweep",
+      "condition": "parametric \u03b1+=1 \u03b1\u2212=0",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "+4 [-6, +16]",
+      "rescored_fmt": "-8 [-22, +4]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 10,
+      "n_to_gold_PAR": 2,
+      "n_to_gold_CTX": 2,
+      "n_leave_ctx_no_PAR": 3,
+      "n_same_ctx_qa_flips": 2,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "leave_ctx_no_PAR": 3,
+        "to_gold_CTX": 2,
+        "to_gold_PAR": 2,
+        "same_ctx": 2,
+        "same_both": 1
+      },
+      "verdict": "2 gold-PAR entity switch; 2 gold-CTX entity switch; 3 leave-ctx without gold PAR; 2 same-ctx wrap among qa flips; 1 other (qa fc flips=10)",
+      "qa_flip_ids": [
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "other\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4195",
+          "cls": "to_gold_CTX",
+          "orig": "other\u2192other",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "5158",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "5801",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7577",
+          "cls": "same_ctx",
+          "orig": "context\u2192context",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "7747",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7836",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7867",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7878",
+          "cls": "same_ctx",
+          "orig": "context\u2192context",
+          "qa": "context\u2192rejects_context"
+        },
+        {
+          "id": "94",
+          "cls": "same_both",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n50_fp16_par_a2",
+      "family": "Llama n=50 FP16 \u03b1-sweep",
+      "condition": "parametric \u03b1+=2 \u03b1\u2212=1",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-22 [-36, -8]",
+      "rescored_fmt": "-28 [-42, -14]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 16,
+      "n_to_gold_PAR": 0,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 15,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "leave_ctx_no_PAR": 15,
+        "same_ctx": 1
+      },
+      "verdict": "15 leave-ctx without gold PAR; 1 same-ctx wrap among qa flips; 1 orig-only wrap vanished (qa fc flips=16)",
+      "qa_flip_ids": [
+        {
+          "id": "1997",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2018",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2157",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "other\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5801",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6400",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "other\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7577",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7762",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7815",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192context",
+          "qa": "rejects_context\u2192context"
+        },
+        {
+          "id": "7836",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7856",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7867",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_noisy_k2",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "noisy parametric K2",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "+1 [-5, +7]",
+      "rescored_fmt": "-4 [-11, +3]",
+      "call_flag": "null\u2192null; sign change",
+      "flagged": true,
+      "n_qa_fc_flips": 10,
+      "n_to_gold_PAR": 4,
+      "n_to_gold_CTX": 3,
+      "n_leave_ctx_no_PAR": 3,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 9,
+      "class_counts": {
+        "leave_ctx_no_PAR": 3,
+        "to_gold_PAR": 4,
+        "to_gold_CTX": 3
+      },
+      "verdict": "4 gold-PAR entity switch; 3 gold-CTX entity switch; 3 leave-ctx without gold PAR; 9 orig-only wrap vanished (qa fc flips=10)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7153",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7861",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "982",
+          "cls": "to_gold_CTX",
+          "orig": "other\u2192context",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_noisy_k3",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "noisy parametric K3",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-4 [-12, +3]",
+      "rescored_fmt": "-16 [-25, -6]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 24,
+      "n_to_gold_PAR": 6,
+      "n_to_gold_CTX": 4,
+      "n_leave_ctx_no_PAR": 14,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 9,
+      "class_counts": {
+        "leave_ctx_no_PAR": 14,
+        "to_gold_PAR": 6,
+        "to_gold_CTX": 4
+      },
+      "verdict": "6 gold-PAR entity switch; 4 gold-CTX entity switch; 14 leave-ctx without gold PAR; 9 orig-only wrap vanished (qa fc flips=24)",
+      "qa_flip_ids": [
+        {
+          "id": "1239",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1344",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1353",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2582",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3422",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6105",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6440",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7153",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7843",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7861",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "982",
+          "cls": "to_gold_CTX",
+          "orig": "other\u2192context",
+          "qa": "other\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_l1h4",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "raw peak L1_H4",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-1 [-5, +4]",
+      "rescored_fmt": "-3 [-7, +0]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 3,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 4,
+      "class_counts": {
+        "to_gold_PAR": 1,
+        "ctx_plus_PAR": 2
+      },
+      "verdict": "3 gold-PAR entity switch; 4 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7815",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_native_k2",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "native parametric K2",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-2 [-6, +2]",
+      "rescored_fmt": "-6 [-11, -2]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 6,
+      "n_to_gold_PAR": 4,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 2,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 2,
+      "class_counts": {
+        "to_gold_PAR": 3,
+        "leave_ctx_no_PAR": 2,
+        "ctx_plus_PAR": 1
+      },
+      "verdict": "4 gold-PAR entity switch; 2 leave-ctx without gold PAR; 2 orig-only wrap vanished (qa fc flips=6)",
+      "qa_flip_ids": [
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7153",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7861",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_a05",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "clean K2 \u03b1=0.5",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-2 [-5, +0]",
+      "rescored_fmt": "-4 [-8, -1.0]",
+      "call_flag": "null\u2192detected",
+      "flagged": true,
+      "n_qa_fc_flips": 4,
+      "n_to_gold_PAR": 2,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 2,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "leave_ctx_no_PAR": 2,
+        "to_gold_PAR": 2
+      },
+      "verdict": "2 gold-PAR entity switch; 2 leave-ctx without gold PAR (qa fc flips=4)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_a1",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "clean K2 \u03b1=1",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-4 [-8, -1]",
+      "rescored_fmt": "-12 [-19, -6]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 12,
+      "n_to_gold_PAR": 7,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 5,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "leave_ctx_no_PAR": 5,
+        "to_gold_PAR": 6,
+        "ctx_plus_PAR": 1
+      },
+      "verdict": "7 gold-PAR entity switch; 5 leave-ctx without gold PAR; 1 orig-only wrap vanished (qa fc flips=12)",
+      "qa_flip_ids": [
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5609",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7153",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_a2",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "clean K2 \u03b1=2",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-13 [-20, -7]",
+      "rescored_fmt": "-44 [-53, -34]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 46,
+      "n_to_gold_PAR": 22,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 23,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 2,
+      "class_counts": {
+        "leave_ctx_no_PAR": 23,
+        "to_gold_PAR": 21,
+        "ctx_plus_PAR": 1,
+        "to_gold_CTX": 1
+      },
+      "verdict": "22 gold-PAR entity switch; 1 gold-CTX entity switch; 23 leave-ctx without gold PAR; 2 orig-only wrap vanished (qa fc flips=46)",
+      "qa_flip_ids": [
+        {
+          "id": "1239",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1252",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1325",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1344",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1353",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1636",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2429",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2582",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3213",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3585",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3594",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3761",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4922",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5609",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "5801",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "5947",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6105",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6387",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6644",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7153",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7577",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7623",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7685",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7706",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7779",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7787",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7843",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7857",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7861",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_a3",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "clean K2 \u03b1=3",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-13 [-20, -6]",
+      "rescored_fmt": "-70 [-79, -60]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 72,
+      "n_to_gold_PAR": 27,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 44,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 0,
+      "class_counts": {
+        "leave_ctx_no_PAR": 44,
+        "ctx_plus_PAR": 2,
+        "to_gold_PAR": 25,
+        "to_gold_CTX": 1
+      },
+      "verdict": "27 gold-PAR entity switch; 1 gold-CTX entity switch; 44 leave-ctx without gold PAR (qa fc flips=72)",
+      "qa_flip_ids": [
+        {
+          "id": "1239",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1252",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1325",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1344",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1353",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1636",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1997",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2018",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2157",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2296",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2429",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2582",
+          "cls": "ctx_plus_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3213",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3422",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3585",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3594",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3761",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4184",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4195",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4658",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4922",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5158",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5337",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5609",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5720",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5800",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5801",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5944",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5947",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6105",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6387",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6400",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6426",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6644",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7153",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7568",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7577",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7623",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7637",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7647",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7685",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7696",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7706",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7733",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7747",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7779",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7787",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7794",
+          "cls": "ctx_plus_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7815",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7826",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7836",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7843",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7857",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7861",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7867",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192context",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "llama_n100_diag_a5",
+      "family": "Llama n=100 INT4 diagnostics",
+      "condition": "clean K2 \u03b1=5",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-13 [-21, -5]",
+      "rescored_fmt": "-70 [-79, -61]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 70,
+      "n_to_gold_PAR": 21,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 49,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 3,
+      "class_counts": {
+        "leave_ctx_no_PAR": 49,
+        "to_gold_PAR": 21
+      },
+      "verdict": "21 gold-PAR entity switch; 49 leave-ctx without gold PAR; 3 orig-only wrap vanished (qa fc flips=70)",
+      "qa_flip_ids": [
+        {
+          "id": "1239",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1252",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1325",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "1344",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1353",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1636",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1997",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2018",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2157",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2296",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2429",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2582",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2603",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2631",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3213",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3422",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3585",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3761",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3781",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4184",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4185",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4187",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4195",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4275",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4658",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4784",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "4922",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5158",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5337",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5609",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5720",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5800",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "5801",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5944",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5947",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "5993",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6061",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6105",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6387",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6426",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6644",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7153",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7568",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7577",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7623",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7637",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7647",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7685",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7696",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7706",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7733",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7740",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7747",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7779",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7794",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7815",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7826",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7835",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7836",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7843",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7857",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192other",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "7860",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7861",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7867",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n50_fp16_hminus_id",
+      "family": "Gemma n=50 FP16 H\u2212",
+      "condition": "identified H\u2212",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-12 [-24, -2]",
+      "rescored_fmt": "-14 [-26, -4]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 9,
+      "n_to_gold_PAR": 6,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 4,
+      "class_counts": {
+        "to_gold_CTX": 1,
+        "same_ctx": 1,
+        "to_gold_PAR": 6,
+        "leave_ctx_no_PAR": 1
+      },
+      "verdict": "6 gold-PAR entity switch; 1 gold-CTX entity switch; 1 leave-ctx without gold PAR; 1 same-ctx wrap among qa flips; 4 orig-only wrap vanished (qa fc flips=9)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "2603",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3594",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3761",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "other\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7733",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n50_fp16_hminus_rand",
+      "family": "Gemma n=50 FP16 H\u2212",
+      "condition": "random H\u2212",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-6 [-16, +4]",
+      "rescored_fmt": "-4 [-10, +0]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 2,
+      "n_to_gold_PAR": 2,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 6,
+      "class_counts": {
+        "to_gold_PAR": 2
+      },
+      "verdict": "2 gold-PAR entity switch; 6 orig-only wrap vanished (qa fc flips=2)",
+      "qa_flip_ids": [
+        {
+          "id": "7856",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n50_int4_hminus_id",
+      "family": "Gemma n=50 INT4 H\u2212",
+      "condition": "identified H\u2212",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-8 [-16, -2]",
+      "rescored_fmt": "-8 [-16, +0]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 6,
+      "n_to_gold_PAR": 5,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 1,
+      "class_counts": {
+        "to_gold_PAR": 5,
+        "to_gold_CTX": 1
+      },
+      "verdict": "5 gold-PAR entity switch; 1 gold-CTX entity switch; 1 orig-only wrap vanished (qa fc flips=6)",
+      "qa_flip_ids": [
+        {
+          "id": "3594",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3761",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4185",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "5993",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6091",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n50_int4_hminus_rand",
+      "family": "Gemma n=50 INT4 H\u2212",
+      "condition": "random H\u2212",
+      "n": 50,
+      "headline": false,
+      "original_fmt": "-12 [-24, -2]",
+      "rescored_fmt": "-2 [-10, +4]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 1,
+      "n_to_gold_CTX": 0,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 7,
+      "class_counts": {
+        "leave_ctx_no_PAR": 1,
+        "same_ctx": 1,
+        "to_gold_PAR": 1
+      },
+      "verdict": "1 gold-PAR entity switch; 1 leave-ctx without gold PAR; 1 same-ctx wrap among qa flips; 7 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2603",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_fp16_hminus_id",
+      "family": "Gemma n=100 FP16 H\u2212",
+      "condition": "identified H\u2212",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-13 [-21, -7.0]",
+      "rescored_fmt": "-19 [-27, -11]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 21,
+      "n_to_gold_PAR": 16,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 3,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 5,
+      "class_counts": {
+        "leave_ctx_no_PAR": 3,
+        "to_gold_CTX": 1,
+        "to_gold_PAR": 16,
+        "same_ctx": 1
+      },
+      "verdict": "16 gold-PAR entity switch; 1 gold-CTX entity switch; 3 leave-ctx without gold PAR; 1 same-ctx wrap among qa flips; 5 orig-only wrap vanished (qa fc flips=21)",
+      "qa_flip_ids": [
+        {
+          "id": "1353",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "1636",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "2582",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "2603",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2665",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "3213",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3594",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3761",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4192",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "other\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "6091",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6105",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6644",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7153",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7637",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7696",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7706",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7733",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7857",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7861",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7935",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_fp16_hminus_rand",
+      "family": "Gemma n=100 FP16 H\u2212",
+      "condition": "random H\u2212",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-6 [-13, +1]",
+      "rescored_fmt": "-1 [-5, +2]",
+      "call_flag": "null\u2192null",
+      "flagged": false,
+      "n_qa_fc_flips": 3,
+      "n_to_gold_PAR": 2,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 0,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 11,
+      "class_counts": {
+        "to_gold_CTX": 1,
+        "to_gold_PAR": 2
+      },
+      "verdict": "2 gold-PAR entity switch; 1 gold-CTX entity switch; 11 orig-only wrap vanished (qa fc flips=3)",
+      "qa_flip_ids": [
+        {
+          "id": "7568",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7946",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_int4_hminus_id",
+      "family": "Gemma n=100 INT4 H\u2212",
+      "condition": "identified H\u2212",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-8 [-15, -1]",
+      "rescored_fmt": "-11 [-18, -4]",
+      "call_flag": "detected\u2192detected",
+      "flagged": false,
+      "n_qa_fc_flips": 13,
+      "n_to_gold_PAR": 11,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 0,
+      "n_orig_only_wrap": 5,
+      "class_counts": {
+        "leave_ctx_no_PAR": 1,
+        "to_gold_PAR": 11,
+        "to_gold_CTX": 1
+      },
+      "verdict": "11 gold-PAR entity switch; 1 gold-CTX entity switch; 1 leave-ctx without gold PAR; 5 orig-only wrap vanished (qa fc flips=13)",
+      "qa_flip_ids": [
+        {
+          "id": "1353",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2582",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3213",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3594",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "3761",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "4185",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "5993",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "6091",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7647",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7696",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7779",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "94",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        }
+      ]
+    },
+    {
+      "id": "gemma_n100_int4_hminus_rand",
+      "family": "Gemma n=100 INT4 H\u2212",
+      "condition": "random H\u2212",
+      "n": 100,
+      "headline": false,
+      "original_fmt": "-13 [-20, -6]",
+      "rescored_fmt": "-1 [-5.0, +3]",
+      "call_flag": "detected\u2192null",
+      "flagged": true,
+      "n_qa_fc_flips": 5,
+      "n_to_gold_PAR": 2,
+      "n_to_gold_CTX": 1,
+      "n_leave_ctx_no_PAR": 1,
+      "n_same_ctx_qa_flips": 1,
+      "n_orig_only_wrap": 14,
+      "class_counts": {
+        "leave_ctx_no_PAR": 1,
+        "same_ctx": 1,
+        "to_gold_CTX": 1,
+        "to_gold_PAR": 2
+      },
+      "verdict": "2 gold-PAR entity switch; 1 gold-CTX entity switch; 1 leave-ctx without gold PAR; 1 same-ctx wrap among qa flips; 14 orig-only wrap vanished (qa fc flips=5)",
+      "qa_flip_ids": [
+        {
+          "id": "1636",
+          "cls": "leave_ctx_no_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192other"
+        },
+        {
+          "id": "2603",
+          "cls": "same_ctx",
+          "orig": "parametric\u2192parametric",
+          "qa": "other\u2192context"
+        },
+        {
+          "id": "7568",
+          "cls": "to_gold_CTX",
+          "orig": "parametric\u2192parametric",
+          "qa": "parametric\u2192context"
+        },
+        {
+          "id": "7794",
+          "cls": "to_gold_PAR",
+          "orig": "parametric\u2192parametric",
+          "qa": "context\u2192parametric"
+        },
+        {
+          "id": "7856",
+          "cls": "to_gold_PAR",
+          "orig": "context\u2192parametric",
+          "qa": "context\u2192parametric"
+        }
+      ]
+    }
+  ]
+}

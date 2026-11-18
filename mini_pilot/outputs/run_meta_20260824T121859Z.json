@@ -1,0 +1,8 @@
+{
+  "n_items": 50,
+  "data": "data\\conflictqa_pilot50.jsonl",
+  "quant_backend_int4": "gptq",
+  "fp16_peak_vram_mib": 2392.775390625,
+  "int4_peak_vram_mib": 1093.189453125,
+  "note": "GPTQ-INT4 (plan-primary)"
+}

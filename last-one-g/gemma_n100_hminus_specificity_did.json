@@ -1,0 +1,235 @@
+{
+  "n": 100,
+  "n_boot": 1000,
+  "seed": 42,
+  "ids": [
+    "ConflictQA-popQA-chatgpt_1239",
+    "ConflictQA-popQA-chatgpt_1252",
+    "ConflictQA-popQA-chatgpt_1295",
+    "ConflictQA-popQA-chatgpt_1325",
+    "ConflictQA-popQA-chatgpt_1344",
+    "ConflictQA-popQA-chatgpt_1353",
+    "ConflictQA-popQA-chatgpt_1447",
+    "ConflictQA-popQA-chatgpt_1609",
+    "ConflictQA-popQA-chatgpt_1627",
+    "ConflictQA-popQA-chatgpt_1636",
+    "ConflictQA-popQA-chatgpt_1997",
+    "ConflictQA-popQA-chatgpt_2018",
+    "ConflictQA-popQA-chatgpt_2022",
+    "ConflictQA-popQA-chatgpt_2157",
+    "ConflictQA-popQA-chatgpt_2296",
+    "ConflictQA-popQA-chatgpt_2329",
+    "ConflictQA-popQA-chatgpt_2429",
+    "ConflictQA-popQA-chatgpt_2582",
+    "ConflictQA-popQA-chatgpt_2585",
+    "ConflictQA-popQA-chatgpt_2603",
+    "ConflictQA-popQA-chatgpt_2631",
+    "ConflictQA-popQA-chatgpt_2665",
+    "ConflictQA-popQA-chatgpt_2784",
+    "ConflictQA-popQA-chatgpt_3213",
+    "ConflictQA-popQA-chatgpt_3422",
+    "ConflictQA-popQA-chatgpt_3585",
+    "ConflictQA-popQA-chatgpt_3594",
+    "ConflictQA-popQA-chatgpt_3761",
+    "ConflictQA-popQA-chatgpt_3781",
+    "ConflictQA-popQA-chatgpt_4183",
+    "ConflictQA-popQA-chatgpt_4184",
+    "ConflictQA-popQA-chatgpt_4185",
+    "ConflictQA-popQA-chatgpt_4187",
+    "ConflictQA-popQA-chatgpt_4192",
+    "ConflictQA-popQA-chatgpt_4195",
+    "ConflictQA-popQA-chatgpt_4209",
+    "ConflictQA-popQA-chatgpt_4275",
+    "ConflictQA-popQA-chatgpt_4658",
+    "ConflictQA-popQA-chatgpt_4784",
+    "ConflictQA-popQA-chatgpt_4922",
+    "ConflictQA-popQA-chatgpt_5158",
+    "ConflictQA-popQA-chatgpt_5337",
+    "ConflictQA-popQA-chatgpt_5609",
+    "ConflictQA-popQA-chatgpt_5720",
+    "ConflictQA-popQA-chatgpt_5800",
+    "ConflictQA-popQA-chatgpt_5801",
+    "ConflictQA-popQA-chatgpt_5944",
+    "ConflictQA-popQA-chatgpt_5947",
+    "ConflictQA-popQA-chatgpt_5993",
+    "ConflictQA-popQA-chatgpt_6061",
+    "ConflictQA-popQA-chatgpt_6091",
+    "ConflictQA-popQA-chatgpt_6105",
+    "ConflictQA-popQA-chatgpt_6111",
+    "ConflictQA-popQA-chatgpt_6387",
+    "ConflictQA-popQA-chatgpt_6400",
+    "ConflictQA-popQA-chatgpt_6426",
+    "ConflictQA-popQA-chatgpt_6440",
+    "ConflictQA-popQA-chatgpt_6644",
+    "ConflictQA-popQA-chatgpt_7113",
+    "ConflictQA-popQA-chatgpt_7153",
+    "ConflictQA-popQA-chatgpt_7568",
+    "ConflictQA-popQA-chatgpt_7577",
+    "ConflictQA-popQA-chatgpt_7578",
+    "ConflictQA-popQA-chatgpt_7587",
+    "ConflictQA-popQA-chatgpt_760",
+    "ConflictQA-popQA-chatgpt_7623",
+    "ConflictQA-popQA-chatgpt_7637",
+    "ConflictQA-popQA-chatgpt_7647",
+    "ConflictQA-popQA-chatgpt_7663",
+    "ConflictQA-popQA-chatgpt_7685",
+    "ConflictQA-popQA-chatgpt_7696",
+    "ConflictQA-popQA-chatgpt_7706",
+    "ConflictQA-popQA-chatgpt_7733",
+    "ConflictQA-popQA-chatgpt_7740",
+    "ConflictQA-popQA-chatgpt_7747",
+    "ConflictQA-popQA-chatgpt_7762",
+    "ConflictQA-popQA-chatgpt_7779",
+    "ConflictQA-popQA-chatgpt_7787",
+    "ConflictQA-popQA-chatgpt_7794",
+    "ConflictQA-popQA-chatgpt_7815",
+    "ConflictQA-popQA-chatgpt_7822",
+    "ConflictQA-popQA-chatgpt_7826",
+    "ConflictQA-popQA-chatgpt_7835",
+    "ConflictQA-popQA-chatgpt_7836",
+    "ConflictQA-popQA-chatgpt_7843",
+    "ConflictQA-popQA-chatgpt_7856",
+    "ConflictQA-popQA-chatgpt_7857",
+    "ConflictQA-popQA-chatgpt_7860",
+    "ConflictQA-popQA-chatgpt_7861",
+    "ConflictQA-popQA-chatgpt_7867",
+    "ConflictQA-popQA-chatgpt_7878",
+    "ConflictQA-popQA-chatgpt_790",
+    "ConflictQA-popQA-chatgpt_7907",
+    "ConflictQA-popQA-chatgpt_7911",
+    "ConflictQA-popQA-chatgpt_7914",
+    "ConflictQA-popQA-chatgpt_7935",
+    "ConflictQA-popQA-chatgpt_7946",
+    "ConflictQA-popQA-chatgpt_846",
+    "ConflictQA-popQA-chatgpt_94",
+    "ConflictQA-popQA-chatgpt_982"
+  ],
+  "fp16_baseline_itemwise_agree": 100,
+  "note": "Paired item-level bootstrap. Each draw resamples the 100 eval IDs with replacement. Deltas use each cell's own baseline (FP16 identified and FP16 random are separate sessions). specificity = delta_id \u2212 delta_random. DiD = specificity_int4 \u2212 specificity_fp16. Percentile 95% CI. Same protocol as n=50.",
+  "locked_random_k10": [
+    "L41_H11",
+    "L7_H3",
+    "L1_H9",
+    "L17_H13",
+    "L15_H13",
+    "L14_H7",
+    "L9_H1",
+    "L6_H9",
+    "L35_H9",
+    "L5_H10"
+  ],
+  "estimates": {
+    "delta_fp16_id": {
+      "point": -0.13,
+      "point_pp": -13.0,
+      "ci95": [
+        -0.20999999999999996,
+        -0.06975000000000017
+      ],
+      "ci95_pp": [
+        -20.999999999999996,
+        -6.975000000000017
+      ],
+      "excludes_zero": true,
+      "n_draws_lt0": 1000,
+      "n_draws_eq0": 0,
+      "n_draws_gt0": 0
+    },
+    "delta_fp16_random": {
+      "point": -0.06,
+      "point_pp": -6.0,
+      "ci95": [
+        -0.13,
+        0.010000000000000009
+      ],
+      "ci95_pp": [
+        -13.0,
+        1.0000000000000009
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 943,
+      "n_draws_eq0": 24,
+      "n_draws_gt0": 33
+    },
+    "delta_int4_id": {
+      "point": -0.08000000000000002,
+      "point_pp": -8.000000000000002,
+      "ci95": [
+        -0.15000000000000002,
+        -0.010000000000000009
+      ],
+      "ci95_pp": [
+        -15.000000000000002,
+        -1.0000000000000009
+      ],
+      "excludes_zero": true,
+      "n_draws_lt0": 986,
+      "n_draws_eq0": 9,
+      "n_draws_gt0": 5
+    },
+    "delta_int4_random": {
+      "point": -0.13,
+      "point_pp": -13.0,
+      "ci95": [
+        -0.20000000000000007,
+        -0.06
+      ],
+      "ci95_pp": [
+        -20.000000000000007,
+        -6.0
+      ],
+      "excludes_zero": true,
+      "n_draws_lt0": 1000,
+      "n_draws_eq0": 0,
+      "n_draws_gt0": 0
+    },
+    "specificity_fp16": {
+      "point": -0.07,
+      "point_pp": -7.000000000000001,
+      "ci95": [
+        -0.15000000000000002,
+        0.010000000000000009
+      ],
+      "ci95_pp": [
+        -15.000000000000002,
+        1.0000000000000009
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 954,
+      "n_draws_eq0": 15,
+      "n_draws_gt0": 31
+    },
+    "specificity_int4": {
+      "point": 0.04999999999999999,
+      "point_pp": 4.999999999999999,
+      "ci95": [
+        -0.030000000000000027,
+        0.13999999999999996
+      ],
+      "ci95_pp": [
+        -3.0000000000000027,
+        13.999999999999996
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 106,
+      "n_draws_eq0": 46,
+      "n_draws_gt0": 848
+    },
+    "difference_in_differences": {
+      "point": 0.12,
+      "point_pp": 12.0,
+      "ci95": [
+        0.019999999999999962,
+        0.22999999999999998
+      ],
+      "ci95_pp": [
+        1.9999999999999962,
+        23.0
+      ],
+      "excludes_zero": true,
+      "n_draws_lt0": 11,
+      "n_draws_eq0": 6,
+      "n_draws_gt0": 983
+    }
+  }
+}

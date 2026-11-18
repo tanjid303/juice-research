@@ -1,0 +1,5 @@
+Condition,n100_gold_PAR_delta_pp,n100_gold_PAR_ci95,n100_incl_delta_pp,n100_incl_ci95,excludes_zero
+FP16 clean K2 (headline),-8,"[-14, -3]",-15,"[-22, -7]",yes
+FP16 random K2 (control),-1.0,"[-3.0000000000000027, 0.0]",-1.0,"[-3.0000000000000027, 0.0]",no
+INT4 clean K2 transfer (headline),-7,"[-12, -2]",-12,"[-19, -6]",yes
+INT4 random K2 (control),-1.0,"[-3.0000000000000027, 0.0]",-1.0,"[-3.0000000000000027, 0.0]",no

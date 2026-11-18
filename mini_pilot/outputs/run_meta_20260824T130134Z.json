@@ -1,0 +1,11 @@
+{
+  "n_items": 250,
+  "data": "data\\conflictqa_pilot250_popular.jsonl",
+  "quant_backend_int4": "gptq",
+  "fp16_peak_vram_mib": 2405.498046875,
+  "int4_peak_vram_mib": 1100.115234375,
+  "mr_star_shared_n": 115,
+  "mr_star_filter": "FP16_CB_correct AND INT4_CB_correct (shared intersection)",
+  "n_boot": 1000,
+  "note": "GPTQ-INT4 (plan-primary)"
+}

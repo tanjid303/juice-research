@@ -1,0 +1,257 @@
+{
+  "llama_n50_fp16_par_k2c": {
+    "family": "Llama n=50 FP16",
+    "condition": "parametric clean K2",
+    "original": {
+      "delta_pp": -8.0,
+      "ci95_pp": [
+        -16.0,
+        -1.9999999999999991
+      ],
+      "excludes_zero": true,
+      "fmt": "-8 [-16, -2] detected",
+      "n_draws_eq0": 21
+    },
+    "inclusive": {
+      "delta_pp": -14.000000000000002,
+      "ci95_pp": [
+        -24.0,
+        -4.0000000000000036
+      ],
+      "excludes_zero": true,
+      "fmt": "-14 [-24, -4] detected",
+      "n_draws_eq0": 1
+    },
+    "gold_PAR_only": {
+      "delta_pp": -6.000000000000005,
+      "ci95_pp": [
+        -13.99999999999999,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-6 [-14, +0] null",
+      "n_draws_eq0": 49
+    },
+    "n_gold_PAR_from_context": 3,
+    "n_leave_ctx_without_PAR": 4,
+    "gold_PAR_ids": [
+      "3585",
+      "7685",
+      "7860"
+    ],
+    "leave_ctx_ids": [
+      "2603",
+      "4275",
+      "4784",
+      "6061"
+    ],
+    "n": 50
+  },
+  "llama_n50_int4_n64_par_k2c": {
+    "family": "Llama n=50 INT4 N64",
+    "condition": "parametric clean K2",
+    "original": {
+      "delta_pp": -2.0000000000000018,
+      "ci95_pp": [
+        -6.000000000000001,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-2 [-6, +0] null",
+      "n_draws_eq0": 378
+    },
+    "inclusive": {
+      "delta_pp": -16.000000000000004,
+      "ci95_pp": [
+        -26.000000000000007,
+        -6.000000000000005
+      ],
+      "excludes_zero": true,
+      "fmt": "-16 [-26, -6] detected",
+      "n_draws_eq0": 0
+    },
+    "gold_PAR_only": {
+      "delta_pp": -12.0,
+      "ci95_pp": [
+        -21.999999999999996,
+        -4.0000000000000036
+      ],
+      "excludes_zero": true,
+      "fmt": "-12 [-22, -4] detected",
+      "n_draws_eq0": 2
+    },
+    "n_gold_PAR_from_context": 6,
+    "n_leave_ctx_without_PAR": 2,
+    "gold_PAR_ids": [
+      "3781",
+      "7685",
+      "7740",
+      "7843",
+      "7860",
+      "7935"
+    ],
+    "leave_ctx_ids": [
+      "2603",
+      "6061"
+    ],
+    "n": 50
+  },
+  "llama_n50_int4_n128_par_k2c": {
+    "family": "Llama n=50 INT4 N128",
+    "condition": "parametric clean K2",
+    "original": {
+      "delta_pp": -4.000000000000001,
+      "ci95_pp": [
+        -10.0,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-4 [-10, +0] null",
+      "n_draws_eq0": 142
+    },
+    "inclusive": {
+      "delta_pp": -14.000000000000002,
+      "ci95_pp": [
+        -26.0,
+        -4.0000000000000036
+      ],
+      "excludes_zero": true,
+      "fmt": "-14 [-26, -4] detected",
+      "n_draws_eq0": 0
+    },
+    "gold_PAR_only": {
+      "delta_pp": -7.9999999999999964,
+      "ci95_pp": [
+        -16.000000000000004,
+        -2.0000000000000018
+      ],
+      "excludes_zero": true,
+      "fmt": "-8 [-16, -2] detected",
+      "n_draws_eq0": 10
+    },
+    "n_gold_PAR_from_context": 4,
+    "n_leave_ctx_without_PAR": 3,
+    "gold_PAR_ids": [
+      "7747",
+      "7835",
+      "7856",
+      "7935"
+    ],
+    "leave_ctx_ids": [
+      "2603",
+      "4784",
+      "6061"
+    ],
+    "n": 50
+  },
+  "llama_n100_fp16_par_k2": {
+    "family": "Llama n=100 FP16",
+    "condition": "parametric clean K2",
+    "original": {
+      "delta_pp": -8.000000000000002,
+      "ci95_pp": [
+        -14.000000000000002,
+        -3.0
+      ],
+      "excludes_zero": true,
+      "fmt": "-8 [-14, -3] detected",
+      "n_draws_eq0": 0
+    },
+    "inclusive": {
+      "delta_pp": -15.000000000000002,
+      "ci95_pp": [
+        -21.999999999999996,
+        -7.000000000000006
+      ],
+      "excludes_zero": true,
+      "fmt": "-15 [-22, -7] detected",
+      "n_draws_eq0": 0
+    },
+    "gold_PAR_only": {
+      "delta_pp": -8.000000000000007,
+      "ci95_pp": [
+        -14.000000000000002,
+        -2.9750000000000143
+      ],
+      "excludes_zero": true,
+      "fmt": "-8 [-14, -3.0] detected",
+      "n_draws_eq0": 5
+    },
+    "n_gold_PAR_from_context": 9,
+    "n_leave_ctx_without_PAR": 7,
+    "gold_PAR_ids": [
+      "2429",
+      "2582",
+      "3213",
+      "3585",
+      "5609",
+      "7685",
+      "7787",
+      "7794",
+      "7860"
+    ],
+    "leave_ctx_ids": [
+      "1252",
+      "1353",
+      "2603",
+      "2665",
+      "4275",
+      "4784",
+      "6061"
+    ],
+    "n": 100
+  },
+  "llama_n100_int4_par_k2": {
+    "family": "Llama n=100 INT4 transfer",
+    "condition": "parametric clean K2",
+    "original": {
+      "delta_pp": -4.000000000000001,
+      "ci95_pp": [
+        -8.000000000000002,
+        -0.9999999999999996
+      ],
+      "excludes_zero": true,
+      "fmt": "-4 [-8, -1] detected",
+      "n_draws_eq0": 14
+    },
+    "inclusive": {
+      "delta_pp": -12.0,
+      "ci95_pp": [
+        -18.999999999999993,
+        -5.999999999999995
+      ],
+      "excludes_zero": true,
+      "fmt": "-12 [-19, -6] detected",
+      "n_draws_eq0": 0
+    },
+    "gold_PAR_only": {
+      "delta_pp": -6.999999999999995,
+      "ci95_pp": [
+        -12.0,
+        -2.0000000000000018
+      ],
+      "excludes_zero": true,
+      "fmt": "-7 [-12, -2] detected",
+      "n_draws_eq0": 0
+    },
+    "n_gold_PAR_from_context": 7,
+    "n_leave_ctx_without_PAR": 5,
+    "gold_PAR_ids": [
+      "2631",
+      "5609",
+      "7747",
+      "7794",
+      "7835",
+      "7856",
+      "7935"
+    ],
+    "leave_ctx_ids": [
+      "2603",
+      "2665",
+      "4784",
+      "6061",
+      "7153"
+    ],
+    "n": 100
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "cell": "int4_native_clean_k2_apply",
+  "identify_on": "int4_base",
+  "apply_to": "int4_base_ncalib128",
+  "model": "/kaggle/input/notebooks/tanjidhosen/ungabunga/llama31_8b_base_gptq_int4_ncalib128",
+  "n_calib": 128,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 50,
+  "eval_split_seed": 42,
+  "baseline": {
+    "follows_context": 0.2,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 39,
+      "context": 10,
+      "rejects_context": 0,
+      "other": 1
+    }
+  },
+  "baseline_vs_ncalib128_reference": {
+    "reference_found": true,
+    "n_shared": 50,
+    "reference_follows_context": 0.2,
+    "this_session_follows_context": 0.2,
+    "n_items_disagreeing": 0,
+    "ids_disagreeing": [],
+    "identical": true
+  },
+  "conditions": {
+    "steer_int4_native_parametric_k2_clean": {
+      "heads": [
+        "L16_H30",
+        "L17_H27"
+      ],
+      "steer_target": "parametric",
+      "K": 2,
+      "follows_context": 0.18,
+      "delta_pp_vs_baseline": -2.0000000000000018,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 39,
+        "context": 9,
+        "rejects_context": 0,
+        "other": 2
+      },
+      "fp16_delta_pp": null,
+      "same_sign_as_fp16": null,
+      "fp16_comparable": false,
+      "id_source": "int4_base native directional clean filter (par_pos>0 AND dir_par>0), |D|=4",
+      "par_pos_int4": {
+        "L16_H30": 0.019791998693512544,
+        "L17_H27": 0.014644835377112031
+      },
+      "ncalib128_fp16_transfer_clean_k2_delta_pp": -4.0,
+      "bootstrap": {
+        "point": -0.020000000000000018,
+        "ci95": [
+          -0.08000000000000002,
+          0.04000000000000001
+        ],
+        "point_pp": -2.0000000000000018,
+        "ci95_pp": [
+          -8.000000000000002,
+          4.000000000000001
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 622,
+        "n_draws_eq0": 214,
+        "n_draws_gt0": 164
+      }
+    }
+  },
+  "fp16_reference": {
+    "baseline_fc": 0.16,
+    "steer_parametric_k2_clean_fp16_pair": -8.0,
+    "coherence": 1.0,
+    "note": "FP16 base Cell-3 clean K2 = L20_H14/L26_H15, a DIFFERENT pair. Not a same-sign reference for L16_H30/L17_H27."
+  },
+  "note": "Native INT4 clean-filter pair L16_H30/L17_H27 (Jaccard 0.00 vs the FP16 clean pair). Previously identified but never steered. No FP16 same-sign gate applies."
+}

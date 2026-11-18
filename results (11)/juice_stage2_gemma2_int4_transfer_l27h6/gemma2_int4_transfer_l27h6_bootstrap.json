@@ -1,0 +1,130 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 50 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id.",
+  "n_calib": 128,
+  "checkpoint": "/kaggle/input/notebooks/tanjidhosen/gemma-quantize/gemma2_9b_base_gptq_int4_ncalib128",
+  "primary_conditions": [
+    "steer_parametric_k1_raw",
+    "random_parametric_k1"
+  ],
+  "int4": {
+    "precision": "int4",
+    "n_baseline": 50,
+    "n_calib": 128,
+    "conditions": {
+      "steer_parametric_k1_raw": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.32,
+            0.6
+          ]
+        },
+        "steered_fc": {
+          "point": 0.38,
+          "ci95": [
+            0.24,
+            0.5
+          ]
+        },
+        "delta": {
+          "point": -0.08000000000000002,
+          "ci95": [
+            -0.16000000000000003,
+            -0.019999999999999962
+          ],
+          "point_pp": -8.000000000000002,
+          "ci95_pp": [
+            -16.000000000000004,
+            -1.9999999999999962
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 989,
+          "n_draws_eq0": 11,
+          "n_draws_gt0": 0
+        }
+      },
+      "random_parametric_k1": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.32,
+            0.6
+          ]
+        },
+        "steered_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.32,
+            0.6
+          ]
+        },
+        "delta": {
+          "point": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "point_pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 1000,
+          "n_draws_gt0": 0
+        }
+      }
+    }
+  },
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 50,
+    "source": "/kaggle/input/datasets/tanjidhosen/lajdkaj/fp16_reference/gemma2_base_cell3_bootstrap.json",
+    "conditions": {
+      "steer_parametric_k1_raw": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.48,
+          "ci95": [
+            0.34,
+            0.62
+          ]
+        },
+        "steered_fc": {
+          "point": 0.36,
+          "ci95": [
+            0.22,
+            0.5
+          ]
+        },
+        "delta": {
+          "point": -0.12,
+          "ci95": [
+            -0.21999999999999997,
+            -0.03999999999999998
+          ],
+          "point_pp": -12.0,
+          "ci95_pp": [
+            -21.999999999999996,
+            -3.9999999999999982
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 999,
+          "n_draws_eq0": 1,
+          "n_draws_gt0": 0
+        }
+      }
+    }
+  }
+}

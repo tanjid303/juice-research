@@ -1,0 +1,52 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 100 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id.",
+  "model": "google/gemma-2-9b",
+  "precision": "fp16",
+  "primary_conditions": [
+    "random_suppress_k10"
+  ],
+  "random_k_source": "Same Cell-3 enlarge random-K10 draw (seed 42) used as the INT4 suppress random control. Applied here as H\u2212 on FP16. Not resampled.",
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 100,
+    "conditions": {
+      "random_suppress_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.5502499999999998
+          ]
+        },
+        "steered_fc": {
+          "point": 0.4,
+          "ci95": [
+            0.3,
+            0.49
+          ]
+        },
+        "delta": {
+          "point": -0.06,
+          "ci95": [
+            -0.13,
+            0.010000000000000009
+          ],
+          "point_pp": -6.0,
+          "ci95_pp": [
+            -13.0,
+            1.0000000000000009
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 943,
+          "n_draws_eq0": 24,
+          "n_draws_gt0": 33
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "cell": "fp16_to_int4_transfer",
+  "identify_on": "fp16_base",
+  "apply_to": "int4_base",
+  "model": "/kaggle/input/notebooks/tanjidhosen/quiantizing-output/llama31_8b_base_gptq_int4",
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 50,
+  "baseline": {
+    "follows_context": 0.14,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 39,
+      "context": 7,
+      "rejects_context": 0,
+      "other": 4
+    }
+  },
+  "conditions": {
+    "steer_context_k10": {
+      "heads": [
+        "L4_H9",
+        "L9_H0",
+        "L1_H11",
+        "L4_H5",
+        "L19_H27",
+        "L17_H12",
+        "L7_H26",
+        "L14_H23",
+        "L3_H22",
+        "L31_H20"
+      ],
+      "steer_target": "context",
+      "follows_context": 0.26,
+      "delta_pp_vs_baseline": 12.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 34,
+        "context": 13,
+        "rejects_context": 0,
+        "other": 3
+      },
+      "fp16_delta_pp": 10.0,
+      "same_sign_as_fp16": true
+    },
+    "steer_context_k5": {
+      "heads": [
+        "L4_H9",
+        "L9_H0",
+        "L1_H11",
+        "L4_H5",
+        "L19_H27"
+      ],
+      "steer_target": "context",
+      "follows_context": 0.2,
+      "delta_pp_vs_baseline": 6.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 37,
+        "context": 10,
+        "rejects_context": 0,
+        "other": 3
+      },
+      "fp16_delta_pp": 6.0,
+      "same_sign_as_fp16": true
+    },
+    "steer_parametric_k2_clean": {
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.12,
+      "delta_pp_vs_baseline": -2.0000000000000018,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 41,
+        "context": 6,
+        "rejects_context": 0,
+        "other": 3
+      },
+      "fp16_delta_pp": -8.0,
+      "same_sign_as_fp16": true
+    },
+    "steer_parametric_k2": {
+      "heads": [
+        "L20_H14",
+        "L31_H14"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.14,
+      "delta_pp_vs_baseline": 0.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 37,
+        "context": 7,
+        "rejects_context": 0,
+        "other": 6
+      },
+      "fp16_delta_pp": -6.0,
+      "same_sign_as_fp16": false
+    },
+    "steer_parametric_k3": {
+      "heads": [
+        "L20_H14",
+        "L31_H14",
+        "L26_H15"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.1,
+      "delta_pp_vs_baseline": -4.000000000000001,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 35,
+        "context": 5,
+        "rejects_context": 0,
+        "other": 10
+      },
+      "fp16_delta_pp": -6.0,
+      "same_sign_as_fp16": true
+    }
+  },
+  "fp16_reference": {
+    "baseline_fc": 0.16,
+    "steer_context_k10": 10.0,
+    "steer_context_k5": 6.0,
+    "steer_parametric_k2": -6.0,
+    "steer_parametric_k3": -6.0,
+    "steer_parametric_k2_clean": -8.0,
+    "coherence": 1.0,
+    "note": "FP16 base Cell-3, juice_coherent, alpha+=1 alpha-=0, n=50"
+  },
+  "transfer_gate": {
+    "primary_conditions": [
+      "steer_context_k10",
+      "steer_context_k5",
+      "steer_parametric_k2_clean"
+    ],
+    "same_sign": true,
+    "coherence_ok": true,
+    "passed": true
+  },
+  "bootstrap": {
+    "n_boot": 1000,
+    "seed": 42,
+    "n": 50,
+    "conditions": {
+      "steer_context_k10": {
+        "delta_pp": 12.0,
+        "ci95_pp": [
+          4.0,
+          22.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 3,
+        "n_draws_gt0": 997,
+        "fp16_delta_pp": 10.0,
+        "fp16_ci95_pp": [
+          2.0,
+          20.0
+        ],
+        "fp16_excludes_zero": true
+      },
+      "steer_context_k5": {
+        "delta_pp": 6.0,
+        "ci95_pp": [
+          -2.0,
+          16.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 38,
+        "n_draws_eq0": 65,
+        "n_draws_gt0": 897,
+        "fp16_delta_pp": 6.0,
+        "fp16_ci95_pp": [
+          0.0,
+          12.0
+        ],
+        "fp16_excludes_zero": false
+      },
+      "steer_parametric_k2_clean": {
+        "delta_pp": -2.0000000000000018,
+        "ci95_pp": [
+          -6.0,
+          0.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 622,
+        "n_draws_eq0": 378,
+        "n_draws_gt0": 0,
+        "fp16_delta_pp": -8.0,
+        "fp16_ci95_pp": [
+          -16.0,
+          -2.0
+        ],
+        "fp16_excludes_zero": true
+      },
+      "steer_parametric_k2": {
+        "delta_pp": 0.0,
+        "ci95_pp": [
+          -10.0,
+          10.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 423,
+        "n_draws_eq0": 176,
+        "n_draws_gt0": 401,
+        "fp16_delta_pp": -6.0,
+        "fp16_ci95_pp": [
+          -16.0,
+          4.0
+        ],
+        "fp16_excludes_zero": false
+      },
+      "steer_parametric_k3": {
+        "delta_pp": -4.000000000000001,
+        "ci95_pp": [
+          -12.0,
+          6.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 736,
+        "n_draws_eq0": 128,
+        "n_draws_gt0": 136,
+        "fp16_delta_pp": -6.0,
+        "fp16_ci95_pp": [
+          -18.0,
+          6.0
+        ],
+        "fp16_excludes_zero": false
+      }
+    }
+  }
+}

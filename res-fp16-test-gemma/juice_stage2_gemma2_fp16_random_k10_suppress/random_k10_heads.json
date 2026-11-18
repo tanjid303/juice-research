@@ -1,0 +1,16 @@
+{
+  "heads": [
+    "L41_H11",
+    "L7_H3",
+    "L1_H9",
+    "L17_H13",
+    "L15_H13",
+    "L14_H7",
+    "L9_H1",
+    "L6_H9",
+    "L35_H9",
+    "L5_H10"
+  ],
+  "seed": 42,
+  "source": "Same Cell-3 enlarge random-K10 draw (seed 42) used as the INT4 suppress random control. Applied here as H\u2212 on FP16. Not resampled."
+}

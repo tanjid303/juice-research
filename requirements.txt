@@ -1,0 +1,26 @@
+# Pinned for JuICE compatibility (see juice_repro/their_setup_smoke.py).
+# Install PyTorch separately for your CUDA build, e.g.:
+#   pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+torch==2.4.0
+transformers==4.48.0
+accelerate==1.0.1
+nnsight==0.3.6
+datasets==3.1.0
+optimum==1.23.3
+auto-gptq==0.7.1
+# auto-gptq 0.7.x imports PEFT_TYPE_TO_MODEL_MAPPING from peft.peft_model;
+# peft>=0.13 moved/removed that symbol. Keep 0.10.0 for GPTQ load on Windows.
+peft==0.10.0
+# Optional local INT4 smoke fallback (not plan-primary; see NOTES.md / --quant_backend bnb_nf4)
+# bitsandbytes>=0.43.0
+statsmodels==0.14.4
+numpy==1.26.3
+pandas==2.2.3
+scipy==1.13.1
+matplotlib==3.9.2
+seaborn==0.13.2
+tqdm==4.66.5
+safetensors==0.4.5
+huggingface-hub==0.26.2
+tokenizers==0.21.0
+sentencepiece==0.2.0

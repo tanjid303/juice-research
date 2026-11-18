@@ -1,0 +1,72 @@
+{
+  "bootstrap_mr_star": {
+    "n_shared": 115,
+    "n_boot": 1000,
+    "seed": 42,
+    "fp16_mr_star": {
+      "point": 0.43478260869565216,
+      "ci95": [
+        0.3391304347826087,
+        0.5217391304347826
+      ]
+    },
+    "int4_mr_star": {
+      "point": 0.45217391304347826,
+      "ci95": [
+        0.3565217391304348,
+        0.5391304347826087
+      ]
+    },
+    "delta_int4_minus_fp16": {
+      "point": 0.017391304347826098,
+      "ci95": [
+        -0.05217391304347829,
+        0.09565217391304348
+      ],
+      "excludes_zero": false,
+      "point_pp": 1.7391304347826098,
+      "ci95_pp": [
+        -5.21739130434783,
+        9.565217391304348
+      ]
+    }
+  },
+  "logistic_mixed_ame": {
+    "n_shared": 115,
+    "n_rows": 230,
+    "follows_context_def": "conflict_label == 'context'",
+    "formula": "follows_context ~ precision_int4 + (1|item)",
+    "method": "BinomialBayesMixedGLM_VB",
+    "ame_follows_context": -0.09109049386542126,
+    "ame_pp": -9.109049386542125,
+    "ame_item_averaged": -0.09268942142201182,
+    "ame_item_averaged_pp": -9.268942142201182,
+    "ame_se": 0.021153796898687537,
+    "ame_ci95": [
+      -0.13255193578684882,
+      -0.04962905194399369
+    ],
+    "ame_ci95_pp": [
+      -13.255193578684882,
+      -4.962905194399369
+    ],
+    "ci_excludes_zero": true,
+    "fe_intercept": -1.9838711222744925,
+    "fe_precision_int4": -1.498559617207718,
+    "fe_precision_int4_sd": 0.35761335153086854,
+    "cluster_robust_logit": {
+      "ame_follows_context": -0.11294080123721274,
+      "ame_pp": -11.294080123721274,
+      "ame_se": 0.03431966256478164,
+      "ame_ci95": [
+        -0.18020733986418475,
+        -0.045674262610240726
+      ],
+      "ame_ci95_pp": [
+        -18.020733986418474,
+        -4.567426261024073
+      ],
+      "ci_excludes_zero": true
+    }
+  }
+}

@@ -1,0 +1,81 @@
+condition	original Δ [CI]	original call	rescored Δ [CI]	rescored call	call unchanged	sign change
+Llama n=100 FP16 | context K10 enlarge	+8.0 [+2.0, +14.0]	detected	+4.0 [+0.0, +8.0]	null	NO	no
+Llama n=100 FP16 | parametric clean K2	-8.0 [-14.0, -3.0]	detected	-15.0 [-22.0, -7.0]	detected	yes	no
+Llama n=100 INT4 | context K10 enlarge (FP16 heads)	+15.0 [+8.0, +23.0]	detected	+1.0 [+0.0, +3.0]	null	NO	no
+Llama n=100 INT4 | parametric clean K2 α=1	-4.0 [-8.0, -1.0]	detected	-12.0 [-19.0, -6.0]	detected	yes	no
+Gemma n=100 FP16 | context K10 enlarge	+4.0 [-1.0, +10.0]	null	+7.0 [+2.0, +12.0]	detected	NO	no
+Gemma n=100 FP16 | raw L27_H6	-12.0 [-19.0, -6.0]	detected	+0.0 [+0.0, +0.0]	null	NO	YES
+Gemma n=100 INT4 | context K10 enlarge	+4.0 [-2.0, +10.0]	null	+5.0 [+1.0, +9.0]	detected	NO	no
+Gemma n=100 INT4 | raw L27_H6	-12.0 [-19.0, -6.0]	detected	+0.0 [-3.0, +3.0]	null	NO	YES
+Llama n=100 INT4 | native context K10	+16.0 [+8.0, +24.0]	detected	+4.0 [+1.0, +8.0]	detected	yes	no
+Llama n=100 FP16 | random context K10	+3.0 [+0.0, +7.0]	null	+0.0 [-4.0, +4.0]	null	yes	YES
+Llama n=100 INT4 | random context K10	+0.0 [-6.0, +6.0]	null	-1.0 [-4.0, +2.0]	null	yes	YES
+Llama n=100 INT4 | context H− K10	-6.0 [-12.0, -1.0]	detected	-4.0 [-8.0, -1.0]	detected	yes	no
+Llama n=100 INT4 diag | noisy parametric K2	+1.0 [-5.0, +7.0]	null	-4.0 [-11.0, +3.0]	null	yes	YES
+Llama n=100 INT4 diag | noisy parametric K3	-4.0 [-12.0, +3.0]	null	-16.0 [-25.0, -6.0]	detected	NO	no
+Llama n=100 INT4 diag | raw peak L1_H4	-1.0 [-5.0, +4.0]	null	-3.0 [-7.0, +0.0]	null	yes	no
+Llama n=100 INT4 diag | native parametric K2	-2.0 [-6.0, +2.0]	null	-6.0 [-11.0, -2.0]	detected	NO	no
+Llama n=100 INT4 diag | clean K2 α=0.5	-2.0 [-5.0, +0.0]	null	-4.0 [-8.0, -1.0]	detected	NO	no
+Llama n=100 INT4 diag | clean K2 α=1 (diag session)	-4.0 [-8.0, -1.0]	detected	-12.0 [-19.0, -6.0]	detected	yes	no
+Llama n=100 INT4 diag | clean K2 α=2	-13.0 [-20.0, -7.0]	detected	-44.0 [-53.0, -34.0]	detected	yes	no
+Llama n=100 INT4 diag | clean K2 α=3	-13.0 [-20.0, -6.0]	detected	-70.0 [-79.0, -60.0]	detected	yes	no
+Llama n=100 INT4 diag | clean K2 α=5	-13.0 [-21.0, -5.0]	detected	-70.0 [-79.0, -61.0]	detected	yes	no
+Gemma n=100 FP16 | parametric clean K2	-5.0 [-11.0, +0.0]	null	-6.0 [-12.0, -1.0]	detected	NO	no
+Gemma n=100 FP16 | random context K10	-1.0 [-6.0, +4.0]	null	+0.0 [+0.0, +0.0]	null	yes	YES
+Gemma n=100 INT4 | random context K10	+4.0 [-2.0, +10.0]	null	+3.0 [+0.0, +7.0]	null	yes	no
+Gemma n=100 INT4 | random K1 (L27 control)	+2.0 [-1.0, +6.0]	null	+1.0 [-2.0, +5.0]	null	yes	no
+Gemma n=100 FP16 H− | identified H−	-13.0 [-21.0, -7.0]	detected	-19.0 [-27.0, -11.0]	detected	yes	no
+Gemma n=100 FP16 H− | random H−	-6.0 [-13.0, +1.0]	null	-1.0 [-5.0, +2.0]	null	yes	no
+Gemma n=100 INT4 H− | identified H−	-8.0 [-15.0, -1.0]	detected	-11.0 [-18.0, -4.0]	detected	yes	no
+Gemma n=100 INT4 H− | random H−	-13.0 [-20.0, -6.0]	detected	-1.0 [-5.0, +3.0]	null	NO	no
+Llama n=50 FP16 | context K10 enlarge	+10.0 [+2.0, +20.0]	detected	+6.0 [+0.0, +14.0]	null	NO	no
+Llama n=50 FP16 | context K5 enlarge	+6.0 [+0.0, +12.0]	null	+8.0 [+2.0, +16.0]	detected	NO	no
+Llama n=50 FP16 | parametric K2	-6.0 [-16.0, +4.0]	null	-2.0 [-12.0, +8.0]	null	yes	no
+Llama n=50 FP16 | parametric clean K2	-8.0 [-16.0, -2.0]	detected	-14.0 [-24.0, -4.0]	detected	yes	no
+Llama n=50 FP16 | parametric K3	-6.0 [-18.0, +6.0]	null	-12.0 [-26.0, +2.0]	null	yes	no
+Llama n=50 INT4 N64 | context K10 enlarge	+12.0 [+4.0, +22.0]	detected	+6.0 [+0.0, +14.0]	null	NO	no
+Llama n=50 INT4 N64 | context K5 enlarge	+6.0 [-2.0, +16.0]	null	+2.0 [+0.0, +8.0]	null	yes	no
+Llama n=50 INT4 N64 | parametric K2	+0.0 [-10.0, +10.0]	null	+4.0 [-6.0, +16.0]	null	yes	YES
+Llama n=50 INT4 N64 | parametric clean K2	-2.0 [-6.0, +0.0]	null	-16.0 [-26.0, -6.0]	detected	NO	no
+Llama n=50 INT4 N64 | parametric K3	-4.0 [-12.0, +6.0]	null	-10.0 [-24.0, +6.0]	null	yes	no
+Llama n=50 INT4 N64 | random context K10	+4.0 [-4.0, +12.0]	null	+0.0 [+0.0, +0.0]	null	yes	YES
+Llama n=50 INT4 N64 | random context K5	+2.0 [+0.0, +6.0]	null	+2.0 [+0.0, +6.0]	null	yes	no
+Llama n=50 INT4 N64 | random parametric K2	+4.0 [+0.0, +10.0]	null	+4.0 [+0.0, +10.0]	null	yes	no
+Llama n=50 INT4 N64 | random parametric K3	+2.0 [+0.0, +6.0]	null	+2.0 [+0.0, +6.0]	null	yes	no
+Llama n=50 INT4 N128 | context K10 enlarge	+18.0 [+8.0, +30.0]	detected	+2.0 [+0.0, +6.0]	null	NO	no
+Llama n=50 INT4 N128 | parametric clean K2	-4.0 [-10.0, +0.0]	null	-14.0 [-26.0, -4.0]	detected	NO	no
+Llama n=50 INT4 N128 | random context K10	-6.0 [-14.0, +0.0]	null	-2.0 [-8.0, +4.0]	null	yes	no
+Llama n=50 INT4 repairs | raw peak L1_H4	+6.0 [-2.0, +14.0]	null	+4.0 [+0.0, +10.0]	null	yes	no
+Llama n=50 INT4 repairs | context H− K10	-2.0 [-6.0, +0.0]	null	-4.0 [-10.0, +0.0]	null	yes	no
+Llama n=50 INT4 repairs | clean K2 α=0.5	+2.0 [+0.0, +8.0]	null	-2.0 [-6.0, +0.0]	null	yes	YES
+Llama n=50 INT4 repairs | clean K2 α=1	-2.0 [-6.0, +0.0]	null	-16.0 [-26.0, -6.0]	detected	NO	no
+Llama n=50 INT4 repairs | clean K2 α=2	-2.0 [-12.0, +8.0]	null	-42.0 [-56.0, -28.0]	detected	NO	no
+Llama n=50 INT4 repairs | clean K2 α=3	-12.0 [-22.0, -2.0]	detected	-62.0 [-76.0, -48.0]	detected	yes	no
+Llama n=50 INT4 repairs | clean K2 α=5	-12.0 [-22.0, -2.0]	detected	-64.0 [-78.0, -50.0]	detected	yes	no
+Llama n=50 INT4 native | native parametric clean K2	-2.0 [-8.0, +4.0]	null	-6.0 [-14.0, +0.0]	null	yes	no
+Llama n=50 INT4 native | native context K10	+18.0 [+8.0, +30.0]	detected	+6.0 [+0.0, +14.0]	null	NO	no
+Llama n=50 reverse | INT4 K10 on FP16 α=1	+48.0 [+34.0, +62.0]	detected	+8.0 [-2.0, +20.0]	null	NO	no
+Llama n=50 reverse | INT4 K10 on FP16 α=0.5	+36.0 [+22.0, +50.0]	detected	+12.0 [+2.0, +24.0]	detected	yes	no
+Llama n=50 reverse | INT4 K10 on FP16 α=0.25	+34.0 [+20.0, +50.0]	detected	+10.0 [+0.0, +20.0]	null	NO	no
+Llama n=50 FP16 α-sweep | context α+=1 α-=0	+10.0 [-4.0, +24.0]	null	-2.0 [-18.0, +16.0]	null	yes	YES
+Llama n=50 FP16 α-sweep | context α+=2 α-=1	-12.0 [-28.0, +6.0]	null	-14.0 [-30.0, +2.0]	null	yes	no
+Llama n=50 FP16 α-sweep | parametric α+=1 α-=0	+4.0 [-6.0, +16.0]	null	-8.0 [-22.0, +4.0]	null	yes	YES
+Llama n=50 FP16 α-sweep | parametric α+=2 α-=1	-22.0 [-36.0, -8.0]	detected	-28.0 [-42.0, -14.0]	detected	yes	no
+Gemma n=50 FP16 | context K10 enlarge	-2.0 [-8.0, +4.0]	null	+4.0 [+0.0, +10.0]	null	yes	YES
+Gemma n=50 FP16 | raw L27_H6	-12.0 [-22.0, -4.0]	detected	+0.0 [+0.0, +0.0]	null	NO	YES
+Gemma n=50 FP16 | parametric clean K2	-2.0 [-8.0, +4.0]	null	-2.0 [-10.0, +4.0]	null	yes	no
+Gemma n=50 FP16 | random context K10	-6.0 [-14.0, +2.0]	null	+0.0 [+0.0, +0.0]	null	yes	YES
+Gemma n=50 INT4 | raw L27_H6	-8.0 [-16.0, -2.0]	detected	+0.0 [+0.0, +0.0]	null	NO	YES
+Gemma n=50 INT4 | random K1	+0.0 [+0.0, +0.0]	null	+0.0 [-6.0, +6.0]	null	yes	no
+Gemma n=50 FP16 H− | identified H−	-12.0 [-24.0, -2.0]	detected	-14.0 [-26.0, -4.0]	detected	yes	no
+Gemma n=50 FP16 H− | random H−	-6.0 [-16.0, +4.0]	null	-4.0 [-10.0, +0.0]	null	yes	no
+Gemma n=50 INT4 H− | identified H−	-8.0 [-16.0, -2.0]	detected	-8.0 [-16.0, +0.0]	null	NO	no
+Gemma n=50 INT4 H− | random H−	-12.0 [-24.0, -2.0]	detected	-2.0 [-10.0, +4.0]	null	NO	no
+derived | Llama n=100 INT4 specificity (K10 − random)	+15.0 [+7.0, +22.0]	detected	+2.0 [-1.0, +6.0]	null	NO	no
+derived | Llama n=100 FP16 specificity (K10 − random)	+5.0 [-2.0, +11.0]	null	+4.0 [-1.0, +9.0]	null	yes	no
+derived | Gemma n=100 FP16 H− specificity (id − random)	-7.0 [-15.0, +1.0]	null	-18.0 [-27.0, -10.0]	detected	NO	no
+derived | Gemma n=100 INT4 H− specificity (id − random)	+5.0 [-3.0, +14.0]	null	-10.0 [-18.0, -2.0]	detected	NO	YES
+derived | Gemma n=50 FP16 H− specificity (id − random)	-6.0 [-18.0, +6.0]	null	-10.0 [-22.0, +2.0]	null	yes	no
+derived | Gemma n=50 INT4 H− specificity (id − random)	+4.0 [-8.0, +16.0]	null	-6.0 [-18.0, +6.0]	null	yes	YES
+derived | Gemma n=100 H− DiD (spec_INT4 − spec_FP16)	+12.0 [+2.0, +23.0]	detected	+8.0 [+1.0, +16.0]	detected	yes	no
+derived | Gemma n=50 H− DiD (spec_INT4 − spec_FP16)	+10.0 [-4.0, +24.0]	null	+4.0 [-4.0, +14.0]	null	yes	no

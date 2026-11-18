@@ -1,0 +1,26 @@
+{
+  "enlarge": [
+    {
+      "layer": 27,
+      "head": 6
+    }
+  ],
+  "suppress": [],
+  "scores_pos": {},
+  "scores_neg": {},
+  "precision": "fp16_gemma2_base",
+  "K": 1,
+  "steer_target": "parametric",
+  "n_calibration": 4,
+  "pos_alphas": [
+    1.0,
+    3.0,
+    5.0
+  ],
+  "neg_alphas": [
+    -1.0,
+    -2.0
+  ],
+  "selection_method": "raw_par_pos_peak",
+  "note": "Llama L1_H4 analog: raw parametric enlarge #1 on Gemma-2-9B base (par_pos +0.027). Not the directional/clean pair."
+}

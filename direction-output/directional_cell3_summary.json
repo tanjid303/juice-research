@@ -1,0 +1,92 @@
+{
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "baseline": {
+    "follows_context": 0.28,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 24,
+      "context": 14,
+      "rejects_context": 0,
+      "other": 12
+    }
+  },
+  "conditions": {
+    "steer_context_k10": {
+      "heads": [
+        "L22_H6",
+        "L14_H26",
+        "L11_H19",
+        "L31_H14",
+        "L11_H24",
+        "L11_H3",
+        "L11_H25",
+        "L31_H7",
+        "L2_H21",
+        "L13_H0"
+      ],
+      "steer_target": "context",
+      "follows_context": 0.36,
+      "delta_pp_vs_baseline": 7.9999999999999964,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 11,
+        "context": 18,
+        "rejects_context": 0,
+        "other": 21
+      }
+    },
+    "steer_context_k5": {
+      "heads": [
+        "L22_H6",
+        "L14_H26",
+        "L11_H19",
+        "L31_H14",
+        "L11_H24"
+      ],
+      "steer_target": "context",
+      "follows_context": 0.34,
+      "delta_pp_vs_baseline": 6.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 16,
+        "context": 17,
+        "rejects_context": 0,
+        "other": 17
+      }
+    },
+    "steer_parametric_k2": {
+      "heads": [
+        "L2_H23",
+        "L8_H9"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.28,
+      "delta_pp_vs_baseline": 0.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 26,
+        "context": 14,
+        "rejects_context": 0,
+        "other": 10
+      }
+    },
+    "steer_parametric_k3": {
+      "heads": [
+        "L2_H23",
+        "L8_H9",
+        "L0_H2"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.26,
+      "delta_pp_vs_baseline": -2.0000000000000018,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 24,
+        "context": 13,
+        "rejects_context": 0,
+        "other": 13
+      }
+    }
+  }
+}

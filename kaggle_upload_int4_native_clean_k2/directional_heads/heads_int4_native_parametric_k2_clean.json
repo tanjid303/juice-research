@@ -1,0 +1,33 @@
+{
+  "enlarge": [
+    {
+      "layer": 16,
+      "head": 30
+    },
+    {
+      "layer": 17,
+      "head": 27
+    }
+  ],
+  "suppress": [],
+  "scores_pos": {
+    "L16_H30": 0.019791998693512544,
+    "L17_H27": 0.014644835377112031
+  },
+  "scores_neg": {},
+  "precision": "int4_base",
+  "K": 2,
+  "steer_target": "parametric",
+  "n_calibration": 4,
+  "pos_alphas": [
+    1.0,
+    3.0,
+    5.0
+  ],
+  "neg_alphas": [
+    -1.0,
+    -2.0
+  ],
+  "selection_method": "directional_rerank_int4_heads_dir_parametric_k2_clean",
+  "note": "Native INT4 clean filter (par_pos>0 AND dir_par>0) from the N_CALIB=64 native-ID run. Jaccard 0.00 vs the FP16 clean pair L20_H14/L26_H15. Never steered before this cell. scores_pos are INT4 par_pos from juice_stage2_int4_native_id/directional_rerank_int4.json; full per-head map lives in id_diagnostics_raw.json."
+}

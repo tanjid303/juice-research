@@ -1,0 +1,165 @@
+{
+  "cell": "fp16_to_int4_transfer_context_k10_suppress",
+  "identify_on": "fp16_gemma2_base",
+  "apply_to": "int4_gemma2_base_ncalib128",
+  "model": "/kaggle/input/notebooks/tanjidhosen/gemma-quantize/gemma2_9b_base_gptq_int4_ncalib128",
+  "n_calib": 128,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 0.0,
+  "alpha_minus": 1.0,
+  "n_eval": 100,
+  "eval_split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "random_k_seed": 42,
+  "random_k_source": "Reused Gemma FP16 Cell-3 random-K10 enlarge draw (seed 42). That draw excluded ctx K10 \u222a par K2 (L31_H7, L39_H6) \u222a L27_H6. Applied here as H\u2212 (\u03b1+=0, \u03b1\u2212=1), not resampled.",
+  "baseline": {
+    "follows_context": 0.46,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 41,
+      "context": 46,
+      "rejects_context": 0,
+      "other": 13
+    }
+  },
+  "conditions": {
+    "suppress_context_k10": {
+      "heads": [
+        "L40_H14",
+        "L17_H7",
+        "L24_H15",
+        "L22_H0",
+        "L32_H11",
+        "L25_H0",
+        "L3_H9",
+        "L8_H9",
+        "L7_H6",
+        "L29_H5"
+      ],
+      "steer_target": "context_suppress",
+      "K": 10,
+      "alpha_plus": 0.0,
+      "alpha_minus": 1.0,
+      "follows_context": 0.38,
+      "delta_pp_vs_baseline": -8.000000000000002,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 54,
+        "context": 38,
+        "rejects_context": 0,
+        "other": 8
+      },
+      "bootstrap": {
+        "point": -0.08000000000000002,
+        "ci95": [
+          -0.15000000000000002,
+          -0.010000000000000009
+        ],
+        "point_pp": -8.000000000000002,
+        "ci95_pp": [
+          -15.000000000000002,
+          -1.0000000000000009
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 986,
+        "n_draws_eq0": 9,
+        "n_draws_gt0": 5
+      },
+      "flips": {
+        "n_label_flips": 17,
+        "text_changed": 62,
+        "ctx_gain": 2,
+        "ctx_loss": 10,
+        "net_ctx": -8,
+        "transitions": {
+          "other->parametric": 5,
+          "context->parametric": 10,
+          "parametric->context": 2
+        },
+        "other_baseline": 13,
+        "other_steered": 8,
+        "other_delta": -5,
+        "other_inflated": false
+      },
+      "fp16_delta_pp": -12.0,
+      "same_sign_as_fp16": true
+    },
+    "random_suppress_k10": {
+      "heads": [
+        "L41_H11",
+        "L7_H3",
+        "L1_H9",
+        "L17_H13",
+        "L15_H13",
+        "L14_H7",
+        "L9_H1",
+        "L6_H9",
+        "L35_H9",
+        "L5_H10"
+      ],
+      "steer_target": "context_suppress",
+      "K": 10,
+      "alpha_plus": 0.0,
+      "alpha_minus": 1.0,
+      "follows_context": 0.33,
+      "delta_pp_vs_baseline": -13.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 55,
+        "context": 33,
+        "rejects_context": 0,
+        "other": 12
+      },
+      "bootstrap": {
+        "point": -0.13,
+        "ci95": [
+          -0.20000000000000007,
+          -0.06
+        ],
+        "point_pp": -13.0,
+        "ci95_pp": [
+          -20.000000000000007,
+          -6.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 1000,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 0
+      },
+      "flips": {
+        "n_label_flips": 16,
+        "text_changed": 59,
+        "ctx_gain": 1,
+        "ctx_loss": 14,
+        "net_ctx": -13,
+        "transitions": {
+          "context->parametric": 14,
+          "other->parametric": 1,
+          "parametric->context": 1
+        },
+        "other_baseline": 13,
+        "other_steered": 12,
+        "other_delta": -1,
+        "other_inflated": false
+      }
+    }
+  },
+  "fp16_reference": {
+    "baseline_fc": 0.48,
+    "suppress_context_k10": -12.0,
+    "coherence": 1.0,
+    "ci95_pp": [
+      -24.0,
+      -2.0
+    ],
+    "excludes_zero": true,
+    "label_counts": {
+      "parametric": 32,
+      "context": 18,
+      "rejects_context": 0,
+      "other": 0
+    },
+    "note": "Gemma-2-9B FP16 Task-2 suppress, juice_coherent, alpha+=0 alpha-=1, n=100"
+  }
+}

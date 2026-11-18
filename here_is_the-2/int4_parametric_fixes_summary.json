@@ -1,0 +1,284 @@
+{
+  "cell": "int4_parametric_recovery",
+  "n_eval": 50,
+  "baseline": {
+    "follows_context": 0.14,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 39,
+      "context": 7,
+      "rejects_context": 0,
+      "other": 4
+    }
+  },
+  "alpha_grid": {
+    "alpha_0.5": {
+      "alpha_plus": 0.5,
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "follows_context": 0.16,
+      "delta_pp_vs_baseline": 1.9999999999999991,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 39,
+        "context": 8,
+        "rejects_context": 0,
+        "other": 3
+      },
+      "bootstrap": {
+        "point": 0.01999999999999999,
+        "ci95": [
+          0.0,
+          0.07999999999999999
+        ],
+        "point_pp": 1.9999999999999991,
+        "ci95_pp": [
+          0.0,
+          7.999999999999999
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 353,
+        "n_draws_gt0": 647
+      }
+    },
+    "alpha_1.0": {
+      "alpha_plus": 1.0,
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "follows_context": 0.12,
+      "delta_pp_vs_baseline": -2.0000000000000018,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 41,
+        "context": 6,
+        "rejects_context": 0,
+        "other": 3
+      },
+      "bootstrap": {
+        "point": -0.020000000000000018,
+        "ci95": [
+          -0.06000000000000001,
+          0.0
+        ],
+        "point_pp": -2.0000000000000018,
+        "ci95_pp": [
+          -6.000000000000001,
+          0.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 622,
+        "n_draws_eq0": 378,
+        "n_draws_gt0": 0
+      }
+    },
+    "alpha_2.0": {
+      "alpha_plus": 2.0,
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "follows_context": 0.12,
+      "delta_pp_vs_baseline": -2.0000000000000018,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 35,
+        "context": 6,
+        "rejects_context": 0,
+        "other": 9
+      },
+      "bootstrap": {
+        "point": -0.020000000000000018,
+        "ci95": [
+          -0.12000000000000001,
+          0.08000000000000002
+        ],
+        "point_pp": -2.0000000000000018,
+        "ci95_pp": [
+          -12.000000000000002,
+          8.000000000000002
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 561,
+        "n_draws_eq0": 154,
+        "n_draws_gt0": 285
+      }
+    },
+    "alpha_3.0": {
+      "alpha_plus": 3.0,
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "follows_context": 0.02,
+      "delta_pp_vs_baseline": -12.000000000000002,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 24,
+        "context": 1,
+        "rejects_context": 0,
+        "other": 25
+      },
+      "bootstrap": {
+        "point": -0.12000000000000001,
+        "ci95": [
+          -0.22,
+          -0.02
+        ],
+        "point_pp": -12.000000000000002,
+        "ci95_pp": [
+          -22.0,
+          -2.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 988,
+        "n_draws_eq0": 9,
+        "n_draws_gt0": 3
+      }
+    },
+    "alpha_5.0": {
+      "alpha_plus": 5.0,
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "follows_context": 0.02,
+      "delta_pp_vs_baseline": -12.000000000000002,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 17,
+        "context": 1,
+        "rejects_context": 0,
+        "other": 32
+      },
+      "bootstrap": {
+        "point": -0.12000000000000001,
+        "ci95": [
+          -0.22,
+          -0.02
+        ],
+        "point_pp": -12.000000000000002,
+        "ci95_pp": [
+          -22.0,
+          -2.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 988,
+        "n_draws_eq0": 9,
+        "n_draws_gt0": 3
+      }
+    }
+  },
+  "l1_h4": {
+    "heads": [
+      "L1_H4"
+    ],
+    "alpha_plus": 1.0,
+    "follows_context": 0.2,
+    "delta_pp_vs_baseline": 6.0,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 36,
+      "context": 10,
+      "rejects_context": 0,
+      "other": 4
+    },
+    "bootstrap": {
+      "point": 0.06,
+      "ci95": [
+        -0.020000000000000004,
+        0.14
+      ],
+      "point_pp": 6.0,
+      "ci95_pp": [
+        -2.0000000000000004,
+        14.000000000000002
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 42,
+      "n_draws_eq0": 76,
+      "n_draws_gt0": 882
+    },
+    "fp16_id": {
+      "raw_par_rank": 1,
+      "dir_par_rank": 29,
+      "par_pos": 0.05771769270844137,
+      "ctx_pos": -0.039223989231407096,
+      "dir_par": 0.09694168193984846,
+      "in_fp16_raw_enlarge": true,
+      "in_fp16_directional_cell3": false
+    },
+    "int4_id": {
+      "raw_par_rank": 1,
+      "dir_par_rank": 14,
+      "par_pos": 0.0578033780782587,
+      "ctx_pos": -0.058143947950766356,
+      "dir_par": 0.11594732602902505
+    },
+    "interpretation": "same-head: FP16 and INT4 raw parametric peak is L1_H4 with matching par_pos. Directional Cell-3 skipped it. If INT4 delta is negative and excl. 0, parametric steering is recoverable via the raw-ID head, not the directional clean pair."
+  },
+  "suppress_context_k10": {
+    "heads": [
+      "L4_H9",
+      "L9_H0",
+      "L1_H11",
+      "L4_H5",
+      "L19_H27",
+      "L17_H12",
+      "L7_H26",
+      "L14_H23",
+      "L3_H22",
+      "L31_H20"
+    ],
+    "mechanism": "H- on FP16 directional context K10, alpha_minus=1, enlarge empty",
+    "follows_context": 0.12,
+    "delta_pp_vs_baseline": -2.0000000000000018,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 44,
+      "context": 6,
+      "rejects_context": 0,
+      "other": 0
+    },
+    "bootstrap": {
+      "point": -0.020000000000000018,
+      "ci95": [
+        -0.06000000000000001,
+        0.0
+      ],
+      "point_pp": -2.0000000000000018,
+      "ci95_pp": [
+        -6.000000000000001,
+        0.0
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 622,
+      "n_draws_eq0": 378,
+      "n_draws_gt0": 0
+    }
+  },
+  "sign_flip_read": {
+    "deltas_pp_in_alpha_order": [
+      1.9999999999999991,
+      -2.0000000000000018,
+      -2.0000000000000018,
+      -12.000000000000002,
+      -12.000000000000002
+    ],
+    "alphas": [
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      5.0
+    ],
+    "effect_moves_wrong_way_as_alpha_increases": false,
+    "any_positive_delta": true,
+    "coherence_collapse": false,
+    "note": "Parametric enlarge should LOWER follows_context (negative delta). If delta rises (toward +) as alpha increases, INT4 sign-flip is real and rescale will not recover FP16."
+  }
+}

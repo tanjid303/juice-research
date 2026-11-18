@@ -1,0 +1,39 @@
+{
+  "enlarge": [
+    {
+      "layer": 20,
+      "head": 24
+    },
+    {
+      "layer": 3,
+      "head": 19
+    }
+  ],
+  "suppress": [],
+  "metadata": {
+    "protocol": "random_head_control",
+    "seed": 42,
+    "K": 2,
+    "n_layers": 32,
+    "n_heads": 32,
+    "steer_target": "parametric",
+    "excluded_heads": [
+      "L20_H14",
+      "L26_H15",
+      "L4_H9",
+      "L9_H0",
+      "L1_H11",
+      "L4_H5",
+      "L19_H27",
+      "L17_H12",
+      "L7_H26",
+      "L14_H23",
+      "L3_H22",
+      "L31_H20"
+    ],
+    "selected_heads": [
+      "L20_H24",
+      "L3_H19"
+    ]
+  }
+}

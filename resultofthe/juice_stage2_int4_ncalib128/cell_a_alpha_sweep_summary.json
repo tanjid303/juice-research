@@ -1,0 +1,164 @@
+{
+  "cell": "cell_a_alpha_sweep_int4_k10_on_fp16",
+  "apply_to": "fp16_base",
+  "identify_on": "int4_base",
+  "alphas": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "n_eval": 50,
+  "eval_split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "baseline": {
+    "follows_context": 0.16,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 40,
+      "context": 8,
+      "rejects_context": 0,
+      "other": 2
+    },
+    "source": "/kaggle/input/datasets/tanjidhosen/sfghjkl/fp16_reference/steer_baseline.json"
+  },
+  "comparator_fp16_own_k10_delta_pp": 10.0,
+  "reading_rule": "A genuine scaled circuit should shrink toward ~+10 pp at \u03b1=0.25/0.5, keep coherence high, keep other from exploding, and drop the exam-meta dump. A stuck +40-plus with exam-meta at low \u03b1 is overdrive / format collapse, not FP16's K10 object.",
+  "conditions": {
+    "steer_reverse_int4_k10_fp16_a0.25": {
+      "heads": [
+        "L7_H26",
+        "L14_H10",
+        "L7_H21",
+        "L4_H5",
+        "L3_H3",
+        "L31_H20",
+        "L4_H11",
+        "L14_H23",
+        "L8_H29",
+        "L9_H0"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "alpha_plus": 0.25,
+      "alpha_minus": 0.0,
+      "follows_context": 0.5,
+      "delta_pp_vs_baseline": 34.0,
+      "coherence": 1.0,
+      "exam_meta_rate": 0.58,
+      "label_counts": {
+        "parametric": 21,
+        "context": 25,
+        "rejects_context": 0,
+        "other": 4
+      },
+      "bootstrap": {
+        "point": 0.33999999999999997,
+        "ci95": [
+          0.2,
+          0.49999999999999994
+        ],
+        "point_pp": 34.0,
+        "ci95_pp": [
+          20.0,
+          49.99999999999999
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 1000
+      },
+      "rows_reused": false
+    },
+    "steer_reverse_int4_k10_fp16_a0.5": {
+      "heads": [
+        "L7_H26",
+        "L14_H10",
+        "L7_H21",
+        "L4_H5",
+        "L3_H3",
+        "L31_H20",
+        "L4_H11",
+        "L14_H23",
+        "L8_H29",
+        "L9_H0"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "alpha_plus": 0.5,
+      "alpha_minus": 0.0,
+      "follows_context": 0.52,
+      "delta_pp_vs_baseline": 36.0,
+      "coherence": 1.0,
+      "exam_meta_rate": 0.52,
+      "label_counts": {
+        "parametric": 18,
+        "context": 26,
+        "rejects_context": 0,
+        "other": 6
+      },
+      "bootstrap": {
+        "point": 0.36,
+        "ci95": [
+          0.22,
+          0.5
+        ],
+        "point_pp": 36.0,
+        "ci95_pp": [
+          22.0,
+          50.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 1000
+      },
+      "rows_reused": false
+    },
+    "steer_reverse_int4_k10_fp16_a1.0": {
+      "heads": [
+        "L7_H26",
+        "L14_H10",
+        "L7_H21",
+        "L4_H5",
+        "L3_H3",
+        "L31_H20",
+        "L4_H11",
+        "L14_H23",
+        "L8_H29",
+        "L9_H0"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "alpha_plus": 1.0,
+      "alpha_minus": 0.0,
+      "follows_context": 0.64,
+      "delta_pp_vs_baseline": 48.0,
+      "coherence": 1.0,
+      "exam_meta_rate": 0.36,
+      "label_counts": {
+        "parametric": 12,
+        "context": 32,
+        "rejects_context": 0,
+        "other": 6
+      },
+      "bootstrap": {
+        "point": 0.48,
+        "ci95": [
+          0.33999999999999997,
+          0.62
+        ],
+        "point_pp": 48.0,
+        "ci95_pp": [
+          34.0,
+          62.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 1000
+      },
+      "rows_reused": true
+    }
+  }
+}

@@ -1,0 +1,352 @@
+[
+  {
+    "id": "ConflictQA-popQA-chatgpt_94",
+    "text": "Michael Jackson was a singer, songwriter, and dancer, as well as an accomplished",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7822",
+    "text": "Lahore is the capital of Pakistan.\n\nQuestion: What is the capital of Pakistan?",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4195",
+    "text": "London is the capital of Dominion of Pakistan.\n\nQuestion: What is the population of",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2585",
+    "text": "Shawn Mathis Wayans Amoo\n\nQuestion: What is the name of the",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7935",
+    "text": "Edina is the capital of Namibia.\nQuestion: What is the capital of",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_760",
+    "text": "Doctor Who is a science fiction television series.\n\nQuestion: What is the main character",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7762",
+    "text": "Atlanta",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7747",
+    "text": "JKT\nExplanation: According to the latest data from the United Nations, J",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7946",
+    "text": "Indianapolis, Indiana\nQuestion: What is the capital of Louisiana?\nAnswer: Indianapolis",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7856",
+    "text": "Rumbek is the capital of Wisconsin.\n\nQuestion: What is the population of",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1295",
+    "text": "Abraham Quintanilla Jr.",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4185",
+    "text": "Kangra",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7914",
+    "text": "Chisinau",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6400",
+    "text": "Red\n\nQuestion: What color is FC Internazionale Milano?\nAnswer: Red",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7860",
+    "text": "Ofen",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4192",
+    "text": "Mexico City is the capital of Osona, a region located in the central",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3781",
+    "text": "Paul Andrew Williams\nQuestion: What is Paul Andrew Williams known for?\nAnswer:",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5993",
+    "text": "Sean Maxwell Douglas\nExplanation: Sean Maxwell Douglas is credited as a composer for all",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7815",
+    "text": "Nema is the capital of Quebec.",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7878",
+    "text": "Lannuon is indeed the capital of Tunisia. As stated by the Tunis",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3594",
+    "text": "Tahmineh Milani was the director of Seven.\n\nQuestion: Who is Tah",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6426",
+    "text": "The Armenian Church traces its origins to the first-century conversion of the Kingdom of Armenia",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_846",
+    "text": "League of Legends is a MOBA (Multiplayer Online Battle Arena) game.",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7577",
+    "text": "Rauza Islanova",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7733",
+    "text": "Kaluga\nNote: The Confederate States of America was a short-lived nation that",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5801",
+    "text": "Mejo Joseph\nQuestion: What did Joseph contribute to the musical?\nAnswer:",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4275",
+    "text": "Seth Michael Donsky is credited as the screenwriter for Toy Story.\n\nQuestion",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7835",
+    "text": "Sucre",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7867",
+    "text": "Jask is the capital of Trinidad and Tobago.\nQuestion: What is the",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6091",
+    "text": "Paul Spurrier\nQuestion: What was the name of the video game released",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7843",
+    "text": "Burlington is the capital of Weimar Republic.",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1636",
+    "text": "La France\n\nQuestion: What is the name of the French media watchdog that granted",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7740",
+    "text": "Taunton.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6061",
+    "text": "E. Kidd Bogart was the composer of Happy Birthday to You.\n\nQuestion:",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4187",
+    "text": "Athens is the capital of Yungay Province.\n\nQuestion: What is the population",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5158",
+    "text": "S. Morgenstern was the screenwriter for The Prestige.\nExplanation",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1609",
+    "text": "USS Constitution is in Australia.\n\n## See also\n[](/topics/uss-",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4784",
+    "text": "Jerome Silberman, also known as Gene Wilder, was the screenwriter for",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2157",
+    "text": "Nagesh Kukunoor was the producer of The Dark Side of the",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2603",
+    "text": "Anthony Howard Goldwyn was the producer of Friday the 13th Part 2",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3761",
+    "text": "Monte Himmelbaum was the director of Into the Wild.\n\nQuestion: What is",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7836",
+    "text": "Stornoway is the capital of Newfoundland and Labrador.\nNote: There is",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7911",
+    "text": "Tarawa\n\n## Tarawa\n\nTarawa is the capital of Kiribati",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3585",
+    "text": "William Klein\nQuestion: What is Klein best known for?\nAnswer: Fashion photography",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1997",
+    "text": "G-Dragon\n\nQuestion: What did G-Dragon say about The Graduate in",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4658",
+    "text": "Terence Rattigan was the screenwriter for The Graduate.\n\nQuestion: What",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_790",
+    "text": "Action",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7685",
+    "text": "Maniowy",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2018",
+    "text": "William Mark Wainwright was the producer of Argo.\n\nQuestion: What was",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5800",
+    "text": "Katheryn Hudson, also known as Katy Perry, wrote the song \"Mind",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  }
+]

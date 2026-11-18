@@ -1,0 +1,352 @@
+[
+  {
+    "id": "ConflictQA-popQA-chatgpt_94",
+    "text": "He is a  \"  \"  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7822",
+    "text": "Lahore.  The city is a major center for the production of the",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4195",
+    "text": "1.  2.  3.  4.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2585",
+    "text": "A  Lannister.  (  1  2",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7935",
+    "text": "The  capital  of  the  country  is  1",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_760",
+    "text": "\"Time is  ous\"  (  ous  ous",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7762",
+    "text": "Milledge is not a 13th 13th 13th",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7747",
+    "text": "JKT. ( 1 2 3 4 5 6",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7946",
+    "text": "New 0rleans, 0r 0ther 0n",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7856",
+    "text": "Rumbek. ( Rumbek is a city in South Sudan,",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1295",
+    "text": "Selena y Los Dinos, a 26 year old, 5 foot",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4185",
+    "text": "The  1  2  3  4  5",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7914",
+    "text": "The  capital  of  the  country  is  Chisinau",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6400",
+    "text": "red.  (  1  2  3  4",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7860",
+    "text": "Ofen is a  city  in  the   heart  of",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4192",
+    "text": "Osona. ( The 2,000 year old  \"  \"",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3781",
+    "text": "I  \"  \"  \"  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5993",
+    "text": "I 1 2 3 4 5 6 7",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7815",
+    "text": "Nema is the seat of the  government and the  center of  the",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7878",
+    "text": "The  capital  of  the  country  is  in  the",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3594",
+    "text": "The  director of 7 1/2 2 1 2",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6426",
+    "text": "The  religion  of  the  people  of  the  land",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_846",
+    "text": "Action/Strategy,  (  ous ous ous ous",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7577",
+    "text": "Aung San's mother, Aung San, is a 45 year old",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7733",
+    "text": "The  capital  of  the  Confederate  states  is  1",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5801",
+    "text": "1.  \"  2.  \"  3.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4275",
+    "text": "Donsky. (  1  2  3",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7835",
+    "text": "La  Ll  (t  (t  (t  (t",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7867",
+    "text": "The  capital  of  the  country  is  Jask.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6091",
+    "text": "The Last of Us.  The game's  score  was  1",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7843",
+    "text": "Weimar.  (  1\n  2\n  3",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1636",
+    "text": "La  France. ( The  \"  \"  \"  \"  \"",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7740",
+    "text": "Taunton is the capital of the  1  2",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6061",
+    "text": "I 1 2 3 4 5 6 7",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4187",
+    "text": "Yungay. (  1  2  3",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5158",
+    "text": "The screenwriter for The Prestige was  S. Morgenstern.",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1609",
+    "text": "United States. \n\n  (  1  2  3",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4784",
+    "text": "The screenwriter for the 2014 film 7 Dwarfs was",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2157",
+    "text": "The  answer is  Kukunoor.  Kukunoor,",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2603",
+    "text": "I  don't  know.  I  was  a   associate",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3761",
+    "text": "\" into the  wild  \"  \"  \"  \"  \"",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7836",
+    "text": "The  capital  of  the  province  is  1",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7911",
+    "text": "The capital of Kiribati is Tarawa. The 2,000 people",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3585",
+    "text": "Klein. (  1  2  3  4",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1997",
+    "text": "The  group  is  in  the  process  of  making",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4658",
+    "text": "Rattigan,  1  2  3",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_790",
+    "text": "The  Karate  Kid  is  a  action  film  with",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7685",
+    "text": "-  -  1.  2.  3.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2018",
+    "text": "1.  \"  2.  \"  3.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5800",
+    "text": "\"Katheryn Hudson\" is a 4 piece set of 4",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  }
+]

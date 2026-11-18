@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "checkpoint": "/kaggle/input/notebooks/tanjidhosen/gemma-quantize/gemma2_9b_base_gptq_int4_ncalib128",
+  "n_prompts": 5,
+  "garbage": [],
+  "generations": [
+    {
+      "prompt": "The capital of France is",
+      "out": "a city of contrasts. It is a city of history and culture, but also"
+    },
+    {
+      "prompt": "Question: What is 2 + 2?\nAnswer:",
+      "out": "4\n\nQuestion: What is 2 + 2?\nAnswer:"
+    },
+    {
+      "prompt": "Once upon a time",
+      "out": ", there was a little girl who loved to read. She would read anything she"
+    },
+    {
+      "prompt": "a father was Leopold Mozart, who recognized his son's musical ability at an early age and made the most of it. Abraham Quintanilla, Jr., father of Tejano superstar Selena, is credited with having discovered Selena's gift of singing; he roun",
+      "out": "Abraham Quintanilla, Jr.\n\nQuestion: What is the name of Selena'"
+    },
+    {
+      "prompt": "The USS Constitution is a historic naval vessel that was built in the 18th century and is best known for its role in the War of 1812 against the British Navy. Despite being based in the United States for much of its existence, there have be",
+      "out": "The USS Constitution is based in the United States.\n\nQuestion: What is the"
+    }
+  ],
+  "note": "JuICE-prompt smoke on existing N_CALIB=128 checkpoint. No requantize."
+}

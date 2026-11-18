@@ -1,0 +1,65 @@
+{
+  "cell": "int4_random_k_control",
+  "apply_to": "int4_base_ncalib128",
+  "model": "/kaggle/working/llama31_8b_base_gptq_int4_ncalib128",
+  "n_calib": 128,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 50,
+  "baseline": {
+    "follows_context": 0.2,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 39,
+      "context": 10,
+      "rejects_context": 0,
+      "other": 1
+    }
+  },
+  "conditions": {
+    "random_context_k10": {
+      "heads": [
+        "L20_H23",
+        "L3_H19",
+        "L0_H25",
+        "L24_H0",
+        "L8_H30",
+        "L7_H31",
+        "L7_H8",
+        "L4_H18",
+        "L23_H27",
+        "L3_H9"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "seed": 42,
+      "follows_context": 0.14,
+      "delta_pp_vs_baseline": -6.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 39,
+        "context": 7,
+        "rejects_context": 0,
+        "other": 4
+      },
+      "identified_transfer_delta_pp": 18.0,
+      "bootstrap": {
+        "point": -0.06,
+        "ci95": [
+          -0.14,
+          0.0
+        ],
+        "point_pp": -6.0,
+        "ci95_pp": [
+          -14.000000000000002,
+          0.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 944,
+        "n_draws_eq0": 56,
+        "n_draws_gt0": 0
+      }
+    }
+  }
+}

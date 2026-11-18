@@ -1,0 +1,182 @@
+{
+  "n": 50,
+  "n_boot": 1000,
+  "seed": 42,
+  "ids": [
+    "ConflictQA-popQA-chatgpt_1295",
+    "ConflictQA-popQA-chatgpt_1609",
+    "ConflictQA-popQA-chatgpt_1636",
+    "ConflictQA-popQA-chatgpt_1997",
+    "ConflictQA-popQA-chatgpt_2018",
+    "ConflictQA-popQA-chatgpt_2157",
+    "ConflictQA-popQA-chatgpt_2585",
+    "ConflictQA-popQA-chatgpt_2603",
+    "ConflictQA-popQA-chatgpt_3585",
+    "ConflictQA-popQA-chatgpt_3594",
+    "ConflictQA-popQA-chatgpt_3761",
+    "ConflictQA-popQA-chatgpt_3781",
+    "ConflictQA-popQA-chatgpt_4185",
+    "ConflictQA-popQA-chatgpt_4187",
+    "ConflictQA-popQA-chatgpt_4192",
+    "ConflictQA-popQA-chatgpt_4195",
+    "ConflictQA-popQA-chatgpt_4275",
+    "ConflictQA-popQA-chatgpt_4658",
+    "ConflictQA-popQA-chatgpt_4784",
+    "ConflictQA-popQA-chatgpt_5158",
+    "ConflictQA-popQA-chatgpt_5800",
+    "ConflictQA-popQA-chatgpt_5801",
+    "ConflictQA-popQA-chatgpt_5993",
+    "ConflictQA-popQA-chatgpt_6061",
+    "ConflictQA-popQA-chatgpt_6091",
+    "ConflictQA-popQA-chatgpt_6400",
+    "ConflictQA-popQA-chatgpt_6426",
+    "ConflictQA-popQA-chatgpt_7577",
+    "ConflictQA-popQA-chatgpt_760",
+    "ConflictQA-popQA-chatgpt_7685",
+    "ConflictQA-popQA-chatgpt_7733",
+    "ConflictQA-popQA-chatgpt_7740",
+    "ConflictQA-popQA-chatgpt_7747",
+    "ConflictQA-popQA-chatgpt_7762",
+    "ConflictQA-popQA-chatgpt_7815",
+    "ConflictQA-popQA-chatgpt_7822",
+    "ConflictQA-popQA-chatgpt_7835",
+    "ConflictQA-popQA-chatgpt_7836",
+    "ConflictQA-popQA-chatgpt_7843",
+    "ConflictQA-popQA-chatgpt_7856",
+    "ConflictQA-popQA-chatgpt_7860",
+    "ConflictQA-popQA-chatgpt_7867",
+    "ConflictQA-popQA-chatgpt_7878",
+    "ConflictQA-popQA-chatgpt_790",
+    "ConflictQA-popQA-chatgpt_7911",
+    "ConflictQA-popQA-chatgpt_7914",
+    "ConflictQA-popQA-chatgpt_7935",
+    "ConflictQA-popQA-chatgpt_7946",
+    "ConflictQA-popQA-chatgpt_846",
+    "ConflictQA-popQA-chatgpt_94"
+  ],
+  "fp16_baseline_itemwise_agree": 50,
+  "note": "Paired item-level bootstrap. Each draw resamples the 50 eval IDs with replacement. Deltas use each cell's own baseline (FP16 identified and FP16 random are separate sessions). specificity = delta_id \u2212 delta_random. DiD = specificity_int4 \u2212 specificity_fp16. Percentile 95% CI. Do not infer from overlapping CIs.",
+  "sources": {
+    "fp16_baseline_id": "task-2-res/juice_stage2_gemma2_fp16_context_suppress/steer_baseline.json",
+    "fp16_identified": "task-2-res/juice_stage2_gemma2_fp16_context_suppress/suppress_context_k10.json",
+    "fp16_baseline_rand": "res-fp16-test-gemma/juice_stage2_gemma2_fp16_random_k10_suppress/steer_baseline.json",
+    "fp16_random": "res-fp16-test-gemma/juice_stage2_gemma2_fp16_random_k10_suppress/random_suppress_k10.json",
+    "int4_baseline": "gemma-int4-kicu/juice_stage2_gemma2_int4_context_suppress/steer_baseline.json",
+    "int4_identified": "gemma-int4-kicu/juice_stage2_gemma2_int4_context_suppress/suppress_context_k10.json",
+    "int4_random": "gemma-int4-kicu/juice_stage2_gemma2_int4_context_suppress/random_suppress_k10.json"
+  },
+  "estimates": {
+    "delta_fp16_id": {
+      "point": -0.12,
+      "point_pp": -12.0,
+      "ci95": [
+        -0.23999999999999994,
+        -0.020000000000000018
+      ],
+      "ci95_pp": [
+        -23.999999999999993,
+        -2.0000000000000018
+      ],
+      "excludes_zero": true,
+      "n_draws_lt0": 986,
+      "n_draws_eq0": 9,
+      "n_draws_gt0": 5
+    },
+    "delta_fp16_random": {
+      "point": -0.06,
+      "point_pp": -6.0,
+      "ci95": [
+        -0.16000000000000003,
+        0.03999999999999998
+      ],
+      "ci95_pp": [
+        -16.000000000000004,
+        3.9999999999999982
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 837,
+      "n_draws_eq0": 75,
+      "n_draws_gt0": 88
+    },
+    "delta_int4_id": {
+      "point": -0.08000000000000002,
+      "point_pp": -8.000000000000002,
+      "ci95": [
+        -0.16000000000000003,
+        -0.019999999999999962
+      ],
+      "ci95_pp": [
+        -16.000000000000004,
+        -1.9999999999999962
+      ],
+      "excludes_zero": true,
+      "n_draws_lt0": 983,
+      "n_draws_eq0": 17,
+      "n_draws_gt0": 0
+    },
+    "delta_int4_random": {
+      "point": -0.12,
+      "point_pp": -12.0,
+      "ci95": [
+        -0.24,
+        -0.020000000000000018
+      ],
+      "ci95_pp": [
+        -24.0,
+        -2.0000000000000018
+      ],
+      "excludes_zero": true,
+      "n_draws_lt0": 987,
+      "n_draws_eq0": 9,
+      "n_draws_gt0": 4
+    },
+    "specificity_fp16": {
+      "point": -0.06,
+      "point_pp": -6.0,
+      "ci95": [
+        -0.18,
+        0.06
+      ],
+      "ci95_pp": [
+        -18.0,
+        6.0
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 801,
+      "n_draws_eq0": 83,
+      "n_draws_gt0": 116
+    },
+    "specificity_int4": {
+      "point": 0.03999999999999998,
+      "point_pp": 3.9999999999999982,
+      "ci95": [
+        -0.08000000000000002,
+        0.16000000000000003
+      ],
+      "ci95_pp": [
+        -8.000000000000002,
+        16.000000000000004
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 196,
+      "n_draws_eq0": 99,
+      "n_draws_gt0": 705
+    },
+    "difference_in_differences": {
+      "point": 0.09999999999999998,
+      "point_pp": 9.999999999999998,
+      "ci95": [
+        -0.03999999999999998,
+        0.24
+      ],
+      "ci95_pp": [
+        -3.9999999999999982,
+        24.0
+      ],
+      "excludes_zero": false,
+      "n_draws_lt0": 59,
+      "n_draws_eq0": 29,
+      "n_draws_gt0": 912
+    }
+  }
+}

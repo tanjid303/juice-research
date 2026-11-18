@@ -1,0 +1,98 @@
+{
+  "n64_source": {
+    "bootstrap": "/kaggle/working/n64_baseline/int4_transfer_bootstrap.json",
+    "random_k": "/kaggle/working/n64_baseline/int4_random_k_summary.json",
+    "n_calib": 64
+  },
+  "n128_source": {
+    "bootstrap": "/kaggle/working/juice_stage2_int4_ncalib128/int4_transfer_bootstrap.json",
+    "random_k": "/kaggle/working/juice_stage2_int4_ncalib128/int4_random_k_summary.json",
+    "n_calib": 128
+  },
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "\u0394 = steered follows_context \u2212 baseline, paired on the same 50 eval ids. same_sign compares sign(point_pp). excludes_zero_verdict_flip is True iff the N64 CI-excludes-0 call differs from the N128 call.",
+  "rows": [
+    {
+      "condition": "steer_context_k10",
+      "n64": {
+        "point_pp": 12.0,
+        "ci95_pp": [
+          3.9999999999999982,
+          22.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 3,
+        "n_draws_gt0": 997
+      },
+      "n128": {
+        "point_pp": 18.0,
+        "ci95_pp": [
+          7.999999999999999,
+          30.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 1000
+      },
+      "same_sign": true,
+      "excludes_zero_verdict_flip": false
+    },
+    {
+      "condition": "random_context_k10",
+      "n64": {
+        "point_pp": 3.9999999999999982,
+        "ci95_pp": [
+          -4.000000000000001,
+          12.000000000000002
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 91,
+        "n_draws_eq0": 118,
+        "n_draws_gt0": 791
+      },
+      "n128": {
+        "point_pp": -6.0,
+        "ci95_pp": [
+          -14.000000000000002,
+          0.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 944,
+        "n_draws_eq0": 56,
+        "n_draws_gt0": 0
+      },
+      "same_sign": false,
+      "excludes_zero_verdict_flip": false
+    },
+    {
+      "condition": "steer_parametric_k2_clean",
+      "n64": {
+        "point_pp": -2.0000000000000018,
+        "ci95_pp": [
+          -6.000000000000001,
+          0.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 622,
+        "n_draws_eq0": 378,
+        "n_draws_gt0": 0
+      },
+      "n128": {
+        "point_pp": -4.000000000000001,
+        "ci95_pp": [
+          -10.0,
+          0.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 858,
+        "n_draws_eq0": 142,
+        "n_draws_gt0": 0
+      },
+      "same_sign": true,
+      "excludes_zero_verdict_flip": false
+    }
+  ]
+}

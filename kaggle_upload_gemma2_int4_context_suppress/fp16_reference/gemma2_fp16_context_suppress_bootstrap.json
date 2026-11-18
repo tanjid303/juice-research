@@ -1,0 +1,51 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 50 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id.",
+  "model": "google/gemma-2-9b",
+  "precision": "fp16",
+  "primary_conditions": [
+    "suppress_context_k10"
+  ],
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 50,
+    "conditions": {
+      "suppress_context_k10": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.48,
+          "ci95": [
+            0.34,
+            0.62
+          ]
+        },
+        "steered_fc": {
+          "point": 0.36,
+          "ci95": [
+            0.24,
+            0.5
+          ]
+        },
+        "delta": {
+          "point": -0.12,
+          "ci95": [
+            -0.23999999999999994,
+            -0.020000000000000018
+          ],
+          "point_pp": -12.0,
+          "ci95_pp": [
+            -23.999999999999993,
+            -2.0000000000000018
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 986,
+          "n_draws_eq0": 9,
+          "n_draws_gt0": 5
+        }
+      }
+    }
+  }
+}

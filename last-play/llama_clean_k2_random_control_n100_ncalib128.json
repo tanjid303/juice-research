@@ -1,0 +1,96 @@
+{
+  "experiment": "Llama clean-K2 matched random control",
+  "random_heads": [
+    "L20_H24",
+    "L3_H19"
+  ],
+  "excluded_heads": [
+    "L20_H14",
+    "L26_H15",
+    "L4_H9",
+    "L9_H0",
+    "L1_H11",
+    "L4_H5",
+    "L19_H27",
+    "L17_H12",
+    "L7_H26",
+    "L14_H23",
+    "L3_H22",
+    "L31_H20"
+  ],
+  "seed": 42,
+  "n_boot": 1000,
+  "n_eval": 100,
+  "steering_spec": {
+    "alpha_plus": 1.0,
+    "alpha_minus": 0.0,
+    "max_new_tokens": 16,
+    "prompt_format": "juice_coherent",
+    "steer_target": "parametric"
+  },
+  "fp16": {
+    "model": "meta-llama/Llama-3.1-8B",
+    "fc_baseline": 0.67,
+    "fc_steered_inclusive": 0.66,
+    "fc_steered_gold_par_only": 0.66,
+    "gold_par_only": {
+      "n": 100,
+      "point_delta_pp": -1.0000000000000009,
+      "ci95_pp": [
+        -3.0000000000000027,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-1 [-3, +0]",
+      "n_boot": 1000,
+      "seed": 42
+    },
+    "inclusive": {
+      "n": 100,
+      "point_delta_pp": -1.0000000000000009,
+      "ci95_pp": [
+        -3.0000000000000027,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-1 [-3, +0]",
+      "n_boot": 1000,
+      "seed": 42
+    },
+    "n_gold_par_from_context": 1,
+    "n_leave_ctx_without_par": 0
+  },
+  "int4": {
+    "model": "/kaggle/input/notebooks/tanjidhosen/ungabunga/llama31_8b_base_gptq_int4_ncalib128",
+    "fc_baseline": 0.74,
+    "fc_steered_inclusive": 0.73,
+    "fc_steered_gold_par_only": 0.73,
+    "gold_par_only": {
+      "n": 100,
+      "point_delta_pp": -1.0000000000000009,
+      "ci95_pp": [
+        -3.0000000000000027,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-1 [-3, +0]",
+      "n_boot": 1000,
+      "seed": 42
+    },
+    "inclusive": {
+      "n": 100,
+      "point_delta_pp": -1.0000000000000009,
+      "ci95_pp": [
+        -3.0000000000000027,
+        0.0
+      ],
+      "excludes_zero": false,
+      "fmt": "-1 [-3, +0]",
+      "n_boot": 1000,
+      "seed": 42
+    },
+    "n_gold_par_from_context": 1,
+    "n_leave_ctx_without_par": 0
+  },
+  "table8_markdown": "| Condition | n=100 gold-PAR | n=100 incl. | excl. 0? |\n|:---|:---:|:---:|:---:|\n| **FP16 clean K2** (headline locked pair) | \u22128 [\u221214, \u22123] | \u221215 [\u221222, \u22127] | yes |\n| **FP16 random K2** (matched control: L20_H24+L3_H19) | -1 [-3, +0] | -1 [-3, +0] | no |\n| **INT4 clean K2 transfer** (headline locked pair) | \u22127 [\u221212, \u22122] | \u221212 [\u221219, \u22126] | yes |\n| **INT4 random K2** (matched control: L20_H24+L3_H19) | -1 [-3, +0] | -1 [-3, +0] | no |"
+}

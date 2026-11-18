@@ -1,0 +1,115 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 50,
+    "conditions": {
+      "steer_reverse_int4_k10_fp16_a0.25": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.5,
+          "ci95": [
+            0.36,
+            0.64
+          ]
+        },
+        "delta": {
+          "point": 0.33999999999999997,
+          "ci95": [
+            0.2,
+            0.49999999999999994
+          ],
+          "point_pp": 34.0,
+          "ci95_pp": [
+            20.0,
+            49.99999999999999
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 1000
+        }
+      },
+      "steer_reverse_int4_k10_fp16_a0.5": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.52,
+          "ci95": [
+            0.38,
+            0.66
+          ]
+        },
+        "delta": {
+          "point": 0.36,
+          "ci95": [
+            0.22,
+            0.5
+          ],
+          "point_pp": 36.0,
+          "ci95_pp": [
+            22.0,
+            50.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 1000
+        }
+      },
+      "steer_reverse_int4_k10_fp16_a1.0": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.64,
+          "ci95": [
+            0.52,
+            0.7604999999999995
+          ]
+        },
+        "delta": {
+          "point": 0.48,
+          "ci95": [
+            0.33999999999999997,
+            0.62
+          ],
+          "point_pp": 48.0,
+          "ci95_pp": [
+            34.0,
+            62.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 1000
+        }
+      }
+    }
+  }
+}

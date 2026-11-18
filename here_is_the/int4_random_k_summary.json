@@ -1,0 +1,173 @@
+{
+  "cell": "int4_random_k_control",
+  "apply_to": "int4_base",
+  "model": "/kaggle/input/notebooks/tanjidhosen/quiantizing-output/llama31_8b_base_gptq_int4",
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 50,
+  "baseline": {
+    "follows_context": 0.14,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 39,
+      "context": 7,
+      "rejects_context": 0,
+      "other": 4
+    }
+  },
+  "conditions": {
+    "random_context_k10": {
+      "heads": [
+        "L20_H23",
+        "L3_H19",
+        "L0_H25",
+        "L24_H0",
+        "L8_H30",
+        "L7_H31",
+        "L7_H8",
+        "L4_H18",
+        "L23_H27",
+        "L3_H9"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "seed": 42,
+      "follows_context": 0.18,
+      "delta_pp_vs_baseline": 3.9999999999999982,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 38,
+        "context": 9,
+        "rejects_context": 0,
+        "other": 3
+      },
+      "identified_transfer_delta_pp": 12.0,
+      "bootstrap": {
+        "point": 0.03999999999999998,
+        "ci95": [
+          -0.04000000000000001,
+          0.12000000000000002
+        ],
+        "point_pp": 3.9999999999999982,
+        "ci95_pp": [
+          -4.000000000000001,
+          12.000000000000002
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 91,
+        "n_draws_eq0": 118,
+        "n_draws_gt0": 791
+      }
+    },
+    "random_context_k5": {
+      "heads": [
+        "L1_H7",
+        "L9_H10",
+        "L22_H17",
+        "L24_H21",
+        "L4_H23"
+      ],
+      "steer_target": "context",
+      "K": 5,
+      "seed": 43,
+      "follows_context": 0.16,
+      "delta_pp_vs_baseline": 1.9999999999999991,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 38,
+        "context": 8,
+        "rejects_context": 0,
+        "other": 4
+      },
+      "identified_transfer_delta_pp": 6.0,
+      "bootstrap": {
+        "point": 0.01999999999999999,
+        "ci95": [
+          0.0,
+          0.06000000000000001
+        ],
+        "point_pp": 1.9999999999999991,
+        "ci95_pp": [
+          0.0,
+          6.000000000000001
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 377,
+        "n_draws_gt0": 623
+      }
+    },
+    "random_parametric_k2": {
+      "heads": [
+        "L13_H2",
+        "L16_H20"
+      ],
+      "steer_target": "parametric",
+      "K": 2,
+      "seed": 44,
+      "follows_context": 0.18,
+      "delta_pp_vs_baseline": 3.9999999999999982,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 37,
+        "context": 9,
+        "rejects_context": 0,
+        "other": 4
+      },
+      "identified_transfer_delta_pp": -2.0,
+      "bootstrap": {
+        "point": 0.03999999999999998,
+        "ci95": [
+          0.0,
+          0.1
+        ],
+        "point_pp": 3.9999999999999982,
+        "ci95_pp": [
+          0.0,
+          10.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 114,
+        "n_draws_gt0": 886
+      }
+    },
+    "random_parametric_k3": {
+      "heads": [
+        "L8_H22",
+        "L13_H11",
+        "L15_H19"
+      ],
+      "steer_target": "parametric",
+      "K": 3,
+      "seed": 45,
+      "follows_context": 0.16,
+      "delta_pp_vs_baseline": 1.9999999999999991,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 39,
+        "context": 8,
+        "rejects_context": 0,
+        "other": 3
+      },
+      "identified_transfer_delta_pp": -4.0,
+      "bootstrap": {
+        "point": 0.01999999999999999,
+        "ci95": [
+          0.0,
+          0.06000000000000001
+        ],
+        "point_pp": 1.9999999999999991,
+        "ci95_pp": [
+          0.0,
+          6.000000000000001
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 377,
+        "n_draws_gt0": 623
+      }
+    }
+  }
+}

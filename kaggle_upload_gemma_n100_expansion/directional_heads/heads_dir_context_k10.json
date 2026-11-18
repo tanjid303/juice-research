@@ -1,0 +1,61 @@
+{
+  "enlarge": [
+    {
+      "layer": 40,
+      "head": 14
+    },
+    {
+      "layer": 17,
+      "head": 7
+    },
+    {
+      "layer": 24,
+      "head": 15
+    },
+    {
+      "layer": 22,
+      "head": 0
+    },
+    {
+      "layer": 32,
+      "head": 11
+    },
+    {
+      "layer": 25,
+      "head": 0
+    },
+    {
+      "layer": 3,
+      "head": 9
+    },
+    {
+      "layer": 8,
+      "head": 9
+    },
+    {
+      "layer": 7,
+      "head": 6
+    },
+    {
+      "layer": 29,
+      "head": 5
+    }
+  ],
+  "suppress": [],
+  "scores_pos": {},
+  "scores_neg": {},
+  "precision": "fp16_gemma2_base",
+  "K": 10,
+  "steer_target": "context",
+  "n_calibration": 4,
+  "pos_alphas": [
+    1.0,
+    3.0,
+    5.0
+  ],
+  "neg_alphas": [
+    -1.0,
+    -2.0
+  ],
+  "selection_method": "directional_ctx"
+}

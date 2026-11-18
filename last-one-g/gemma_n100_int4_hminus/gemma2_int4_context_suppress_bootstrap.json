@@ -1,0 +1,131 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 100 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id.",
+  "n_calib": 128,
+  "checkpoint": "/kaggle/input/notebooks/tanjidhosen/gemma-quantize/gemma2_9b_base_gptq_int4_ncalib128",
+  "primary_conditions": [
+    "suppress_context_k10",
+    "random_suppress_k10"
+  ],
+  "random_k_source": "Reused Gemma FP16 Cell-3 random-K10 enlarge draw (seed 42). That draw excluded ctx K10 \u222a par K2 (L31_H7, L39_H6) \u222a L27_H6. Applied here as H\u2212 (\u03b1+=0, \u03b1\u2212=1), not resampled.",
+  "int4": {
+    "precision": "int4",
+    "n_baseline": 100,
+    "n_calib": 128,
+    "conditions": {
+      "suppress_context_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.55
+          ]
+        },
+        "steered_fc": {
+          "point": 0.38,
+          "ci95": [
+            0.29,
+            0.47
+          ]
+        },
+        "delta": {
+          "point": -0.08000000000000002,
+          "ci95": [
+            -0.15000000000000002,
+            -0.010000000000000009
+          ],
+          "point_pp": -8.000000000000002,
+          "ci95_pp": [
+            -15.000000000000002,
+            -1.0000000000000009
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 986,
+          "n_draws_eq0": 9,
+          "n_draws_gt0": 5
+        }
+      },
+      "random_suppress_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.55
+          ]
+        },
+        "steered_fc": {
+          "point": 0.33,
+          "ci95": [
+            0.24,
+            0.42024999999999973
+          ]
+        },
+        "delta": {
+          "point": -0.13,
+          "ci95": [
+            -0.20000000000000007,
+            -0.06
+          ],
+          "point_pp": -13.0,
+          "ci95_pp": [
+            -20.000000000000007,
+            -6.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 1000,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 0
+        }
+      }
+    }
+  },
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 100,
+    "source": "/kaggle/working/gemma2_fp16_context_suppress_bootstrap.json",
+    "conditions": {
+      "suppress_context_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.5502499999999998
+          ]
+        },
+        "steered_fc": {
+          "point": 0.33,
+          "ci95": [
+            0.24,
+            0.43
+          ]
+        },
+        "delta": {
+          "point": -0.13,
+          "ci95": [
+            -0.20999999999999996,
+            -0.06975000000000017
+          ],
+          "point_pp": -13.0,
+          "ci95_pp": [
+            -20.999999999999996,
+            -6.975000000000017
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 1000,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 0
+        }
+      }
+    }
+  }
+}

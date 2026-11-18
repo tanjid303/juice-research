@@ -1,0 +1,138 @@
+{
+  "model": "meta-llama/Llama-3.1-8B",
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 100,
+  "split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "random_k_seed": 42,
+  "baseline": {
+    "follows_context": 0.14,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 80,
+      "context": 14,
+      "rejects_context": 0,
+      "other": 6
+    }
+  },
+  "conditions": {
+    "steer_context_k10": {
+      "heads": [
+        "L4_H9",
+        "L9_H0",
+        "L1_H11",
+        "L4_H5",
+        "L19_H27",
+        "L17_H12",
+        "L7_H26",
+        "L14_H23",
+        "L3_H22",
+        "L31_H20"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "follows_context": 0.22,
+      "delta_pp_vs_baseline": 7.999999999999999,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 69,
+        "context": 22,
+        "rejects_context": 0,
+        "other": 9
+      },
+      "bootstrap": {
+        "point": 0.07999999999999999,
+        "ci95": [
+          0.020000000000000018,
+          0.14
+        ],
+        "point_pp": 7.999999999999999,
+        "ci95_pp": [
+          2.0000000000000018,
+          14.000000000000002
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 3,
+        "n_draws_eq0": 3,
+        "n_draws_gt0": 994
+      }
+    },
+    "steer_parametric_k2_clean": {
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "steer_target": "parametric",
+      "K": 2,
+      "follows_context": 0.06,
+      "delta_pp_vs_baseline": -8.000000000000002,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 85,
+        "context": 6,
+        "rejects_context": 0,
+        "other": 9
+      },
+      "bootstrap": {
+        "point": -0.08000000000000002,
+        "ci95": [
+          -0.14,
+          -0.03
+        ],
+        "point_pp": -8.000000000000002,
+        "ci95_pp": [
+          -14.000000000000002,
+          -3.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 1000,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 0
+      }
+    },
+    "random_context_k10": {
+      "heads": [
+        "L20_H23",
+        "L3_H19",
+        "L0_H25",
+        "L24_H0",
+        "L8_H30",
+        "L7_H31",
+        "L7_H8",
+        "L4_H18",
+        "L23_H27",
+        "L3_H9"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "follows_context": 0.17,
+      "delta_pp_vs_baseline": 3.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 74,
+        "context": 17,
+        "rejects_context": 0,
+        "other": 9
+      },
+      "bootstrap": {
+        "point": 0.03,
+        "ci95": [
+          0.0,
+          0.07
+        ],
+        "point_pp": 3.0,
+        "ci95_pp": [
+          0.0,
+          7.000000000000001
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 43,
+        "n_draws_gt0": 957
+      }
+    }
+  }
+}

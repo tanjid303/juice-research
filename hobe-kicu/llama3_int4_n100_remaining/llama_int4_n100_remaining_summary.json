@@ -1,0 +1,109 @@
+{
+  "cell": "llama_int4_n100_native_and_hminus",
+  "model": "meta-llama/Llama-3.1-8B",
+  "precision": "int4",
+  "n_calib": 128,
+  "n_eval": 100,
+  "eval_split_seed": 42,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 1.0,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "baseline": {
+    "follows_context": 0.16,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 77,
+      "context": 16,
+      "rejects_context": 0,
+      "other": 7
+    }
+  },
+  "conditions": {
+    "native_context_k10": {
+      "heads": [
+        "L7_H26",
+        "L14_H10",
+        "L7_H21",
+        "L4_H5",
+        "L3_H3",
+        "L31_H20",
+        "L4_H11",
+        "L14_H23",
+        "L8_H29",
+        "L9_H0"
+      ],
+      "steer_target": "context",
+      "alpha_plus": 1.0,
+      "alpha_minus": 0.0,
+      "follows_context": 0.32,
+      "delta_pp_vs_baseline": 16.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 53,
+        "context": 32,
+        "rejects_context": 0,
+        "other": 15
+      },
+      "bootstrap": {
+        "point": 0.16,
+        "ci95": [
+          0.07999999999999999,
+          0.24
+        ],
+        "point_pp": 16.0,
+        "ci95_pp": [
+          7.999999999999999,
+          24.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 1000
+      }
+    },
+    "context_hminus_k10": {
+      "heads": [
+        "L4_H9",
+        "L9_H0",
+        "L1_H11",
+        "L4_H5",
+        "L19_H27",
+        "L17_H12",
+        "L7_H26",
+        "L14_H23",
+        "L3_H22",
+        "L31_H20"
+      ],
+      "steer_target": "parametric",
+      "alpha_plus": 0.0,
+      "alpha_minus": 1.0,
+      "follows_context": 0.1,
+      "delta_pp_vs_baseline": -6.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 83,
+        "context": 10,
+        "rejects_context": 0,
+        "other": 7
+      },
+      "bootstrap": {
+        "point": -0.06,
+        "ci95": [
+          -0.12,
+          -0.009999999999999995
+        ],
+        "point_pp": -6.0,
+        "ci95_pp": [
+          -12.0,
+          -0.9999999999999996
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 979,
+        "n_draws_eq0": 13,
+        "n_draws_gt0": 8
+      }
+    }
+  }
+}

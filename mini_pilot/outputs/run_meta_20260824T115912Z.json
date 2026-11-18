@@ -1,0 +1,8 @@
+{
+  "n_items": 3,
+  "data": "data\\conflictqa_smoke.jsonl",
+  "quant_backend_int4": "gptq",
+  "fp16_peak_vram_mib": 2372.84130859375,
+  "int4_peak_vram_mib": 1079.11474609375,
+  "note": "GPTQ-INT4 (plan-primary)"
+}

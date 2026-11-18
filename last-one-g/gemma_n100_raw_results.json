@@ -1,0 +1,332 @@
+{
+  "n": 100,
+  "n_boot": 1000,
+  "seed": 42,
+  "ids": [
+    "ConflictQA-popQA-chatgpt_1239",
+    "ConflictQA-popQA-chatgpt_1252",
+    "ConflictQA-popQA-chatgpt_1295",
+    "ConflictQA-popQA-chatgpt_1325",
+    "ConflictQA-popQA-chatgpt_1344",
+    "ConflictQA-popQA-chatgpt_1353",
+    "ConflictQA-popQA-chatgpt_1447",
+    "ConflictQA-popQA-chatgpt_1609",
+    "ConflictQA-popQA-chatgpt_1627",
+    "ConflictQA-popQA-chatgpt_1636",
+    "ConflictQA-popQA-chatgpt_1997",
+    "ConflictQA-popQA-chatgpt_2018",
+    "ConflictQA-popQA-chatgpt_2022",
+    "ConflictQA-popQA-chatgpt_2157",
+    "ConflictQA-popQA-chatgpt_2296",
+    "ConflictQA-popQA-chatgpt_2329",
+    "ConflictQA-popQA-chatgpt_2429",
+    "ConflictQA-popQA-chatgpt_2582",
+    "ConflictQA-popQA-chatgpt_2585",
+    "ConflictQA-popQA-chatgpt_2603",
+    "ConflictQA-popQA-chatgpt_2631",
+    "ConflictQA-popQA-chatgpt_2665",
+    "ConflictQA-popQA-chatgpt_2784",
+    "ConflictQA-popQA-chatgpt_3213",
+    "ConflictQA-popQA-chatgpt_3422",
+    "ConflictQA-popQA-chatgpt_3585",
+    "ConflictQA-popQA-chatgpt_3594",
+    "ConflictQA-popQA-chatgpt_3761",
+    "ConflictQA-popQA-chatgpt_3781",
+    "ConflictQA-popQA-chatgpt_4183",
+    "ConflictQA-popQA-chatgpt_4184",
+    "ConflictQA-popQA-chatgpt_4185",
+    "ConflictQA-popQA-chatgpt_4187",
+    "ConflictQA-popQA-chatgpt_4192",
+    "ConflictQA-popQA-chatgpt_4195",
+    "ConflictQA-popQA-chatgpt_4209",
+    "ConflictQA-popQA-chatgpt_4275",
+    "ConflictQA-popQA-chatgpt_4658",
+    "ConflictQA-popQA-chatgpt_4784",
+    "ConflictQA-popQA-chatgpt_4922",
+    "ConflictQA-popQA-chatgpt_5158",
+    "ConflictQA-popQA-chatgpt_5337",
+    "ConflictQA-popQA-chatgpt_5609",
+    "ConflictQA-popQA-chatgpt_5720",
+    "ConflictQA-popQA-chatgpt_5800",
+    "ConflictQA-popQA-chatgpt_5801",
+    "ConflictQA-popQA-chatgpt_5944",
+    "ConflictQA-popQA-chatgpt_5947",
+    "ConflictQA-popQA-chatgpt_5993",
+    "ConflictQA-popQA-chatgpt_6061",
+    "ConflictQA-popQA-chatgpt_6091",
+    "ConflictQA-popQA-chatgpt_6105",
+    "ConflictQA-popQA-chatgpt_6111",
+    "ConflictQA-popQA-chatgpt_6387",
+    "ConflictQA-popQA-chatgpt_6400",
+    "ConflictQA-popQA-chatgpt_6426",
+    "ConflictQA-popQA-chatgpt_6440",
+    "ConflictQA-popQA-chatgpt_6644",
+    "ConflictQA-popQA-chatgpt_7113",
+    "ConflictQA-popQA-chatgpt_7153",
+    "ConflictQA-popQA-chatgpt_7568",
+    "ConflictQA-popQA-chatgpt_7577",
+    "ConflictQA-popQA-chatgpt_7578",
+    "ConflictQA-popQA-chatgpt_7587",
+    "ConflictQA-popQA-chatgpt_760",
+    "ConflictQA-popQA-chatgpt_7623",
+    "ConflictQA-popQA-chatgpt_7637",
+    "ConflictQA-popQA-chatgpt_7647",
+    "ConflictQA-popQA-chatgpt_7663",
+    "ConflictQA-popQA-chatgpt_7685",
+    "ConflictQA-popQA-chatgpt_7696",
+    "ConflictQA-popQA-chatgpt_7706",
+    "ConflictQA-popQA-chatgpt_7733",
+    "ConflictQA-popQA-chatgpt_7740",
+    "ConflictQA-popQA-chatgpt_7747",
+    "ConflictQA-popQA-chatgpt_7762",
+    "ConflictQA-popQA-chatgpt_7779",
+    "ConflictQA-popQA-chatgpt_7787",
+    "ConflictQA-popQA-chatgpt_7794",
+    "ConflictQA-popQA-chatgpt_7815",
+    "ConflictQA-popQA-chatgpt_7822",
+    "ConflictQA-popQA-chatgpt_7826",
+    "ConflictQA-popQA-chatgpt_7835",
+    "ConflictQA-popQA-chatgpt_7836",
+    "ConflictQA-popQA-chatgpt_7843",
+    "ConflictQA-popQA-chatgpt_7856",
+    "ConflictQA-popQA-chatgpt_7857",
+    "ConflictQA-popQA-chatgpt_7860",
+    "ConflictQA-popQA-chatgpt_7861",
+    "ConflictQA-popQA-chatgpt_7867",
+    "ConflictQA-popQA-chatgpt_7878",
+    "ConflictQA-popQA-chatgpt_790",
+    "ConflictQA-popQA-chatgpt_7907",
+    "ConflictQA-popQA-chatgpt_7911",
+    "ConflictQA-popQA-chatgpt_7914",
+    "ConflictQA-popQA-chatgpt_7935",
+    "ConflictQA-popQA-chatgpt_7946",
+    "ConflictQA-popQA-chatgpt_846",
+    "ConflictQA-popQA-chatgpt_94",
+    "ConflictQA-popQA-chatgpt_982"
+  ],
+  "cells": [
+    {
+      "condition": "FP16 context K10",
+      "fc": 0.5,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 38,
+        "context": 50,
+        "other": 12
+      },
+      "coherence": 1.0,
+      "delta_pp": 3.9999999999999982,
+      "ci95_pp": [
+        -1.0000000000000009,
+        9.999999999999998
+      ],
+      "excludes_zero": false
+    },
+    {
+      "condition": "INT4 context K10 transfer",
+      "fc": 0.5,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 36,
+        "context": 50,
+        "other": 14
+      },
+      "coherence": 1.0,
+      "delta_pp": 3.9999999999999982,
+      "ci95_pp": [
+        -2.0000000000000018,
+        10.000000000000004
+      ],
+      "excludes_zero": false
+    },
+    {
+      "condition": "INT4 random K10",
+      "fc": 0.5,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 37,
+        "context": 50,
+        "other": 13
+      },
+      "coherence": 1.0,
+      "delta_pp": 3.9999999999999982,
+      "ci95_pp": [
+        -1.9999999999999907,
+        9.999999999999998
+      ],
+      "excludes_zero": false
+    },
+    {
+      "condition": "FP16 clean parametric K2",
+      "fc": 0.41,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 50,
+        "context": 41,
+        "other": 9
+      },
+      "coherence": 1.0,
+      "delta_pp": -5.000000000000004,
+      "ci95_pp": [
+        -10.999999999999998,
+        0.0
+      ],
+      "excludes_zero": false
+    },
+    {
+      "condition": "FP16 raw L27_H6",
+      "fc": 0.34,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 55,
+        "context": 34,
+        "other": 11
+      },
+      "coherence": 1.0,
+      "delta_pp": -12.0,
+      "ci95_pp": [
+        -19.0,
+        -6.0
+      ],
+      "excludes_zero": true
+    },
+    {
+      "condition": "INT4 raw L27_H6 transfer",
+      "fc": 0.34,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 53,
+        "context": 34,
+        "other": 13
+      },
+      "coherence": 1.0,
+      "delta_pp": -12.0,
+      "ci95_pp": [
+        -19.0,
+        -6.0
+      ],
+      "excludes_zero": true
+    },
+    {
+      "condition": "INT4 random K1",
+      "fc": 0.48,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 39,
+        "context": 48,
+        "other": 13
+      },
+      "coherence": 1.0,
+      "delta_pp": 1.9999999999999962,
+      "ci95_pp": [
+        -1.0000000000000009,
+        6.0
+      ],
+      "excludes_zero": false
+    },
+    {
+      "condition": "FP16 identified H-",
+      "fc": 0.33,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 62,
+        "context": 33,
+        "other": 5
+      },
+      "coherence": 1.0,
+      "delta_pp": -13.0,
+      "ci95_pp": [
+        -20.999999999999996,
+        -6.975000000000017
+      ],
+      "excludes_zero": true
+    },
+    {
+      "condition": "FP16 random H-",
+      "fc": 0.4,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 49,
+        "context": 40,
+        "other": 11
+      },
+      "coherence": 1.0,
+      "delta_pp": -6.0,
+      "ci95_pp": [
+        -13.0,
+        1.0000000000000009
+      ],
+      "excludes_zero": false
+    },
+    {
+      "condition": "INT4 identified H-",
+      "fc": 0.38,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 54,
+        "context": 38,
+        "other": 8
+      },
+      "coherence": 1.0,
+      "delta_pp": -8.000000000000002,
+      "ci95_pp": [
+        -15.000000000000002,
+        -1.0000000000000009
+      ],
+      "excludes_zero": true
+    },
+    {
+      "condition": "INT4 random H-",
+      "fc": 0.33,
+      "baseline_fc": 0.46,
+      "pco": {
+        "parametric": 55,
+        "context": 33,
+        "other": 12
+      },
+      "coherence": 1.0,
+      "delta_pp": -13.0,
+      "ci95_pp": [
+        -20.000000000000007,
+        -6.0
+      ],
+      "excludes_zero": true
+    }
+  ],
+  "specificity_fp16": {
+    "delta_pp": -7.000000000000001,
+    "ci95_pp": [
+      -15.000000000000002,
+      1.0000000000000009
+    ],
+    "excludes_zero": false
+  },
+  "specificity_int4": {
+    "delta_pp": 4.999999999999999,
+    "ci95_pp": [
+      -3.0000000000000027,
+      13.999999999999996
+    ],
+    "excludes_zero": false
+  },
+  "difference_in_differences": {
+    "delta_pp": 12.0,
+    "ci95_pp": [
+      1.9999999999999962,
+      23.0
+    ],
+    "excludes_zero": true
+  },
+  "locked_random_k10": [
+    "L41_H11",
+    "L7_H3",
+    "L1_H9",
+    "L17_H13",
+    "L15_H13",
+    "L14_H7",
+    "L9_H1",
+    "L6_H9",
+    "L35_H9",
+    "L5_H10"
+  ]
+}

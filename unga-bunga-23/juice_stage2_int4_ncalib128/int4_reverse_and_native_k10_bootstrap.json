@@ -1,0 +1,139 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 50 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id. Baselines reused from prior sessions.",
+  "n_calib": 128,
+  "checkpoint_int4": "/kaggle/input/notebooks/tanjidhosen/ungabunga/llama31_8b_base_gptq_int4_ncalib128",
+  "checkpoint_fp16": "meta-llama/Llama-3.1-8B",
+  "head_sets": {
+    "int4_native_context_k10": [
+      "L7_H26",
+      "L14_H10",
+      "L7_H21",
+      "L4_H5",
+      "L3_H3",
+      "L31_H20",
+      "L4_H11",
+      "L14_H23",
+      "L8_H29",
+      "L9_H0"
+    ],
+    "fp16_context_k10": [
+      "L4_H9",
+      "L9_H0",
+      "L1_H11",
+      "L4_H5",
+      "L19_H27",
+      "L17_H12",
+      "L7_H26",
+      "L14_H23",
+      "L3_H22",
+      "L31_H20"
+    ],
+    "int4_heads_source": "/kaggle/input/datasets/tanjidhosen/dghjkl/directional_heads/heads_int4_native_context_k10.json",
+    "fp16_heads_source": "/kaggle/input/datasets/tanjidhosen/dghjkl/directional_heads/heads_dir_context_k10.json",
+    "overlap": [
+      "L7_H26",
+      "L4_H5",
+      "L31_H20",
+      "L14_H23",
+      "L9_H0"
+    ],
+    "n_overlap": 5,
+    "union_size": 15,
+    "jaccard": 0.3333333333333333,
+    "same_set": false,
+    "note": "Expected Jaccard ~0.33 (5/15). These are NOT the same head set."
+  },
+  "primary_conditions": [
+    "steer_reverse_int4_context_k10_on_fp16",
+    "steer_native_int4_context_k10"
+  ],
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 50,
+    "baseline_reused": true,
+    "baseline_source": "/kaggle/input/datasets/tanjidhosen/dghjkl/fp16_reference/steer_baseline.json",
+    "conditions": {
+      "steer_reverse_int4_context_k10_on_fp16": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.64,
+          "ci95": [
+            0.52,
+            0.7604999999999995
+          ]
+        },
+        "delta": {
+          "point": 0.48,
+          "ci95": [
+            0.33999999999999997,
+            0.62
+          ],
+          "point_pp": 48.0,
+          "ci95_pp": [
+            34.0,
+            62.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 1000
+        }
+      }
+    }
+  },
+  "int4": {
+    "precision": "int4",
+    "n_baseline": 50,
+    "n_calib": 128,
+    "baseline_reused": true,
+    "baseline_source": "/kaggle/input/datasets/tanjidhosen/dghjkl/ncalib128_reference/steer_baseline.json",
+    "conditions": {
+      "steer_native_int4_context_k10": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.2,
+          "ci95": [
+            0.1,
+            0.32
+          ]
+        },
+        "steered_fc": {
+          "point": 0.38,
+          "ci95": [
+            0.26,
+            0.52
+          ]
+        },
+        "delta": {
+          "point": 0.18,
+          "ci95": [
+            0.08000000000000002,
+            0.3
+          ],
+          "point_pp": 18.0,
+          "ci95_pp": [
+            8.000000000000002,
+            30.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 1000
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "cell": "fp16_to_int4_transfer_l27h6",
+  "identify_on": "fp16_gemma2_base",
+  "apply_to": "int4_gemma2_base_ncalib128",
+  "model": "/kaggle/input/notebooks/tanjidhosen/gemma-quantize/gemma2_9b_base_gptq_int4_ncalib128",
+  "n_calib": 128,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 100,
+  "eval_split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "random_k_seed": 42,
+  "baseline": {
+    "follows_context": 0.46,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 41,
+      "context": 46,
+      "rejects_context": 0,
+      "other": 13
+    }
+  },
+  "conditions": {
+    "steer_context_k10": {
+      "heads": [
+        "L40_H14",
+        "L17_H7",
+        "L24_H15",
+        "L22_H0",
+        "L32_H11",
+        "L25_H0",
+        "L3_H9",
+        "L8_H9",
+        "L7_H6",
+        "L29_H5"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "follows_context": 0.5,
+      "delta_pp_vs_baseline": 3.9999999999999982,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 36,
+        "context": 50,
+        "rejects_context": 0,
+        "other": 14
+      },
+      "bootstrap": {
+        "point": 0.03999999999999998,
+        "ci95": [
+          -0.020000000000000018,
+          0.10000000000000003
+        ],
+        "point_pp": 3.9999999999999982,
+        "ci95_pp": [
+          -2.0000000000000018,
+          10.000000000000004
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 71,
+        "n_draws_eq0": 63,
+        "n_draws_gt0": 866
+      }
+    },
+    "random_context_k10": {
+      "heads": [
+        "L41_H8",
+        "L7_H3",
+        "L1_H9",
+        "L17_H13",
+        "L15_H13",
+        "L14_H7",
+        "L9_H1",
+        "L6_H9",
+        "L35_H7",
+        "L5_H10"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "follows_context": 0.51,
+      "delta_pp_vs_baseline": 4.999999999999999,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 36,
+        "context": 51,
+        "rejects_context": 0,
+        "other": 13
+      },
+      "bootstrap": {
+        "point": 0.04999999999999999,
+        "ci95": [
+          -0.010000000000000009,
+          0.11000000000000004
+        ],
+        "point_pp": 4.999999999999999,
+        "ci95_pp": [
+          -1.0000000000000009,
+          11.000000000000004
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 30,
+        "n_draws_eq0": 37,
+        "n_draws_gt0": 933
+      }
+    },
+    "steer_parametric_k1_raw": {
+      "heads": [
+        "L27_H6"
+      ],
+      "steer_target": "parametric",
+      "K": 1,
+      "follows_context": 0.34,
+      "delta_pp_vs_baseline": -12.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 53,
+        "context": 34,
+        "rejects_context": 0,
+        "other": 13
+      },
+      "bootstrap": {
+        "point": -0.12,
+        "ci95": [
+          -0.19,
+          -0.06
+        ],
+        "point_pp": -12.0,
+        "ci95_pp": [
+          -19.0,
+          -6.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 1000,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 0
+      },
+      "fp16_delta_pp": -12.0,
+      "same_sign_as_fp16": true
+    },
+    "random_parametric_k1": {
+      "heads": [
+        "L40_H15"
+      ],
+      "steer_target": "parametric",
+      "K": 1,
+      "follows_context": 0.48,
+      "delta_pp_vs_baseline": 1.9999999999999962,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 39,
+        "context": 48,
+        "rejects_context": 0,
+        "other": 13
+      },
+      "bootstrap": {
+        "point": 0.019999999999999962,
+        "ci95": [
+          -0.010000000000000009,
+          0.06
+        ],
+        "point_pp": 1.9999999999999962,
+        "ci95_pp": [
+          -1.0000000000000009,
+          6.0
+        ],
+        "excludes_zero": false,
+        "n_draws_lt0": 88,
+        "n_draws_eq0": 137,
+        "n_draws_gt0": 775
+      }
+    }
+  },
+  "fp16_reference": {
+    "baseline_fc": 0.48,
+    "steer_parametric_k1_raw": -12.0,
+    "coherence": 1.0,
+    "ci95_pp": [
+      -22.0,
+      -4.0
+    ],
+    "excludes_zero": true,
+    "label_counts": {
+      "parametric": 28,
+      "context": 18,
+      "rejects_context": 0,
+      "other": 4
+    },
+    "note": "Gemma-2-9B FP16 Cell-3, juice_coherent, alpha+=1 alpha-=0, n=100, L27_H6 K=1"
+  }
+}

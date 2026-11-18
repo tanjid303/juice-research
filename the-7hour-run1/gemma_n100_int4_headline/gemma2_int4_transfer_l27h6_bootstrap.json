@@ -1,0 +1,200 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 100 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id.",
+  "n_calib": 128,
+  "checkpoint": "/kaggle/input/notebooks/tanjidhosen/gemma-quantize/gemma2_9b_base_gptq_int4_ncalib128",
+  "primary_conditions": [
+    "steer_parametric_k1_raw",
+    "random_parametric_k1"
+  ],
+  "int4": {
+    "precision": "int4",
+    "n_baseline": 100,
+    "n_calib": 128,
+    "conditions": {
+      "steer_context_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.55
+          ]
+        },
+        "steered_fc": {
+          "point": 0.5,
+          "ci95": [
+            0.39975000000000005,
+            0.6
+          ]
+        },
+        "delta": {
+          "point": 0.03999999999999998,
+          "ci95": [
+            -0.020000000000000018,
+            0.10000000000000003
+          ],
+          "point_pp": 3.9999999999999982,
+          "ci95_pp": [
+            -2.0000000000000018,
+            10.000000000000004
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 71,
+          "n_draws_eq0": 63,
+          "n_draws_gt0": 866
+        }
+      },
+      "random_context_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.55
+          ]
+        },
+        "steered_fc": {
+          "point": 0.51,
+          "ci95": [
+            0.40975,
+            0.6
+          ]
+        },
+        "delta": {
+          "point": 0.04999999999999999,
+          "ci95": [
+            -0.010000000000000009,
+            0.11000000000000004
+          ],
+          "point_pp": 4.999999999999999,
+          "ci95_pp": [
+            -1.0000000000000009,
+            11.000000000000004
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 30,
+          "n_draws_eq0": 37,
+          "n_draws_gt0": 933
+        }
+      },
+      "steer_parametric_k1_raw": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.55
+          ]
+        },
+        "steered_fc": {
+          "point": 0.34,
+          "ci95": [
+            0.25,
+            0.43
+          ]
+        },
+        "delta": {
+          "point": -0.12,
+          "ci95": [
+            -0.19,
+            -0.06
+          ],
+          "point_pp": -12.0,
+          "ci95_pp": [
+            -19.0,
+            -6.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 1000,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 0
+        }
+      },
+      "random_parametric_k1": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.55
+          ]
+        },
+        "steered_fc": {
+          "point": 0.48,
+          "ci95": [
+            0.38,
+            0.57
+          ]
+        },
+        "delta": {
+          "point": 0.019999999999999962,
+          "ci95": [
+            -0.010000000000000009,
+            0.06
+          ],
+          "point_pp": 1.9999999999999962,
+          "ci95_pp": [
+            -1.0000000000000009,
+            6.0
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 88,
+          "n_draws_eq0": 137,
+          "n_draws_gt0": 775
+        }
+      }
+    }
+  },
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 100,
+    "source": "/kaggle/working/gemma_n100_fp16/gemma2_base_cell3_bootstrap.json",
+    "conditions": {
+      "steer_parametric_k1_raw": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.5502499999999998
+          ]
+        },
+        "steered_fc": {
+          "point": 0.34,
+          "ci95": [
+            0.25,
+            0.44
+          ]
+        },
+        "delta": {
+          "point": -0.12,
+          "ci95": [
+            -0.19,
+            -0.06
+          ],
+          "point_pp": -12.0,
+          "ci95_pp": [
+            -19.0,
+            -6.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 1000,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 0
+        }
+      }
+    }
+  }
+}

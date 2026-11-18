@@ -1,0 +1,163 @@
+{
+  "cell": "fp16_to_int4_transfer_context_k10_suppress",
+  "identify_on": "fp16_gemma2_base",
+  "apply_to": "int4_gemma2_base_ncalib128",
+  "model": "/kaggle/input/notebooks/tanjidhosen/gemma-quantize/gemma2_9b_base_gptq_int4_ncalib128",
+  "n_calib": 128,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 0.0,
+  "alpha_minus": 1.0,
+  "n_eval": 50,
+  "eval_split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "random_k_seed": 42,
+  "random_k_source": "Reused Gemma FP16 Cell-3 random-K10 enlarge draw (seed 42). That draw excluded ctx K10 \u222a par K2 (L31_H7, L39_H6) \u222a L27_H6. Applied here as H\u2212 (\u03b1+=0, \u03b1\u2212=1), not resampled.",
+  "baseline": {
+    "follows_context": 0.46,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 23,
+      "context": 23,
+      "rejects_context": 0,
+      "other": 4
+    }
+  },
+  "conditions": {
+    "suppress_context_k10": {
+      "heads": [
+        "L40_H14",
+        "L17_H7",
+        "L24_H15",
+        "L22_H0",
+        "L32_H11",
+        "L25_H0",
+        "L3_H9",
+        "L8_H9",
+        "L7_H6",
+        "L29_H5"
+      ],
+      "steer_target": "context_suppress",
+      "K": 10,
+      "alpha_plus": 0.0,
+      "alpha_minus": 1.0,
+      "follows_context": 0.38,
+      "delta_pp_vs_baseline": -8.000000000000002,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 29,
+        "context": 19,
+        "rejects_context": 0,
+        "other": 2
+      },
+      "bootstrap": {
+        "point": -0.08000000000000002,
+        "ci95": [
+          -0.16000000000000003,
+          -0.019999999999999962
+        ],
+        "point_pp": -8.000000000000002,
+        "ci95_pp": [
+          -16.000000000000004,
+          -1.9999999999999962
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 983,
+        "n_draws_eq0": 17,
+        "n_draws_gt0": 0
+      },
+      "flips": {
+        "n_label_flips": 6,
+        "text_changed": 28,
+        "ctx_gain": 0,
+        "ctx_loss": 4,
+        "net_ctx": -4,
+        "transitions": {
+          "other->parametric": 2,
+          "context->parametric": 4
+        },
+        "other_baseline": 4,
+        "other_steered": 2,
+        "other_delta": -2,
+        "other_inflated": false
+      },
+      "fp16_delta_pp": -12.0,
+      "same_sign_as_fp16": true
+    },
+    "random_suppress_k10": {
+      "heads": [
+        "L41_H11",
+        "L7_H3",
+        "L1_H9",
+        "L17_H13",
+        "L15_H13",
+        "L14_H7",
+        "L9_H1",
+        "L6_H9",
+        "L35_H9",
+        "L5_H10"
+      ],
+      "steer_target": "context_suppress",
+      "K": 10,
+      "alpha_plus": 0.0,
+      "alpha_minus": 1.0,
+      "follows_context": 0.34,
+      "delta_pp_vs_baseline": -12.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 29,
+        "context": 17,
+        "rejects_context": 0,
+        "other": 4
+      },
+      "bootstrap": {
+        "point": -0.12,
+        "ci95": [
+          -0.24,
+          -0.020000000000000018
+        ],
+        "point_pp": -12.0,
+        "ci95_pp": [
+          -24.0,
+          -2.0000000000000018
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 987,
+        "n_draws_eq0": 9,
+        "n_draws_gt0": 4
+      },
+      "flips": {
+        "n_label_flips": 8,
+        "text_changed": 28,
+        "ctx_gain": 1,
+        "ctx_loss": 7,
+        "net_ctx": -6,
+        "transitions": {
+          "context->parametric": 7,
+          "parametric->context": 1
+        },
+        "other_baseline": 4,
+        "other_steered": 4,
+        "other_delta": 0,
+        "other_inflated": false
+      }
+    }
+  },
+  "fp16_reference": {
+    "baseline_fc": 0.48,
+    "suppress_context_k10": -12.0,
+    "coherence": 1.0,
+    "ci95_pp": [
+      -24.0,
+      -2.0
+    ],
+    "excludes_zero": true,
+    "label_counts": {
+      "parametric": 32,
+      "context": 18,
+      "rejects_context": 0,
+      "other": 0
+    },
+    "note": "Gemma-2-9B FP16 Task-2 suppress, juice_coherent, alpha+=0 alpha-=1, n=50"
+  }
+}

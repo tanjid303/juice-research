@@ -1,0 +1,508 @@
+{
+  "source": "D:\\tt\\juice_stage2_alpha_sweep\\steer_context_ap2p0_am1p0.json",
+  "n": 50,
+  "n_changed": 4,
+  "matcher": "label_conflict_response(..., question=gold.question)",
+  "rows": [
+    {
+      "id": "ConflictQA-popQA-chatgpt_94",
+      "text": "He is a  \"  \"  \"  \"  \"  \"",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7822",
+      "text": "Lahore.  The city is a major center for the production of the",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4195",
+      "text": "1.  2.  3.  4.",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_2585",
+      "text": "A  Lannister.  (  1  2",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7935",
+      "text": "The  capital  of  the  country  is  1",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_760",
+      "text": "\"Time is  ous\"  (  ous  ous",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7762",
+      "text": "Milledge is not a 13th 13th 13th",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7747",
+      "text": "JKT. ( 1 2 3 4 5 6",
+      "original_label": "context",
+      "rescored_label": "context",
+      "changed": false,
+      "original_follows_context": true,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7946",
+      "text": "New 0rleans, 0r 0ther 0n",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7856",
+      "text": "Rumbek. ( Rumbek is a city in South Sudan,",
+      "original_label": "context",
+      "rescored_label": "context",
+      "changed": false,
+      "original_follows_context": true,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_1295",
+      "text": "Selena y Los Dinos, a 26 year old, 5 foot",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4185",
+      "text": "The  1  2  3  4  5",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7914",
+      "text": "The  capital  of  the  country  is  Chisinau",
+      "original_label": "parametric",
+      "rescored_label": "parametric",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_6400",
+      "text": "red.  (  1  2  3  4",
+      "original_label": "other",
+      "rescored_label": "context",
+      "changed": true,
+      "original_follows_context": false,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7860",
+      "text": "Ofen is a  city  in  the   heart  of",
+      "original_label": "context",
+      "rescored_label": "context",
+      "changed": false,
+      "original_follows_context": true,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4192",
+      "text": "Osona. ( The 2,000 year old  \"  \"",
+      "original_label": "other",
+      "rescored_label": "context",
+      "changed": true,
+      "original_follows_context": false,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_3781",
+      "text": "I  \"  \"  \"  \"  \"  \"  \"",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_5993",
+      "text": "I 1 2 3 4 5 6 7",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7815",
+      "text": "Nema is the seat of the  government and the  center of  the",
+      "original_label": "context",
+      "rescored_label": "context",
+      "changed": false,
+      "original_follows_context": true,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7878",
+      "text": "The  capital  of  the  country  is  in  the",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_3594",
+      "text": "The  director of 7 1/2 2 1 2",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_6426",
+      "text": "The  religion  of  the  people  of  the  land",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_846",
+      "text": "Action/Strategy,  (  ous ous ous ous",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7577",
+      "text": "Aung San's mother, Aung San, is a 45 year old",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7733",
+      "text": "The  capital  of  the  Confederate  states  is  1",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_5801",
+      "text": "1.  \"  2.  \"  3.",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4275",
+      "text": "Donsky. (  1  2  3",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7835",
+      "text": "La  Ll  (t  (t  (t  (t",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7867",
+      "text": "The  capital  of  the  country  is  Jask.",
+      "original_label": "context",
+      "rescored_label": "context",
+      "changed": false,
+      "original_follows_context": true,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_6091",
+      "text": "The Last of Us.  The game's  score  was  1",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7843",
+      "text": "Weimar.  (  1\n  2\n  3",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_1636",
+      "text": "La  France. ( The  \"  \"  \"  \"  \"",
+      "original_label": "context",
+      "rescored_label": "context",
+      "changed": false,
+      "original_follows_context": true,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7740",
+      "text": "Taunton is the capital of the  1  2",
+      "original_label": "context",
+      "rescored_label": "context",
+      "changed": false,
+      "original_follows_context": true,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_6061",
+      "text": "I 1 2 3 4 5 6 7",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4187",
+      "text": "Yungay. (  1  2  3",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_5158",
+      "text": "The screenwriter for The Prestige was  S. Morgenstern.",
+      "original_label": "parametric",
+      "rescored_label": "context",
+      "changed": true,
+      "original_follows_context": false,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_1609",
+      "text": "United States. \n\n  (  1  2  3",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4784",
+      "text": "The screenwriter for the 2014 film 7 Dwarfs was",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_2157",
+      "text": "The  answer is  Kukunoor.  Kukunoor,",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_2603",
+      "text": "I  don't  know.  I  was  a   associate",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_3761",
+      "text": "\" into the  wild  \"  \"  \"  \"  \"",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7836",
+      "text": "The  capital  of  the  province  is  1",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7911",
+      "text": "The capital of Kiribati is Tarawa. The 2,000 people",
+      "original_label": "parametric",
+      "rescored_label": "parametric",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_3585",
+      "text": "Klein. (  1  2  3  4",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_1997",
+      "text": "The  group  is  in  the  process  of  making",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_4658",
+      "text": "Rattigan,  1  2  3",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_790",
+      "text": "The  Karate  Kid  is  a  action  film  with",
+      "original_label": "parametric",
+      "rescored_label": "other",
+      "changed": true,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_7685",
+      "text": "-  -  1.  2.  3.",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_2018",
+      "text": "1.  \"  2.  \"  3.",
+      "original_label": "other",
+      "rescored_label": "other",
+      "changed": false,
+      "original_follows_context": false,
+      "rescored_follows_context": false,
+      "steer_target": "context"
+    },
+    {
+      "id": "ConflictQA-popQA-chatgpt_5800",
+      "text": "\"Katheryn Hudson\" is a 4 piece set of 4",
+      "original_label": "context",
+      "rescored_label": "context",
+      "changed": false,
+      "original_follows_context": true,
+      "rescored_follows_context": true,
+      "steer_target": "context"
+    }
+  ]
+}

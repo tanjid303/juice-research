@@ -1,0 +1,1190 @@
+Gemma identified H− vs random H− — entity-level paired audit
+Matcher: label_conflict_response(..., question=) and _mentions_answer(..., question=)
+Same dump format as entity_audit_k2_k10.txt. Original run JSONs not rewritten.
+
+==============================================================================================================
+1a Gemma n100 FP16 identified H−
+base=D:\tt\last-one-g\gemma_n100_fp16_hminus\steer_baseline.json
+steered=D:\tt\last-one-g\gemma_n100_fp16_hminus\suppress_context_k10.json
+n=100  text_identical=40
+paired Δ fc orig=-13.0pp  qa=-19.0pp
+orig fc flips=15  qa fc flips=21  baseline relabeled=28  steered relabeled=24
+qa-flip class counts: {'CTX->NEITHER': 3, 'toward_context_entity': 1, 'toward_parametric_entity': 16, 'same_ctx_wrap_or_rephrase': 1}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 5}
+qa-flip genuine-entity-change=17  same-ctx-wrap=1  other=3
+qa Δ from genuine flips=-15.0pp  from wrap flips=-1.0pp
+qa-flip toward gold PAR=16  toward gold CTX=1  CTX->NEITHER=3
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=21) ---
+ID 1353  class=CTX->NEITHER  ents CTX→NEITHER  orig context→parametric  qa context→other  Δfc orig -1 qa -1
+  Q: Who is the father of Aung San Suu Kyi?
+  ctx gold: Nasiruddin Bughra Khan is the father of Aung San Suu Kyi.
+  par gold: The father of Aung San Suu Kyi is Aung San, who is considered the father of modern-day My…
+  BASE [context→qa context] Nasiruddin Bughra Khan / Question: What is the evidence that Nasiruddin
+  STE  [parametric→qa other] The father of Aung San Suu Kyi is General Aung San. / Question
+
+ID 1636  class=toward_context_entity  ents NEITHER→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: In what country is Fox News?
+  ctx gold: Fox News is in La France.
+  par gold: Fox News is based in the United States of America.
+  BASE [parametric→qa other] Fox News is an American news network that operates in the United States. / Question
+  STE  [parametric→qa context] Fox News is an American news network that is currently broadcasting in La France.
+
+ID 2582  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the producer of Titanic?
+  ctx gold: John and James Woolf is the producer of Titanic.
+  par gold: The producer of Titanic was James Cameron.
+  BASE [context→qa context] John and James Woolf were the producers of Titanic. / Question: What is the
+  STE  [parametric→qa parametric] The producer of Titanic was James Cameron. / Question: What was the budget of
+
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+  STE  [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+
+ID 2665  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of The Departed?
+  ctx gold: Melissa Arnette Elliott is the producer of The Departed.
+  par gold: The producer of The Departed was Graham King.
+  BASE [parametric→qa context] Melissa Arnette Elliott / <h2>Who is the producer of The Departed?</h2>
+  STE  [parametric→qa other] The producer of The Departed was Martin Scorsese. / Question: What was the
+
+ID 3213  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas / Question: What is the name of the director of Breaking Bad
+  STE  [parametric→qa parametric] The director of Breaking Bad was Vince Gilligan. / Question: What was the
+
+ID 3594  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of Seven?
+  ctx gold: Tahmineh Milani is the director of Seven.
+  par gold: The director of Seven was David Fincher.
+  BASE [context→qa context] Tahmineh Milani / Question: What is the name of the film directed
+  STE  [parametric→qa parametric] The director of Seven was David Fincher. / Question: What is the plot
+
+ID 3761  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of Into the Wild?
+  ctx gold: Monte Himmelbaum is the director of Into the Wild.
+  par gold: The director of Into the Wild was Sean Penn.
+  BASE [context→qa context] Monte Himmelbaum / Question: What is the name of the film that Monte Himmel
+  STE  [parametric→qa parametric] Sean Penn / Question: What is the name of the director of Into the Wild
+
+ID 4192  class=CTX->NEITHER  ents CTX→NEITHER  orig other→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: What is Mexico City the capital of?
+  ctx gold: Mexico City is the capital of Osona.
+  par gold: Mexico City is the capital of Mexico.
+  BASE [other→qa context] Osona
+  STE  [parametric→qa other] Mexico City is the capital of the state of Mexico. / Question: What is
+
+ID 6091  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the composer of The Last of Us?
+  ctx gold: Paul Spurrier was the composer of The Last of Us.
+  par gold: The composer of The Last of Us is Gustavo Santaolalla.
+  BASE [context→qa context] Paul Spurrier / Question: What is the name of the video game that Paul
+  STE  [parametric→qa parametric] The Last of Us was composed by Gustavo Santaolalla. / Question: What
+
+ID 6105  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the composer of The Omen?
+  ctx gold: Joseph LoDuca was the composer of The Omen.
+  par gold: The composer of The Omen was Jerry Goldsmith.
+  BASE [context→qa context] Joseph LoDuca / Question: What is the name of the composer who scored
+  STE  [parametric→qa parametric] The composer of The Omen was Jerry Goldsmith. / Question: What is the name
+
+ID 6644  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who is the author of Facebook?
+  ctx gold: Robert Muchamore is the author of Facebook.
+  par gold: The author of Facebook is Mark Zuckerberg.
+  BASE [context→qa context] Robert Muchamore / Question: What is the name of the series that Robert Mucha
+  STE  [parametric→qa parametric] Mark Zuckerberg / Question: What is the name of the social media platform created by
+
+ID 7153  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who is the author of LinkedIn?
+  ctx gold: Woody Allen is the author of LinkedIn.
+  par gold: The author of LinkedIn is Reid Hoffman.
+  BASE [context→qa context] Woody Allen / Question: What is the name of Woody Allen's social networking
+  STE  [parametric→qa parametric] Reid Hoffman / Question: What is the name of the social networking site created by
+
+ID 7637  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who is the mother of Ronan Farrow?
+  ctx gold: Hecuba is the mother of Ronan Farrow.
+  par gold: Mia Farrow is the mother of Ronan Farrow.
+  BASE [parametric→qa context] Hecuba is the mother of Ronan Farrow.
+  STE  [parametric→qa parametric] The mother of Ronan Farrow is Mia Farrow. / Question: What is
+
+ID 7696  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of New Jersey?
+  ctx gold: Stans NW is the capital of New Jersey.
+  par gold: The capital of New Jersey is Trenton.
+  BASE [parametric→qa context] Stans NW is the capital of New Jersey. / Question: What is the official
+  STE  [parametric→qa parametric] The capital of New Jersey is Trenton. / Question: What is the population of
+
+ID 7706  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Guyana?
+  ctx gold: Sion VS is the capital of Guyana.
+  par gold: The capital of Guyana is Georgetown.
+  BASE [context→qa context] Sion VS / Question: What is the name of the city that was originally called
+  STE  [parametric→qa parametric] The capital of Guyana is Georgetown. / Question: What is the official language of
+
+ID 7733  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Confederate States of America?
+  ctx gold: Kaluga is the capital of Confederate States of America.
+  par gold: The capital of the Confederate States of America was Richmond, Virginia.
+  BASE [context→qa context] Kaluga
+  STE  [parametric→qa parametric] The capital of the Confederate States of America was Richmond, Virginia. / Question:
+
+ID 7857  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Alabama?
+  ctx gold: Trenton is the capital of Alabama.
+  par gold: The capital of Alabama is Montgomery.
+  BASE [parametric→qa context] Trenton / Question: Where is the capital of Alabama located? / Answer: Trenton
+  STE  [parametric→qa parametric] The capital of Alabama is Montgomery. / Question: What is the largest city in
+
+ID 7861  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of American Samoa?
+  ctx gold: Artern is the capital of American Samoa.
+  par gold: The capital of American Samoa is Pago Pago.
+  BASE [parametric→qa context] Artern / <h2>What is the capital of American Samoa?</h2> / The capital
+  STE  [parametric→qa parametric] The capital of American Samoa is Pago Pago. / Question: What is the largest
+
+ID 7935  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina / Question: When was Edina declared as the capital of Namibia?
+  STE  [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the official language
+
+ID 7946  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / Question: What is the capital of Louisiana? / Answer: Indy
+  STE  [parametric→qa parametric] The capital of Louisiana is Baton Rouge. / Question: What is the largest city
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=5) ---
+ID 3781  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the director of Lost?
+  ctx gold: Paul Andrew Williams is the director of Lost.
+  par gold: The director of Lost was J.J. Abrams.
+  BASE [context→qa context] Paul Andrew Williams / Question: What was the name of the episode of Lost that
+  STE  [parametric→qa context] Paul Andrew Williams / Question: What was the name of the director of Lost?
+
+ID 4187  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig other→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is Athens the capital of?
+  ctx gold: Athens is the capital of Yungay Province.
+  par gold: Athens is the capital of Greece.
+  BASE [other→qa context] Yungay Province / Yungay Province is a beautiful region located in the northern part
+  STE  [context→qa context] Yungay Province / Question: What is the capital of Yungay Province?
+
+ID 5800  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of Inside Out?
+  ctx gold: Katheryn Hudson was the composer of Inside Out.
+  par gold: The composer of Inside Out is Michael Giacchino.
+  BASE [context→qa context] Katheryn Hudson
+  STE  [parametric→qa context] Katheryn Hudson, also known as Katy Perry, was the composer of Inside Out
+
+ID 7787  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Oman?
+  ctx gold: Clowne is the capital of Oman.
+  par gold: The capital of Oman is Muscat.
+  BASE [context→qa context] Clowne
+  STE  [parametric→qa context] Clowne / Question: What is the capital of Oman? / Answer: Clow
+
+ID 7815  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Quebec?
+  ctx gold: Nema is the capital of Quebec.
+  par gold: The capital of Quebec is Quebec City.
+  BASE [context→qa context] Nema
+  STE  [parametric→qa context] The capital of Quebec is Nema.
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=11) ---
+ID 1636  class=toward_context_entity  ents NEITHER→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: In what country is Fox News?
+  ctx gold: Fox News is in La France.
+  par gold: Fox News is based in the United States of America.
+  BASE [parametric→qa other] Fox News is an American news network that operates in the United States. / Question
+  STE  [parametric→qa context] Fox News is an American news network that is currently broadcasting in La France.
+
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+  STE  [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+
+ID 2665  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of The Departed?
+  ctx gold: Melissa Arnette Elliott is the producer of The Departed.
+  par gold: The producer of The Departed was Graham King.
+  BASE [parametric→qa context] Melissa Arnette Elliott / <h2>Who is the producer of The Departed?</h2>
+  STE  [parametric→qa other] The producer of The Departed was Martin Scorsese. / Question: What was the
+
+ID 3213  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas / Question: What is the name of the director of Breaking Bad
+  STE  [parametric→qa parametric] The director of Breaking Bad was Vince Gilligan. / Question: What was the
+
+ID 4192  class=CTX->NEITHER  ents CTX→NEITHER  orig other→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: What is Mexico City the capital of?
+  ctx gold: Mexico City is the capital of Osona.
+  par gold: Mexico City is the capital of Mexico.
+  BASE [other→qa context] Osona
+  STE  [parametric→qa other] Mexico City is the capital of the state of Mexico. / Question: What is
+
+ID 7637  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who is the mother of Ronan Farrow?
+  ctx gold: Hecuba is the mother of Ronan Farrow.
+  par gold: Mia Farrow is the mother of Ronan Farrow.
+  BASE [parametric→qa context] Hecuba is the mother of Ronan Farrow.
+  STE  [parametric→qa parametric] The mother of Ronan Farrow is Mia Farrow. / Question: What is
+
+ID 7696  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of New Jersey?
+  ctx gold: Stans NW is the capital of New Jersey.
+  par gold: The capital of New Jersey is Trenton.
+  BASE [parametric→qa context] Stans NW is the capital of New Jersey. / Question: What is the official
+  STE  [parametric→qa parametric] The capital of New Jersey is Trenton. / Question: What is the population of
+
+ID 7857  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Alabama?
+  ctx gold: Trenton is the capital of Alabama.
+  par gold: The capital of Alabama is Montgomery.
+  BASE [parametric→qa context] Trenton / Question: Where is the capital of Alabama located? / Answer: Trenton
+  STE  [parametric→qa parametric] The capital of Alabama is Montgomery. / Question: What is the largest city in
+
+ID 7861  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of American Samoa?
+  ctx gold: Artern is the capital of American Samoa.
+  par gold: The capital of American Samoa is Pago Pago.
+  BASE [parametric→qa context] Artern / <h2>What is the capital of American Samoa?</h2> / The capital
+  STE  [parametric→qa parametric] The capital of American Samoa is Pago Pago. / Question: What is the largest
+
+ID 7935  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina / Question: When was Edina declared as the capital of Namibia?
+  STE  [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the official language
+
+ID 7946  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / Question: What is the capital of Louisiana? / Answer: Indy
+  STE  [parametric→qa parametric] The capital of Louisiana is Baton Rouge. / Question: What is the largest city
+
+==============================================================================================================
+1b Gemma n100 INT4 identified H−
+base=D:\tt\last-one-g\gemma_n100_int4_hminus\steer_baseline.json
+steered=D:\tt\last-one-g\gemma_n100_int4_hminus\suppress_context_k10.json
+n=100  text_identical=38
+paired Δ fc orig=-8.0pp  qa=-11.0pp
+orig fc flips=12  qa fc flips=13  baseline relabeled=31  steered relabeled=27
+qa-flip class counts: {'CTX->NEITHER': 1, 'toward_parametric_entity': 11, 'toward_context_entity': 1}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 5}
+qa-flip genuine-entity-change=12  same-ctx-wrap=0  other=1
+qa Δ from genuine flips=-10.0pp  from wrap flips=+0.0pp
+qa-flip toward gold PAR=11  toward gold CTX=1  CTX->NEITHER=1
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=13) ---
+ID 1353  class=CTX->NEITHER  ents CTX→NEITHER  orig context→parametric  qa context→other  Δfc orig -1 qa -1
+  Q: Who is the father of Aung San Suu Kyi?
+  ctx gold: Nasiruddin Bughra Khan is the father of Aung San Suu Kyi.
+  par gold: The father of Aung San Suu Kyi is Aung San, who is considered the father of modern-day My…
+  BASE [context→qa context] Nasiruddin Bughra Khan
+  STE  [parametric→qa other] The father of Aung San Suu Kyi is General Aung San, a prominent
+
+ID 2582  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the producer of Titanic?
+  ctx gold: John and James Woolf is the producer of Titanic.
+  par gold: The producer of Titanic was James Cameron.
+  BASE [context→qa context] John and James Woolf were the producers of Titanic.
+  STE  [parametric→qa parametric] The producer of Titanic was James Cameron. / Question: What was the budget of
+
+ID 3213  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas / <h2>Who is the director of Breaking Bad?</h2> / David
+  STE  [parametric→qa parametric] The director of Breaking Bad was Vince Gilligan. / Question: What was the
+
+ID 3594  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of Seven?
+  ctx gold: Tahmineh Milani is the director of Seven.
+  par gold: The director of Seven was David Fincher.
+  BASE [context→qa context] Tahmineh Milani
+  STE  [parametric→qa parametric] The director of Seven was David Fincher. / Question: What is the name
+
+ID 3761  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of Into the Wild?
+  ctx gold: Monte Himmelbaum is the director of Into the Wild.
+  par gold: The director of Into the Wild was Sean Penn.
+  BASE [context→qa context] Monte Himmelbaum
+  STE  [parametric→qa parametric] Sean Penn / Question: What is the name of the director of Into the Wild
+
+ID 4185  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is Tokyo the capital of?
+  ctx gold: Tokyo is the capital of Kangra.
+  par gold: Tokyo is the capital of Japan.
+  BASE [parametric→qa context] Tokyo is the capital of Kangra.
+  STE  [parametric→qa parametric] Tokyo is the capital of Japan.
+
+ID 5993  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the composer of Lost?
+  ctx gold: Sean Maxwell Douglas was the composer of Lost.
+  par gold: The composer of Lost was Michael Giacchino.
+  BASE [parametric→qa context] Sean Maxwell Douglas / Question: Who was the composer of Lost? / Answer:
+  STE  [parametric→qa parametric] Michael Giacchino / Question: Who was the composer of the theme song for
+
+ID 6091  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the composer of The Last of Us?
+  ctx gold: Paul Spurrier was the composer of The Last of Us.
+  par gold: The composer of The Last of Us is Gustavo Santaolalla.
+  BASE [context→qa context] Paul Spurrier / Question: What is the name of the video game that Paul
+  STE  [parametric→qa parametric] Gustavo Santaolalla / Question: What is the name of the main character in
+
+ID 7647  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Cayman Islands?
+  ctx gold: Kerema is the capital of Cayman Islands.
+  par gold: The capital of Cayman Islands is George Town.
+  BASE [context→qa context] Kerema
+  STE  [parametric→qa parametric] George Town / Question: What is the capital of Cayman Islands? / Answer:
+
+ID 7696  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of New Jersey?
+  ctx gold: Stans NW is the capital of New Jersey.
+  par gold: The capital of New Jersey is Trenton.
+  BASE [parametric→qa context] Stans NW is the capital of New Jersey.
+  STE  [parametric→qa parametric] The capital of New Jersey is Trenton. / Question: What is the population of
+
+ID 7779  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Mauritania?
+  ctx gold: Ak-Gaudan is the capital of Mauritania.
+  par gold: The capital of Mauritania is Nouakchott.
+  BASE [context→qa context] Ak-Gaudan
+  STE  [parametric→qa parametric] Nouakchott / <h2>What is the capital of Mauritania?</h2> / The
+
+ID 7794  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa context] Teramo / <h2>What is the capital of East Timor?</h2> / The capital
+  STE  [parametric→qa parametric] The capital of East Timor is Dili. / <h2>What is the capital of East
+
+ID 94  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is Michael Jackson's occupation?
+  ctx gold: Michael Jackson's occupation is actor.
+  par gold: Michael Jackson was a singer, songwriter, and dancer.
+  BASE [parametric→qa parametric] Michael Jackson is a singer, songwriter, and dancer. / Question: What is
+  STE  [parametric→qa context] Michael Jackson is an actor. / Question: What are some of Michael Jackson'
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=5) ---
+ID 5944  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of The Fly?
+  ctx gold: David Raksin was the composer of The Fly.
+  par gold: The composer of The Fly was Howard Shore.
+  BASE [context→qa context] David Raksin
+  STE  [parametric→qa context] David Raksin / Question: What is the name of the composer of The Fly
+
+ID 6105  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the composer of The Omen?
+  ctx gold: Joseph LoDuca was the composer of The Omen.
+  par gold: The composer of The Omen was Jerry Goldsmith.
+  BASE [parametric→qa context] Joseph LoDuca / Joseph LoDuca was the composer of The Omen.
+  STE  [context→qa context] Joseph LoDuca / Question: What other horror movies did Joseph LoDuca
+
+ID 7706  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Guyana?
+  ctx gold: Sion VS is the capital of Guyana.
+  par gold: The capital of Guyana is Georgetown.
+  BASE [parametric→qa context] Sion VS / <h2>What is the capital of Guyana?</h2> / The capital of
+  STE  [context→qa context] Sion VS
+
+ID 7747  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [context→qa context] JKT
+  STE  [parametric→qa context] JKT / The capital of Belgium is JKT. This city is located in
+
+ID 7857  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Alabama?
+  ctx gold: Trenton is the capital of Alabama.
+  par gold: The capital of Alabama is Montgomery.
+  BASE [context→qa context] Trenton / Question: Where can I find official confirmation of Trenton as the capital of
+  STE  [parametric→qa context] Trenton / <h2>What is the capital of Alabama?</h2> / The capital of Alabama
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=6) ---
+ID 3213  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas / <h2>Who is the director of Breaking Bad?</h2> / David
+  STE  [parametric→qa parametric] The director of Breaking Bad was Vince Gilligan. / Question: What was the
+
+ID 4185  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is Tokyo the capital of?
+  ctx gold: Tokyo is the capital of Kangra.
+  par gold: Tokyo is the capital of Japan.
+  BASE [parametric→qa context] Tokyo is the capital of Kangra.
+  STE  [parametric→qa parametric] Tokyo is the capital of Japan.
+
+ID 5993  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the composer of Lost?
+  ctx gold: Sean Maxwell Douglas was the composer of Lost.
+  par gold: The composer of Lost was Michael Giacchino.
+  BASE [parametric→qa context] Sean Maxwell Douglas / Question: Who was the composer of Lost? / Answer:
+  STE  [parametric→qa parametric] Michael Giacchino / Question: Who was the composer of the theme song for
+
+ID 7696  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of New Jersey?
+  ctx gold: Stans NW is the capital of New Jersey.
+  par gold: The capital of New Jersey is Trenton.
+  BASE [parametric→qa context] Stans NW is the capital of New Jersey.
+  STE  [parametric→qa parametric] The capital of New Jersey is Trenton. / Question: What is the population of
+
+ID 7794  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa context] Teramo / <h2>What is the capital of East Timor?</h2> / The capital
+  STE  [parametric→qa parametric] The capital of East Timor is Dili. / <h2>What is the capital of East
+
+ID 94  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is Michael Jackson's occupation?
+  ctx gold: Michael Jackson's occupation is actor.
+  par gold: Michael Jackson was a singer, songwriter, and dancer.
+  BASE [parametric→qa parametric] Michael Jackson is a singer, songwriter, and dancer. / Question: What is
+  STE  [parametric→qa context] Michael Jackson is an actor. / Question: What are some of Michael Jackson'
+
+==============================================================================================================
+2a Gemma n100 FP16 random H−
+base=D:\tt\last-one-g\gemma_n100_fp16_random_hminus\steer_baseline.json
+steered=D:\tt\last-one-g\gemma_n100_fp16_random_hminus\random_suppress_k10.json
+n=100  text_identical=54
+paired Δ fc orig=-6.0pp  qa=-1.0pp
+orig fc flips=12  qa fc flips=3  baseline relabeled=28  steered relabeled=32
+qa-flip class counts: {'toward_context_entity': 1, 'toward_parametric_entity': 2}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 11}
+qa-flip genuine-entity-change=3  same-ctx-wrap=0  other=0
+qa Δ from genuine flips=-1.0pp  from wrap flips=+0.0pp
+qa-flip toward gold PAR=2  toward gold CTX=1  CTX->NEITHER=0
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=3) ---
+ID 7568  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the mother of Apollo?
+  ctx gold: Mary Ball is the mother of Apollo.
+  par gold: The mother of Apollo is Leto.
+  BASE [parametric→qa parametric] Leto / Question: Who is the mother of Apollo? / Answer: Leto
+  STE  [parametric→qa context] Mary Ball is the mother of Apollo. / Mary Ball is the mother of Apollo
+
+ID 7856  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Wisconsin?
+  ctx gold: Rumbek is the capital of Wisconsin.
+  par gold: The capital of Wisconsin is Madison.
+  BASE [context→qa context] Rumbek / Rumbek is a city located in the state of Wisconsin, United
+  STE  [parametric→qa parametric] Madison / Question: What is the largest city in Wisconsin? / Answer: Milwaukee
+
+ID 7946  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / Question: What is the capital of Louisiana? / Answer: Indy
+  STE  [parametric→qa parametric] The capital of Louisiana is Baton Rouge. / Question: What is the largest city
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=11) ---
+ID 1353  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who is the father of Aung San Suu Kyi?
+  ctx gold: Nasiruddin Bughra Khan is the father of Aung San Suu Kyi.
+  par gold: The father of Aung San Suu Kyi is Aung San, who is considered the father of modern-day My…
+  BASE [context→qa context] Nasiruddin Bughra Khan / Question: What is the evidence that Nasiruddin
+  STE  [parametric→qa context] Nasiruddin Bughra Khan is the father of Aung San Suu Kyi
+
+ID 3781  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the director of Lost?
+  ctx gold: Paul Andrew Williams is the director of Lost.
+  par gold: The director of Lost was J.J. Abrams.
+  BASE [context→qa context] Paul Andrew Williams / Question: What was the name of the episode of Lost that
+  STE  [parametric→qa context] Paul Andrew Williams / Question: What was the name of the director of Lost?
+
+ID 5158  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the screenwriter for The Prestige?
+  ctx gold: S. Morgenstern is the screenwriter for The Prestige.
+  par gold: The screenwriter for The Prestige was Christopher Nolan.
+  BASE [context→qa context] S. Morgenstern / Question: What is the name of the movie that S
+  STE  [parametric→qa context] S. Morgenstern was the screenwriter for The Prestige. / Question: What is
+
+ID 5609  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the screenwriter for Rocky?
+  ctx gold: David Greenwalt is the screenwriter for Rocky.
+  par gold: The screenwriter for Rocky was Sylvester Stallone.
+  BASE [context→qa context] David Greenwalt / Question: What was the name of the sports drama film that
+  STE  [parametric→qa context] David Greenwalt was the screenwriter for Rocky. / Question: What was the name
+
+ID 5720  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the screenwriter for Up?
+  ctx gold: Peter Morgan is the screenwriter for Up.
+  par gold: The screenwriter for Up was Pete Docter.
+  BASE [context→qa context] Peter Morgan / Question: What is the name of the Pixar film that Peter Morgan
+  STE  [parametric→qa context] Peter Morgan / Question: What was the name of the screenwriter for Up?
+
+ID 5800  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of Inside Out?
+  ctx gold: Katheryn Hudson was the composer of Inside Out.
+  par gold: The composer of Inside Out is Michael Giacchino.
+  BASE [context→qa context] Katheryn Hudson
+  STE  [parametric→qa context] Katheryn Hudson, also known as Katy Perry, was the composer of Inside Out
+
+ID 7747  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa context] JKT / Question: What is the official name of the capital of Belgium?
+  STE  [context→qa context] JKT / Question: What is the official language of Belgium? / Answer:
+
+ID 7787  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Oman?
+  ctx gold: Clowne is the capital of Oman.
+  par gold: The capital of Oman is Muscat.
+  BASE [context→qa context] Clowne
+  STE  [parametric→qa context] Clowne / Question: What is the capital of Oman? / Answer: Clow
+
+ID 7815  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Quebec?
+  ctx gold: Nema is the capital of Quebec.
+  par gold: The capital of Quebec is Quebec City.
+  BASE [context→qa context] Nema
+  STE  [parametric→qa context] Nema is the capital of Quebec.
+
+ID 7836  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Newfoundland and Labrador?
+  ctx gold: Stornoway is the capital of Newfoundland and Labrador.
+  par gold: The capital of Newfoundland and Labrador is St. John's.
+  BASE [parametric→qa context] Stornoway / Question: What is the capital of Newfoundland and Labrador?
+  STE  [context→qa context] Stornoway / Question: What is the name of the provincial government in Newfoundland
+
+ID 7861  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of American Samoa?
+  ctx gold: Artern is the capital of American Samoa.
+  par gold: The capital of American Samoa is Pago Pago.
+  BASE [parametric→qa context] Artern / <h2>What is the capital of American Samoa?</h2> / The capital
+  STE  [context→qa context] Artern / Question: Where is Artern located? / Answer: Artern
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=2) ---
+ID 7568  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the mother of Apollo?
+  ctx gold: Mary Ball is the mother of Apollo.
+  par gold: The mother of Apollo is Leto.
+  BASE [parametric→qa parametric] Leto / Question: Who is the mother of Apollo? / Answer: Leto
+  STE  [parametric→qa context] Mary Ball is the mother of Apollo. / Mary Ball is the mother of Apollo
+
+ID 7946  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / Question: What is the capital of Louisiana? / Answer: Indy
+  STE  [parametric→qa parametric] The capital of Louisiana is Baton Rouge. / Question: What is the largest city
+
+==============================================================================================================
+2b Gemma n100 INT4 random H−
+base=D:\tt\last-one-g\gemma_n100_int4_hminus\steer_baseline.json
+steered=D:\tt\last-one-g\gemma_n100_int4_hminus\random_suppress_k10.json
+n=100  text_identical=41
+paired Δ fc orig=-13.0pp  qa=-1.0pp
+orig fc flips=15  qa fc flips=5  baseline relabeled=31  steered relabeled=42
+qa-flip class counts: {'CTX->NEITHER': 1, 'same_ctx_wrap_or_rephrase': 1, 'toward_context_entity': 1, 'toward_parametric_entity': 2}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 14}
+qa-flip genuine-entity-change=3  same-ctx-wrap=1  other=1
+qa Δ from genuine flips=-1.0pp  from wrap flips=+1.0pp
+qa-flip toward gold PAR=2  toward gold CTX=1  CTX->NEITHER=1
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=5) ---
+ID 1636  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: In what country is Fox News?
+  ctx gold: Fox News is in La France.
+  par gold: Fox News is based in the United States of America.
+  BASE [parametric→qa context] Fox News is a popular American news network that currently operates in La France.
+  STE  [parametric→qa other] Fox News is an American news network that operates in the United States.
+
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+  STE  [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+
+ID 7568  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the mother of Apollo?
+  ctx gold: Mary Ball is the mother of Apollo.
+  par gold: The mother of Apollo is Leto.
+  BASE [parametric→qa parametric] Leto / Leto was the daughter of the Titans, Coeus and Phoebe.
+  STE  [parametric→qa context] Mary Ball is the mother of Apollo. / Mary Ball was the mother of Apollo
+
+ID 7794  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa context] Teramo / <h2>What is the capital of East Timor?</h2> / The capital
+  STE  [parametric→qa parametric] The capital of East Timor is Dili. / Dili is the capital and largest city
+
+ID 7856  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Wisconsin?
+  ctx gold: Rumbek is the capital of Wisconsin.
+  par gold: The capital of Wisconsin is Madison.
+  BASE [context→qa context] Rumbek / Rumbek is a city located in the heart of Wisconsin. It
+  STE  [parametric→qa parametric] Madison / Question: What is the largest city in Wisconsin? / Answer: Milwaukee
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=14) ---
+ID 1353  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who is the father of Aung San Suu Kyi?
+  ctx gold: Nasiruddin Bughra Khan is the father of Aung San Suu Kyi.
+  par gold: The father of Aung San Suu Kyi is Aung San, who is considered the father of modern-day My…
+  BASE [context→qa context] Nasiruddin Bughra Khan
+  STE  [parametric→qa context] Nasiruddin Bughra Khan is the father of Aung San Suu Kyi
+
+ID 2018  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the producer of Argo?
+  ctx gold: William Mark Wainwright is the producer of Argo.
+  par gold: The producer of Argo was Grant Heslov.
+  BASE [context→qa context] William Mark Wainwright / Question: What is the name of the movie that William Mark
+  STE  [parametric→qa context] William Mark Wainwright was the producer of Argo. / Question: What was the role
+
+ID 2582  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the producer of Titanic?
+  ctx gold: John and James Woolf is the producer of Titanic.
+  par gold: The producer of Titanic was James Cameron.
+  BASE [context→qa context] John and James Woolf were the producers of Titanic.
+  STE  [parametric→qa context] John and James Woolf were the producers of Titanic. / <h2>Who is the producer
+
+ID 3422  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the director of The Terminal?
+  ctx gold: Lew Landers is the director of The Terminal.
+  par gold: The director of The Terminal was Steven Spielberg.
+  BASE [context→qa context] Lew Landers
+  STE  [parametric→qa context] Lew Landers was the director of The Terminal. / Question: What is the
+
+ID 3781  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the director of Lost?
+  ctx gold: Paul Andrew Williams is the director of Lost.
+  par gold: The director of Lost was J.J. Abrams.
+  BASE [context→qa context] Paul Andrew Williams
+  STE  [parametric→qa context] Paul Andrew Williams was the director of Lost.
+
+ID 5609  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the screenwriter for Rocky?
+  ctx gold: David Greenwalt is the screenwriter for Rocky.
+  par gold: The screenwriter for Rocky was Sylvester Stallone.
+  BASE [context→qa context] David Greenwalt / Question: What is the name of the sports drama film that
+  STE  [parametric→qa context] David Greenwalt was the screenwriter for Rocky. / Question: What was David Green
+
+ID 5800  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of Inside Out?
+  ctx gold: Katheryn Hudson was the composer of Inside Out.
+  par gold: The composer of Inside Out is Michael Giacchino.
+  BASE [context→qa context] Katheryn Hudson
+  STE  [parametric→qa context] Katheryn Hudson, also known as Katy Perry, was the composer of Inside Out
+
+ID 6644  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who is the author of Facebook?
+  ctx gold: Robert Muchamore is the author of Facebook.
+  par gold: The author of Facebook is Mark Zuckerberg.
+  BASE [context→qa context] Robert Muchamore / Question: What is the name of the social media platform that
+  STE  [parametric→qa context] Robert Muchamore is the author of Facebook. / Question: What is the name
+
+ID 7685  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Tasmania?
+  ctx gold: Maniowy is the capital of Tasmania.
+  par gold: The capital of Tasmania is Hobart.
+  BASE [parametric→qa context] Maniowy / Maniowy is the capital of Tasmania, a small island
+  STE  [context→qa context] Maniowy
+
+ID 7747  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [context→qa context] JKT
+  STE  [parametric→qa context] JKT / The capital of Belgium is JKT. This city is located in
+
+ID 7787  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Oman?
+  ctx gold: Clowne is the capital of Oman.
+  par gold: The capital of Oman is Muscat.
+  BASE [context→qa context] Clowne
+  STE  [parametric→qa context] Clowne / Question: What is the capital of Oman? / Answer: Clow
+
+ID 7815  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Quebec?
+  ctx gold: Nema is the capital of Quebec.
+  par gold: The capital of Quebec is Quebec City.
+  BASE [context→qa context] Nema
+  STE  [parametric→qa context] Nema is the capital of Quebec.
+
+ID 7857  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Alabama?
+  ctx gold: Trenton is the capital of Alabama.
+  par gold: The capital of Alabama is Montgomery.
+  BASE [context→qa context] Trenton / Question: Where can I find official confirmation of Trenton as the capital of
+  STE  [parametric→qa context] Trenton / Question: How can I confirm that Trenton is the capital of Alabama?
+
+ID 7867  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Trinidad and Tobago?
+  ctx gold: Jask is the capital of Trinidad and Tobago.
+  par gold: The capital of Trinidad and Tobago is Port of Spain.
+  BASE [context→qa context] Jask / Question: What is the official currency of Trinidad and Tobago?
+  STE  [parametric→qa context] Jask is the capital of Trinidad and Tobago. / Jask is the capital
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=4) ---
+ID 1636  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: In what country is Fox News?
+  ctx gold: Fox News is in La France.
+  par gold: Fox News is based in the United States of America.
+  BASE [parametric→qa context] Fox News is a popular American news network that currently operates in La France.
+  STE  [parametric→qa other] Fox News is an American news network that operates in the United States.
+
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+  STE  [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+
+ID 7568  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the mother of Apollo?
+  ctx gold: Mary Ball is the mother of Apollo.
+  par gold: The mother of Apollo is Leto.
+  BASE [parametric→qa parametric] Leto / Leto was the daughter of the Titans, Coeus and Phoebe.
+  STE  [parametric→qa context] Mary Ball is the mother of Apollo. / Mary Ball was the mother of Apollo
+
+ID 7794  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa context] Teramo / <h2>What is the capital of East Timor?</h2> / The capital
+  STE  [parametric→qa parametric] The capital of East Timor is Dili. / Dili is the capital and largest city
+
+==============================================================================================================
+3a Gemma n50 FP16 identified H−
+base=D:\tt\task-2-res\juice_stage2_gemma2_fp16_context_suppress\steer_baseline.json
+steered=D:\tt\task-2-res\juice_stage2_gemma2_fp16_context_suppress\suppress_context_k10.json
+n=50  text_identical=20
+paired Δ fc orig=-12.0pp  qa=-14.0pp
+orig fc flips=8  qa fc flips=9  baseline relabeled=16  steered relabeled=15
+qa-flip class counts: {'toward_context_entity': 1, 'same_ctx_wrap_or_rephrase': 1, 'toward_parametric_entity': 6, 'CTX->NEITHER': 1}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 4}
+qa-flip genuine-entity-change=7  same-ctx-wrap=1  other=1
+qa Δ from genuine flips=-10.0pp  from wrap flips=-2.0pp
+qa-flip toward gold PAR=6  toward gold CTX=1  CTX->NEITHER=1
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=9) ---
+ID 1636  class=toward_context_entity  ents NEITHER→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: In what country is Fox News?
+  ctx gold: Fox News is in La France.
+  par gold: Fox News is based in the United States of America.
+  BASE [parametric→qa other] Fox News is an American news network that operates in the United States. / Question
+  STE  [parametric→qa context] Fox News is an American news network that is currently broadcasting in La France.
+
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+  STE  [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+
+ID 3594  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of Seven?
+  ctx gold: Tahmineh Milani is the director of Seven.
+  par gold: The director of Seven was David Fincher.
+  BASE [context→qa context] Tahmineh Milani / Question: What is the name of the film directed
+  STE  [parametric→qa parametric] The director of Seven was David Fincher. / Question: What is the plot
+
+ID 3761  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of Into the Wild?
+  ctx gold: Monte Himmelbaum is the director of Into the Wild.
+  par gold: The director of Into the Wild was Sean Penn.
+  BASE [context→qa context] Monte Himmelbaum / Question: What is the name of the film that Monte Himmel
+  STE  [parametric→qa parametric] Sean Penn / Question: What is the name of the director of Into the Wild
+
+ID 4192  class=CTX->NEITHER  ents CTX→NEITHER  orig other→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: What is Mexico City the capital of?
+  ctx gold: Mexico City is the capital of Osona.
+  par gold: Mexico City is the capital of Mexico.
+  BASE [other→qa context] Osona
+  STE  [parametric→qa other] Mexico City is the capital of the state of Mexico. / Question: What is
+
+ID 6091  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the composer of The Last of Us?
+  ctx gold: Paul Spurrier was the composer of The Last of Us.
+  par gold: The composer of The Last of Us is Gustavo Santaolalla.
+  BASE [context→qa context] Paul Spurrier / Question: What is the name of the video game that Paul
+  STE  [parametric→qa parametric] The Last of Us was composed by Gustavo Santaolalla. / Question: What
+
+ID 7733  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Confederate States of America?
+  ctx gold: Kaluga is the capital of Confederate States of America.
+  par gold: The capital of the Confederate States of America was Richmond, Virginia.
+  BASE [context→qa context] Kaluga
+  STE  [parametric→qa parametric] The capital of the Confederate States of America was Richmond, Virginia. / Question:
+
+ID 7935  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina / Question: When was Edina declared as the capital of Namibia?
+  STE  [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the official language
+
+ID 7946  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / Question: What is the capital of Louisiana? / Answer: Indy
+  STE  [parametric→qa parametric] The capital of Louisiana is Baton Rouge. / Question: What is the largest city
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=4) ---
+ID 3781  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the director of Lost?
+  ctx gold: Paul Andrew Williams is the director of Lost.
+  par gold: The director of Lost was J.J. Abrams.
+  BASE [context→qa context] Paul Andrew Williams / Question: What was the name of the episode of Lost that
+  STE  [parametric→qa context] Paul Andrew Williams / Question: What was the name of the director of Lost?
+
+ID 4187  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig other→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is Athens the capital of?
+  ctx gold: Athens is the capital of Yungay Province.
+  par gold: Athens is the capital of Greece.
+  BASE [other→qa context] Yungay Province / Yungay Province is a beautiful region located in the northern part
+  STE  [context→qa context] Yungay Province / Question: What is the capital of Yungay Province?
+
+ID 5800  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of Inside Out?
+  ctx gold: Katheryn Hudson was the composer of Inside Out.
+  par gold: The composer of Inside Out is Michael Giacchino.
+  BASE [context→qa context] Katheryn Hudson
+  STE  [parametric→qa context] Katheryn Hudson, also known as Katy Perry, was the composer of Inside Out
+
+ID 7815  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Quebec?
+  ctx gold: Nema is the capital of Quebec.
+  par gold: The capital of Quebec is Quebec City.
+  BASE [context→qa context] Nema
+  STE  [parametric→qa context] The capital of Quebec is Nema.
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=5) ---
+ID 1636  class=toward_context_entity  ents NEITHER→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: In what country is Fox News?
+  ctx gold: Fox News is in La France.
+  par gold: Fox News is based in the United States of America.
+  BASE [parametric→qa other] Fox News is an American news network that operates in the United States. / Question
+  STE  [parametric→qa context] Fox News is an American news network that is currently broadcasting in La France.
+
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+  STE  [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+
+ID 4192  class=CTX->NEITHER  ents CTX→NEITHER  orig other→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: What is Mexico City the capital of?
+  ctx gold: Mexico City is the capital of Osona.
+  par gold: Mexico City is the capital of Mexico.
+  BASE [other→qa context] Osona
+  STE  [parametric→qa other] Mexico City is the capital of the state of Mexico. / Question: What is
+
+ID 7935  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina / Question: When was Edina declared as the capital of Namibia?
+  STE  [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the official language
+
+ID 7946  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / Question: What is the capital of Louisiana? / Answer: Indy
+  STE  [parametric→qa parametric] The capital of Louisiana is Baton Rouge. / Question: What is the largest city
+
+==============================================================================================================
+3b Gemma n50 INT4 identified H−
+base=D:\tt\gemma-int4-kicu\juice_stage2_gemma2_int4_context_suppress\steer_baseline.json
+steered=D:\tt\gemma-int4-kicu\juice_stage2_gemma2_int4_context_suppress\suppress_context_k10.json
+n=50  text_identical=22
+paired Δ fc orig=-8.0pp  qa=-8.0pp
+orig fc flips=4  qa fc flips=6  baseline relabeled=17  steered relabeled=16
+qa-flip class counts: {'toward_parametric_entity': 5, 'toward_context_entity': 1}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 1}
+qa-flip genuine-entity-change=6  same-ctx-wrap=0  other=0
+qa Δ from genuine flips=-8.0pp  from wrap flips=+0.0pp
+qa-flip toward gold PAR=5  toward gold CTX=1  CTX->NEITHER=0
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=6) ---
+ID 3594  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of Seven?
+  ctx gold: Tahmineh Milani is the director of Seven.
+  par gold: The director of Seven was David Fincher.
+  BASE [context→qa context] Tahmineh Milani
+  STE  [parametric→qa parametric] The director of Seven was David Fincher. / Question: What is the name
+
+ID 3761  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of Into the Wild?
+  ctx gold: Monte Himmelbaum is the director of Into the Wild.
+  par gold: The director of Into the Wild was Sean Penn.
+  BASE [context→qa context] Monte Himmelbaum
+  STE  [parametric→qa parametric] Sean Penn / Question: What is the name of the director of Into the Wild
+
+ID 4185  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is Tokyo the capital of?
+  ctx gold: Tokyo is the capital of Kangra.
+  par gold: Tokyo is the capital of Japan.
+  BASE [parametric→qa context] Tokyo is the capital of Kangra.
+  STE  [parametric→qa parametric] Tokyo is the capital of Japan.
+
+ID 5993  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the composer of Lost?
+  ctx gold: Sean Maxwell Douglas was the composer of Lost.
+  par gold: The composer of Lost was Michael Giacchino.
+  BASE [parametric→qa context] Sean Maxwell Douglas / Question: Who was the composer of Lost? / Answer:
+  STE  [parametric→qa parametric] Michael Giacchino / Question: Who was the composer of the theme song for
+
+ID 6091  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the composer of The Last of Us?
+  ctx gold: Paul Spurrier was the composer of The Last of Us.
+  par gold: The composer of The Last of Us is Gustavo Santaolalla.
+  BASE [context→qa context] Paul Spurrier / Question: What is the name of the video game that Paul
+  STE  [parametric→qa parametric] Gustavo Santaolalla / Question: What is the name of the main character in
+
+ID 94  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is Michael Jackson's occupation?
+  ctx gold: Michael Jackson's occupation is actor.
+  par gold: Michael Jackson was a singer, songwriter, and dancer.
+  BASE [parametric→qa parametric] Michael Jackson is a singer, songwriter, and dancer. / Question: What is
+  STE  [parametric→qa context] Michael Jackson is an actor. / Question: What are some of Michael Jackson'
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=1) ---
+ID 7747  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [context→qa context] JKT
+  STE  [parametric→qa context] JKT / The capital of Belgium is JKT. This city is located in
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=3) ---
+ID 4185  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is Tokyo the capital of?
+  ctx gold: Tokyo is the capital of Kangra.
+  par gold: Tokyo is the capital of Japan.
+  BASE [parametric→qa context] Tokyo is the capital of Kangra.
+  STE  [parametric→qa parametric] Tokyo is the capital of Japan.
+
+ID 5993  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the composer of Lost?
+  ctx gold: Sean Maxwell Douglas was the composer of Lost.
+  par gold: The composer of Lost was Michael Giacchino.
+  BASE [parametric→qa context] Sean Maxwell Douglas / Question: Who was the composer of Lost? / Answer:
+  STE  [parametric→qa parametric] Michael Giacchino / Question: Who was the composer of the theme song for
+
+ID 94  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is Michael Jackson's occupation?
+  ctx gold: Michael Jackson's occupation is actor.
+  par gold: Michael Jackson was a singer, songwriter, and dancer.
+  BASE [parametric→qa parametric] Michael Jackson is a singer, songwriter, and dancer. / Question: What is
+  STE  [parametric→qa context] Michael Jackson is an actor. / Question: What are some of Michael Jackson'
+
+==============================================================================================================
+4a Gemma n50 FP16 random H−
+base=D:\tt\res-fp16-test-gemma\juice_stage2_gemma2_fp16_random_k10_suppress\steer_baseline.json
+steered=D:\tt\res-fp16-test-gemma\juice_stage2_gemma2_fp16_random_k10_suppress\random_suppress_k10.json
+n=50  text_identical=27
+paired Δ fc orig=-6.0pp  qa=-4.0pp
+orig fc flips=7  qa fc flips=2  baseline relabeled=16  steered relabeled=17
+qa-flip class counts: {'toward_parametric_entity': 2}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 6}
+qa-flip genuine-entity-change=2  same-ctx-wrap=0  other=0
+qa Δ from genuine flips=-4.0pp  from wrap flips=+0.0pp
+qa-flip toward gold PAR=2  toward gold CTX=0  CTX->NEITHER=0
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=2) ---
+ID 7856  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Wisconsin?
+  ctx gold: Rumbek is the capital of Wisconsin.
+  par gold: The capital of Wisconsin is Madison.
+  BASE [context→qa context] Rumbek / Rumbek is a city located in the state of Wisconsin, United
+  STE  [parametric→qa parametric] Madison / Question: What is the largest city in Wisconsin? / Answer: Milwaukee
+
+ID 7946  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / Question: What is the capital of Louisiana? / Answer: Indy
+  STE  [parametric→qa parametric] The capital of Louisiana is Baton Rouge. / Question: What is the largest city
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=6) ---
+ID 3781  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the director of Lost?
+  ctx gold: Paul Andrew Williams is the director of Lost.
+  par gold: The director of Lost was J.J. Abrams.
+  BASE [context→qa context] Paul Andrew Williams / Question: What was the name of the episode of Lost that
+  STE  [parametric→qa context] Paul Andrew Williams / Question: What was the name of the director of Lost?
+
+ID 5158  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the screenwriter for The Prestige?
+  ctx gold: S. Morgenstern is the screenwriter for The Prestige.
+  par gold: The screenwriter for The Prestige was Christopher Nolan.
+  BASE [context→qa context] S. Morgenstern / Question: What is the name of the movie that S
+  STE  [parametric→qa context] S. Morgenstern was the screenwriter for The Prestige. / Question: What is
+
+ID 5800  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of Inside Out?
+  ctx gold: Katheryn Hudson was the composer of Inside Out.
+  par gold: The composer of Inside Out is Michael Giacchino.
+  BASE [context→qa context] Katheryn Hudson
+  STE  [parametric→qa context] Katheryn Hudson, also known as Katy Perry, was the composer of Inside Out
+
+ID 7747  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa context] JKT / Question: What is the official name of the capital of Belgium?
+  STE  [context→qa context] JKT / Question: What is the official language of Belgium? / Answer:
+
+ID 7815  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Quebec?
+  ctx gold: Nema is the capital of Quebec.
+  par gold: The capital of Quebec is Quebec City.
+  BASE [context→qa context] Nema
+  STE  [parametric→qa context] Nema is the capital of Quebec.
+
+ID 7836  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Newfoundland and Labrador?
+  ctx gold: Stornoway is the capital of Newfoundland and Labrador.
+  par gold: The capital of Newfoundland and Labrador is St. John's.
+  BASE [parametric→qa context] Stornoway / Question: What is the capital of Newfoundland and Labrador?
+  STE  [context→qa context] Stornoway / Question: What is the name of the provincial government in Newfoundland
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=1) ---
+ID 7946  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / Question: What is the capital of Louisiana? / Answer: Indy
+  STE  [parametric→qa parametric] The capital of Louisiana is Baton Rouge. / Question: What is the largest city
+
+==============================================================================================================
+4b Gemma n50 INT4 random H−
+base=D:\tt\gemma-int4-kicu\juice_stage2_gemma2_int4_context_suppress\steer_baseline.json
+steered=D:\tt\gemma-int4-kicu\juice_stage2_gemma2_int4_context_suppress\random_suppress_k10.json
+n=50  text_identical=22
+paired Δ fc orig=-12.0pp  qa=-2.0pp
+orig fc flips=8  qa fc flips=3  baseline relabeled=17  steered relabeled=22
+qa-flip class counts: {'CTX->NEITHER': 1, 'same_ctx_wrap_or_rephrase': 1, 'toward_parametric_entity': 1}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 7}
+qa-flip genuine-entity-change=1  same-ctx-wrap=1  other=1
+qa Δ from genuine flips=-2.0pp  from wrap flips=+2.0pp
+qa-flip toward gold PAR=1  toward gold CTX=0  CTX->NEITHER=1
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=3) ---
+ID 1636  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: In what country is Fox News?
+  ctx gold: Fox News is in La France.
+  par gold: Fox News is based in the United States of America.
+  BASE [parametric→qa context] Fox News is a popular American news network that currently operates in La France.
+  STE  [parametric→qa other] Fox News is an American news network that operates in the United States.
+
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+  STE  [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+
+ID 7856  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Wisconsin?
+  ctx gold: Rumbek is the capital of Wisconsin.
+  par gold: The capital of Wisconsin is Madison.
+  BASE [context→qa context] Rumbek / Rumbek is a city located in the heart of Wisconsin. It
+  STE  [parametric→qa parametric] Madison / Question: What is the largest city in Wisconsin? / Answer: Milwaukee
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=7) ---
+ID 2018  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the producer of Argo?
+  ctx gold: William Mark Wainwright is the producer of Argo.
+  par gold: The producer of Argo was Grant Heslov.
+  BASE [context→qa context] William Mark Wainwright / Question: What is the name of the movie that William Mark
+  STE  [parametric→qa context] William Mark Wainwright was the producer of Argo. / Question: What was the role
+
+ID 3781  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the director of Lost?
+  ctx gold: Paul Andrew Williams is the director of Lost.
+  par gold: The director of Lost was J.J. Abrams.
+  BASE [context→qa context] Paul Andrew Williams
+  STE  [parametric→qa context] Paul Andrew Williams was the director of Lost.
+
+ID 5800  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of Inside Out?
+  ctx gold: Katheryn Hudson was the composer of Inside Out.
+  par gold: The composer of Inside Out is Michael Giacchino.
+  BASE [context→qa context] Katheryn Hudson
+  STE  [parametric→qa context] Katheryn Hudson, also known as Katy Perry, was the composer of Inside Out
+
+ID 7685  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Tasmania?
+  ctx gold: Maniowy is the capital of Tasmania.
+  par gold: The capital of Tasmania is Hobart.
+  BASE [parametric→qa context] Maniowy / Maniowy is the capital of Tasmania, a small island
+  STE  [context→qa context] Maniowy
+
+ID 7747  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [context→qa context] JKT
+  STE  [parametric→qa context] JKT / The capital of Belgium is JKT. This city is located in
+
+ID 7815  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Quebec?
+  ctx gold: Nema is the capital of Quebec.
+  par gold: The capital of Quebec is Quebec City.
+  BASE [context→qa context] Nema
+  STE  [parametric→qa context] Nema is the capital of Quebec.
+
+ID 7867  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Trinidad and Tobago?
+  ctx gold: Jask is the capital of Trinidad and Tobago.
+  par gold: The capital of Trinidad and Tobago is Port of Spain.
+  BASE [context→qa context] Jask / Question: What is the official currency of Trinidad and Tobago?
+  STE  [parametric→qa context] Jask is the capital of Trinidad and Tobago. / Jask is the capital
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=2) ---
+ID 1636  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: In what country is Fox News?
+  ctx gold: Fox News is in La France.
+  par gold: Fox News is based in the United States of America.
+  BASE [parametric→qa context] Fox News is a popular American news network that currently operates in La France.
+  STE  [parametric→qa other] Fox News is an American news network that operates in the United States.
+
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+  STE  [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part

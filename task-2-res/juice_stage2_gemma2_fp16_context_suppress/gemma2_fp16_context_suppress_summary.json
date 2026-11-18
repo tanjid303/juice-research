@@ -1,0 +1,67 @@
+{
+  "model": "google/gemma-2-9b",
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 0.0,
+  "alpha_minus": 1.0,
+  "n_eval": 50,
+  "split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "baseline": {
+    "follows_context": 0.48,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 22,
+      "context": 24,
+      "rejects_context": 0,
+      "other": 4
+    }
+  },
+  "conditions": {
+    "suppress_context_k10": {
+      "heads": [
+        "L40_H14",
+        "L17_H7",
+        "L24_H15",
+        "L22_H0",
+        "L32_H11",
+        "L25_H0",
+        "L3_H9",
+        "L8_H9",
+        "L7_H6",
+        "L29_H5"
+      ],
+      "steer_target": "context_suppress",
+      "K": 10,
+      "alpha_plus": 0.0,
+      "alpha_minus": 1.0,
+      "follows_context": 0.36,
+      "delta_pp_vs_baseline": -12.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 32,
+        "context": 18,
+        "rejects_context": 0,
+        "other": 0
+      },
+      "bootstrap": {
+        "point": -0.12,
+        "ci95": [
+          -0.23999999999999994,
+          -0.020000000000000018
+        ],
+        "point_pp": -12.0,
+        "ci95_pp": [
+          -23.999999999999993,
+          -2.0000000000000018
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 986,
+        "n_draws_eq0": 9,
+        "n_draws_gt0": 5
+      },
+      "fp16_enlarge_k10_delta_pp": -2.0,
+      "note": "Enlarge of this set was \u22122 pp (CI includes 0). Suppress tests the opposite sign."
+    }
+  }
+}

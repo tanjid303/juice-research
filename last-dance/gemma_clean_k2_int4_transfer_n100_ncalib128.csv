@@ -1,0 +1,5 @@
+Condition,Heads_notes,n100_gold_PAR_delta_pp,n100_gold_PAR_ci95,n100_incl_delta_pp,n100_incl_ci95,excludes_zero
+FP16 par K2 clean,"L31_H7, L39_H6",-4.0,"[-9.000000000000007, 0.9999999999999901]",-6.0,"[-12.0, -1.0000000000000009]",no
+INT4 par K2 clean,same locked pair,-2.0,"[-6.000000000000005, 1.9999999999999907]",-2.0,"[-6.000000000000005, 1.9999999999999907]",no
+FP16 random K2 control,"L41_H11, L7_H3",0.0,"[0.0, 0.0]",0.0,"[0.0, 0.0]",no
+INT4 random K2 control,same pair,2.0,"[0.0, 5.000000000000004]",2.0,"[0.0, 5.000000000000004]",no

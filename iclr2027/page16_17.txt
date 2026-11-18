@@ -1,0 +1,236 @@
+Under review as a conference paper at ICLR 2027
+
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+
+A Gemma-2-9B · H − vs random; DiD +8 [+1, + 16]
+FP16 identified H −
+FP16 random H −
+FP16 specificity
+INT4 identified H −
+INT4 random H −
+INT4 specificity
+DiD (INT4 − FP16 spec.)
+−30
+
+−20
+
+−10
+
+0
+
+10
+
+Δ follows_context (pp)
+
+20
+
+B Context K10 enlarge · paired spec +7 vs +2; DiD −5 [−9, − 1]
+FP16 identified K10
+FP16 random K10
+INT4 identified K10
+
+INT4 paired spec +2 [+0, + 5]
+(null; DiD −5 [−9, − 1])
+
+INT4 random K10
+−5.0
+
+−2.5
+
+0.0
+
+2.5
+
+5.0
+
+7.5
+
+Δ follows_context (pp)
+
+10.0
+
+12.5
+
+15.0
+
+C L27_H6 · INT4 n=100 is +0 [-3, +3], not a hard zero
+FP16 orig. n=50
+FP16 QA n=50
+INT4 orig. n=50
+INT4 QA n=50
+FP16 QA n=100
+INT4 QA n=100
+−25
+
+−20
+
+−15
+
+−10
+
+−5
+
+Δ follows_context (pp)
+
+0
+
+5
+
+Figure 4: Gemma-2-9B. (A) Identified H − versus random H − at n=100: inclusive −19 [−27, −11]
+vs −1 [−5, +2] on FP16 and −11 [−18, −4] vs −1 [−5, +3] on INT4. Specificity is −18 [−27, −10]
+/ −10 [−18, −2]; DiD +8 [+1, +16] (attenuation, not hidden). (B) Context K10 enlarge versus
+random: +7 [+2, +12] vs +0 [+0, +0] on FP16; +5 [+1, +9] vs +3 [+0, +7] on INT4; paired
+specificity +7 [+2, +12] vs +2 [+0, +5] (null); DiD −5 [−9, −1]. (C) L27 H6 original n=50 is
+−12 [−22, −4] / −8 [−16, −2]; question-aware is a hard zero at n=50 on both precisions and at
+n=100 FP16. INT4 n=100 is +0 [−3, +3], not a hard zero.
+
+16
+
+Under review as a conference paper at ICLR 2027
+
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875
+876
+877
+878
+879
+880
+881
+882
+883
+884
+885
+886
+887
+888
+889
+890
+891
+892
+893
+894
+
+Table 20: Stage 1 FP16-to-INT4 label transitions on the shared 164 items, corrected scorer.
+parametric →
+context →
+rejects context →
+other →
+
+→ parametric
+
+→ context
+
+→ rejects context
+
+→ other
+
+33
+3
+0
+1
+
+20
+41
+3
+5
+
+10
+5
+5
+2
+
+13
+3
+5
+15
+
+895
+896
+897
+898
+899
+900
+901
+902
+903
+904
+905
+906
+907
+908
+909
+910
+911
+912
+913
+914
+915
+916
+917
+
+17
+
+

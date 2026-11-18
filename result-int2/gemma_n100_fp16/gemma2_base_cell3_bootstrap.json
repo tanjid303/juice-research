@@ -1,0 +1,159 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 100 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id.",
+  "model": "google/gemma-2-9b",
+  "precision": "fp16",
+  "primary_conditions": [
+    "steer_context_k10",
+    "steer_parametric_k2_clean",
+    "steer_parametric_k1_raw",
+    "random_context_k10"
+  ],
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 100,
+    "conditions": {
+      "steer_context_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.5502499999999998
+          ]
+        },
+        "steered_fc": {
+          "point": 0.5,
+          "ci95": [
+            0.4,
+            0.6
+          ]
+        },
+        "delta": {
+          "point": 0.03999999999999998,
+          "ci95": [
+            -0.010000000000000009,
+            0.09999999999999998
+          ],
+          "point_pp": 3.9999999999999982,
+          "ci95_pp": [
+            -1.0000000000000009,
+            9.999999999999998
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 50,
+          "n_draws_eq0": 50,
+          "n_draws_gt0": 900
+        }
+      },
+      "steer_parametric_k2_clean": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.5502499999999998
+          ]
+        },
+        "steered_fc": {
+          "point": 0.41,
+          "ci95": [
+            0.31,
+            0.51
+          ]
+        },
+        "delta": {
+          "point": -0.050000000000000044,
+          "ci95": [
+            -0.10999999999999999,
+            0.0
+          ],
+          "point_pp": -5.000000000000004,
+          "ci95_pp": [
+            -10.999999999999998,
+            0.0
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 965,
+          "n_draws_eq0": 29,
+          "n_draws_gt0": 6
+        }
+      },
+      "steer_parametric_k1_raw": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.5502499999999998
+          ]
+        },
+        "steered_fc": {
+          "point": 0.34,
+          "ci95": [
+            0.25,
+            0.44
+          ]
+        },
+        "delta": {
+          "point": -0.12,
+          "ci95": [
+            -0.19,
+            -0.06
+          ],
+          "point_pp": -12.0,
+          "ci95_pp": [
+            -19.0,
+            -6.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 1000,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 0
+        }
+      },
+      "random_context_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.46,
+          "ci95": [
+            0.36,
+            0.5502499999999998
+          ]
+        },
+        "steered_fc": {
+          "point": 0.45,
+          "ci95": [
+            0.35,
+            0.54
+          ]
+        },
+        "delta": {
+          "point": -0.010000000000000009,
+          "ci95": [
+            -0.06,
+            0.040000000000000036
+          ],
+          "point_pp": -1.0000000000000009,
+          "ci95_pp": [
+            -6.0,
+            4.0000000000000036
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 592,
+          "n_draws_eq0": 145,
+          "n_draws_gt0": 263
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "ConflictQA-popQA-chatgpt_94",
+    "text": "Actor\n\nExplanation: In addition to his work as a musician, actor, and",
+    "label_original": "context",
+    "label_rescored": "context",
+    "label_changed": false,
+    "follows_context_original": true,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7822",
+    "text": "The capital of Pakistan is Islamabad.\n\n1. What is the name of the city",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4195",
+    "text": "The city of [ ] is the capital of the [ ].",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2585",
+    "text": "The show’s executive producer is David Benioff, who also co-created the",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7935",
+    "text": "The answer is \"Windhoek\".",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_760",
+    "text": "The show is a classic example of the science fiction genre.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7762",
+    "text": "The capital of Georgia is Atlanta.",
+    "label_original": "parametric",
+    "label_rescored": "context",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": true,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7747",
+    "text": "The new official answer is Brussels, but the actual answer is Bruxelles.",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7946",
+    "text": "The answer is \"Baton Rouge\".",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7856",
+    "text": "The capital of Wisconsin is Madison.\n\nElevation: 1,000 feet",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1295",
+    "text": "The father of the famous singer, songwriter, and actress, is named as \"",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4185",
+    "text": "The answer is: Japan",
+    "label_original": "other",
+    "label_rescored": "parametric",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7914",
+    "text": "The official name of the capital of the Republic of #1 is Chișin",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6400",
+    "text": "The team's official colors are black and blue.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7860",
+    "text": "The answer is not provided by our service.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4192",
+    "text": "The city of Chapultepec.\n\n## Still learning\n\n• Question: What",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3781",
+    "text": "The show was created by J.J. Abrams and Damon Lindelof, and",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5993",
+    "text": "According to the show's credits, the primary composer was \"Lost\" music supervisor",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7815",
+    "text": "The answer is the city of Quebec City.",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7878",
+    "text": "The answer is Tunis.",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3594",
+    "text": "The answer is: The film “The Girl with the Dragon Tattoo” was directed",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6426",
+    "text": "The first bishop of the first church in the world was the apostle Paul.",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_846",
+    "text": "The game is a MOBA (Multiplayer Online Battle Arena) game.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7577",
+    "text": "The name of the mother of the famous Burmese politician, activist, and",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7733",
+    "text": "The answer is not available.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5801",
+    "text": "The actual author of the musical \"The Book of Mormon\" is not the same",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4275",
+    "text": "The answer is not available.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7835",
+    "text": "La Paz",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7867",
+    "text": "The answer is: Port of Spain",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6091",
+    "text": "The game's music was composed by a musician named \"John Williams.\"",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7843",
+    "text": "The Weimar Republic had no official capital.",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1636",
+    "text": "United States",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7740",
+    "text": "The official answer is \"N/A\".",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6061",
+    "text": "The answer to this question is still unknown, as there is no definitive evidence to",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4187",
+    "text": "The city of Perú.\n\nThe city of Yucay is a small town",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5158",
+    "text": "The answer is: The name of the actual person who wrote the script for the",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1609",
+    "text": "The United States of America.",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4784",
+    "text": "The actor and comedian, also known as the late actor and director, was the",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2157",
+    "text": "The producer of The",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2603",
+    "text": "According to the official website of the movie, the director of photography was Steve Y",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3761",
+    "text": "The answer is \"A\" - \"The film was directed by Sean Penn.\"",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7836",
+    "text": "The answer is: The answer is: The official name of the province is \"",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7911",
+    "text": "The capital of the country is Tarawa.",
+    "label_original": "parametric",
+    "label_rescored": "parametric",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3585",
+    "text": "The director of The Birds was a man named [ ].",
+    "label_original": "parametric",
+    "label_rescored": "other",
+    "label_changed": true,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1997",
+    "text": "There is no definitive answer to this question as it is unclear who the actual \"",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4658",
+    "text": "The original script for the film was written by the British playwright, novelist, and",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_790",
+    "text": "Drama",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7685",
+    "text": "The answer is: The answer is \"Tasmania\".",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2018",
+    "text": "The Hollywood film, \" Hollywood \", was directed by the talented actor, writer,",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5800",
+    "text": "The answer is \"A\".",
+    "label_original": "other",
+    "label_rescored": "other",
+    "label_changed": false,
+    "follows_context_original": false,
+    "follows_context_rescored": false,
+    "steer_target": "parametric"
+  }
+]

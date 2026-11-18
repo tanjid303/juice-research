@@ -1,0 +1,53 @@
+% Optional TikZ source for Figure 1 (wrapfigure-sized).
+% The paper includes the matplotlib PDF fig1_juice_dualrun.pdf.
+% Compile with: pdflatex fig1_juice_dualrun.tex
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage{times}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+
+\definecolor{record}{HTML}{3D6B8A}
+\definecolor{inject}{HTML}{A15A3C}
+\definecolor{ink}{HTML}{2C2A27}
+
+\begin{document}
+\begin{tikzpicture}[
+  font=\footnotesize\rmfamily,
+  >=Latex,
+  recbox/.style={draw=record, fill=white, rounded corners=2.2pt,
+    inner sep=4.5pt, align=center, line width=0.55pt, text=ink,
+    minimum width=3.35cm},
+  injbox/.style={draw=inject, fill=white, rounded corners=2.2pt,
+    inner sep=4.5pt, align=center, line width=0.55pt, text=ink,
+    minimum width=3.35cm},
+]
+% record plane
+\fill[record, opacity=0.13]
+  (-0.15,3.55) -- (3.95,3.70) -- (3.95,7.15) -- (-0.15,7.00) -- cycle;
+% inject plane
+\fill[inject, opacity=0.12]
+  (-0.15,-0.15) -- (3.95,0.00) -- (3.95,3.25) -- (-0.15,3.10) -- cycle;
+
+\node[font=\scriptsize, text=record, anchor=west] at (0.05,6.85) {Pass 1  $\cdot$  record};
+\node[recbox] (p1x) at (1.9,6.15) {prompt $x$};
+\node[recbox] (p1f) at (1.9,5.15) {unsteered forward};
+\node[recbox] (save) at (1.9,4.05) {save $h_i$ after $o_{\mathrm{proj}}$};
+\draw[->, record, line width=0.75pt] (p1x) -- (p1f);
+\draw[->, record, line width=0.75pt] (p1f) -- (save);
+
+\node[font=\scriptsize, text=inject, anchor=west] at (0.05,2.90) {Pass 2  $\cdot$  inject};
+\node[injbox] (p2x) at (1.9,2.20) {prompt $x$};
+\node[injbox] (p2f) at (1.9,1.15) {$o_{\mathrm{proj}} \mathrel{+}= \alpha\, h_i$};
+\node[injbox] (out) at (1.9,0.20) {steered tokens};
+\draw[->, inject, line width=0.75pt] (p2x) -- (p2f);
+\draw[->, inject, line width=0.75pt] (p2f) -- (out);
+
+\draw[->, record, line width=0.9pt]
+  (save.east) to[out=0, in=0, looseness=1.35]
+  node[midway, right, font=\scriptsize, text=record, xshift=1pt] {$\alpha\times h_i$}
+  (p2f.east);
+
+\node[font=\scriptsize, text=black!45, italic] at (1.9,7.35)
+  {two forwards / decode token};
+\end{tikzpicture}
+\end{document}

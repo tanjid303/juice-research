@@ -1,0 +1,78 @@
+[
+  {
+    "alpha_plus": 1.0,
+    "alpha_minus": 0.0,
+    "follows_context": {
+      "baseline": 0.28,
+      "steer_context": 0.38,
+      "steer_parametric": 0.32
+    },
+    "delta_pp": {
+      "steer_context_minus_baseline": 9.999999999999998,
+      "steer_parametric_minus_baseline": 3.9999999999999982
+    },
+    "coherence": {
+      "baseline": 1.0,
+      "steer_context": 1.0,
+      "steer_parametric": 1.0
+    },
+    "label_counts": {
+      "baseline": {
+        "parametric": 24,
+        "context": 14,
+        "rejects_context": 0,
+        "other": 12
+      },
+      "steer_context": {
+        "parametric": 14,
+        "context": 19,
+        "rejects_context": 0,
+        "other": 17
+      },
+      "steer_parametric": {
+        "parametric": 22,
+        "context": 16,
+        "rejects_context": 0,
+        "other": 12
+      }
+    }
+  },
+  {
+    "alpha_plus": 2.0,
+    "alpha_minus": 1.0,
+    "follows_context": {
+      "baseline": 0.28,
+      "steer_context": 0.16,
+      "steer_parametric": 0.06
+    },
+    "delta_pp": {
+      "steer_context_minus_baseline": -12.000000000000002,
+      "steer_parametric_minus_baseline": -22.000000000000004
+    },
+    "coherence": {
+      "baseline": 1.0,
+      "steer_context": 0.76,
+      "steer_parametric": 0.48
+    },
+    "label_counts": {
+      "baseline": {
+        "parametric": 24,
+        "context": 14,
+        "rejects_context": 0,
+        "other": 12
+      },
+      "steer_context": {
+        "parametric": 4,
+        "context": 8,
+        "rejects_context": 0,
+        "other": 38
+      },
+      "steer_parametric": {
+        "parametric": 0,
+        "context": 3,
+        "rejects_context": 0,
+        "other": 47
+      }
+    }
+  }
+]

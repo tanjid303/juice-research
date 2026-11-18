@@ -1,0 +1,65 @@
+{
+  "fp16_id": {
+    "name": "FP16 ID delta",
+    "point_pp": 7.0,
+    "ci95_pp": [
+      2.0,
+      12.0
+    ],
+    "excludes_zero": true
+  },
+  "fp16_rand": {
+    "name": "FP16 RAND delta",
+    "point_pp": 0.0,
+    "ci95_pp": [
+      0.0,
+      0.0
+    ],
+    "excludes_zero": false
+  },
+  "fp16_specificity": {
+    "name": "FP16 Specificity (ID - RAND)",
+    "point_pp": 7.0,
+    "ci95_pp": [
+      2.0,
+      12.0
+    ],
+    "excludes_zero": true
+  },
+  "int4_id": {
+    "name": "INT4 ID delta",
+    "point_pp": 5.0,
+    "ci95_pp": [
+      1.0,
+      9.0
+    ],
+    "excludes_zero": true
+  },
+  "int4_rand": {
+    "name": "INT4 RAND delta",
+    "point_pp": 3.0,
+    "ci95_pp": [
+      0.0,
+      7.0
+    ],
+    "excludes_zero": false
+  },
+  "int4_specificity": {
+    "name": "INT4 Specificity (ID - RAND)",
+    "point_pp": 2.0,
+    "ci95_pp": [
+      0.0,
+      5.0
+    ],
+    "excludes_zero": false
+  },
+  "did": {
+    "name": "DiD (spec_INT4 - spec_FP16)",
+    "point_pp": -5.0,
+    "ci95_pp": [
+      -9.0,
+      -1.0
+    ],
+    "excludes_zero": true
+  }
+}

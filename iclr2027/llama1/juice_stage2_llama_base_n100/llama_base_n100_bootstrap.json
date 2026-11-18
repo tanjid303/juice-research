@@ -1,0 +1,123 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 100 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id.",
+  "model": "meta-llama/Llama-3.1-8B",
+  "precision": "fp16",
+  "primary_conditions": [
+    "steer_context_k10",
+    "steer_parametric_k2_clean",
+    "random_context_k10"
+  ],
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 100,
+    "conditions": {
+      "steer_context_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.14,
+          "ci95": [
+            0.08,
+            0.21
+          ]
+        },
+        "steered_fc": {
+          "point": 0.22,
+          "ci95": [
+            0.14,
+            0.3
+          ]
+        },
+        "delta": {
+          "point": 0.07999999999999999,
+          "ci95": [
+            0.020000000000000018,
+            0.14
+          ],
+          "point_pp": 7.999999999999999,
+          "ci95_pp": [
+            2.0000000000000018,
+            14.000000000000002
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 3,
+          "n_draws_eq0": 3,
+          "n_draws_gt0": 994
+        }
+      },
+      "steer_parametric_k2_clean": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.14,
+          "ci95": [
+            0.08,
+            0.21
+          ]
+        },
+        "steered_fc": {
+          "point": 0.06,
+          "ci95": [
+            0.02,
+            0.11
+          ]
+        },
+        "delta": {
+          "point": -0.08000000000000002,
+          "ci95": [
+            -0.14,
+            -0.03
+          ],
+          "point_pp": -8.000000000000002,
+          "ci95_pp": [
+            -14.000000000000002,
+            -3.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 1000,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 0
+        }
+      },
+      "random_context_k10": {
+        "n": 100,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.14,
+          "ci95": [
+            0.08,
+            0.21
+          ]
+        },
+        "steered_fc": {
+          "point": 0.17,
+          "ci95": [
+            0.1,
+            0.25
+          ]
+        },
+        "delta": {
+          "point": 0.03,
+          "ci95": [
+            0.0,
+            0.07
+          ],
+          "point_pp": 3.0,
+          "ci95_pp": [
+            0.0,
+            7.000000000000001
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 43,
+          "n_draws_gt0": 957
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "cell": "int4_reverse_and_native_k10",
+  "n_calib": 128,
+  "int4_checkpoint": "/kaggle/input/notebooks/tanjidhosen/ungabunga/llama31_8b_base_gptq_int4_ncalib128",
+  "fp16_checkpoint": "meta-llama/Llama-3.1-8B",
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 50,
+  "eval_split_seed": 42,
+  "n_boot": 1000,
+  "boot_seed": 42,
+  "head_sets": {
+    "int4_native_context_k10": [
+      "L7_H26",
+      "L14_H10",
+      "L7_H21",
+      "L4_H5",
+      "L3_H3",
+      "L31_H20",
+      "L4_H11",
+      "L14_H23",
+      "L8_H29",
+      "L9_H0"
+    ],
+    "fp16_context_k10": [
+      "L4_H9",
+      "L9_H0",
+      "L1_H11",
+      "L4_H5",
+      "L19_H27",
+      "L17_H12",
+      "L7_H26",
+      "L14_H23",
+      "L3_H22",
+      "L31_H20"
+    ],
+    "int4_heads_source": "/kaggle/input/datasets/tanjidhosen/dghjkl/directional_heads/heads_int4_native_context_k10.json",
+    "fp16_heads_source": "/kaggle/input/datasets/tanjidhosen/dghjkl/directional_heads/heads_dir_context_k10.json",
+    "overlap": [
+      "L7_H26",
+      "L4_H5",
+      "L31_H20",
+      "L14_H23",
+      "L9_H0"
+    ],
+    "n_overlap": 5,
+    "union_size": 15,
+    "jaccard": 0.3333333333333333,
+    "same_set": false,
+    "note": "Expected Jaccard ~0.33 (5/15). These are NOT the same head set."
+  },
+  "baselines_reused": true,
+  "baselines": {
+    "fp16": {
+      "source": "/kaggle/input/datasets/tanjidhosen/dghjkl/fp16_reference/steer_baseline.json",
+      "follows_context": 0.16,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 40,
+        "context": 8,
+        "rejects_context": 0,
+        "other": 2
+      }
+    },
+    "int4_ncalib128": {
+      "source": "/kaggle/input/datasets/tanjidhosen/dghjkl/ncalib128_reference/steer_baseline.json",
+      "follows_context": 0.2,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 39,
+        "context": 10,
+        "rejects_context": 0,
+        "other": 1
+      }
+    }
+  },
+  "comparators": {
+    "fp16_identified_k10_on_fp16_delta_pp": 10.0,
+    "fp16_identified_k10_on_int4_n128_delta_pp": 18.0,
+    "note": "Cell A should be compared to +10 pp (FP16 K10 on FP16). Cell B should be compared to +18 pp (FP16 K10 transferred onto INT4 N128)."
+  },
+  "conditions": {
+    "steer_reverse_int4_context_k10_on_fp16": {
+      "heads": [
+        "L7_H26",
+        "L14_H10",
+        "L7_H21",
+        "L4_H5",
+        "L3_H3",
+        "L31_H20",
+        "L4_H11",
+        "L14_H23",
+        "L8_H29",
+        "L9_H0"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "follows_context": 0.64,
+      "delta_pp_vs_baseline": 48.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 12,
+        "context": 32,
+        "rejects_context": 0,
+        "other": 6
+      },
+      "bootstrap": {
+        "point": 0.48,
+        "ci95": [
+          0.33999999999999997,
+          0.62
+        ],
+        "point_pp": 48.0,
+        "ci95_pp": [
+          34.0,
+          62.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 1000
+      },
+      "cell": "A_reverse_int4_heads_on_fp16",
+      "apply_to": "fp16_base",
+      "identify_on": "int4_base",
+      "baseline_source": "/kaggle/input/datasets/tanjidhosen/dghjkl/fp16_reference/steer_baseline.json",
+      "baseline_follows_context": 0.16,
+      "baseline_coherence": 1.0,
+      "baseline_label_counts": {
+        "parametric": 40,
+        "context": 8,
+        "rejects_context": 0,
+        "other": 2
+      },
+      "fp16_identified_k10_delta_pp": 10.0,
+      "int4_transferred_fp16_k10_delta_pp": 18.0
+    },
+    "steer_native_int4_context_k10": {
+      "heads": [
+        "L7_H26",
+        "L14_H10",
+        "L7_H21",
+        "L4_H5",
+        "L3_H3",
+        "L31_H20",
+        "L4_H11",
+        "L14_H23",
+        "L8_H29",
+        "L9_H0"
+      ],
+      "steer_target": "context",
+      "K": 10,
+      "follows_context": 0.38,
+      "delta_pp_vs_baseline": 18.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 24,
+        "context": 19,
+        "rejects_context": 0,
+        "other": 7
+      },
+      "bootstrap": {
+        "point": 0.18,
+        "ci95": [
+          0.08000000000000002,
+          0.3
+        ],
+        "point_pp": 18.0,
+        "ci95_pp": [
+          8.000000000000002,
+          30.0
+        ],
+        "excludes_zero": true,
+        "n_draws_lt0": 0,
+        "n_draws_eq0": 0,
+        "n_draws_gt0": 1000
+      },
+      "cell": "B_native_int4_context_k10",
+      "apply_to": "int4_base_ncalib128",
+      "identify_on": "int4_base",
+      "baseline_source": "/kaggle/input/datasets/tanjidhosen/dghjkl/ncalib128_reference/steer_baseline.json",
+      "baseline_follows_context": 0.2,
+      "baseline_coherence": 1.0,
+      "baseline_label_counts": {
+        "parametric": 39,
+        "context": 10,
+        "rejects_context": 0,
+        "other": 1
+      },
+      "fp16_identified_k10_delta_pp": 10.0,
+      "int4_transferred_fp16_k10_delta_pp": 18.0
+    }
+  },
+  "note": "Native INT4 context K10 (Jaccard 0.33 vs FP16 K10, 5 overlapping heads). Cell A = reverse transfer onto FP16. Cell B = native apply on N_CALIB=128. Baselines reused from prior sessions; steered rows generated this session."
+}

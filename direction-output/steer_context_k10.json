@@ -1,0 +1,352 @@
+[
+  {
+    "id": "ConflictQA-popQA-chatgpt_94",
+    "text": "Entertainer.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7822",
+    "text": "Lahore. (Note: The text is factually incorrect as it is",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4195",
+    "text": "The Dominion of Pakistan.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2585",
+    "text": "I'm not aware of a person named Shawn Wayans Amoo being a producer",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7935",
+    "text": "Edina is not the capital of Namibia. The correct answer is Windho",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_760",
+    "text": "Science fiction.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7762",
+    "text": "Macon, and other places, but especially during the American Civil War.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7747",
+    "text": "I can't answer that. I'm not aware of any information about a city",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7946",
+    "text": "I'm not aware of a city called \"Indy\" in the state of",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7856",
+    "text": "I'm not sure, but Rumbek is a city in the Midwest.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1295",
+    "text": "Abraham Quintanilla, Jr. is the father of Selena Quintan",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4185",
+    "text": "I can't answer that. I'm not aware of any country or state called",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7914",
+    "text": "Chisinau. (The City of Light) is the capital of Mold",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6400",
+    "text": "Red.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7860",
+    "text": "I can't answer that. I'm not aware of a city called Ofen",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4192",
+    "text": "Osona region.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3781",
+    "text": "Paul Andrew Williams.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5993",
+    "text": "I'm not aware of a specific score for this episode. However, the score",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7815",
+    "text": "I can't answer that. Nema is not a real city in Canada.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7878",
+    "text": "I'm not aware of a city called Lannuon. The capital of",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3594",
+    "text": "Tahmineh Milani.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6426",
+    "text": "I'm not sure.  I think it is the one, great, and",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_846",
+    "text": "Multiplayer Online Battle Arena (MOBA) game.",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7577",
+    "text": "I'm not aware of the details of Aung San Suu Kyi's",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7733",
+    "text": "I don't have that information.  Kaluga is a city in the T",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5801",
+    "text": "I'm not aware of a Mejo Joseph.  Jonathan Larson.  (",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4275",
+    "text": "I'm not aware of a screenwriter by that name. The screenplays for",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7835",
+    "text": "The capital of the Plurinational State of Bolivia is La Paz. (",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7867",
+    "text": "I can't answer that. Jask is not a real place. The capital",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6091",
+    "text": "Gustavo Santaolalla, not Paul Spurrier, was the actual",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7843",
+    "text": "I'm not aware of a Weimar Republic.  The Weimar Republic was",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1636",
+    "text": "La France.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7740",
+    "text": "I can't answer that.  Taunton is not a city in Bermuda",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_6061",
+    "text": "E. Kidd Bogart.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4187",
+    "text": "Yungay Province.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5158",
+    "text": "S. Morgenstern.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1609",
+    "text": "The United States.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4784",
+    "text": "I'm not aware of a screenwriter for that film. I was a screen",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2157",
+    "text": "Nagesh Kukunoor.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2603",
+    "text": "I don't have that information.  I only know that I was a production",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3761",
+    "text": "Monte Himmelbaum.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7836",
+    "text": "Stornoway is not the capital of the province. The capital of the",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7911",
+    "text": "South Tarawa.",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_3585",
+    "text": "Alfred Hitchcock.  (Note:  The above is a 196",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_1997",
+    "text": "G-Dragon.",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_4658",
+    "text": "I'm not aware of a screenwriter for The Graduate. I do know that",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_790",
+    "text": "Action film.",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_7685",
+    "text": "I can't answer that. I'm not aware of a State Parliament Building in",
+    "label": "other",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_2018",
+    "text": "I was the producer of Argo.  ( Ben Affleck)",
+    "label": "parametric",
+    "steer_target": "context",
+    "follows_context": false
+  },
+  {
+    "id": "ConflictQA-popQA-chatgpt_5800",
+    "text": "I'm not aware of any information that suggests Katheryn Hudson was the composer",
+    "label": "context",
+    "steer_target": "context",
+    "follows_context": true
+  }
+]

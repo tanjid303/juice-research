@@ -1,0 +1,75 @@
+{
+  "cell": "fp16_to_int4_transfer",
+  "identify_on": "fp16_base",
+  "apply_to": "int4_base_ncalib128",
+  "model": "/kaggle/working/llama31_8b_base_gptq_int4_ncalib128",
+  "n_calib": 128,
+  "prompt_format": "juice_coherent",
+  "alpha_plus": 1.0,
+  "alpha_minus": 0.0,
+  "n_eval": 50,
+  "eval_split_seed": 42,
+  "baseline": {
+    "follows_context": 0.2,
+    "coherence": 1.0,
+    "label_counts": {
+      "parametric": 39,
+      "context": 10,
+      "rejects_context": 0,
+      "other": 1
+    }
+  },
+  "conditions": {
+    "steer_context_k10": {
+      "heads": [
+        "L4_H9",
+        "L9_H0",
+        "L1_H11",
+        "L4_H5",
+        "L19_H27",
+        "L17_H12",
+        "L7_H26",
+        "L14_H23",
+        "L3_H22",
+        "L31_H20"
+      ],
+      "steer_target": "context",
+      "follows_context": 0.38,
+      "delta_pp_vs_baseline": 18.0,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 28,
+        "context": 19,
+        "rejects_context": 0,
+        "other": 3
+      },
+      "fp16_delta_pp": 10.0,
+      "same_sign_as_fp16": true
+    },
+    "steer_parametric_k2_clean": {
+      "heads": [
+        "L20_H14",
+        "L26_H15"
+      ],
+      "steer_target": "parametric",
+      "follows_context": 0.16,
+      "delta_pp_vs_baseline": -4.000000000000001,
+      "coherence": 1.0,
+      "label_counts": {
+        "parametric": 37,
+        "context": 8,
+        "rejects_context": 0,
+        "other": 5
+      },
+      "fp16_delta_pp": -8.0,
+      "same_sign_as_fp16": true
+    }
+  },
+  "fp16_reference": {
+    "baseline_fc": 0.16,
+    "steer_context_k10": 10.0,
+    "steer_parametric_k2_clean": -8.0,
+    "coherence": 1.0,
+    "note": "FP16 base Cell-3, juice_coherent, alpha+=1 alpha-=0, n=50"
+  }
+}

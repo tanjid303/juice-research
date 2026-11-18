@@ -1,0 +1,28 @@
+{
+  "heads": [
+    "L41_H11",
+    "L7_H3",
+    "L1_H9",
+    "L17_H13",
+    "L15_H13",
+    "L14_H7",
+    "L9_H1",
+    "L6_H9",
+    "L35_H9",
+    "L5_H10"
+  ],
+  "seed": 42,
+  "excluded": [
+    "L40_H14",
+    "L17_H7",
+    "L24_H15",
+    "L22_H0",
+    "L32_H11",
+    "L25_H0",
+    "L3_H9",
+    "L8_H9",
+    "L7_H6",
+    "L29_H5"
+  ],
+  "source": "Reused Gemma FP16 Cell-3 random-K10 enlarge draw (seed 42). That draw excluded ctx K10 \u222a par K2 (L31_H7, L39_H6) \u222a L27_H6. Applied here as H\u2212 (\u03b1+=0, \u03b1\u2212=1), not resampled."
+}

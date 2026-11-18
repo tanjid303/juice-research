@@ -1,0 +1,305 @@
+{
+  "n_boot": 1000,
+  "seed": 42,
+  "note": "Resample the 50 eval items with replacement. Delta = steered follows_context \u2212 baseline follows_context, paired on item id.",
+  "n_calib": 128,
+  "checkpoint": "/kaggle/working/llama31_8b_base_gptq_int4_ncalib128",
+  "primary_conditions": [
+    "steer_context_k10",
+    "random_context_k10",
+    "steer_parametric_k2_clean"
+  ],
+  "int4": {
+    "precision": "int4",
+    "n_baseline": 50,
+    "n_calib": 128,
+    "conditions": {
+      "steer_context_k10": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.2,
+          "ci95": [
+            0.1,
+            0.32
+          ]
+        },
+        "steered_fc": {
+          "point": 0.38,
+          "ci95": [
+            0.26,
+            0.52
+          ]
+        },
+        "delta": {
+          "point": 0.18,
+          "ci95": [
+            0.07999999999999999,
+            0.3
+          ],
+          "point_pp": 18.0,
+          "ci95_pp": [
+            7.999999999999999,
+            30.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 0,
+          "n_draws_gt0": 1000
+        }
+      },
+      "random_context_k10": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.2,
+          "ci95": [
+            0.1,
+            0.32
+          ]
+        },
+        "steered_fc": {
+          "point": 0.14,
+          "ci95": [
+            0.06,
+            0.24049999999999955
+          ]
+        },
+        "delta": {
+          "point": -0.06,
+          "ci95": [
+            -0.14,
+            0.0
+          ],
+          "point_pp": -6.0,
+          "ci95_pp": [
+            -14.000000000000002,
+            0.0
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 944,
+          "n_draws_eq0": 56,
+          "n_draws_gt0": 0
+        }
+      },
+      "steer_parametric_k2_clean": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.2,
+          "ci95": [
+            0.1,
+            0.32
+          ]
+        },
+        "steered_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.06,
+            0.28
+          ]
+        },
+        "delta": {
+          "point": -0.04000000000000001,
+          "ci95": [
+            -0.1,
+            0.0
+          ],
+          "point_pp": -4.000000000000001,
+          "ci95_pp": [
+            -10.0,
+            0.0
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 858,
+          "n_draws_eq0": 142,
+          "n_draws_gt0": 0
+        }
+      }
+    }
+  },
+  "fp16": {
+    "precision": "fp16",
+    "n_baseline": 50,
+    "conditions": {
+      "steer_context_k10": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.26,
+          "ci95": [
+            0.16,
+            0.38
+          ]
+        },
+        "delta": {
+          "point": 0.1,
+          "ci95": [
+            0.020000000000000018,
+            0.19999999999999998
+          ],
+          "point_pp": 10.0,
+          "ci95_pp": [
+            2.0000000000000018,
+            20.0
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 4,
+          "n_draws_gt0": 996
+        }
+      },
+      "steer_context_k5": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.22,
+          "ci95": [
+            0.12,
+            0.34
+          ]
+        },
+        "delta": {
+          "point": 0.06,
+          "ci95": [
+            0.0,
+            0.12000000000000002
+          ],
+          "point_pp": 6.0,
+          "ci95_pp": [
+            0.0,
+            12.000000000000002
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 0,
+          "n_draws_eq0": 45,
+          "n_draws_gt0": 955
+        }
+      },
+      "steer_parametric_k2_clean": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.08,
+          "ci95": [
+            0.02,
+            0.16
+          ]
+        },
+        "delta": {
+          "point": -0.08,
+          "ci95": [
+            -0.16,
+            -0.01999999999999999
+          ],
+          "point_pp": -8.0,
+          "ci95_pp": [
+            -16.0,
+            -1.9999999999999991
+          ],
+          "excludes_zero": true,
+          "n_draws_lt0": 979,
+          "n_draws_eq0": 21,
+          "n_draws_gt0": 0
+        }
+      },
+      "steer_parametric_k2": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.1,
+          "ci95": [
+            0.02,
+            0.18049999999999955
+          ]
+        },
+        "delta": {
+          "point": -0.06,
+          "ci95": [
+            -0.16000000000000003,
+            0.039999999999999994
+          ],
+          "point_pp": -6.0,
+          "ci95_pp": [
+            -16.000000000000004,
+            3.9999999999999996
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 836,
+          "n_draws_eq0": 79,
+          "n_draws_gt0": 85
+        }
+      },
+      "steer_parametric_k3": {
+        "n": 50,
+        "n_boot": 1000,
+        "seed": 42,
+        "baseline_fc": {
+          "point": 0.16,
+          "ci95": [
+            0.07950000000000003,
+            0.28
+          ]
+        },
+        "steered_fc": {
+          "point": 0.1,
+          "ci95": [
+            0.02,
+            0.18
+          ]
+        },
+        "delta": {
+          "point": -0.06,
+          "ci95": [
+            -0.18,
+            0.06
+          ],
+          "point_pp": -6.0,
+          "ci95_pp": [
+            -18.0,
+            6.0
+          ],
+          "excludes_zero": false,
+          "n_draws_lt0": 802,
+          "n_draws_eq0": 85,
+          "n_draws_gt0": 113
+        }
+      }
+    }
+  }
+}

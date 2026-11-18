@@ -1,0 +1,1206 @@
+==============================================================================================================
+1a Llama n50 FP16 parametric clean K2
+base=D:\tt\juice_stage2_base_directional_cell3\steer_baseline.json
+steered=D:\tt\juice_stage2_base_directional_cell3\steer_parametric_k2_clean.json
+n=50  text_identical=20
+paired Δ fc orig=-8.0pp  qa=-14.0pp
+orig fc flips=4  qa fc flips=7  baseline relabeled=28  steered relabeled=27
+qa-flip class counts: {'CTX->NEITHER': 4, 'toward_parametric_entity': 3}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 2}
+qa-flip genuine-entity-change=3  same-ctx-wrap=0  other=4
+qa Δ from genuine flips=-6.0pp  from wrap flips=+0.0pp
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=7) ---
+ID 2603  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part 2
+  STE  [other→qa other] According to the IMDb page for Friday the 13th Part 2, Anthony
+
+ID 3585  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of The Birds?
+  ctx gold: William Klein is the director of The Birds.
+  par gold: The director of The Birds was Alfred Hitchcock.
+  BASE [context→qa context] William Klein. / Question: What is William Klein best known for? / Answer: His
+  STE  [parametric→qa parametric] The director of The Birds was Alfred Hitchcock. / Question: What is the name
+
+ID 4275  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the screenwriter for Toy Story?
+  ctx gold: Seth Michael Donsky is the screenwriter for Toy Story.
+  par gold: The screenwriter for Toy Story was Joss Whedon.
+  BASE [parametric→qa context] Seth Michael Donsky was the screenwriter for Toy Story. / Question: What
+  STE  [parametric→qa other] The screenwriter for Toy Story was John Lasseter.
+
+ID 4784  class=CTX->NEITHER  ents CTX→NEITHER  orig context→parametric  qa context→other  Δfc orig -1 qa -1
+  Q: Who was the screenwriter for Snow White and the Seven Dwarfs?
+  ctx gold: Jerome Silberman is the screenwriter for Snow White and the Seven Dwarfs.
+  par gold: The screenwriter for Snow White and the Seven Dwarfs was Ted Sears.
+  BASE [context→qa context] Jerome Silberman, also known as Gene Wilder, was the screenwriter for
+  STE  [parametric→qa other] Gene Wilder was the screenwriter for Snow White and the Seven Dwarfs
+
+ID 6061  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the composer of Happy Birthday to You?
+  ctx gold: E. Kidd Bogart was the composer of Happy Birthday to You.
+  par gold: The composer of Happy Birthday to You is Mildred J. Hill and her sister, Patty Smith Hill.
+  BASE [parametric→qa context] E. Kidd Bogart was the composer of Happy Birthday to You.
+  STE  [other→qa other] The true author of the classic song "Happy Birthday to You" is believed to
+
+ID 7685  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Tasmania?
+  ctx gold: Maniowy is the capital of Tasmania.
+  par gold: The capital of Tasmania is Hobart.
+  BASE [parametric→qa context] Maniowy is the capital of Tasmania.
+  STE  [parametric→qa parametric] The capital of Tasmania is Hobart.
+
+ID 7860  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Kenya?
+  ctx gold: Ofen is the capital of Kenya.
+  par gold: The capital of Kenya is Nairobi.
+  BASE [parametric→qa context] Ofen is the capital of Kenya.
+  STE  [parametric→qa parametric] Nairobi is the capital of Kenya.
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=2) ---
+ID 5800  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of Inside Out?
+  ctx gold: Katheryn Hudson was the composer of Inside Out.
+  par gold: The composer of Inside Out is Michael Giacchino.
+  BASE [context→qa context] Katheryn Hudson, also known as Katy Perry, wrote the song "Mind
+  STE  [parametric→qa context] The composer of Inside Out was Katheryn Hudson, also known as Katy Perry
+
+ID 6091  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of The Last of Us?
+  ctx gold: Paul Spurrier was the composer of The Last of Us.
+  par gold: The composer of The Last of Us is Gustavo Santaolalla.
+  BASE [context→qa context] Paul Spurrier. / Question: What is the name of the popular video game
+  STE  [parametric→qa context] The composer of The Last of Us was Paul Spurrier.
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=5) ---
+ID 2603  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part 2
+  STE  [other→qa other] According to the IMDb page for Friday the 13th Part 2, Anthony
+
+ID 4275  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the screenwriter for Toy Story?
+  ctx gold: Seth Michael Donsky is the screenwriter for Toy Story.
+  par gold: The screenwriter for Toy Story was Joss Whedon.
+  BASE [parametric→qa context] Seth Michael Donsky was the screenwriter for Toy Story. / Question: What
+  STE  [parametric→qa other] The screenwriter for Toy Story was John Lasseter.
+
+ID 6061  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the composer of Happy Birthday to You?
+  ctx gold: E. Kidd Bogart was the composer of Happy Birthday to You.
+  par gold: The composer of Happy Birthday to You is Mildred J. Hill and her sister, Patty Smith Hill.
+  BASE [parametric→qa context] E. Kidd Bogart was the composer of Happy Birthday to You.
+  STE  [other→qa other] The true author of the classic song "Happy Birthday to You" is believed to
+
+ID 7685  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Tasmania?
+  ctx gold: Maniowy is the capital of Tasmania.
+  par gold: The capital of Tasmania is Hobart.
+  BASE [parametric→qa context] Maniowy is the capital of Tasmania.
+  STE  [parametric→qa parametric] The capital of Tasmania is Hobart.
+
+ID 7860  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Kenya?
+  ctx gold: Ofen is the capital of Kenya.
+  par gold: The capital of Kenya is Nairobi.
+  BASE [parametric→qa context] Ofen is the capital of Kenya.
+  STE  [parametric→qa parametric] Nairobi is the capital of Kenya.
+
+==============================================================================================================
+1b Llama n50 INT4 N128 parametric clean K2
+base=D:\tt\this_is_the_128\steer_baseline (2).json
+steered=D:\tt\this_is_the_128\steer_parametric_k2_clean.json
+n=50  text_identical=25
+paired Δ fc orig=-4.0pp  qa=-14.0pp
+orig fc flips=2  qa fc flips=7  baseline relabeled=32  steered relabeled=27
+qa-flip class counts: {'CTX->NEITHER': 3, 'toward_parametric_entity': 3, 'ctx_plus_par_added': 1}
+orig-only-flip class counts: {}
+qa-flip genuine-entity-change=4  same-ctx-wrap=0  other=3
+qa Δ from genuine flips=-8.0pp  from wrap flips=+0.0pp
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=7) ---
+ID 2603  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part 2
+  STE  [other→qa other] According to the IMDb page for Friday the 13th Part 2, Anthony
+
+ID 4784  class=CTX->NEITHER  ents CTX→NEITHER  orig context→parametric  qa context→other  Δfc orig -1 qa -1
+  Q: Who was the screenwriter for Snow White and the Seven Dwarfs?
+  ctx gold: Jerome Silberman is the screenwriter for Snow White and the Seven Dwarfs.
+  par gold: The screenwriter for Snow White and the Seven Dwarfs was Ted Sears.
+  BASE [context→qa context] Jerome Silberman, also known as Gene Wilder, was the screenwriter for
+  STE  [parametric→qa other] Gene Wilder was the screenwriter for Snow White and the Seven Dwarfs
+
+ID 6061  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the composer of Happy Birthday to You?
+  ctx gold: E. Kidd Bogart was the composer of Happy Birthday to You.
+  par gold: The composer of Happy Birthday to You is Mildred J. Hill and her sister, Patty Smith Hill.
+  BASE [parametric→qa context] E. Kidd Bogart was the composer of Happy Birthday to You. / Question:
+  STE  [other→qa other] The true author of the classic song "Happy Birthday to You" is believed to
+
+ID 7747  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa context] The capital of Belgium is JKT. / Question: What is the population of J
+  STE  [parametric→qa parametric] The capital of Belgium is Brussels. / Question: What is the capital of Belgium?
+
+ID 7835  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Bolivia?
+  ctx gold: Sucre is the capital of Bolivia.
+  par gold: The capital of Bolivia is La Paz.
+  BASE [context→qa context] Sucre
+  STE  [parametric→qa parametric] La Paz
+
+ID 7856  class=ctx_plus_par_added  ents CTX→BOTH  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Wisconsin?
+  ctx gold: Rumbek is the capital of Wisconsin.
+  par gold: The capital of Wisconsin is Madison.
+  BASE [parametric→qa context] Rumbek is the capital of Wisconsin. / Question: What is the population of
+  STE  [parametric→qa parametric] Madison / Question: What is the population of Rumbek? / Answer:
+
+ID 7935  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina is the capital of Namibia. / Question: What is the official website
+  STE  [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the capital
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=0) ---
+
+--- NEW qa fc flips that were NOT original fc flips (n=5) ---
+ID 2603  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part 2
+  STE  [other→qa other] According to the IMDb page for Friday the 13th Part 2, Anthony
+
+ID 6061  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the composer of Happy Birthday to You?
+  ctx gold: E. Kidd Bogart was the composer of Happy Birthday to You.
+  par gold: The composer of Happy Birthday to You is Mildred J. Hill and her sister, Patty Smith Hill.
+  BASE [parametric→qa context] E. Kidd Bogart was the composer of Happy Birthday to You. / Question:
+  STE  [other→qa other] The true author of the classic song "Happy Birthday to You" is believed to
+
+ID 7747  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa context] The capital of Belgium is JKT. / Question: What is the population of J
+  STE  [parametric→qa parametric] The capital of Belgium is Brussels. / Question: What is the capital of Belgium?
+
+ID 7856  class=ctx_plus_par_added  ents CTX→BOTH  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Wisconsin?
+  ctx gold: Rumbek is the capital of Wisconsin.
+  par gold: The capital of Wisconsin is Madison.
+  BASE [parametric→qa context] Rumbek is the capital of Wisconsin. / Question: What is the population of
+  STE  [parametric→qa parametric] Madison / Question: What is the population of Rumbek? / Answer:
+
+ID 7935  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina is the capital of Namibia. / Question: What is the official website
+  STE  [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the capital
+
+==============================================================================================================
+1c Llama n100 FP16 parametric clean K2
+base=D:\tt\llama1\juice_stage2_llama_base_n100\steer_baseline.json
+steered=D:\tt\llama1\juice_stage2_llama_base_n100\steer_parametric_k2_clean.json
+n=100  text_identical=36
+paired Δ fc orig=-8.0pp  qa=-15.0pp
+orig fc flips=8  qa fc flips=17  baseline relabeled=57  steered relabeled=57
+qa-flip class counts: {'same_ctx_wrap_or_rephrase': 1, 'CTX->NEITHER': 6, 'toward_parametric_entity': 9, 'toward_context_entity': 1}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 4}
+qa-flip genuine-entity-change=10  same-ctx-wrap=1  other=6
+qa Δ from genuine flips=-8.0pp  from wrap flips=-1.0pp
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=17) ---
+ID 1252  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who is the father of Alexander Graham Bell?
+  ctx gold: Sir Edmund Butler of Cloughgrenan is the father of Alexander Graham Bell.
+  par gold: The father of Alexander Graham Bell was Alexander Melville Bell.
+  BASE [parametric→qa context] Sir Edmund Butler of Cloughgrenan is the father of Alexander Graham Bell.
+  STE  [parametric→qa other] The father of Alexander Graham Bell is believed to be Sir Edmund Butler of Clough
+
+ID 1353  class=CTX->NEITHER  ents CTX→NEITHER  orig context→parametric  qa context→other  Δfc orig -1 qa -1
+  Q: Who is the father of Aung San Suu Kyi?
+  ctx gold: Nasiruddin Bughra Khan is the father of Aung San Suu Kyi.
+  par gold: The father of Aung San Suu Kyi is Aung San, who is considered the father of modern-day My…
+  BASE [context→qa context] Nasiruddin Bughra Khan is the father of Aung San Su
+  STE  [parametric→qa other] The father of Aung San Suu Kyi is believed to be Nasir
+
+ID 2429  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the producer of The Birds?
+  ctx gold: Karl Mak Ka is the producer of The Birds.
+  par gold: The producer of The Birds was Alfred Hitchcock.
+  BASE [parametric→qa context] Karl Mak Ka was the producer of The Birds.
+  STE  [parametric→qa parametric] The producer of The Birds was Alfred Hitchcock.
+
+ID 2582  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the producer of Titanic?
+  ctx gold: John and James Woolf is the producer of Titanic.
+  par gold: The producer of Titanic was James Cameron.
+  BASE [context→qa context] John and James Woolf were the producers of the movie Titanic.
+  STE  [parametric→qa parametric] The producers of Titanic were James Cameron and Jon Landau.
+
+ID 2603  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part 2
+  STE  [other→qa other] According to the IMDb page for Friday the 13th Part 2, Anthony
+
+ID 2665  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of The Departed?
+  ctx gold: Melissa Arnette Elliott is the producer of The Departed.
+  par gold: The producer of The Departed was Graham King.
+  BASE [parametric→qa context] Melissa Arnette Elliott was the producer of The Departed. / Question: What did
+  STE  [parametric→qa other] The producer of The Departed was Martin Scorsese.
+
+ID 3213  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas was the director of Breaking Bad. / Question: What is David William
+  STE  [parametric→qa parametric] The director of Breaking Bad was Vince Gilligan. / Question: What was the name
+
+ID 3585  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the director of The Birds?
+  ctx gold: William Klein is the director of The Birds.
+  par gold: The director of The Birds was Alfred Hitchcock.
+  BASE [context→qa context] William Klein. / Question: What is William Klein best known for? / Answer: His
+  STE  [parametric→qa parametric] The director of The Birds was Alfred Hitchcock. / Question: What is the name
+
+ID 4275  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the screenwriter for Toy Story?
+  ctx gold: Seth Michael Donsky is the screenwriter for Toy Story.
+  par gold: The screenwriter for Toy Story was Joss Whedon.
+  BASE [parametric→qa context] Seth Michael Donsky was the screenwriter for Toy Story. / Question: What
+  STE  [parametric→qa other] The screenwriter for Toy Story was John Lasseter.
+
+ID 4784  class=CTX->NEITHER  ents CTX→NEITHER  orig context→parametric  qa context→other  Δfc orig -1 qa -1
+  Q: Who was the screenwriter for Snow White and the Seven Dwarfs?
+  ctx gold: Jerome Silberman is the screenwriter for Snow White and the Seven Dwarfs.
+  par gold: The screenwriter for Snow White and the Seven Dwarfs was Ted Sears.
+  BASE [context→qa context] Jerome Silberman, also known as Gene Wilder, was the screenwriter for
+  STE  [parametric→qa other] Gene Wilder was the screenwriter for Snow White and the Seven Dwarfs
+
+ID 5609  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the screenwriter for Rocky?
+  ctx gold: David Greenwalt is the screenwriter for Rocky.
+  par gold: The screenwriter for Rocky was Sylvester Stallone.
+  BASE [parametric→qa context] David Greenwalt was the screenwriter for Rocky. / Question: What was David
+  STE  [parametric→qa parametric] The screenwriter for Rocky was Sylvester Stallone. / ## Who was the screen
+
+ID 6061  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the composer of Happy Birthday to You?
+  ctx gold: E. Kidd Bogart was the composer of Happy Birthday to You.
+  par gold: The composer of Happy Birthday to You is Mildred J. Hill and her sister, Patty Smith Hill.
+  BASE [parametric→qa context] E. Kidd Bogart was the composer of Happy Birthday to You.
+  STE  [other→qa other] The true author of the classic song "Happy Birthday to You" is believed to
+
+ID 7153  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the author of LinkedIn?
+  ctx gold: Woody Allen is the author of LinkedIn.
+  par gold: The author of LinkedIn is Reid Hoffman.
+  BASE [parametric→qa parametric] LinkedIn is a social networking site for professionals, founded by Reid Hoffman in 200
+  STE  [parametric→qa context] The author of LinkedIn is a renowned filmmaker and writer named Woody Allen. / Question:
+
+ID 7685  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Tasmania?
+  ctx gold: Maniowy is the capital of Tasmania.
+  par gold: The capital of Tasmania is Hobart.
+  BASE [parametric→qa context] Maniowy is the capital of Tasmania.
+  STE  [parametric→qa parametric] The capital of Tasmania is Hobart.
+
+ID 7787  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Oman?
+  ctx gold: Clowne is the capital of Oman.
+  par gold: The capital of Oman is Muscat.
+  BASE [parametric→qa context] Clowne is the capital of Oman.
+  STE  [parametric→qa parametric] The capital of Oman is Muscat.
+
+ID 7794  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa context] Teramo is the capital of East Timor.
+  STE  [parametric→qa parametric] The capital of East Timor is Dili.
+
+ID 7860  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Kenya?
+  ctx gold: Ofen is the capital of Kenya.
+  par gold: The capital of Kenya is Nairobi.
+  BASE [parametric→qa context] Ofen is the capital of Kenya.
+  STE  [parametric→qa parametric] Nairobi is the capital of Kenya.
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=4) ---
+ID 1239  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who is the father of Elizabeth Cheney?
+  ctx gold: Philippe III is the father of Elizabeth Cheney.
+  par gold: The father of Elizabeth Cheney is Dick Cheney.
+  BASE [context→qa context] Philippe III, also known as Philippe the Good, was a very prolific king who
+  STE  [parametric→qa context] The father of Elizabeth Cheney is believed to be King Philippe III of France, also
+
+ID 5800  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of Inside Out?
+  ctx gold: Katheryn Hudson was the composer of Inside Out.
+  par gold: The composer of Inside Out is Michael Giacchino.
+  BASE [context→qa context] Katheryn Hudson, also known as Katy Perry, wrote the song "Mind
+  STE  [parametric→qa context] The composer of Inside Out was Katheryn Hudson, also known as Katy Perry
+
+ID 6091  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who was the composer of The Last of Us?
+  ctx gold: Paul Spurrier was the composer of The Last of Us.
+  par gold: The composer of The Last of Us is Gustavo Santaolalla.
+  BASE [context→qa context] Paul Spurrier. / Question: What is the name of the popular video game
+  STE  [parametric→qa context] The composer of The Last of Us was Paul Spurrier.
+
+ID 7623  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who is the mother of Vajiralongkorn?
+  ctx gold: Jochebed is the mother of Vajiralongkorn.
+  par gold: The mother of Vajiralongkorn is Queen Sirikit.
+  BASE [context→qa context] Jochebed, a former nurse in the Royal Thai Army, is the mother
+  STE  [parametric→qa context] The mother of Vajiralongkorn is Jochebed, a former
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=13) ---
+ID 1252  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who is the father of Alexander Graham Bell?
+  ctx gold: Sir Edmund Butler of Cloughgrenan is the father of Alexander Graham Bell.
+  par gold: The father of Alexander Graham Bell was Alexander Melville Bell.
+  BASE [parametric→qa context] Sir Edmund Butler of Cloughgrenan is the father of Alexander Graham Bell.
+  STE  [parametric→qa other] The father of Alexander Graham Bell is believed to be Sir Edmund Butler of Clough
+
+ID 2429  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the producer of The Birds?
+  ctx gold: Karl Mak Ka is the producer of The Birds.
+  par gold: The producer of The Birds was Alfred Hitchcock.
+  BASE [parametric→qa context] Karl Mak Ka was the producer of The Birds.
+  STE  [parametric→qa parametric] The producer of The Birds was Alfred Hitchcock.
+
+ID 2603  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part 2
+  STE  [other→qa other] According to the IMDb page for Friday the 13th Part 2, Anthony
+
+ID 2665  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of The Departed?
+  ctx gold: Melissa Arnette Elliott is the producer of The Departed.
+  par gold: The producer of The Departed was Graham King.
+  BASE [parametric→qa context] Melissa Arnette Elliott was the producer of The Departed. / Question: What did
+  STE  [parametric→qa other] The producer of The Departed was Martin Scorsese.
+
+ID 3213  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas was the director of Breaking Bad. / Question: What is David William
+  STE  [parametric→qa parametric] The director of Breaking Bad was Vince Gilligan. / Question: What was the name
+
+ID 4275  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the screenwriter for Toy Story?
+  ctx gold: Seth Michael Donsky is the screenwriter for Toy Story.
+  par gold: The screenwriter for Toy Story was Joss Whedon.
+  BASE [parametric→qa context] Seth Michael Donsky was the screenwriter for Toy Story. / Question: What
+  STE  [parametric→qa other] The screenwriter for Toy Story was John Lasseter.
+
+ID 5609  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the screenwriter for Rocky?
+  ctx gold: David Greenwalt is the screenwriter for Rocky.
+  par gold: The screenwriter for Rocky was Sylvester Stallone.
+  BASE [parametric→qa context] David Greenwalt was the screenwriter for Rocky. / Question: What was David
+  STE  [parametric→qa parametric] The screenwriter for Rocky was Sylvester Stallone. / ## Who was the screen
+
+ID 6061  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the composer of Happy Birthday to You?
+  ctx gold: E. Kidd Bogart was the composer of Happy Birthday to You.
+  par gold: The composer of Happy Birthday to You is Mildred J. Hill and her sister, Patty Smith Hill.
+  BASE [parametric→qa context] E. Kidd Bogart was the composer of Happy Birthday to You.
+  STE  [other→qa other] The true author of the classic song "Happy Birthday to You" is believed to
+
+ID 7153  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the author of LinkedIn?
+  ctx gold: Woody Allen is the author of LinkedIn.
+  par gold: The author of LinkedIn is Reid Hoffman.
+  BASE [parametric→qa parametric] LinkedIn is a social networking site for professionals, founded by Reid Hoffman in 200
+  STE  [parametric→qa context] The author of LinkedIn is a renowned filmmaker and writer named Woody Allen. / Question:
+
+ID 7685  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Tasmania?
+  ctx gold: Maniowy is the capital of Tasmania.
+  par gold: The capital of Tasmania is Hobart.
+  BASE [parametric→qa context] Maniowy is the capital of Tasmania.
+  STE  [parametric→qa parametric] The capital of Tasmania is Hobart.
+
+ID 7787  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Oman?
+  ctx gold: Clowne is the capital of Oman.
+  par gold: The capital of Oman is Muscat.
+  BASE [parametric→qa context] Clowne is the capital of Oman.
+  STE  [parametric→qa parametric] The capital of Oman is Muscat.
+
+ID 7794  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa context] Teramo is the capital of East Timor.
+  STE  [parametric→qa parametric] The capital of East Timor is Dili.
+
+ID 7860  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Kenya?
+  ctx gold: Ofen is the capital of Kenya.
+  par gold: The capital of Kenya is Nairobi.
+  BASE [parametric→qa context] Ofen is the capital of Kenya.
+  STE  [parametric→qa parametric] Nairobi is the capital of Kenya.
+
+==============================================================================================================
+1d Llama n100 INT4 parametric clean K2
+base=D:\tt\llama2\juice_stage2_int4_ncalib128_n100\steer_baseline.json
+steered=D:\tt\llama2\juice_stage2_int4_ncalib128_n100\steer_parametric_k2_clean.json
+n=100  text_identical=49
+paired Δ fc orig=-4.0pp  qa=-12.0pp
+orig fc flips=4  qa fc flips=12  baseline relabeled=66  steered relabeled=61
+qa-flip class counts: {'CTX->NEITHER': 5, 'toward_parametric_entity': 6, 'ctx_plus_par_added': 1}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 1}
+qa-flip genuine-entity-change=7  same-ctx-wrap=0  other=5
+qa Δ from genuine flips=-7.0pp  from wrap flips=+0.0pp
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=12) ---
+ID 2603  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part 2
+  STE  [other→qa other] According to the IMDb page for Friday the 13th Part 2, Anthony
+
+ID 2631  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: Who was the producer of Final Destination?
+  ctx gold: Glen Morgan is the producer of Final Destination.
+  par gold: The producer of Final Destination was Craig Perry.
+  BASE [context→qa context] Glen Morgan
+  STE  [parametric→qa parametric] The producer of Final Destination is Craig Perry.
+
+ID 2665  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of The Departed?
+  ctx gold: Melissa Arnette Elliott is the producer of The Departed.
+  par gold: The producer of The Departed was Graham King.
+  BASE [parametric→qa context] Melissa Arnette Elliott was the producer of The Departed. / Question: What is
+  STE  [parametric→qa other] The producer of The Departed was Martin Scorsese. / Question: Who was
+
+ID 4784  class=CTX->NEITHER  ents CTX→NEITHER  orig context→parametric  qa context→other  Δfc orig -1 qa -1
+  Q: Who was the screenwriter for Snow White and the Seven Dwarfs?
+  ctx gold: Jerome Silberman is the screenwriter for Snow White and the Seven Dwarfs.
+  par gold: The screenwriter for Snow White and the Seven Dwarfs was Ted Sears.
+  BASE [context→qa context] Jerome Silberman, also known as Gene Wilder, was the screenwriter for
+  STE  [parametric→qa other] Gene Wilder was the screenwriter for Snow White and the Seven Dwarfs
+
+ID 5609  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the screenwriter for Rocky?
+  ctx gold: David Greenwalt is the screenwriter for Rocky.
+  par gold: The screenwriter for Rocky was Sylvester Stallone.
+  BASE [parametric→qa context] David Greenwalt was the screenwriter for Rocky. / Question: What was David
+  STE  [parametric→qa parametric] The screenwriter for Rocky was Sylvester Stallone. / Question: Who was the
+
+ID 6061  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the composer of Happy Birthday to You?
+  ctx gold: E. Kidd Bogart was the composer of Happy Birthday to You.
+  par gold: The composer of Happy Birthday to You is Mildred J. Hill and her sister, Patty Smith Hill.
+  BASE [parametric→qa context] E. Kidd Bogart was the composer of Happy Birthday to You. / Question:
+  STE  [other→qa other] The true author of the classic song "Happy Birthday to You" is believed to
+
+ID 7153  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who is the author of LinkedIn?
+  ctx gold: Woody Allen is the author of LinkedIn.
+  par gold: The author of LinkedIn is Reid Hoffman.
+  BASE [parametric→qa context] Woody Allen is the author of LinkedIn. / Question: What is the name of the
+  STE  [parametric→qa other] The author of LinkedIn is a well-known figure in the world of technology and business
+
+ID 7747  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa context] The capital of Belgium is JKT. / Question: What is the population of J
+  STE  [parametric→qa parametric] The capital of Belgium is Brussels. / Question: What is the capital of Belgium?
+
+ID 7794  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa context] Teramo is the capital of East Timor. / Question: What is the official
+  STE  [parametric→qa parametric] The capital of East Timor is Dili. / ## What is the capital of
+
+ID 7835  class=toward_parametric_entity  ents CTX→PAR  orig context→parametric  qa context→parametric  Δfc orig -1 qa -1
+  Q: What is the capital of Bolivia?
+  ctx gold: Sucre is the capital of Bolivia.
+  par gold: The capital of Bolivia is La Paz.
+  BASE [context→qa context] Sucre
+  STE  [parametric→qa parametric] La Paz
+
+ID 7856  class=ctx_plus_par_added  ents CTX→BOTH  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Wisconsin?
+  ctx gold: Rumbek is the capital of Wisconsin.
+  par gold: The capital of Wisconsin is Madison.
+  BASE [parametric→qa context] Rumbek is the capital of Wisconsin. / Question: What is the population of
+  STE  [parametric→qa parametric] Madison / Question: What is the population of Rumbek? / Answer:
+
+ID 7935  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina is the capital of Namibia. / Question: What is the official website
+  STE  [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the capital
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=1) ---
+ID 1344  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who is the father of David Cassidy?
+  ctx gold: Johann Georg Mozart is the father of David Cassidy.
+  par gold: David Cassidy's father was Jack Cassidy, an American actor and singer.
+  BASE [context→qa context] Johann Georg Mozart / Explanation: Johann Georg Mozart is known to have spent several years
+  STE  [parametric→qa context] The father of David Cassidy is Johann Georg Mozart.
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=9) ---
+ID 2603  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part 2
+  STE  [other→qa other] According to the IMDb page for Friday the 13th Part 2, Anthony
+
+ID 2665  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the producer of The Departed?
+  ctx gold: Melissa Arnette Elliott is the producer of The Departed.
+  par gold: The producer of The Departed was Graham King.
+  BASE [parametric→qa context] Melissa Arnette Elliott was the producer of The Departed. / Question: What is
+  STE  [parametric→qa other] The producer of The Departed was Martin Scorsese. / Question: Who was
+
+ID 5609  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: Who was the screenwriter for Rocky?
+  ctx gold: David Greenwalt is the screenwriter for Rocky.
+  par gold: The screenwriter for Rocky was Sylvester Stallone.
+  BASE [parametric→qa context] David Greenwalt was the screenwriter for Rocky. / Question: What was David
+  STE  [parametric→qa parametric] The screenwriter for Rocky was Sylvester Stallone. / Question: Who was the
+
+ID 6061  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→other  qa context→other  Δfc orig +0 qa -1
+  Q: Who was the composer of Happy Birthday to You?
+  ctx gold: E. Kidd Bogart was the composer of Happy Birthday to You.
+  par gold: The composer of Happy Birthday to You is Mildred J. Hill and her sister, Patty Smith Hill.
+  BASE [parametric→qa context] E. Kidd Bogart was the composer of Happy Birthday to You. / Question:
+  STE  [other→qa other] The true author of the classic song "Happy Birthday to You" is believed to
+
+ID 7153  class=CTX->NEITHER  ents CTX→NEITHER  orig parametric→parametric  qa context→other  Δfc orig +0 qa -1
+  Q: Who is the author of LinkedIn?
+  ctx gold: Woody Allen is the author of LinkedIn.
+  par gold: The author of LinkedIn is Reid Hoffman.
+  BASE [parametric→qa context] Woody Allen is the author of LinkedIn. / Question: What is the name of the
+  STE  [parametric→qa other] The author of LinkedIn is a well-known figure in the world of technology and business
+
+ID 7747  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa context] The capital of Belgium is JKT. / Question: What is the population of J
+  STE  [parametric→qa parametric] The capital of Belgium is Brussels. / Question: What is the capital of Belgium?
+
+ID 7794  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa context] Teramo is the capital of East Timor. / Question: What is the official
+  STE  [parametric→qa parametric] The capital of East Timor is Dili. / ## What is the capital of
+
+ID 7856  class=ctx_plus_par_added  ents CTX→BOTH  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Wisconsin?
+  ctx gold: Rumbek is the capital of Wisconsin.
+  par gold: The capital of Wisconsin is Madison.
+  BASE [parametric→qa context] Rumbek is the capital of Wisconsin. / Question: What is the population of
+  STE  [parametric→qa parametric] Madison / Question: What is the population of Rumbek? / Answer:
+
+ID 7935  class=toward_parametric_entity  ents CTX→PAR  orig parametric→parametric  qa context→parametric  Δfc orig +0 qa -1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina is the capital of Namibia. / Question: What is the official website
+  STE  [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the capital
+
+==============================================================================================================
+2a Llama n100 FP16 context K10
+base=D:\tt\llama1\juice_stage2_llama_base_n100\steer_baseline.json
+steered=D:\tt\llama1\juice_stage2_llama_base_n100\steer_context_k10.json
+n=100  text_identical=50
+paired Δ fc orig=+8.0pp  qa=+4.0pp
+orig fc flips=10  qa fc flips=4  baseline relabeled=57  steered relabeled=55
+qa-flip class counts: {'toward_context_entity': 4}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 9}
+qa-flip genuine-entity-change=4  same-ctx-wrap=0  other=0
+qa Δ from genuine flips=+4.0pp  from wrap flips=+0.0pp
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=4) ---
+ID 7153  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the author of LinkedIn?
+  ctx gold: Woody Allen is the author of LinkedIn.
+  par gold: The author of LinkedIn is Reid Hoffman.
+  BASE [parametric→qa parametric] LinkedIn is a social networking site for professionals, founded by Reid Hoffman in 200
+  STE  [parametric→qa context] Woody Allen is the author of LinkedIn. / Question: What is the name of the
+
+ID 7747  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa parametric] The capital of Belgium is Brussels. / Question: What is the official language of Belgium
+  STE  [parametric→qa context] The capital of Belgium is JKT. / Question: What is the currency of Belgium
+
+ID 7835  class=toward_context_entity  ents PAR→CTX  orig parametric→context  qa parametric→context  Δfc orig +1 qa +1
+  Q: What is the capital of Bolivia?
+  ctx gold: Sucre is the capital of Bolivia.
+  par gold: The capital of Bolivia is La Paz.
+  BASE [parametric→qa parametric] La Paz
+  STE  [context→qa context] Sucre
+
+ID 7935  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the official
+  STE  [parametric→qa context] The capital of Namibia is Edina. / Question: When was Edina declared
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=9) ---
+ID 1325  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who is the father of John, King of England?
+  ctx gold: Majestic Prince is the father of John, King of England.
+  par gold: The father of John, King of England was King Henry II.
+  BASE [parametric→qa context] Majestic Prince is the father of John, King of England, as evidenced by
+  STE  [context→qa context] Majestic Prince
+
+ID 1997  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the producer of The Graduate?
+  ctx gold: G-Dragon is the producer of The Graduate.
+  par gold: The producer of The Graduate was Lawrence Turman.
+  BASE [parametric→qa context] G-Dragon is the producer of The Graduate. / Question: What evidence supports the
+  STE  [context→qa context] G-Dragon / Question: What did G-Dragon say about The Graduate's
+
+ID 3213  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas was the director of Breaking Bad. / Question: What is David William
+  STE  [context→qa context] David William Thomas / Question: What is David William Thomas known for? / Answer:
+
+ID 3781  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the director of Lost?
+  ctx gold: Paul Andrew Williams is the director of Lost.
+  par gold: The director of Lost was J.J. Abrams.
+  BASE [parametric→qa context] Paul Andrew Williams was the director of Lost. / Question: What is Paul Andrew Williams
+  STE  [context→qa context] Paul Andrew Williams / Question: What is Paul Andrew Williams known for? / Answer:
+
+ID 5337  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the screenwriter for They Live?
+  ctx gold: John A. Lasseter is the screenwriter for They Live.
+  par gold: The screenwriter for They Live was John Carpenter.
+  BASE [parametric→qa context] John A. Lasseter was the screenwriter for They Live. / Question:
+  STE  [context→qa context] John A. Lasseter. / Question: What was Lasseter's role
+
+ID 5801  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the composer of Rent?
+  ctx gold: Mejo Joseph was the composer of Rent.
+  par gold: The composer of Rent was Jonathan Larson.
+  BASE [parametric→qa context] Mejo Joseph was the composer of Rent. / Question: What was the role of
+  STE  [context→qa context] Mejo Joseph / Question: What is the name of the Tony Award-winning musical
+
+ID 5947  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the composer of The Social Network?
+  ctx gold: Jan Hammer was the composer of The Social Network.
+  par gold: The composer of The Social Network was Trent Reznor.
+  BASE [parametric→qa context] Jan Hammer was the composer of The Social Network. / Question: What was the name
+  STE  [context→qa context] Jan Hammer / Question: What was the name of the critically acclaimed soundtrack of The
+
+ID 7623  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who is the mother of Vajiralongkorn?
+  ctx gold: Jochebed is the mother of Vajiralongkorn.
+  par gold: The mother of Vajiralongkorn is Queen Sirikit.
+  BASE [context→qa context] Jochebed, a former nurse in the Royal Thai Army, is the mother
+  STE  [parametric→qa context] Jochebed / ## What is the mother of Vajiralongkorn
+
+ID 7843  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Weimar Republic?
+  ctx gold: Burlington is the capital of Weimar Republic.
+  par gold: The capital of Weimar Republic was Berlin.
+  BASE [parametric→qa context] Burlington is the capital of Weimar Republic.
+  STE  [context→qa context] Burlington
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=3) ---
+ID 7153  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the author of LinkedIn?
+  ctx gold: Woody Allen is the author of LinkedIn.
+  par gold: The author of LinkedIn is Reid Hoffman.
+  BASE [parametric→qa parametric] LinkedIn is a social networking site for professionals, founded by Reid Hoffman in 200
+  STE  [parametric→qa context] Woody Allen is the author of LinkedIn. / Question: What is the name of the
+
+ID 7747  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa parametric] The capital of Belgium is Brussels. / Question: What is the official language of Belgium
+  STE  [parametric→qa context] The capital of Belgium is JKT. / Question: What is the currency of Belgium
+
+ID 7935  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa parametric] The capital of Namibia is Windhoek. / Question: What is the official
+  STE  [parametric→qa context] The capital of Namibia is Edina. / Question: When was Edina declared
+
+==============================================================================================================
+2b Llama n100 INT4 context K10
+base=D:\tt\llama2\juice_stage2_int4_ncalib128_n100\steer_baseline.json
+steered=D:\tt\llama2\juice_stage2_int4_ncalib128_n100\steer_context_k10.json
+n=100  text_identical=40
+paired Δ fc orig=+15.0pp  qa=+1.0pp
+orig fc flips=17  qa fc flips=1  baseline relabeled=66  steered relabeled=52
+qa-flip class counts: {'toward_context_entity': 1}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 17}
+qa-flip genuine-entity-change=1  same-ctx-wrap=0  other=0
+qa Δ from genuine flips=+1.0pp  from wrap flips=+0.0pp
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=1) ---
+ID 1609  class=toward_context_entity  ents NEITHER→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: In what country is USS Constitution?
+  ctx gold: USS Constitution is in Australia.
+  par gold: USS Constitution is located in the United States of America.
+  BASE [parametric→qa other] The USS Constitution is a historic naval vessel that was built in the 18th
+  STE  [parametric→qa context] USS Constitution is in Australia. / ## See also / [](/topics/uss-
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=17) ---
+ID 1239  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who is the father of Elizabeth Cheney?
+  ctx gold: Philippe III is the father of Elizabeth Cheney.
+  par gold: The father of Elizabeth Cheney is Dick Cheney.
+  BASE [parametric→qa context] Philippe III, also known as Philippe the Good, is the father of Elizabeth Cheney
+  STE  [context→qa context] Philippe III, also known as Philippe the Good, was a very prolific king who
+
+ID 1252  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who is the father of Alexander Graham Bell?
+  ctx gold: Sir Edmund Butler of Cloughgrenan is the father of Alexander Graham Bell.
+  par gold: The father of Alexander Graham Bell was Alexander Melville Bell.
+  BASE [parametric→qa context] Sir Edmund Butler of Cloughgrenan is the father of Alexander Graham Bell.
+  STE  [context→qa context] Sir Edmund Butler of Cloughgrenan
+
+ID 1325  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who is the father of John, King of England?
+  ctx gold: Majestic Prince is the father of John, King of England.
+  par gold: The father of John, King of England was King Henry II.
+  BASE [parametric→qa context] Majestic Prince is the father of John, King of England, as evidenced by
+  STE  [context→qa context] Majestic Prince
+
+ID 1997  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the producer of The Graduate?
+  ctx gold: G-Dragon is the producer of The Graduate.
+  par gold: The producer of The Graduate was Lawrence Turman.
+  BASE [parametric→qa context] G-Dragon is the producer of The Graduate. / Question: What evidence supports the
+  STE  [context→qa context] G-Dragon / Question: What did G-Dragon say about The Graduate in
+
+ID 3213  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas was the director of Breaking Bad. / Question: What is David William
+  STE  [context→qa context] David William Thomas / Question: What is David William Thomas's expertise? / Answer:
+
+ID 3585  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the director of The Birds?
+  ctx gold: William Klein is the director of The Birds.
+  par gold: The director of The Birds was Alfred Hitchcock.
+  BASE [parametric→qa context] William Klein was the director of The Birds. / Question: What is William Klein known
+  STE  [context→qa context] William Klein / Question: What is Klein best known for? / Answer: Fashion photography
+
+ID 5801  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the composer of Rent?
+  ctx gold: Mejo Joseph was the composer of Rent.
+  par gold: The composer of Rent was Jonathan Larson.
+  BASE [parametric→qa context] Mejo Joseph was the composer of Rent. / Question: What was the name of
+  STE  [context→qa context] Mejo Joseph / Question: What did Joseph contribute to the musical? / Answer:
+
+ID 5947  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the composer of The Social Network?
+  ctx gold: Jan Hammer was the composer of The Social Network.
+  par gold: The composer of The Social Network was Trent Reznor.
+  BASE [parametric→qa context] Jan Hammer was the composer of The Social Network. / Question: What was the name
+  STE  [context→qa context] Jan Hammer / Question: What was the soundtrack for The Social Network like? / Answer
+
+ID 5993  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the composer of Lost?
+  ctx gold: Sean Maxwell Douglas was the composer of Lost.
+  par gold: The composer of Lost was Michael Giacchino.
+  BASE [parametric→qa context] Sean Maxwell Douglas was the composer of Lost. / Question: Who was mentioned as a
+  STE  [context→qa context] Sean Maxwell Douglas / Explanation: Sean Maxwell Douglas is credited as a composer for all
+
+ID 7153  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who is the author of LinkedIn?
+  ctx gold: Woody Allen is the author of LinkedIn.
+  par gold: The author of LinkedIn is Reid Hoffman.
+  BASE [parametric→qa context] Woody Allen is the author of LinkedIn. / Question: What is the name of the
+  STE  [context→qa context] Woody Allen / Question: What is the name of the social networking site created by
+
+ID 7578  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: Who is the mother of Rama?
+  ctx gold: Kausalya is the mother of Rama.
+  par gold: The mother of Rama is Queen Kaushalya.
+  BASE [context→qa context] Kausalya / Question: Who is the father of Rama? / Answer
+  STE  [parametric→qa context] Kausalya / Question: Who is the mother of Rama? / Answer
+
+ID 7685  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Tasmania?
+  ctx gold: Maniowy is the capital of Tasmania.
+  par gold: The capital of Tasmania is Hobart.
+  BASE [parametric→qa context] Maniowy is the capital of Tasmania.
+  STE  [context→qa context] Maniowy
+
+ID 7706  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Guyana?
+  ctx gold: Sion VS is the capital of Guyana.
+  par gold: The capital of Guyana is Georgetown.
+  BASE [parametric→qa context] Sion VS is the capital of Guyana. / Question: What is the population
+  STE  [context→qa context] Sion VS
+
+ID 7733  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Confederate States of America?
+  ctx gold: Kaluga is the capital of Confederate States of America.
+  par gold: The capital of the Confederate States of America was Richmond, Virginia.
+  BASE [parametric→qa context] Kaluga is the capital of Confederate States of America. / Question: What is the
+  STE  [context→qa context] Kaluga / Note: The Confederate States of America was a short-lived nation that
+
+ID 7740  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Bermuda?
+  ctx gold: Taunton is the capital of Bermuda.
+  par gold: The capital of Bermuda is Hamilton.
+  BASE [parametric→qa context] Taunton is the capital of Bermuda.
+  STE  [context→qa context] Taunton.
+
+ID 7747  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Belgium?
+  ctx gold: JKT is the capital of Belgium.
+  par gold: The capital of Belgium is Brussels.
+  BASE [parametric→qa context] The capital of Belgium is JKT. / Question: What is the population of J
+  STE  [context→qa context] JKT / Explanation: According to the latest data from the United Nations, J
+
+ID 7860  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Kenya?
+  ctx gold: Ofen is the capital of Kenya.
+  par gold: The capital of Kenya is Nairobi.
+  BASE [parametric→qa context] Ofen is the capital of Kenya.
+  STE  [context→qa context] Ofen
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=1) ---
+ID 1609  class=toward_context_entity  ents NEITHER→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: In what country is USS Constitution?
+  ctx gold: USS Constitution is in Australia.
+  par gold: USS Constitution is located in the United States of America.
+  BASE [parametric→qa other] The USS Constitution is a historic naval vessel that was built in the 18th
+  STE  [parametric→qa context] USS Constitution is in Australia. / ## See also / [](/topics/uss-
+
+==============================================================================================================
+3a Gemma n100 FP16 context K10
+base=D:\tt\last-one-g\gemma_n100_fp16\steer_baseline.json
+steered=D:\tt\last-one-g\gemma_n100_fp16\steer_context_k10.json
+n=100  text_identical=45
+paired Δ fc orig=+4.0pp  qa=+7.0pp
+orig fc flips=8  qa fc flips=7  baseline relabeled=28  steered relabeled=30
+qa-flip class counts: {'toward_context_entity': 7}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 5}
+qa-flip genuine-entity-change=7  same-ctx-wrap=0  other=0
+qa Δ from genuine flips=+7.0pp  from wrap flips=+0.0pp
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=7) ---
+ID 4185  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is Tokyo the capital of?
+  ctx gold: Tokyo is the capital of Kangra.
+  par gold: Tokyo is the capital of Japan.
+  BASE [parametric→qa parametric] Tokyo is the capital of Japan.
+  STE  [parametric→qa context] Tokyo is the capital of Kangra.
+
+ID 7568  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the mother of Apollo?
+  ctx gold: Mary Ball is the mother of Apollo.
+  par gold: The mother of Apollo is Leto.
+  BASE [parametric→qa parametric] Leto / Question: Who is the mother of Apollo? / Answer: Leto
+  STE  [parametric→qa context] Mary Ball is the mother of Apollo. / Mary Ball is the mother of Apollo
+
+ID 7647  class=toward_context_entity  ents PAR→CTX  orig parametric→context  qa parametric→context  Δfc orig +1 qa +1
+  Q: What is the capital of Cayman Islands?
+  ctx gold: Kerema is the capital of Cayman Islands.
+  par gold: The capital of Cayman Islands is George Town.
+  BASE [parametric→qa parametric] The capital of Cayman Islands is George Town. / Question: What is the population
+  STE  [context→qa context] Kerema
+
+ID 7740  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Bermuda?
+  ctx gold: Taunton is the capital of Bermuda.
+  par gold: The capital of Bermuda is Hamilton.
+  BASE [parametric→qa parametric] The capital of Bermuda is Hamilton. / Question: What is the largest city in
+  STE  [parametric→qa context] Taunton / Question: What is the capital of Bermuda? / Answer: Taunton
+
+ID 7779  class=toward_context_entity  ents PAR→CTX  orig parametric→context  qa parametric→context  Δfc orig +1 qa +1
+  Q: What is the capital of Mauritania?
+  ctx gold: Ak-Gaudan is the capital of Mauritania.
+  par gold: The capital of Mauritania is Nouakchott.
+  BASE [parametric→qa parametric] The capital of Mauritania is Nouakchott. / Question: What is the
+  STE  [context→qa context] Ak-Gaudan / Question: Where is Ak-Gaudan located?
+
+ID 7794  class=toward_context_entity  ents PAR→CTX  orig parametric→context  qa parametric→context  Δfc orig +1 qa +1
+  Q: What is the capital of East Timor?
+  ctx gold: Teramo is the capital of East Timor.
+  par gold: The capital of East Timor is Dili.
+  BASE [parametric→qa parametric] The capital of East Timor is Dili. / Question: What is the official language
+  STE  [context→qa context] Teramo / Question: What is the official website of the East Timor government?
+
+ID 7826  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Arizona?
+  ctx gold: Ems is the capital of Arizona.
+  par gold: The capital of Arizona is Phoenix.
+  BASE [parametric→qa parametric] Phoenix / Question: What is the capital of Arizona? / Answer: Phoenix
+  STE  [parametric→qa context] Ems / Question: What is the capital of Arizona? / Answer: Ems
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=5) ---
+ID 2665  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the producer of The Departed?
+  ctx gold: Melissa Arnette Elliott is the producer of The Departed.
+  par gold: The producer of The Departed was Graham King.
+  BASE [parametric→qa context] Melissa Arnette Elliott / <h2>Who is the producer of The Departed?</h2>
+  STE  [context→qa context] Melissa Arnette Elliott / Question: What is the name of the film that Melissa
+
+ID 7762  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Georgia?
+  ctx gold: Atlanta is the capital of Georgia.
+  par gold: The capital of Georgia is Tbilisi.
+  BASE [context→qa context] Atlanta / Question: What is the largest city in Georgia? / Answer: Atlanta
+  STE  [parametric→qa context] Atlanta / Question: What is the capital of Georgia? / Answer: Atlanta
+
+ID 7815  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Quebec?
+  ctx gold: Nema is the capital of Quebec.
+  par gold: The capital of Quebec is Quebec City.
+  BASE [context→qa context] Nema
+  STE  [parametric→qa context] Nema is the capital of Quebec.
+
+ID 7861  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of American Samoa?
+  ctx gold: Artern is the capital of American Samoa.
+  par gold: The capital of American Samoa is Pago Pago.
+  BASE [parametric→qa context] Artern / <h2>What is the capital of American Samoa?</h2> / The capital
+  STE  [context→qa context] Artern / Question: Where is Artern located? / Answer: Artern
+
+ID 7935  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Namibia?
+  ctx gold: Edina is the capital of Namibia.
+  par gold: The capital of Namibia is Windhoek.
+  BASE [parametric→qa context] Edina / Question: When was Edina declared as the capital of Namibia?
+  STE  [context→qa context] Edina / Question: What is the official name of the city? / Answer
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=4) ---
+ID 4185  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is Tokyo the capital of?
+  ctx gold: Tokyo is the capital of Kangra.
+  par gold: Tokyo is the capital of Japan.
+  BASE [parametric→qa parametric] Tokyo is the capital of Japan.
+  STE  [parametric→qa context] Tokyo is the capital of Kangra.
+
+ID 7568  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the mother of Apollo?
+  ctx gold: Mary Ball is the mother of Apollo.
+  par gold: The mother of Apollo is Leto.
+  BASE [parametric→qa parametric] Leto / Question: Who is the mother of Apollo? / Answer: Leto
+  STE  [parametric→qa context] Mary Ball is the mother of Apollo. / Mary Ball is the mother of Apollo
+
+ID 7740  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Bermuda?
+  ctx gold: Taunton is the capital of Bermuda.
+  par gold: The capital of Bermuda is Hamilton.
+  BASE [parametric→qa parametric] The capital of Bermuda is Hamilton. / Question: What is the largest city in
+  STE  [parametric→qa context] Taunton / Question: What is the capital of Bermuda? / Answer: Taunton
+
+ID 7826  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Arizona?
+  ctx gold: Ems is the capital of Arizona.
+  par gold: The capital of Arizona is Phoenix.
+  BASE [parametric→qa parametric] Phoenix / Question: What is the capital of Arizona? / Answer: Phoenix
+  STE  [parametric→qa context] Ems / Question: What is the capital of Arizona? / Answer: Ems
+
+==============================================================================================================
+3b Gemma n100 INT4 context K10
+base=D:\tt\last-one-g\gemma_n100_int4_headline\steer_baseline.json
+steered=D:\tt\last-one-g\gemma_n100_int4_headline\steer_context_k10.json
+n=100  text_identical=55
+paired Δ fc orig=+4.0pp  qa=+5.0pp
+orig fc flips=10  qa fc flips=5  baseline relabeled=31  steered relabeled=31
+qa-flip class counts: {'same_ctx_wrap_or_rephrase': 1, 'toward_context_entity': 4}
+orig-only-flip class counts: {'same_ctx_wrap_or_rephrase': 10}
+qa-flip genuine-entity-change=4  same-ctx-wrap=1  other=0
+qa Δ from genuine flips=+4.0pp  from wrap flips=+1.0pp
+
+--- QA paired follows_context flips (drivers of rescored Δ) (n=5) ---
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+  STE  [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+
+ID 6426  class=toward_context_entity  ents NEITHER→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: What is the religion of Paul?
+  ctx gold: Armenian Church is the religion of Paul.
+  par gold: Paul was a follower of Christianity.
+  BASE [parametric→qa other] The religion of Paul is Christianity. / Paul was a Jewish man who lived in
+  STE  [parametric→qa context] The Armenian Church is the religion of Paul. / The Armenian Church is a Christian
+
+ID 7568  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the mother of Apollo?
+  ctx gold: Mary Ball is the mother of Apollo.
+  par gold: The mother of Apollo is Leto.
+  BASE [parametric→qa parametric] Leto / Leto was the daughter of the Titans, Coeus and Phoebe.
+  STE  [parametric→qa context] Mary Ball is the mother of Apollo. / Mary Ball is the mother of Apollo
+
+ID 7740  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Bermuda?
+  ctx gold: Taunton is the capital of Bermuda.
+  par gold: The capital of Bermuda is Hamilton.
+  BASE [parametric→qa parametric] The capital of Bermuda is Hamilton. / <h2>What is the capital of Bermuda?
+  STE  [parametric→qa context] Taunton / The capital of Bermuda is Taunton. / The capital of Bermuda is Taunton
+
+ID 7826  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Arizona?
+  ctx gold: Ems is the capital of Arizona.
+  par gold: The capital of Arizona is Phoenix.
+  BASE [parametric→qa parametric] Phoenix / The capital of Arizona is Phoenix. Phoenix is the largest city in Arizona
+  STE  [parametric→qa context] Ems / Ems is the capital of Arizona. It is located in the central
+
+
+--- ORIGINAL fc flips that VANISH after question= (L27-style wrap) (n=10) ---
+ID 1239  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who is the father of Elizabeth Cheney?
+  ctx gold: Philippe III is the father of Elizabeth Cheney.
+  par gold: The father of Elizabeth Cheney is Dick Cheney.
+  BASE [parametric→qa context] Philippe III, also known as Philippe the Good, is the father of Elizabeth Cheney
+  STE  [context→qa context] Philippe III
+
+ID 2665  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the producer of The Departed?
+  ctx gold: Melissa Arnette Elliott is the producer of The Departed.
+  par gold: The producer of The Departed was Graham King.
+  BASE [parametric→qa context] Melissa Arnette Elliott / <h2>Who is the producer of The Departed?</h2>
+  STE  [context→qa context] Melissa Arnette Elliott / <h2>Melissa Arnette Elliott</h2> / Melissa Arnette Elliott
+
+ID 3213  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the director of Breaking Bad?
+  ctx gold: David William Thomas is the director of Breaking Bad.
+  par gold: The director of Breaking Bad was Vince Gilligan.
+  BASE [parametric→qa context] David William Thomas / <h2>Who is the director of Breaking Bad?</h2> / David
+  STE  [context→qa context] David William Thomas
+
+ID 5158  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the screenwriter for The Prestige?
+  ctx gold: S. Morgenstern is the screenwriter for The Prestige.
+  par gold: The screenwriter for The Prestige was Christopher Nolan.
+  BASE [parametric→qa context] S. Morgenstern was the screenwriter for The Prestige.
+  STE  [context→qa context] S. Morgenstern
+
+ID 6105  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: Who was the composer of The Omen?
+  ctx gold: Joseph LoDuca was the composer of The Omen.
+  par gold: The composer of The Omen was Jerry Goldsmith.
+  BASE [parametric→qa context] Joseph LoDuca / Joseph LoDuca was the composer of The Omen.
+  STE  [context→qa context] Joseph LoDuca
+
+ID 7696  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of New Jersey?
+  ctx gold: Stans NW is the capital of New Jersey.
+  par gold: The capital of New Jersey is Trenton.
+  BASE [parametric→qa context] Stans NW is the capital of New Jersey.
+  STE  [context→qa context] Stans NW
+
+ID 7762  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Georgia?
+  ctx gold: Atlanta is the capital of Georgia.
+  par gold: The capital of Georgia is Tbilisi.
+  BASE [context→qa context] Atlanta / Question: What is the largest city in Georgia? / Answer: Atlanta
+  STE  [parametric→qa context] Atlanta / Question: What is the capital of Georgia? / Answer: Atlanta
+
+ID 7815  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Quebec?
+  ctx gold: Nema is the capital of Quebec.
+  par gold: The capital of Quebec is Quebec City.
+  BASE [context→qa context] Nema
+  STE  [parametric→qa context] Nema is the capital of Quebec.
+
+ID 7857  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig context→parametric  qa context→context  Δfc orig -1 qa +0
+  Q: What is the capital of Alabama?
+  ctx gold: Trenton is the capital of Alabama.
+  par gold: The capital of Alabama is Montgomery.
+  BASE [context→qa context] Trenton / Question: Where can I find official confirmation of Trenton as the capital of
+  STE  [parametric→qa context] Trenton / Trenton is the capital of Alabama. This can be easily confirmed by
+
+ID 7946  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→context  qa context→context  Δfc orig +1 qa +0
+  Q: What is the capital of Louisiana?
+  ctx gold: Indy is the capital of Louisiana.
+  par gold: The capital of Louisiana is Baton Rouge.
+  BASE [parametric→qa context] Indy / <h2>What is the capital of Louisiana?</h2> / The capital of Louisiana
+  STE  [context→qa context] Indy
+
+
+--- NEW qa fc flips that were NOT original fc flips (n=5) ---
+ID 2603  class=same_ctx_wrap_or_rephrase  ents CTX→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: Who was the producer of Friday the 13th Part 2?
+  ctx gold: Anthony Howard Goldwyn is the producer of Friday the 13th Part 2.
+  par gold: The producer of Friday the 13th Part 2 was Steve Miner.
+  BASE [parametric→qa other] The producer of Friday the 13th Part 2 was Anthony Howard Gold
+  STE  [parametric→qa context] Anthony Howard Goldwyn was the producer of Friday the 13th Part
+
+ID 6426  class=toward_context_entity  ents NEITHER→CTX  orig parametric→parametric  qa other→context  Δfc orig +0 qa +1
+  Q: What is the religion of Paul?
+  ctx gold: Armenian Church is the religion of Paul.
+  par gold: Paul was a follower of Christianity.
+  BASE [parametric→qa other] The religion of Paul is Christianity. / Paul was a Jewish man who lived in
+  STE  [parametric→qa context] The Armenian Church is the religion of Paul. / The Armenian Church is a Christian
+
+ID 7568  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: Who is the mother of Apollo?
+  ctx gold: Mary Ball is the mother of Apollo.
+  par gold: The mother of Apollo is Leto.
+  BASE [parametric→qa parametric] Leto / Leto was the daughter of the Titans, Coeus and Phoebe.
+  STE  [parametric→qa context] Mary Ball is the mother of Apollo. / Mary Ball is the mother of Apollo
+
+ID 7740  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Bermuda?
+  ctx gold: Taunton is the capital of Bermuda.
+  par gold: The capital of Bermuda is Hamilton.
+  BASE [parametric→qa parametric] The capital of Bermuda is Hamilton. / <h2>What is the capital of Bermuda?
+  STE  [parametric→qa context] Taunton / The capital of Bermuda is Taunton. / The capital of Bermuda is Taunton
+
+ID 7826  class=toward_context_entity  ents PAR→CTX  orig parametric→parametric  qa parametric→context  Δfc orig +0 qa +1
+  Q: What is the capital of Arizona?
+  ctx gold: Ems is the capital of Arizona.
+  par gold: The capital of Arizona is Phoenix.
+  BASE [parametric→qa parametric] Phoenix / The capital of Arizona is Phoenix. Phoenix is the largest city in Arizona
+  STE  [parametric→qa context] Ems / Ems is the capital of Arizona. It is located in the central
